@@ -1,0 +1,170 @@
+"use client";
+import { navItems, subServices } from "@/app/data";
+import Link from "next/link";
+import React, { useState } from "react";
+import { Button } from "./ui/button";
+import { IconMapPin, IconMenu2, IconPhone } from "@tabler/icons-react";
+import { motion } from "framer-motion";
+import { ChevronDown, Phone, TimerIcon, X } from "lucide-react";
+function Navbar() {
+  const [infoDetailOpen, setInfoDetailOpen] = useState(false);
+  const [subServicesMenu, setsubServicesMenu] = useState(false);
+  const [sideMenu, setSideMenu] = useState(false);
+  return (
+    <>
+      <header className="w-full flex justify-center z-[100]">
+        <nav className="flex justify-between items-center md:px-4 px-2 md:w-11/12 b-bg my-3 md:h-[72px] h-[65px] drop-shadow-xl rounded-lg w-full">
+          <div>
+            <h3 className="text-white">LOGO</h3>
+          </div>
+          <div className="md:block hidden">
+            <ul>
+              {navItems.map((item, index) => (
+                <Link
+                  key={index}
+                  className="inline-block text-white border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-lg active:scale-[0.98]"
+                  href={item.link}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </ul>
+          </div>
+          <div className="flex gap-x-2 flex-row-reverse">
+            <Button className="md:block hidden" variant={"white"}>
+              Contact Now
+            </Button>
+            <div className="md:hidden flex items-center justify-center px-2 py-[6px] rounded-md active:scale-[0.98] transition-all bg-white">
+              <IconMenu2
+                className="pr"
+                onClick={() => setSideMenu((prev) => !prev)}
+              />
+            </div>
+            <div
+              onClick={(e) => setInfoDetailOpen((prev) => !prev)}
+              className="md:hidden w-16 h-10 rounded-3xl flex items-center justify-between p-[6px] border border-neutral-200 text-white hover:border-white"
+            >
+              <IconPhone />
+              <ChevronDown
+                className={`w-4 transition-transform ${
+                  infoDetailOpen ? "rotate-180" : "rotate-0"
+                }`}
+              />
+            </div>
+            {infoDetailOpen ? (
+              <motion.div
+                initial={{
+                  y: "10%",
+                  opacity: 0,
+                }}
+                animate={{
+                  y: "0",
+                  opacity: 1,
+                }}
+                transition={{
+                  ease: "linear",
+                  duration: 0.3,
+                }}
+                className="absolute -bottom-[133px] rounded-2xl  bg-white/95 backdrop-blur-sm flex flex-col gap-y-2 w-[97%] z-[551] px-3 py-4"
+              >
+                <div className="flex justify-start gap-x-2 items-center">
+                  <IconMapPin className="pr p-[2px]" />{" "}
+                  <p className="text-sm">Estiqlal Road Abushagara sharjah</p>
+                </div>
+                <div className="flex justify-start gap-x-2 items-center">
+                  <TimerIcon className="pr p-[2px]" />{" "}
+                  <p className="text-sm">Open 24 Hours</p>
+                </div>
+                <div className="flex justify-start gap-x-2 items-center">
+                  <Phone className="pr p-[2px]" />{" "}
+                  <p className="text-sm"> 0566651978, 0503626685</p>
+                </div>
+              </motion.div>
+            ) : null}
+          </div>
+        </nav>
+      </header>
+      {sideMenu ? (
+        <motion.div
+          initial={{
+            opacity: 0,
+            right: "-100%",
+          }}
+          animate={{
+            opacity: 1,
+            right: "0",
+          }}
+          transition={{
+            ease: "linear",
+            duration: 0.3,
+          }}
+          exit={{
+            opacity: 0,
+            right: "-100%",
+          }}
+          className="w-4/5 h-screen bg-white/80 backdrop-blur-md fixed top-0 right-0 z-30"
+        >
+          <div className="mt-14">
+            <ul>
+              {navItems.map((item, index) => (
+                <div
+                  key={index}
+                  className="pb block border-b mx-[2px]  px-4 py-3 transition-all font-semibold"
+                >
+                  {item?.sub ? (
+                    <>
+                      <div className="flex flex-col">
+                        <div className="flex gap-x-4 items-center">
+                          <Link
+                            className="active:text-[#287094]"
+                            href={item.link}
+                          >
+                            {item.name}
+                          </Link>{" "}
+                          <ChevronDown
+                            className={`w-6 h-6 transition-transform ${
+                              subServicesMenu ? "rotate-180" : "rotate-0"
+                            }`}
+                            onClick={() => setsubServicesMenu((prev) => !prev)}
+                          />
+                        </div>
+                        {subServicesMenu ? (
+                          <div className="w-full px-5 block transition-all duration-300">
+                            {subServices.map((ser, i) => (
+                              <Link
+                                href={ser.link}
+                                className="block font-normal my-1"
+                                key={i}
+                              >
+                                {ser.name}
+                              </Link>
+                            ))}
+                          </div>
+                        ) : null}
+                      </div>
+                    </>
+                  ) : (
+                    <Link href={item.link}> {item.name}</Link>
+                  )}
+                </div>
+              ))}
+            </ul>
+          </div>
+          <div className="mt-7 flex w-full justify-center">
+            <Button size={"lg"}>Contact Now</Button>
+          </div>
+          <Button
+            onClick={() => setSideMenu(false)}
+            className="absolute top-4 right-4"
+            variant={"secondary"}
+            size={"icon"}
+          >
+            <X />
+          </Button>
+        </motion.div>
+      ) : null}
+    </>
+  );
+}
+
+export default Navbar;
