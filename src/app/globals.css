@@ -60,6 +60,10 @@ p{
 .b-btn {
   background: -webkit-linear-gradient(45deg, #023246, #287094);
 }
+.csom {
+  color: #09adff;
+  background: #FA6450;
+}
 @layer base {
   :root {
     --background: 0 0% 100%;

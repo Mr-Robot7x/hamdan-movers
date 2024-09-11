@@ -1,5 +1,6 @@
 "use client";
 import "./globals.css";
+
 import { Amiri, Bodoni_Moda, Poppins } from "next/font/google";
 const poppins = Poppins({
   subsets: ["latin"],
@@ -20,8 +21,6 @@ const arabic = Amiri({
 const EngHeading = Bodoni_Moda({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
-  style: "normal",
-
   variable: "--heading",
 });
 import Script from "next/script";
@@ -31,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" dir="ltr" className="light">
+    <html lang="en" dir="" className="light">
       <body className=" dark:bg-gray-900">
         <div className="container px-[10px] h-full">
           <main className={`a`}>{children}</main>

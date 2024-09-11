@@ -7,7 +7,7 @@ import { HeartHandshake, LucideSettings2, PartyPopperIcon } from "lucide-react";
 function BrandingContent() {
   return (
     <>
-      <div className="md:w-11/12 w-full mt-5">
+      {/* <div className="md:w-11/12 w-full mt-5">
         <h2 className="text-center">
           <span className="t-grd">Top Trusted</span>
           <br />
@@ -22,42 +22,102 @@ function BrandingContent() {
 
         <div className="w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 mt-7 md:px-10 px-3">
           <div className="min-h-[70px] bg-gradient-to-b from-transparent via-[#69c5f4]/5 to-[#69c5f4]/10 rounded-2xl p-2 gap-y-1 flex flex-col items-center justify-center">
-            <IconTruckDelivery className="text-[#69c5f4]" />
-            <h3 className="font-[poppins] font-medium md:text-[20px] text-[18px] pb text-center">
-              Best Moving Services
-            </h3>
+            
           </div>
           <div className="min-h-[70px] bg-gradient-to-b from-transparent via-[#69c5f4]/5 to-[#69c5f4]/10  rounded-2xl p-2 gap-y-1 flex flex-col items-center justify-center">
-            <IconZoomMoney className="text-[#69c5f4]" />
-            <h3 className="font-[poppins] font-medium md:text-[20px] text-[18px] pb text-center">
-              No Hidden Charges
-            </h3>
+            
           </div>
           <div className="min-h-[70px] bg-gradient-to-b from-transparent via-[#69c5f4]/5 to-[#69c5f4]/10 rounded-2xl p-2 gap-y-1 flex flex-col items-center justify-center">
-            <PartyPopperIcon className="text-[#69c5f4]" />
-            <h3 className="font-[poppins] font-medium md:text-[20px] text-[18px] pb text-center">
-              Over 6+ Years Experience
-            </h3>
+            
           </div>
           <div className="min-h-[70px] bg-gradient-to-b from-transparent via-[#69c5f4]/5 to-[#69c5f4]/10 rounded-2xl p-2 gap-y-1 flex flex-col items-center justify-center">
-            <IconClock24 className="text-[#69c5f4]" />
-            <h3 className="font-[poppins] font-medium md:text-[20px] text-[18px] pb text-center">
-              24 Hours Availabe
-            </h3>
+            
           </div>
           <div className="min-h-[70px] bg-gradient-to-b from-transparent via-[#69c5f4]/5 to-[#69c5f4]/10 rounded-2xl p-2 gap-y-1 flex flex-col items-center justify-center">
-            <HeartHandshake className="text-[#69c5f4]" />
-            <h3 className="font-[poppins] font-medium md:text-[20px] text-[18px] pb text-center">
-              Friendly Staff
-            </h3>
+            
           </div>
           <div className="min-h-[70px] bg-gradient-to-b from-transparent via-[#69c5f4]/5 to-[#69c5f4]/10 rounded-2xl p-2 gap-y-1 flex flex-col items-center justify-center">
-            <LucideSettings2 className="text-[#69c5f4]" />
-            <h3 className="font-[poppins] font-medium md:text-[20px] text-[18px] pb text-center">
-              Personalized Service
-            </h3>
+            
           </div>
         </div>
+      </div> */}
+      <div className="w-full md:w-11/12 mt-5">
+        <section className="rounded-3xl md:py-16 py-10 md:px-10 px-1">
+          <div className="md:mr-3 container mx-auto flex flex-col md:flex-row items-center">
+            {/* Left Side - Image */}
+            <div className="md:w-1/2 flex order-2  justify-center">
+              <div className=" flex items-center justify-start px-8 rounded-3xl shadow-xl shadow-neutral-100 w-[420px] h-[450px]  bg-gradient-to-b from-yellow-50 via-white to-white">
+                <div className="flex flex-col md:gap-y-7 gap-y-5">
+                  <div className="flex gap-x-5 items-center">
+                    <IconTruckDelivery className="text-[#105572]" />
+                    <h3 className="font-[poppins] font-semibold md:text-[20px] text-[18px] text-black">
+                      Best Moving Services
+                    </h3>
+                  </div>
+                  <div className="flex gap-x-5 items-center">
+                    <IconZoomMoney className="text-[#105572]" />
+                    <h3 className="font-[poppins] font-semibold md:text-[20px] text-[18px] text-black">
+                      No Hidden Charges
+                    </h3>
+                  </div>
+                  <div className="flex gap-x-5 items-center">
+                    <PartyPopperIcon className="text-[#105572]" />
+                    <h3 className="font-[poppins] font-semibold md:text-[20px] text-[18px] text-black">
+                      Over 6+ Years Experience
+                    </h3>
+                  </div>
+                  <div className="flex gap-x-5 items-center">
+                    <IconClock24 className="text-[#105572]" />
+                    <h3 className="font-[poppins] font-semibold md:text-[20px] text-[18px] text-black">
+                      24 Hours Availabe
+                    </h3>
+                  </div>
+                  <div className="flex gap-x-5 items-center">
+                    <HeartHandshake className="text-[#105572]" />
+                    <h3 className="font-[poppins] font-semibold md:text-[20px] text-[18px] text-black">
+                      Friendly Staff
+                    </h3>
+                  </div>
+                  <div className="flex gap-x-5 items-center">
+                    <LucideSettings2 className="text-[#105572]" />
+                    <h3 className="font-[poppins] font-semibold md:text-[20px] text-[18px] text-black">
+                      Personalized Service
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Side - Content */}
+            <div className="order-1 md:-mt-0 -mt-20 p-4 md:w-1/2 md:pl-10 text-center md:text-left">
+              <h2 className="">
+                <span className="t-grd">Top Trusted </span>
+                Moving Company in Sharjah
+              </h2>
+              <p className="text-gray-600 mb-6 mt-2">
+                We provide top-tier moving services in Sharjah, backed by a
+                skilled team and the latest equipment. We value client feedback,
+                continuously improving our services to ensure safe, timely
+                moves. Count on us for a smooth, efficient relocation experience
+              </p>
+
+              <div className="flex justify-center md:justify-start space-x-4 mb-8">
+                <a
+                  href="#"
+                  className="bg-[#287094] text-white py-3 px-6 rounded-full hover:bg-blue-600 transition duration-300"
+                >
+                  Know More
+                </a>
+                <a
+                  href="#"
+                  className="bg-yellow-500 text-white py-3 px-6 rounded-full hover:bg-yellow-600 transition duration-300"
+                >
+                  Contact Us
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
       <div className="md:w-11/12 w-full mt-5">
         <h2>

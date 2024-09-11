@@ -2,6 +2,7 @@ import BrandingContent from "@/components/Home/BrandingContent";
 import Footer from "@/components/Home/Footer";
 import HeroSection from "@/components/Home/HeroSection";
 import OurServices from "@/components/Home/OurServices";
+import WhyChooseUs from "@/components/Home/WhyChooseUs";
 import Navbar from "@/components/Navbar";
 
 import React from "react";
@@ -17,6 +18,7 @@ function page() {
         <HeroSection />
         <BrandingContent />
         <OurServices />
+        <WhyChooseUs />
         <div className="h-screen bg-red-300 md:w-11/12 w-full"></div>
       </div>
 
