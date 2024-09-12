@@ -2,8 +2,10 @@ import BrandingContent from "@/components/Home/BrandingContent";
 import Footer from "@/components/Home/Footer";
 import HeroSection from "@/components/Home/HeroSection";
 import OurServices from "@/components/Home/OurServices";
+import PickUpRentalServices from "@/components/Home/PickUpRentalServices";
 import WhyChooseUs from "@/components/Home/WhyChooseUs";
 import Navbar from "@/components/Navbar";
+import WorkProcessSection from "@/components/Process";
 
 import React from "react";
 
@@ -19,6 +21,8 @@ function page() {
         <BrandingContent />
         <OurServices />
         <WhyChooseUs />
+        <PickUpRentalServices />
+        <WorkProcessSection />
         <div className="h-screen bg-red-300 md:w-11/12 w-full"></div>
       </div>
 

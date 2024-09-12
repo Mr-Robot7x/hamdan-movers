@@ -1,4 +1,5 @@
 "use client";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import "./globals.css";
 
 import { Amiri, Bodoni_Moda, Poppins } from "next/font/google";
@@ -35,8 +36,7 @@ export default function RootLayout({
         <div className="container px-[10px] h-full">
           <main className={`a`}>{children}</main>
         </div>
-
-        <Script src="/script.js"></Script>
+        <WhatsAppButton />
       </body>
     </html>
   );

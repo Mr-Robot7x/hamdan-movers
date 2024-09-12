@@ -49,8 +49,13 @@ p{
 .pb {
   @apply text-[#023246]
 }
+.ts{
+  text-shadow: 0 2px 3px rgba(0,0,0,0.2);
+  filter: hue-rotate();
+}
 .b-bg {
   background: #023246;
+
 }
 .t-grd {
   background: -webkit-linear-gradient(45deg, #023246, #69c5f4);
@@ -124,5 +129,28 @@ p{
 @layer base {
   * {
     @apply border-border;
+  }
+}
+.color-changing-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  background-color: #3498db;
+  /* Starting color */
+  transition: all 0.3s ease;
+  filter: hue-rotate(0deg);
+  animation: hue-rotation 5s infinite linear;
+}
+
+@keyframes hue-rotation {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    filter: hue-rotate(360deg);
   }
 }

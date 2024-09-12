@@ -9,7 +9,8 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "b-btn text-white",
+        default:
+          "bg-yellow-500 hover:bg-yellow-600 transition duration-300 text-white ts",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
@@ -18,13 +19,13 @@ const buttonVariants = cva(
           "bg-accent border border-transparent hover:border-neutral-300 transition-all",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 under hover:underline",
-        light: "b-light",
+        light: "bg-[#287094] text-white",
         white:
           "bg-white text-[#023246] hover:bg-[#287094] hover:text-white hover:border-transparent",
       },
       size: {
-        default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
+        default: "py-3 px-6 rounded-full",
+        sm: "py-2 px-4 rounded-full",
         lg: "h-11 rounded-md px-8",
         icon: "h-12 w-12 rounded-full",
       },

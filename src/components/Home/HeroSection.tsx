@@ -4,7 +4,7 @@ import heroImage from "../../../public/images/image001.png";
 import { Button } from "../ui/button";
 function HeroSection() {
   return (
-    <div className="relative md:w-11/12 w-full flex-wrap md:mt-14 mt-14 flex justify-evenly gap-y-8">
+    <div className="relative md:w-11/12 w-full flex-wrap md:mt-16 mt-14 items-center flex justify-evenly gap-y-8">
       <img
         src="/images/waves.png"
         alt="waves image"
@@ -13,11 +13,11 @@ function HeroSection() {
       <div className="md:basis-2/4 basis-full z-20">
         <h1 className="md:text-[55px]">
           <span className="t-grd">Hamdan</span>
-          <br /> Furniture Transport <br />
-          In Sharjah
+          <br /> Movers and Packers <br />
+          In Dubai
         </h1>
         <h3 className="mt-6 font-[poppins] font-medium">
-          Sharjah&apos;s No.1 Trusted Furniture Transportors
+          Dubai&apos;s No.1 Movers and Packers
         </h3>
         <p className="gr mt-3">
           For over 10 years, we’ve been the go-to movers and packers in Sharjah,

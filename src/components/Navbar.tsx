@@ -6,6 +6,8 @@ import { Button } from "./ui/button";
 import { IconMapPin, IconMenu2, IconPhone } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import { ChevronDown, Phone, TimerIcon, X } from "lucide-react";
+import Image from "next/image";
+import logo from "../../public/images/hamdan-mover-logo.png";
 function Navbar() {
   const [infoDetailOpen, setInfoDetailOpen] = useState(false);
   const [subServicesMenu, setsubServicesMenu] = useState(false);
@@ -13,16 +15,24 @@ function Navbar() {
   return (
     <>
       <header className="w-full flex justify-center z-[100]">
-        <nav className="flex justify-between items-center md:px-4 px-2 md:w-11/12 b-bg my-3 md:h-[72px] h-[65px] drop-shadow-xl rounded-lg w-full">
-          <div>
-            <h3 className="text-white">LOGO</h3>
+        <nav className="flex relative justify-between items-center md:px-4 px-2 md:w-11/12 bg-white my-3 md:h-[82px] h-[68px] shadow-2xl shadow-neutral-100 rounded-full w-full">
+          <div className="md:w-36 w-32 h-16 relative">
+            <Image
+              src={logo}
+              fill
+              placeholder="blur"
+              quality={100}
+              priority
+              className=" object-contain absolute"
+              alt="hamdan movers logo"
+            />
           </div>
           <div className="md:block hidden">
             <ul>
               {navItems.map((item, index) => (
                 <Link
                   key={index}
-                  className="inline-block text-white border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-lg active:scale-[0.98]"
+                  className="inline-block text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-3xl active:scale-[0.98]"
                   href={item.link}
                 >
                   {item.name}
@@ -31,22 +41,20 @@ function Navbar() {
             </ul>
           </div>
           <div className="flex gap-x-2 flex-row-reverse">
-            <Button className="md:block hidden" variant={"white"}>
-              Contact Now
-            </Button>
-            <div className="md:hidden flex items-center justify-center px-2 py-[6px] rounded-md active:scale-[0.98] transition-all bg-white">
+            <Button className="md:block hidden">Contact Now</Button>
+            <div className="md:hidden flex items-center justify-center px-2 py-[6px] rounded-md active:scale-[0.98] transition-all bg-yellow-500">
               <IconMenu2
-                className="pr"
+                className="text-white"
                 onClick={() => setSideMenu((prev) => !prev)}
               />
             </div>
             <div
               onClick={(e) => setInfoDetailOpen((prev) => !prev)}
-              className="md:hidden w-16 h-10 rounded-3xl flex items-center justify-between p-[6px] border border-neutral-200 text-white hover:border-white"
+              className="md:hidden w-16 h-10 rounded-3xl flex items-center justify-between p-[6px] border border-neutral-200 hover:border-neutral-300"
             >
-              <IconPhone />
+              <IconPhone className="pr" />
               <ChevronDown
-                className={`w-4 transition-transform ${
+                className={`w-4 pr transition-transform ${
                   infoDetailOpen ? "rotate-180" : "rotate-0"
                 }`}
               />
@@ -102,7 +110,7 @@ function Navbar() {
             opacity: 0,
             right: "-100%",
           }}
-          className="w-4/5 h-screen bg-white/80 backdrop-blur-md fixed top-0 right-0 z-30"
+          className="w-4/5 h-screen bg-white/80 backdrop-blur-md fixed top-0 right-0 z-[60]"
         >
           <div className="mt-14">
             <ul>
