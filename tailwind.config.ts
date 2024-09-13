@@ -19,7 +19,7 @@ const config = {
     },
     extend: {
       fontFamily: {
-        headings: ["var(--heading)"],
+        headings: ["var(--playfair)"],
         arabic: ["var(--arabic)"],
       },
       colors: {

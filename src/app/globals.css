@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -19,8 +20,7 @@ svg {
 h1,
 h2,
 h3 {
-  font-family: 'Bodoni_Moda';
-  font-weight: 700;
+ font-family: 'Playfair Display', sans-serif;
 }
 h4 {
   @apply md:text-[21px] text-[19px] md:leading-7 leading-6 font-medium
@@ -29,12 +29,15 @@ h1, h2, h3 {
   @apply tracking-wide  text-[#023246]
 }
 h1 {
+  font-weight: 600;
   @apply md:text-[45px] text-[38px] md:leading-[55px] leading-[42px]
 }
 h2 {
+  font-weight: 500;
   @apply md:text-[37px] text-[30px] leading-[35px] md:leading-10
 }
 h3 {
+  font-weight: 500;
   @apply md:text-[26px] text-[23px] leading-[27px] md:leading-7 text-black
 }
 p{

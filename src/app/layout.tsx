@@ -2,7 +2,7 @@
 import WhatsAppButton from "@/components/WhatsAppButton";
 import "./globals.css";
 
-import { Amiri, Bodoni_Moda, Poppins } from "next/font/google";
+import { Amiri, Poppins, Playfair_Display } from "next/font/google";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -19,12 +19,13 @@ const arabic = Amiri({
   variable: "--arabic",
 });
 
-const EngHeading = Bodoni_Moda({
+const playfair = Playfair_Display({
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--heading",
+  weight: ["400", "500", "600", "700"],
+  style: "normal",
+  display: "auto",
+  variable: "--playfair",
 });
-import Script from "next/script";
 export default function RootLayout({
   children,
 }: {
@@ -34,7 +35,7 @@ export default function RootLayout({
     <html lang="en" dir="" className="light">
       <body className=" dark:bg-gray-900">
         <div className="container px-[10px] h-full">
-          <main className={`a`}>{children}</main>
+          <main className={`a ${poppins.className}`}>{children}</main>
         </div>
         <WhatsAppButton />
       </body>
