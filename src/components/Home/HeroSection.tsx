@@ -14,7 +14,7 @@ function HeroSection() {
         <h1 className="md:text-[55px]">
           <span className="t-grd">Hamdan</span>
           <br /> Movers and Packers <br />
-          In Dubai
+          In UAE
         </h1>
         <h3 className="mt-6 font-[poppins] font-medium">
           Dubai&apos;s No.1 Movers and Packers

@@ -35,9 +35,11 @@ export default function RootLayout({
     <html lang="en" dir="" className="light">
       <body className=" dark:bg-gray-900">
         <div className="container px-[10px] h-full">
-          <main className={`a ${poppins.className}`}>{children}</main>
+          <main className={`a ${playfair.className} ${poppins.className}`}>
+            {children}
+          </main>
         </div>
-        <WhatsAppButton />
+        {/* <WhatsAppButton /> */}
       </body>
     </html>
   );

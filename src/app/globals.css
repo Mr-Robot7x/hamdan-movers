@@ -22,15 +22,29 @@ h2,
 h3 {
  font-family: 'Playfair Display', sans-serif;
 }
+h5 {
+  @apply tracking-wide text-black font-semibold text-[17px]
+}
 h4 {
   @apply md:text-[21px] text-[19px] md:leading-7 leading-6 font-medium
 }
 h1, h2, h3 {
   @apply tracking-wide  text-[#023246]
 }
+    ol.custom-symbol {
+      list-style-type: none;
+      /* Remove default numbering */
+    }
+  
+    ol.custom-symbol li::before {
+      content: "\2713";
+      /* Custom symbol, like a checkmark */
+      margin-right: 10px;
+      /* Space between symbol and text */
+    }
 h1 {
-  font-weight: 600;
-  @apply md:text-[45px] text-[38px] md:leading-[55px] leading-[42px]
+  
+  @apply md:text-[45px] font-semibold text-[35px] md:leading-[55px] leading-[42px]
 }
 h2 {
   font-weight: 500;
@@ -40,7 +54,7 @@ h3 {
   font-weight: 500;
   @apply md:text-[26px] text-[23px] leading-[27px] md:leading-7 text-black
 }
-p{
+p, li{
   @apply md:text-[16.5px] text-[15.5px] md:leading-6 leading-[22px] tracking-[0.5px] font-['poppins'] 
 }
 .gr {
