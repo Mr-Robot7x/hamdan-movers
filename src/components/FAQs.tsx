@@ -20,7 +20,7 @@ export function FAQs() {
         />
       </div>
       <h2 className="mt-5">Frequently Asked Questions</h2>
-      <div className="mt-5 w-full md:w-11/12">
+      <div className="mt-10 w-full md:w-11/12">
         <Accordion type="multiple" className="w-full">
           {faqs.map((faq, i) => (
             <AccordionItem key={i} value={faq.ques}>

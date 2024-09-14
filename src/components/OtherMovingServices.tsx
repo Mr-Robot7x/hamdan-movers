@@ -42,11 +42,11 @@ const HealthcareSlider: React.FC = () => {
     return () => clearInterval(interval); // Cleanup the interval on component unmount
   }, [currentIndex, slidesToShow]);
   return (
-    <div className="w-full max-w-6xl mx-auto p-4 relative">
+    <div className="w-full max-w-6xl mx-auto  md:p-4 p-0 relative">
       <h2 className=" mb-4">Other Moving Services</h2>
       <div className="overflow-hidden w-full">
         <div
-          className="flex transition-transform duration-500 py-3 px-5"
+          className="flex transition-transform duration-500 py-3 md:px-5 px-2"
           style={{
             transform: `translateX(-${(currentIndex * 100) / slidesToShow}%)`,
           }}
@@ -54,12 +54,12 @@ const HealthcareSlider: React.FC = () => {
           {cardData.map((card, index) => (
             <div key={index} className="min-w-[100%] md:min-w-[33.33%] p-2">
               <div className="p-4 border rounded-lg shadow-lg shadow-neutral-100 flex flex-col items-center">
-                <div className="w-80 h-48 bg-gray-100 rounded-lg relative">
+                <div className="md:w-80 w-[280px] h-48 bg-gray-100 rounded-lg relative">
                   <Image
                     alt={card.title}
                     src={card.imgSrc}
                     fill
-                    className="object-cover"
+                    className="object-cover rounded-lg"
                   />
                 </div>
                 <p className="mt-4 text-center text-lg">{card.title}</p>

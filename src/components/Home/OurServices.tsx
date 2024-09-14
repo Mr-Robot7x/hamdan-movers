@@ -13,7 +13,7 @@ function OurServices() {
         efficient, and tailored services to meet every client’s unique
         requirements.
       </p>
-      <div className="w-full mt-8 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
+      <div className="w-full mt-14 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
         {/* Local Moving */}
         <div className="shadow-xl shadow-neutral-200/50 border border-neutral-200 bg-white md:py-7 py-5 px-4 min-h-32 rounded-2xl">
           <div className="mb-1 flex w-full justify-center">

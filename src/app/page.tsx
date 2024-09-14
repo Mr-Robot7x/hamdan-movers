@@ -19,7 +19,7 @@ function page() {
       <Navbar />
       <div
         dir=""
-        className="w-full flex flex-col justify-center items-center gap-y-16"
+        className=" w-full flex flex-col justify-center items-center gap-y-16"
       >
         <HeroSection />
         <BrandingContent />

@@ -15,7 +15,7 @@ function Navbar() {
   return (
     <>
       <header className="w-full fixed left-0 flex justify-center z-[200]">
-        <nav className="flex  relative justify-between items-center md:px-4 px-2 md:w-11/12 bg-white my-3 mt-1 md:h-[82px] h-[68px] shadow-2xl shadow-neutral-200/80 rounded-full w-full">
+        <nav className="flex  relative justify-between items-center md:px-4 px-2 md:w-11/12 bg-white my-3 md:mt-1 mt-0 md:h-[82px] h-[68px] shadow-2xl shadow-neutral-200/80 md:rounded-full rounded-none w-full">
           <div className="md:w-36 w-32 h-16 relative">
             <Image
               src={logo}
@@ -110,7 +110,7 @@ function Navbar() {
             opacity: 0,
             right: "-100%",
           }}
-          className="w-4/5 h-screen bg-white/80 backdrop-blur-md fixed top-0 right-0 z-[60]"
+          className="w-4/5 h-screen bg-white/80 backdrop-blur-md fixed top-0 right-0 z-[201]"
         >
           <div className="mt-14">
             <ul>

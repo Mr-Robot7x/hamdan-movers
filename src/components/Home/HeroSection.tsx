@@ -4,7 +4,7 @@ import heroImage from "../../../public/images/image001.png";
 import { Button } from "../ui/button";
 function HeroSection() {
   return (
-    <div className="relative md:w-11/12 w-full flex-wrap md:mt-16 mt-14 items-center flex justify-evenly gap-y-8">
+    <div className="relative md:w-11/12 w-full flex-wrap md:mt-36 mt-28 items-center flex justify-evenly gap-y-8">
       <img
         src="/images/waves.png"
         alt="waves image"
