@@ -171,3 +171,73 @@ p, li{
     filter: hue-rotate(360deg);
   }
 }
+
+
+
+/* Card slider container */
+.slider-container {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Card wrapper */
+.slider-wrapper {
+  display: flex;
+  overflow: hidden;
+}
+
+/* Slider track */
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Card styling */
+.card {
+  min-width: 100%;
+  padding: 20px;
+  background-color: #fafafa;
+  border-radius: 10px;
+  text-align: left;
+}
+
+/* Card header for star ratings */
+.card-header {
+  margin-bottom: 10px;
+}
+
+/* Individual card body */
+.card-body {
+  display: flex;
+  align-items: center;
+}
+
+.card-description {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Slider buttons */
+
+
+/* Pagination dots */
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.slider-dots span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #888;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.slider-dots span.active {
+  background-color: #333;
+}
