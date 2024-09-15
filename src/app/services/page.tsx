@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import HealthcareSlider from "@/components/OtherMovingServices";
 
 import ServiceTopSection from "@/components/ServiceTopSection";
+import TestimonialSection from "@/components/Testimonials";
 import React from "react";
 
 function page() {
@@ -20,6 +21,7 @@ function page() {
         <Benifits />
         <OurServices />
         <HealthcareSlider />
+        <TestimonialSection />
       </div>
 
       <Footer />

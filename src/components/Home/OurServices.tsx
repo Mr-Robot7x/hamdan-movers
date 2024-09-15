@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 function OurServices() {
   return (
@@ -129,9 +130,11 @@ function OurServices() {
           </p>
           <div className="flex gap-x-3 w-full mt-5">
             <Button size={"sm"}>Book Now</Button>
-            <Button size={"sm"} variant={"secondary"}>
-              Service Details
-            </Button>
+            <Link href={"/services/local-residential-movers"}>
+              <Button size={"sm"} variant={"secondary"}>
+                Service Details
+              </Button>
+            </Link>
           </div>
         </div>
         {/* Commerical Moving */}
