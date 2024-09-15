@@ -8,7 +8,7 @@ function WhatsAppButton() {
       <div
         onClick={(e) => setOpen((p) => !p)}
         className="active:scale-[0.98] transition-all fixed p-3 bg-gradient-to-b from-white to-yellow-100 
-    drop-shadow-2xl rounded-full bottom-4 right-4 z-50"
+    drop-shadow-2xl rounded-full bottom-4 right-4 z-[500] "
       >
         <Image
           src={"/images/whatsapp-icon.png"}

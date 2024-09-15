@@ -14,7 +14,7 @@ function PerServiceSec({
   image: StaticImageData;
 }) {
   return (
-    <div className="w-full md:w-11/12 md:mt-[160px] mt-32">
+    <div className="w-full md:w-11/12 md:mt-[160px] mt-36">
       <div className="grid md:grid-cols-2 grid-cols-1 md:gap-x-4 gap-y-9 items-center md:ml-[60px]">
         <div className="min-h-40 ">
           <h1>{title}</h1>

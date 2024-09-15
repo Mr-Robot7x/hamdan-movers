@@ -1,21 +1,19 @@
 import Image from "next/image";
 import React from "react";
-import heroImage from "../../../public/images/image001.png";
+import heroImage from "../../../public/images/main-section-image.jpg";
 import { Button } from "../ui/button";
+import { useTranslations } from "next-intl";
 function HeroSection() {
+  const t = useTranslations("heroSection");
   return (
-    <div className="relative md:w-11/12 w-full flex-wrap md:mt-36 mt-28 items-center flex justify-evenly gap-y-8">
+    <div className="relative md:w-11/12 w-full flex-wrap md:mt-36 mt-32 items-center flex justify-evenly gap-y-8">
       <img
         src="/images/waves.png"
         alt="waves image"
         className="w-full z-10 absolute top-10 opacity-10 right-0"
       />
       <div className="md:basis-2/4 basis-full z-20">
-        <h1 className="md:text-[55px]">
-          <span className="t-grd">Hamdan</span>
-          <br /> Movers and Packers <br />
-          In UAE
-        </h1>
+        <h1 className="md:text-[55px]">{t("headingTitle")}</h1>
         <h3 className="mt-6 font-[poppins] font-medium">
           Dubai&apos;s No.1 Movers and Packers
         </h3>
@@ -29,15 +27,15 @@ function HeroSection() {
           <Button variant={"secondary"}>Our Services</Button>
         </div>
       </div>
-      <div className="z-20">
+      <div className=" md:w-[400px] w-80 h-80 md:h-[400px] relative z-20">
         <Image
           src={heroImage}
-          width={600}
-          height={600}
+          fill
           placeholder="blur"
           quality={80}
           alt="Hamdan movers"
-          className="drop-shadow-2xl w-[300px] h-auto"
+          className="drop-shadow-2xl object-cover"
+          style={{ borderRadius: "31% 69% 82% 18% / 30% 35% 65% 70% " }}
         />
       </div>
     </div>

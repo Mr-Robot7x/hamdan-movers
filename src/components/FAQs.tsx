@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/accordion";
 import faqsImage from "../../public/images/FAQs.png";
 import Image from "next/image";
-import { faqs } from "@/app/data";
+import { faqs } from "@/app/[locale]/data";
 export function FAQs() {
   return (
     <div className="w-full md:w-11/12 flex flex-col items-center justify-center">

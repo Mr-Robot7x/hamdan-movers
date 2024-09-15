@@ -44,7 +44,7 @@ h1, h2, h3 {
     }
 h1 {
   
-  @apply md:text-[45px] font-semibold text-[35px] md:leading-[55px] leading-[42px]
+  @apply md:text-[45px] font-semibold text-[35px] md:leading-[60px] leading-[42px]
 }
 h2 {
   font-weight: 500;

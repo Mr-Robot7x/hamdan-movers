@@ -1,5 +1,5 @@
 "use client";
-import { navItems, subServices } from "@/app/data";
+import { navItems, subServices } from "@/app/[locale]/data";
 import Link from "next/link";
 import React, { useState } from "react";
 import { Button } from "./ui/button";
