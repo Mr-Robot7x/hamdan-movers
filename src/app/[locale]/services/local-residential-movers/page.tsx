@@ -9,7 +9,10 @@ import ServiceHire from "@/components/ServiceHire";
 import PricingList from "@/components/PricingList";
 import ContactUs from "@/components/ContactForm";
 import ServiceMovingProcess from "@/components/ServiceMovingProcess";
-
+import initialConts from "../../../../../public/images/Initial-Consultation-icon.png";
+import packingIcon from "../../../../../public/images/packing-unpacking.png";
+import moveIcon from "../../../../../public/images/safe-transportation.png";
+import settingIcon from "../../../../../public/images/home-setting-icon.png";
 function LocalResidentailMovers() {
   return (
     <>
@@ -56,7 +59,30 @@ function LocalResidentailMovers() {
         <div className="-mt-10 flex justify-center">
           <PricingList />
         </div>
-        {/* <ServiceMovingProcess /> */}
+        <ServiceMovingProcess
+          boxs={[
+            {
+              heading: "Pre-Move Consultation",
+              desc: "Start your move with a personalized consultation. We assess your needs, address challenges, and provide a clear moving plan with a detailed estimate, ensuring no surprises.",
+              image: initialConts,
+            },
+            {
+              heading: "Packing and Preparation",
+              desc: "Our expert packers carefully handle and protect your items for the journey. Using top-quality packing materials and efficient techniques, we ensure everything is securely packed and ready for a smooth move.",
+              image: packingIcon,
+            },
+            {
+              heading: "The Move",
+              desc: "Our experienced moving team carefully loads your belongings into our trucks and ensures each item is handled with care throughout the entire journey, delivering everything safely to your new home",
+              image: moveIcon,
+            },
+            {
+              heading: "Unpacking and Settling In",
+              desc: "Upon arrival at your new home, we'll assist with unpacking and setting up your space, ensuring everything is placed according to your preferences for a smooth transition and immediate comfort.",
+              image: settingIcon,
+            },
+          ]}
+        />
       </div>
 
       <Footer />
