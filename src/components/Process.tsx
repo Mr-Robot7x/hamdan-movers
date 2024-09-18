@@ -7,7 +7,7 @@ const WorkProcessSection: React.FC = () => {
       <section className="work-process-section">
         <div className="container mx-auto text-center">
           <h2 className="text-xl font-bold text-gray-800">
-            <span className="text-yellow-500">Work Process</span>
+            <span className="text-[#FF5F00]">Work Process</span>
           </h2>
           <h2 className=" my-4">Our Moving Process</h2>
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 mt-12">

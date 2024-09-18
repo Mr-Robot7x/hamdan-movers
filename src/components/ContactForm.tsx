@@ -160,8 +160,8 @@ const ContactUs: React.FC = () => {
                         <SelectItem value="Local Moving Services">
                           Local Moving Services
                         </SelectItem>
-                        <SelectItem value="Commerical Moving Services">
-                          Commerical Moving Services
+                        <SelectItem value="Commercial  Moving Services">
+                          Commercial Moving Services
                         </SelectItem>
                         <SelectItem value="Packing and Unpacking">
                           Packing and Unpacking
@@ -237,7 +237,7 @@ const ContactUs: React.FC = () => {
           <div className="space-y-14">
             {/* Item */}
             <div className="flex gap-x-5">
-              <IconLocationPin className="text-yellow-500" />
+              <IconLocationPin className="text-[#FF5F00]" />
               <div>
                 <h3 className="font-semibold font-[poppins] text-lg text-black">
                   Office
@@ -251,7 +251,7 @@ const ContactUs: React.FC = () => {
 
             {/* Item */}
             <div className="flex gap-x-5">
-              <PhoneForwardedIcon className="text-yellow-500" />
+              <PhoneForwardedIcon className="text-[#FF5F00]" />
               <div>
                 <h3 className="font-semibold font-[poppins] text-lg text-black">
                   Phone
@@ -263,7 +263,7 @@ const ContactUs: React.FC = () => {
 
             {/* Item */}
             <div className="flex gap-x-5">
-              <MailsIcon className="text-yellow-500" />
+              <MailsIcon className="text-[#FF5F00]" />
               <div>
                 <h3 className="font-semibold font-[poppins] text-lg text-black">
                   Email
@@ -272,7 +272,7 @@ const ContactUs: React.FC = () => {
               </div>
             </div>
             <div className="flex gap-x-5">
-              <IconHours24 className="text-yellow-500" />
+              <IconHours24 className="text-[#FF5F00]" />
               <div>
                 <h3 className="font-semibold font-[poppins] text-lg text-black">
                   Opening Hours

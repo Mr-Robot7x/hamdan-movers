@@ -9,7 +9,7 @@ function PricingList() {
         <div className="md:ml-9 container mx-auto flex flex-col md:flex-row items-center justify-center">
           {/* Right Side - Content */}
           <div className="md:-mr-28 md:-mt-0 z-20 rounded-lg shadow-lg shadow-neutral-100 bg-white p-4 md:w-1/2 md:pl-10 text-center md:text-left">
-            <h3 className="text-yellow-500 text-sm uppercase font-bold mb-2">
+            <h3 className="text-[#FF5F00] text-sm uppercase font-bold mb-2">
               Our Pricing
             </h3>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">

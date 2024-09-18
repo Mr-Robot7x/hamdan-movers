@@ -32,17 +32,62 @@ function Navbar() {
               {navItems.map((item, index) => (
                 <Link
                   key={index}
-                  className="inline-block text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-3xl active:scale-[0.98]"
+                  className={`font-[poppins] inline-block text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-3xl active:scale-[0.98] relative ${
+                    index === 1 || index === 3 ? "group" : ""
+                  }`}
                   href={item.link}
                 >
                   {item.name}
+                  {index === 1 && (
+                    <>
+                      <div className="hidden group-hover:block w-96 bg-white drop-shadow-2xl h-auto absolute -bottom-[285px] left-0 rounded-3xl">
+                        <ul className="p-4">
+                          {subServices.map((sub, i) => (
+                            <Link
+                              key={i}
+                              className="block text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-3xl active:scale-[0.98] relative"
+                              href={sub.link}
+                            >
+                              {sub.name}
+                            </Link>
+                          ))}
+                        </ul>
+                      </div>
+                    </>
+                  )}
+                  {index === 3 && (
+                    <>
+                      <div className="hidden group-hover:block w-96 bg-white drop-shadow-2xl h-auto absolute -bottom-40 left-0 rounded-3xl">
+                        <ul className="p-4">
+                          <Link
+                            className="block text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-3xl active:scale-[0.98] relative"
+                            href={"/"}
+                          >
+                            Dubai
+                          </Link>
+                          <Link
+                            className="block text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-3xl active:scale-[0.98] relative"
+                            href={"/"}
+                          >
+                            Sharjah
+                          </Link>
+                          <Link
+                            className="block text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-3xl active:scale-[0.98] relative"
+                            href={"/"}
+                          >
+                            Ajman
+                          </Link>
+                        </ul>
+                      </div>
+                    </>
+                  )}
                 </Link>
               ))}
             </ul>
           </div>
           <div className="flex gap-x-2 flex-row-reverse">
             <Button className="md:block hidden">Contact Now</Button>
-            <div className="md:hidden flex items-center justify-center px-2 py-[6px] rounded-md active:scale-[0.98] transition-all bg-yellow-500">
+            <div className="md:hidden flex items-center justify-center px-2 py-[6px] rounded-md active:scale-[0.98] transition-all bg-[#FF5F00]">
               <IconMenu2
                 className="text-white"
                 onClick={() => setSideMenu((prev) => !prev)}

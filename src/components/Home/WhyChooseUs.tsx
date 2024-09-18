@@ -23,7 +23,7 @@ const WhyChooseUs: React.FC = () => {
 
             {/* Right Side - Content */}
             <div className="md:-ml-28 md:-mt-0 z-20 -mt-20 rounded-lg shadow-lg shadow-neutral-100 bg-white p-4 md:w-1/2 md:pl-10 text-center md:text-left">
-              <h3 className="text-yellow-500 text-sm uppercase font-bold mb-2">
+              <h3 className="text-[#FF5F00] text-sm uppercase font-bold mb-2">
                 Why Choose Us
               </h3>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -45,7 +45,7 @@ const WhyChooseUs: React.FC = () => {
                 </a>
                 <a
                   href="#"
-                  className="bg-yellow-500 text-white py-3 px-6 rounded-full hover:bg-yellow-600 transition duration-300"
+                  className="bg-[#FF5F00] text-white py-3 px-6 rounded-full hover:bg-yellow-600 transition duration-300"
                 >
                   Contact Us
                 </a>

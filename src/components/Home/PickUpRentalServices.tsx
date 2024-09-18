@@ -2,6 +2,8 @@ import React from "react";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import imSrc from "../../../public/images/commercial-delivery-trucks-hamdan.png";
+import Link from "next/link";
+import { PhoneOutgoingIcon } from "lucide-react";
 function PickUpRentalServices() {
   return (
     <>
@@ -20,11 +22,19 @@ function PickUpRentalServices() {
               range of pickups tailored to meet your transportation needs,
               ensuring a smooth and hassle-free experience. Whether you&apos;re
               moving items or transporting goods, our diverse fleet is ready to
-              serve you
+              serve you.
             </p>
-            <div className="flex gap-x-3 mt-5">
-              <Button variant={"light"}>See More</Button>
-              <Button>Contact Now</Button>
+            <div className="flex md:flex-row flex-col gap-y-3 md:gap-x-3 mt-5">
+              <Link href={"tel:+971 56 6651978"}>
+                <Button>
+                  +971 56 6651978 <PhoneOutgoingIcon className="w-5 h-5 ml-2" />
+                </Button>
+              </Link>
+              <Link href={"tel:+971 50 3626685"}>
+                <Button variant={"light"}>
+                  +971 50 3626685 <PhoneOutgoingIcon className="w-5 h-5 ml-2" />
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="relative h-72 w-full rounded-2xl">
@@ -55,13 +65,17 @@ function PickUpRentalServices() {
             space while remaining easy to drive and park, making it perfect for
             quick jobs around the city.
           </p>
-          <div className="mt-3 flex gap-x-3">
-            <Button variant={"light"} size={"sm"}>
-              Call Now
-            </Button>
-            <Button variant={"secondary"} size={"sm"}>
-              More Details
-            </Button>
+          <div className="flex md:flex-row flex-col gap-y-3 md:gap-x-3 mt-5">
+            <Link href={"tel:+971 56 6651978"}>
+              <Button>
+                +971 56 6651978 <PhoneOutgoingIcon className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
+            <Link href={"tel:+971 50 3626685"}>
+              <Button variant={"light"}>
+                +971 50 3626685 <PhoneOutgoingIcon className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
           </div>
         </div>
         <div className="md:w-3/4 w-full mt-3 shadow-xl shadow-neutral-200/50 border border-neutral-200 bg-white md:p-5 py-4 px-3 rounded-3xl">
@@ -74,13 +88,17 @@ function PickUpRentalServices() {
             goods, this is the ideal choice. Spacious and durable, it&apos;s
             designed to handle heavy loads with ease.
           </p>
-          <div className="mt-3 flex gap-x-3">
-            <Button variant={"light"} size={"sm"}>
-              Call Now
-            </Button>
-            <Button variant={"secondary"} size={"sm"}>
-              More Details
-            </Button>
+          <div className="flex md:flex-row flex-col gap-y-3 md:gap-x-3 mt-5">
+            <Link href={"tel:+971 56 6651978"}>
+              <Button>
+                +971 56 6651978 <PhoneOutgoingIcon className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
+            <Link href={"tel:+971 50 3626685"}>
+              <Button variant={"light"}>
+                +971 50 3626685 <PhoneOutgoingIcon className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

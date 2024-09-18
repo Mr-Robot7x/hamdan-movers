@@ -8,40 +8,6 @@ import { Button } from "../ui/button";
 function BrandingContent() {
   return (
     <>
-      {/* <div className="md:w-11/12 w-full mt-5">
-        <h2 className="text-center">
-          <span className="t-grd">Top Trusted</span>
-          <br />
-          Moving Company in Sharjah
-        </h2>
-        <p className="text-center mt-5 md:text-[19px] md:leading-7">
-          Looking for cheap and reliable Movers in Sharjah, accept nothing but
-          the best. Proudly introducing ourselves as Sharjah’s No.1 Trusted
-          Movers and Packers, we ensure every move feels like a breeze, From
-          packaging to transportation.
-        </p>
-
-        <div className="w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 mt-7 md:px-10 px-3">
-          <div className="min-h-[70px] bg-gradient-to-b from-transparent via-[#69c5f4]/5 to-[#69c5f4]/10 rounded-2xl p-2 gap-y-1 flex flex-col items-center justify-center">
-            
-          </div>
-          <div className="min-h-[70px] bg-gradient-to-b from-transparent via-[#69c5f4]/5 to-[#69c5f4]/10  rounded-2xl p-2 gap-y-1 flex flex-col items-center justify-center">
-            
-          </div>
-          <div className="min-h-[70px] bg-gradient-to-b from-transparent via-[#69c5f4]/5 to-[#69c5f4]/10 rounded-2xl p-2 gap-y-1 flex flex-col items-center justify-center">
-            
-          </div>
-          <div className="min-h-[70px] bg-gradient-to-b from-transparent via-[#69c5f4]/5 to-[#69c5f4]/10 rounded-2xl p-2 gap-y-1 flex flex-col items-center justify-center">
-            
-          </div>
-          <div className="min-h-[70px] bg-gradient-to-b from-transparent via-[#69c5f4]/5 to-[#69c5f4]/10 rounded-2xl p-2 gap-y-1 flex flex-col items-center justify-center">
-            
-          </div>
-          <div className="min-h-[70px] bg-gradient-to-b from-transparent via-[#69c5f4]/5 to-[#69c5f4]/10 rounded-2xl p-2 gap-y-1 flex flex-col items-center justify-center">
-            
-          </div>
-        </div>
-      </div> */}
       <div className="w-full md:w-11/12 mt-5">
         <section className="rounded-3xl md:py-16 pt-10  md:px-10 px-0">
           <div className="md:mr-3 container mx-auto flex flex-col md:flex-row items-center">

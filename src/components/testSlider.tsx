@@ -56,7 +56,7 @@ const CardSlider: React.FC<CardSliderProps> = ({
       <span
         key={index}
         className={`inline-block ${
-          index < rating ? "text-yellow-500" : "text-gray-300"
+          index < rating ? "text-[#FF5F00] " : "text-gray-300"
         }`}
       >
         ★

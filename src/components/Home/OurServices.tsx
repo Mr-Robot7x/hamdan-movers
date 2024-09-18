@@ -137,7 +137,7 @@ function OurServices() {
             </Link>
           </div>
         </div>
-        {/* Commerical Moving */}
+        {/* Commercial  Moving */}
         <div className="shadow-xl shadow-neutral-200/50 border border-neutral-200 bg-white md:py-7 py-5 px-4 min-h-32 rounded-2xl">
           <div className="mb-1 flex w-full justify-center">
             <svg
@@ -348,16 +348,18 @@ function OurServices() {
               </g>
             </svg>
           </div>
-          <h4 className="text-center mt-2">Commerical Moving Services</h4>
+          <h4 className="text-center mt-2">Commercial Moving Services</h4>
           <p className="gr md:leading-5 mt-1 text-[15.3px] text-center">
             We handle every detail of your office relocation, minimizing
             downtime and ensuring a smooth, efficient commercial move.
           </p>
           <div className="flex gap-x-3 w-full mt-5">
             <Button size={"sm"}>Book Now</Button>
-            <Button size={"sm"} variant={"secondary"}>
-              Service Details
-            </Button>
+            <Link href={"/services/Commercial -office-movers"}>
+              <Button size={"sm"} variant={"secondary"}>
+                Service Details
+              </Button>
+            </Link>
           </div>
         </div>
         {/* Packing and Unpacking */}

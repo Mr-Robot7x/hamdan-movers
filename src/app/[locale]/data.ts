@@ -9,13 +9,14 @@ export const navItems: { name: string; link: string; sub?: boolean }[] = [
     sub: true,
   },
   {
-    name: "Google Reviews",
-    link: "/google-reviews",
-  },
-  {
-    name: "News",
+    name: "Rent Services",
     link: "/news",
   },
+  {
+    name: "Moving Locations",
+    link: "/google-reviews",
+  },
+
   {
     name: "About Us",
     link: "/about-us",
@@ -32,8 +33,8 @@ export const subServices: { name: string; link: string }[] = [
     link: "/services/local-moving",
   },
   {
-    name: "Commerical Moving",
-    link: "/services/commerical-moving",
+    name: "Commercial  Moving",
+    link: "/services/Commercial -moving",
   },
   {
     name: "Packing and Unpacking",
