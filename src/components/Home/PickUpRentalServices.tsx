@@ -2,8 +2,10 @@ import React from "react";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import imSrc from "../../../public/images/commercial-delivery-trucks-hamdan.png";
+import truck2 from "../../../public/images/3-tom.jpg";
+import truck1 from "../../../public/images/1.5-ton-truck.jpg";
 import Link from "next/link";
-import { PhoneOutgoingIcon } from "lucide-react";
+import { PhoneForwardedIcon, PhoneOutgoingIcon } from "lucide-react";
 function PickUpRentalServices() {
   return (
     <>
@@ -55,50 +57,60 @@ function PickUpRentalServices() {
             your needs
           </h2>
         </div>
-        <div className="md:w-3/4 w-full mt-7 shadow-xl shadow-neutral-200/50 border border-neutral-200 bg-white md:p-5 py-4 px-3 rounded-3xl">
-          <h3 className="font-[poppins] font-medium mb-2">
-            1.5 Ton Pickup Truck For Rent
-          </h3>
-          <p>
-            The 1.5-ton Pickup Truck is ideal for small to medium tasks, like
-            moving a fridge, sofa, or a one-bedroom apartment. It offers ample
-            space while remaining easy to drive and park, making it perfect for
-            quick jobs around the city.
-          </p>
-          <div className="flex md:flex-row flex-col gap-y-3 md:gap-x-3 mt-5">
-            <Link href={"tel:+971 56 6651978"}>
-              <Button>
-                +971 56 6651978 <PhoneOutgoingIcon className="w-5 h-5 ml-2" />
-              </Button>
-            </Link>
-            <Link href={"tel:+971 50 3626685"}>
-              <Button variant={"light"}>
-                +971 50 3626685 <PhoneOutgoingIcon className="w-5 h-5 ml-2" />
-              </Button>
-            </Link>
+        <div className="w-full grid lg:grid-flow-col md:grid-flow-row grid-flow-row md:grid-col-2 md:gap-x-8 gap-y-8 md:px-24 mt-8">
+          <div className="min-h-32 bg-neutral-50 border border-neutral-200 rounded-3xl flex items-center flex-col py-4 px-2">
+            <div className="relative md:w-[450px] w-[327px] bg-gradient-to-t from-slate-100 to-slate-300 h-64 rounded-2xl">
+              <Image
+                alt={"long term storage"}
+                src={truck1}
+                placeholder="blur"
+                fill
+                className="object-cover rounded-2xl"
+              />
+            </div>
+            <h3 className="font-[poppins] text-center mt-5 mb-1">
+              1.5 Ton Pickup Truck Rental <br /> in UAE
+            </h3>
+            <p className="mt-2 md:px-3">
+              Need reliable transportation for home, office, or goods
+              relocation? Rent our 1.5 ton pickup truck in UAE for safe, easy,
+              and hassle-free moves. With competitive pricing and top-notch
+              service, we ensure your items are transported smoothly every time.
+            </p>
+            <div className="w-full flex gap-x-3 mt-5 justify-center">
+              <Link href={"tel:+971545019655"}>
+                <Button variant={"light"} className="flex gap-x-2">
+                  <PhoneForwardedIcon className="w-5 h-5" /> +971 54 501 9655
+                </Button>
+              </Link>
+            </div>
           </div>
-        </div>
-        <div className="md:w-3/4 w-full mt-3 shadow-xl shadow-neutral-200/50 border border-neutral-200 bg-white md:p-5 py-4 px-3 rounded-3xl">
-          <h3 className="font-[poppins] font-medium mb-2">
-            3 Ton Pickup Truck For Rent
-          </h3>
-          <p>
-            Our largest truck is built for big projects. Whether you&apos;re
-            moving the contents of an entire house or transporting commercial
-            goods, this is the ideal choice. Spacious and durable, it&apos;s
-            designed to handle heavy loads with ease.
-          </p>
-          <div className="flex md:flex-row flex-col gap-y-3 md:gap-x-3 mt-5">
-            <Link href={"tel:+971 56 6651978"}>
-              <Button>
-                +971 56 6651978 <PhoneOutgoingIcon className="w-5 h-5 ml-2" />
-              </Button>
-            </Link>
-            <Link href={"tel:+971 50 3626685"}>
-              <Button variant={"light"}>
-                +971 50 3626685 <PhoneOutgoingIcon className="w-5 h-5 ml-2" />
-              </Button>
-            </Link>
+          <div className="min-h-32 bg-neutral-50 border border-neutral-200 rounded-3xl flex items-center col-span-1 flex-col py-4 px-2">
+            <div className="relative md:w-[450px] w-[327px] bg-gradient-to-t from-slate-100 to-slate-300 h-64 rounded-2xl">
+              <Image
+                alt={"long term storage"}
+                src={truck2}
+                placeholder="blur"
+                fill
+                className="object-cover rounded-2xl"
+              />
+            </div>
+            <h3 className="font-[poppins] text-center mt-5 mb-1">
+              3 Ton Pickup Truck for rent <br /> in UAE
+            </h3>
+            <p className="mt-2 md:px-3">
+              For seamless transportation of heavy cargo, home relocations, or
+              office moves, rent our 3 ton pickup in UAE. We offer comprehensive
+              services, including loading and unloading, ensuring stress-free
+              and secure delivery of your belongings to their destination.
+            </p>
+            <div className="w-full flex gap-x-3 mt-5 justify-center">
+              <Link href={"tel:+971503626685"}>
+                <Button className="flex gap-x-2">
+                  <PhoneForwardedIcon className="w-5 h-5" /> +971 503626685
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

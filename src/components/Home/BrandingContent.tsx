@@ -75,26 +75,6 @@ function BrandingContent() {
           </div>
         </section>
       </div>
-      <div className="md:w-11/12 w-full mt-5">
-        <h2>
-          Why Choose Local Movers <br />
-          In Sharjah ?
-        </h2>
-        <div className="md:px-10 mt-4">
-          <p className="md:text-[19px] md:leading-7">
-            Moving in Sharjah? Local movers like us can help a lot. We know
-            Sharjah’s roads and rules really well. This means we can move your
-            stuff quickly without problems.
-          </p>
-          <p className="md:text-[19px] md:leading-7">
-            When you pick us for your move, you’re using experts who know the
-            city inside out. We can handle surprises easily because we’re close
-            by. Many people in Sharjah trust us. Plus, if you’re not moving far,
-            we can save you money. Choose us, and your move will be easy and
-            affordable.
-          </p>
-        </div>
-      </div>
     </>
   );
 }

@@ -1,28 +1,36 @@
 "use client";
 import { navItems, subServices } from "@/app/[locale]/data";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "./ui/button";
-import { IconMapPin, IconMenu2, IconPhone } from "@tabler/icons-react";
+import {
+  IconBrandWhatsapp,
+  IconMailFast,
+  IconMapPin,
+  IconMenu2,
+  IconPhone,
+} from "@tabler/icons-react";
 import { motion } from "framer-motion";
-import { ChevronDown, Phone, TimerIcon, X } from "lucide-react";
+import { ChevronDown, MapPin, Phone, TimerIcon, X } from "lucide-react";
 import Image from "next/image";
 import logo from "../../public/images/hamdan-mover-logo.png";
 function Navbar() {
   const [infoDetailOpen, setInfoDetailOpen] = useState(false);
   const [subServicesMenu, setsubServicesMenu] = useState(false);
   const [sideMenu, setSideMenu] = useState(false);
+
   return (
     <>
-      <header className="w-full fixed left-0 flex justify-center z-[200]">
-        <nav className="flex  relative justify-between items-center md:px-4 px-2 md:w-11/12 bg-white my-3 md:mt-1 mt-0 md:h-[82px] h-[68px] shadow-2xl shadow-neutral-200/80 md:rounded-full rounded-none w-full">
-          <div className="md:w-36 w-32 h-16 relative">
+      <header className="w-full fixed left-0 flex flex-col items-center justify-center z-[200]">
+        <nav className="border flex relative justify-between items-center md:px-4 px-2 md:w-11/12 bg-white my-3 md:mt-1 mt-0 md:h-[82px] h-[68px] shadow-2xl shadow-neutral-200/80 md:rounded-full rounded-none w-full">
+          <div className="md:w-36 w-[120px] h-14 relative">
             <Image
               src={logo}
               fill
               placeholder="blur"
               quality={100}
               priority
+              sizes="100"
               className=" object-contain absolute"
               alt="hamdan movers logo"
             />
@@ -30,14 +38,18 @@ function Navbar() {
           <div className="md:block hidden">
             <ul>
               {navItems.map((item, index) => (
-                <Link
+                <div
                   key={index}
-                  className={`font-[poppins] inline-block text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-3xl active:scale-[0.98] relative ${
+                  className={`inline-block relative ${
                     index === 1 || index === 3 ? "group" : ""
                   }`}
-                  href={item.link}
                 >
-                  {item.name}
+                  <Link
+                    className={`font-[poppins] text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-3xl active:scale-[0.98]`}
+                    href={item.link}
+                  >
+                    {item.name}
+                  </Link>
                   {index === 1 && (
                     <>
                       <div className="hidden group-hover:block w-96 bg-white drop-shadow-2xl h-auto absolute -bottom-[285px] left-0 rounded-3xl">
@@ -81,7 +93,7 @@ function Navbar() {
                       </div>
                     </>
                   )}
-                </Link>
+                </div>
               ))}
             </ul>
           </div>

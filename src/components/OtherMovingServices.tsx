@@ -48,21 +48,23 @@ const HealthcareSlider: React.FC = () => {
         <div
           className="flex transition-transform duration-500 py-3 md:px-5 px-2"
           style={{
-            transform: `translateX(-${(currentIndex * 100) / slidesToShow}%)`,
+            transform: `translateX(-${(currentIndex * 95) / slidesToShow}%)`,
           }}
         >
           {cardData.map((card, index) => (
             <div key={index} className="min-w-[100%] md:min-w-[33.33%] p-2">
               <div className="p-4 border rounded-lg shadow-lg shadow-neutral-100 flex flex-col items-center">
-                <div className="md:w-80 w-[280px] h-48 bg-gray-100 rounded-lg relative">
+                <div className="md:w-80 w-[280px] h-48 bg-gray-100 rounded-lg relative overflow-hidden">
                   <Image
                     alt={card.title}
                     src={card.imgSrc}
                     fill
-                    className="object-cover rounded-lg"
+                    className="object-cover rounded-lg shadow-xl transition-transform hover:scale-105"
                   />
                 </div>
-                <p className="mt-4 text-center text-lg">{card.title}</p>
+                <p className="mt-4 text-center text-lg font-semibold">
+                  {card.title}
+                </p>
               </div>
             </div>
           ))}
