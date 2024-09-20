@@ -355,7 +355,7 @@ function OurServices() {
           </p>
           <div className="flex gap-x-3 w-full mt-5">
             <Button size={"sm"}>Book Now</Button>
-            <Link href={"/services/Commercial -office-movers"}>
+            <Link href={"/services/commerical-office-movers"}>
               <Button size={"sm"} variant={"secondary"}>
                 Service Details
               </Button>
@@ -529,9 +529,11 @@ function OurServices() {
           </p>
           <div className="flex gap-x-3 w-full mt-5">
             <Button size={"sm"}>Book Now</Button>
-            <Button size={"sm"} variant={"secondary"}>
-              Service Details
-            </Button>
+            <Link href={"/services/packing-services"}>
+              <Button size={"sm"} variant={"secondary"}>
+                Service Details
+              </Button>
+            </Link>
           </div>
         </div>
         {/* Storage Soluations */}
@@ -690,9 +692,11 @@ function OurServices() {
           </p>
           <div className="flex gap-x-3 w-full mt-5">
             <Button size={"sm"}>Book Now</Button>
-            <Button size={"sm"} variant={"secondary"}>
-              Service Details
-            </Button>
+            <Link href={"/services/storage-services"}>
+              <Button size={"sm"} variant={"secondary"}>
+                Service Details
+              </Button>
+            </Link>
           </div>
         </div>
         {/* Specialty moving */}
@@ -886,9 +890,11 @@ function OurServices() {
           </p>
           <div className="flex gap-x-3 w-full mt-5">
             <Button size={"sm"}>Book Now</Button>
-            <Button size={"sm"} variant={"secondary"}>
-              Service Details
-            </Button>
+            <Link href={"/services/speciality-moving"}>
+              <Button size={"sm"} variant={"secondary"}>
+                Service Details
+              </Button>
+            </Link>
           </div>
         </div>
         {/* International Moving */}
@@ -989,9 +995,11 @@ function OurServices() {
           </p>
           <div className="flex gap-x-3 w-full mt-5">
             <Button size={"sm"}>Book Now</Button>
-            <Button size={"sm"} variant={"secondary"}>
-              Service Details
-            </Button>
+            <Link href={"/services/international-moving"}>
+              <Button size={"sm"} variant={"secondary"}>
+                Service Details
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

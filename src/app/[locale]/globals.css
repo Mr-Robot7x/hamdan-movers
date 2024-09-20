@@ -20,7 +20,7 @@ svg {
 h1,
 h2,
 h3 {
- font-family: 'Playfair Display', sans-serif;
+ font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
 }
 h5 {
   @apply tracking-wide text-black font-semibold text-[17px]

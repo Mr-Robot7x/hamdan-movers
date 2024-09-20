@@ -19,11 +19,11 @@ function ServiceDetails({
             key={i}
             className="min-h-32 bg-white shadow-lg shadow-neutral-100 border border-neutral-200 py-4 px-3 rounded-2xl"
           >
-            <h3 className="font-[poppins] font-medium md:text-[21px] md:leading-6 text-center mb-1">
+            <h3 className="font-[poppins] font-medium md:text-[21px]  md:leading-6 text-center mb-1">
               {box.heading}
             </h3>
             <div className="w-full h-px bg-neutral-100 px-10"></div>
-            <p className="text-[15.2px] text-center mt-2">{box.desc}</p>
+            <p className="text-[15.2px] text-center mt-2 gr">{box.desc}</p>
           </div>
         ))}
       </div>

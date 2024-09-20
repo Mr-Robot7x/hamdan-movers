@@ -1,7 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import React from "react";
 import { Button } from "./ui/button";
-import serviceImage from "../../public/images/services-image.jpg";
 function PerServiceSec({
   title,
   subTitle,

@@ -10,11 +10,11 @@ export const navItems: { name: string; link: string; sub?: boolean }[] = [
   },
   {
     name: "Rent Services",
-    link: "/news",
+    link: "/pickup-rental-trucks",
   },
   {
     name: "Moving Locations",
-    link: "/google-reviews",
+    link: "/services-locations",
   },
 
   {
@@ -34,19 +34,19 @@ export const subServices: { name: string; link: string }[] = [
   },
   {
     name: "Commercial  Moving",
-    link: "/services/Commercial -moving",
+    link: "/services/commerical-office-movers",
   },
   {
     name: "Packing and Unpacking",
-    link: "/services/packing-and-unpacking",
+    link: "/services/packing-services",
   },
   {
     name: "Storage Soluations",
-    link: "/services/storage-soluations",
+    link: "/services/storage-services",
   },
   {
     name: "Specialty Moving",
-    link: "/services/specialty-moving",
+    link: "/services/speciality-moving",
   },
   {
     name: "International Moving",

@@ -1,6 +1,16 @@
 {
   "heroSection": {
     "headingTitle": "Hamdan Movers And Packers In UAE",
-    "SubTitle": "UAE's No.1 Movers and Packers"
+    "SubTitle": "UAE's No.1 Movers and Packers",
+    "description": "For over 6 years, Hamdan Movers and Packers is your trusted partner for seamless moving solutions in the UAE. We offer a comprehensive range of services, including local and international moving, packing, storage, and specialty moving. Whether you're relocating your home, office, or commercial space, our experienced team ensures a hassle-free and efficient transition."
+  },
+  "buttons": {
+    "View More": "View More",
+    "Contact Us": "Contact Us",
+    "Service Detail": "Service Details",
+    "Know More": "Know More",
+    "Pricing List": "Pricing List",
+    "Send Now": "Send Now",
+    "Our Services": "Our Services"
   }
 }

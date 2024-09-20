@@ -19,8 +19,7 @@ const config = {
     },
     extend: {
       fontFamily: {
-        headings: ["var(--playfair)"],
-        arabic: ["var(--arabic)"],
+        subHeading: "var(--sub-heading)",
       },
       colors: {
         border: "hsl(var(--border))",
