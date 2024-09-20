@@ -2,18 +2,16 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import "./globals.css";
 import { Amiri, Poppins, Playfair_Display } from "next/font/google";
 import { Metadata } from "next";
-import localFont from "next/font/local";
+export const metadata: Metadata = {
+  title: "Hamdan Mover and Packer",
+};
 
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  style: "normal",
-  display: "auto",
   variable: "--poppins",
 });
-export const metadata: Metadata = {
-  title: "Hamdan Mover and Packer",
-};
+
 const arabic = Amiri({
   subsets: ["arabic"],
   weight: ["400", "700"],
@@ -24,16 +22,8 @@ const arabic = Amiri({
 const playfair = Playfair_Display({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  style: "normal",
-  display: "auto",
   variable: "--playfair",
 });
-
-const localSubHeading = localFont({
-  src: "../louis-george.ttf",
-  variable: "--sub-heading",
-});
-
 interface RootLayoutProps {
   children: React.ReactNode;
   params: {
@@ -54,7 +44,7 @@ export default function RootLayout({
             //     ? arabic.className
             //     : playfair.className + poppins.className
             // }`}
-            className={`${poppins.className} ${localSubHeading.variable}`}
+            className={`${poppins.className} ${playfair.className}`}
           >
             {children}
           </main>

@@ -11,16 +11,15 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: "poppins", sans-serif;
+  /* font-family: "poppins", sans-serif; */
   @apply antialiased;
 }
 svg {
   @apply drop-shadow w-7 h-7
 }
 h1,
-h2,
-h3 {
- font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
+h2 {
+ font-family: var(--playfair);
 }
 h5 {
   @apply tracking-wide text-black font-semibold text-[17px]
@@ -55,7 +54,7 @@ h3 {
   @apply md:text-[26px] text-[23px] leading-[27px] md:leading-7 text-black
 }
 p, li{
-  @apply md:text-[16.5px] text-[15.5px] md:leading-6 leading-[22px] tracking-[0.5px] font-['poppins'] 
+  @apply md:text-[16.5px] text-[15.5px] md:leading-6 leading-[22px] tracking-[0.5px] font-poppins
 }
 .gr {
   color: #464646;

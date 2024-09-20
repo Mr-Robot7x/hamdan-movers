@@ -41,7 +41,7 @@ function Navbar() {
                 <div
                   key={index}
                   className={`inline-block relative ${
-                    index === 1 || index === 3 ? "group" : ""
+                    index === 1 || index === 2 || index === 3 ? "group" : ""
                   }`}
                 >
                   <Link
@@ -52,7 +52,7 @@ function Navbar() {
                   </Link>
                   {index === 1 && (
                     <>
-                      <div className="hidden group-hover:block w-96 bg-white drop-shadow-2xl h-auto absolute -bottom-[285px] left-0 rounded-3xl">
+                      <div className="hidden group-hover:block w-80 bg-white drop-shadow-2xl h-auto absolute -bottom-[285px] left-0 rounded-3xl">
                         <ul className="p-4">
                           {subServices.map((sub, i) => (
                             <Link
@@ -67,9 +67,35 @@ function Navbar() {
                       </div>
                     </>
                   )}
+                  {index === 2 && (
+                    <>
+                      <div className="hidden group-hover:block w-80 bg-white drop-shadow-2xl h-auto absolute -bottom-40 left-0 rounded-3xl">
+                        <ul className="p-4">
+                          <Link
+                            className="block text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-3xl active:scale-[0.98] relative"
+                            href={"/"}
+                          >
+                            Dubai
+                          </Link>
+                          <Link
+                            className="block text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-3xl active:scale-[0.98] relative"
+                            href={"/"}
+                          >
+                            Sharjah
+                          </Link>
+                          <Link
+                            className="block text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-3xl active:scale-[0.98] relative"
+                            href={"/"}
+                          >
+                            Ajman
+                          </Link>
+                        </ul>
+                      </div>
+                    </>
+                  )}
                   {index === 3 && (
                     <>
-                      <div className="hidden group-hover:block w-96 bg-white drop-shadow-2xl h-auto absolute -bottom-40 left-0 rounded-3xl">
+                      <div className="hidden group-hover:block w-80 bg-white drop-shadow-2xl h-auto absolute -bottom-40 left-0 rounded-3xl">
                         <ul className="p-4">
                           <Link
                             className="block text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-3xl active:scale-[0.98] relative"

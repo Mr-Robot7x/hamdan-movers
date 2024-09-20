@@ -1,17 +1,35 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import React from "react";
 import { Button } from "@/components/ui/button";
 import serviceImage from "../../../../public/images/pickup-rent-services-3-trans.png";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Home/Footer";
 import Link from "next/link";
-import ServiceDetails from "@/components/ServiceDetails";
 import truck1 from "../../../../public/images/1.5-ton-truck.jpg";
 import truck2 from "../../../../public/images/3-tom.jpg";
 import truck3 from "../../../../public/images/pickup-rent-services-3.jpeg";
 import ServiceHire from "@/components/ServiceHire";
 import ContactUs from "@/components/ContactForm";
+
 import { PhoneForwardedIcon } from "lucide-react";
+const boxData = [
+  {
+    heading: "Certified Pickup Truck Rental In UAE",
+    desc: "Meeting our client's needs is paramount to our success. We hold certifications recognized globally within the industry, ensuring top-notch service for pickup rental trucks in UAE.",
+  },
+  {
+    heading: "Dedicated Customer Care",
+    desc: "Our dedicated customer support team, made up of industry professionals, listens attentively to all client feedback with empathy and understanding. Additionally, we maintain open lines of communication for ongoing support with pickup rental in UAE.",
+  },
+  {
+    heading: "Prioritizing Safety",
+    desc: "From regularly maintaining our vehicles to providing training for our drivers, we take proactive measures to minimize risks and keep our customers and their belongings safe throughout the travel.",
+  },
+  {
+    heading: "Satisfaction Guaranteed",
+    desc: "We are dedicated to meeting customers' expectations with personalized and dependable services. We aim to provide a seamless, hassle-free experience, ensuring every customer feels content and assured in their choice of our services.",
+  },
+];
 function PerServiceSec() {
   return (
     <>
@@ -50,32 +68,39 @@ function PerServiceSec() {
             </div>
           </div>
         </div>
-        <ServiceDetails
-          title="Professional and affordable car rental UAE"
-          description="Hamdan Movers is your go-to provider for affordable pickup rental services in Dubai. Offering 24/7 availability and competitive rates, we specialize in fast, efficient moving solutions for the Dubai community. Whether you need a reliable truck for home or office relocation, furniture shifting, or transporting light and heavy materials, we’ve got the perfect vehicle for any job. With a versatile fleet of pickups, we handle moves of all sizes seamlessly and affordably"
-          boxs={[
-            {
-              heading: "Certified Pickup Truck Rental In UAE",
-              desc: "Meeting our client's needs is paramount to our success. We hold certifications recognized globally within the industry, ensuring top-notch service for pickup rental trucks in UAE.",
-            },
-            {
-              heading: "Dedicated Customer Care",
-              desc: "Our dedicated customer support team, made up of industry professionals, listens attentively to all client feedback with empathy and understanding. Additionally, we maintain open lines of communication for ongoing support with pickup rental in UAE.",
-            },
-            {
-              heading: "Prioritizing Safety",
-              desc: "From regularly maintaining our vehicles to providing training for our drivers, we take proactive measures to minimize risks and keep our customers and their belongings safe throughout the travel.",
-            },
-            {
-              heading: "Satisfaction Guaranteed",
-              desc: "We are dedicated to meeting customers' expectations with personalized and dependable services. We aim to provide a seamless, hassle-free experience, ensuring every customer feels content and assured in their choice of our services.",
-            },
-          ]}
-        />
 
+        <div className="w-full md:w-11/12 mt-14">
+          <h2 className="text-center mb-4">
+            Professional and affordable car rental in UAE
+          </h2>
+          <p className="text-center">
+            Hamdan Movers offers affordable 24/7 pickup rental services in
+            Dubai, specializing in fast and efficient home, office, and
+            furniture relocations. With a versatile fleet, we provide reliable
+            transport for both light and heavy materials, ensuring seamless and
+            affordable moves.
+          </p>
+          <div className="mt-10 grid md:grid-cols-3 grid-cols-1 gap-7">
+            {boxData.map((box, i) => (
+              <div
+                key={i}
+                className="min-h-32 bg-white shadow-lg shadow-neutral-100 border border-neutral-200 py-4 px-3 rounded-2xl"
+              >
+                <h3 className="font-[poppins] font-medium md:text-[21px]  md:leading-6 text-center mb-1">
+                  {box.heading}
+                </h3>
+                <div className="w-full h-px bg-neutral-100 px-10"></div>
+                <p className="text-[15.2px] text-center mt-2 gr">{box.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
         <div className="w-full md:w-11/12 min-h-32 mt-8">
           <h2 className="text-center mb-5">
-            We Have Following Size Of Cars For Rental Services In UAE
+            We Have Following Size Of Cars For{" "}
+            <span className="md:block inline-block">
+              Rental Services In UAE
+            </span>
           </h2>
           <p className="text-center md:px-16 mt-3">
             Hamdan Movers expertly handles art, antiques, pianos, pool tables,
