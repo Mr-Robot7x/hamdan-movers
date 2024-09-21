@@ -52,7 +52,7 @@ function StorageServices() {
                   className="object-cover rounded-2xl"
                 />
               </div>
-              <h3 className="font-[poppins] text-center mt-4">
+              <h3 className="font-poppins text-center mt-4">
                 Short Term Storage
               </h3>
               <p className="mt-2 md:px-3">
@@ -72,7 +72,7 @@ function StorageServices() {
                   className="object-cover rounded-2xl"
                 />
               </div>
-              <h3 className="font-[poppins] text-center mt-4">
+              <h3 className="font-poppins text-center mt-4">
                 Long Term Storage
               </h3>
               <p className="mt-2 md:px-3">
@@ -94,7 +94,7 @@ function StorageServices() {
                   className="object-cover rounded-2xl"
                 />
               </div>
-              <h3 className="font-[poppins] text-center mt-4">
+              <h3 className="font-poppins text-center mt-4">
                 Residential Storage
               </h3>
               <p className="mt-2 md:px-3">
@@ -114,7 +114,7 @@ function StorageServices() {
                   className="object-cover rounded-2xl"
                 />
               </div>
-              <h3 className="font-[poppins] text-center mt-4">
+              <h3 className="font-poppins text-center mt-4">
                 Commercial Storage
               </h3>
               <p className="mt-2 md:px-3">

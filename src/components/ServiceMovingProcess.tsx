@@ -30,7 +30,9 @@ function ServiceMovingProcess({
                     height={60}
                   />
                 </div>
-                <h4 className="text-lg font-semibold">{box.heading}</h4>
+                <h4 className="text-lg font-semibold font-poppins">
+                  {box.heading}
+                </h4>
                 <p className="text-sm text-gray-500 mt-2">{box.desc}</p>
               </div>
             ))}

@@ -17,37 +17,37 @@ function BrandingContent() {
                 <div className="flex flex-col md:gap-y-7 gap-y-5">
                   <div className="flex gap-x-5 items-center">
                     <IconTruckDelivery className="text-[#105572]" />
-                    <h3 className="font-[poppins] font-medium md:text-[21px] text-[18px] text-black">
+                    <h3 className="font-poppinst-medium md:text-[21px] text-[18px] text-black">
                       Best Moving Services
                     </h3>
                   </div>
                   <div className="flex gap-x-5 items-center">
                     <IconZoomMoney className="text-[#105572]" />
-                    <h3 className="font-[poppins] font-medium md:text-[21px] text-[18px] text-black">
+                    <h3 className="font-poppinst-medium md:text-[21px] text-[18px] text-black">
                       No Hidden Charges
                     </h3>
                   </div>
                   <div className="flex gap-x-5 items-center">
                     <PartyPopperIcon className="text-[#105572]" />
-                    <h3 className="font-[poppins] font-medium md:text-[21px] text-[18px] text-black">
+                    <h3 className="font-poppinst-medium md:text-[21px] text-[18px] text-black">
                       Over 6+ Years Experience
                     </h3>
                   </div>
                   <div className="flex gap-x-5 items-center">
                     <IconClock24 className="text-[#105572]" />
-                    <h3 className="font-[poppins] font-medium md:text-[21px] text-[18px] text-black">
+                    <h3 className="font-poppinst-medium md:text-[21px] text-[18px] text-black">
                       24 Hours Availabe
                     </h3>
                   </div>
                   <div className="flex gap-x-5 items-center">
                     <HeartHandshake className="text-[#105572]" />
-                    <h3 className="font-[poppins] font-medium md:text-[21px] text-[18px] text-black">
+                    <h3 className="font-poppinst-medium md:text-[21px] text-[18px] text-black">
                       Friendly Staff
                     </h3>
                   </div>
                   <div className="flex gap-x-5 items-center">
                     <LucideSettings2 className="text-[#105572]" />
-                    <h3 className="font-[poppins] font-medium md:text-[21px] text-[18px] text-black">
+                    <h3 className="font-poppinst-medium md:text-[21px] text-[18px] text-black">
                       Personalized Service
                     </h3>
                   </div>

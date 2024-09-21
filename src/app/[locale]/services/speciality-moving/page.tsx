@@ -81,7 +81,7 @@ function SpecialityMovingService() {
                   className="object-cover rounded-2xl"
                 />
               </div>
-              <h3 className="font-[poppins] text-center mt-4">
+              <h3 className="font-poppins text-center mt-4">
                 Art and Antique Moving
               </h3>
               <p className="mt-2 md:px-3">
@@ -101,7 +101,7 @@ function SpecialityMovingService() {
                   className="object-cover rounded-2xl"
                 />
               </div>
-              <h3 className="font-[poppins] text-center mt-4">Piano Moving</h3>
+              <h3 className="font-poppins text-center mt-4">Piano Moving</h3>
               <p className="mt-2 md:px-3">
                 Pianos are delicate and require expert handling. Our specialized
                 equipment and skilled movers ensure your piano is safely
@@ -120,7 +120,7 @@ function SpecialityMovingService() {
                   className="object-cover rounded-2xl"
                 />
               </div>
-              <h3 className="font-[poppins] text-center mt-4">
+              <h3 className="font-poppins text-center mt-4">
                 Crating & Packing Services
               </h3>
               <p className="mt-2 md:px-3">
@@ -140,7 +140,7 @@ function SpecialityMovingService() {
                   className="object-cover rounded-2xl"
                 />
               </div>
-              <h3 className="font-[poppins] text-center mt-4">
+              <h3 className="font-poppins text-center mt-4">
                 Specialty Appliance Moving
               </h3>
               <p className="mt-2 md:px-3">

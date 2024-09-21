@@ -45,7 +45,7 @@ function Navbar() {
                   }`}
                 >
                   <Link
-                    className={`font-[poppins] text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-3xl active:scale-[0.98]`}
+                    className={`font-poppins text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-3xl active:scale-[0.98]`}
                     href={item.link}
                   >
                     {item.name}

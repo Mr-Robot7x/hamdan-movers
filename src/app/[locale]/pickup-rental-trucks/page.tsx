@@ -39,7 +39,7 @@ function PerServiceSec() {
           <div className="grid md:grid-cols-2 grid-cols-1 md:gap-x-4 gap-y-9 items-center md:ml-[60px]">
             <div className="min-h-40 ">
               <h1>Cheap Pickup Truck Rental In UAE</h1>
-              <h3 className="font-[poppins] md:text-[22px] mt-4">
+              <h3 className="font-poppins md:text-[22px] mt-4">
                 Cheap Pickup Truck Rentals for Business and Personal Use in UAE
               </h3>
               <p className="mt-2">
@@ -86,7 +86,7 @@ function PerServiceSec() {
                 key={i}
                 className="min-h-32 bg-white shadow-lg shadow-neutral-100 border border-neutral-200 py-4 px-3 rounded-2xl"
               >
-                <h3 className="font-[poppins] font-medium md:text-[21px]  md:leading-6 text-center mb-1">
+                <h3 className="font-poppins font-medium md:text-[21px]  md:leading-6 text-center mb-1">
                   {box.heading}
                 </h3>
                 <div className="w-full h-px bg-neutral-100 px-10"></div>
@@ -119,7 +119,7 @@ function PerServiceSec() {
                   className="object-cover rounded-2xl"
                 />
               </div>
-              <h3 className="font-[poppins] text-center mt-5 mb-1">
+              <h3 className="font-poppins text-center mt-5 mb-1">
                 1.5 Ton Pickup Truck Rental <br /> in UAE
               </h3>
               <p className="mt-2 md:px-3">
@@ -147,7 +147,7 @@ function PerServiceSec() {
                   className="object-cover rounded-2xl"
                 />
               </div>
-              <h3 className="font-[poppins] text-center mt-5 mb-1">
+              <h3 className="font-poppins text-center mt-5 mb-1">
                 3 Ton Pickup Truck for rent <br /> in UAE
               </h3>
               <p className="mt-2 md:px-3">

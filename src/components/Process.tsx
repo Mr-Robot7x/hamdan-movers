@@ -22,7 +22,9 @@ const WorkProcessSection: React.FC = () => {
                   height={60}
                 />
               </div>
-              <h4 className="text-lg font-semibold">Book Your Service</h4>
+              <h4 className="text-lg font-semibold font-poppins">
+                Book Your Service
+              </h4>
               <p className="text-sm text-gray-500 mt-2">
                 Start with a quick call or an in-person chat. We’ll go over your
                 moving needs and handle all the details to make it easy for you.
@@ -38,7 +40,9 @@ const WorkProcessSection: React.FC = () => {
                   height={60}
                 />
               </div>
-              <h4 className="text-lg font-semibold">Before We Move</h4>
+              <h4 className="text-lg font-semibold font-poppins">
+                Before We Move
+              </h4>
               <p className="text-sm text-gray-500 mt-2">
                 We’ll visit your place to assess what needs moving. This helps
                 us plan packing and ensure a smooth moving day with no
@@ -55,7 +59,9 @@ const WorkProcessSection: React.FC = () => {
                   height={60}
                 />
               </div>
-              <h4 className="text-lg font-semibold">The Move Plan</h4>
+              <h4 className="text-lg font-semibold font-poppins">
+                The Move Plan
+              </h4>
               <p className="text-sm text-gray-500 mt-2">
                 Once we’ve discussed your needs, we create a detailed plan for
                 your move—covering timing, crew size, and costs—so everything
@@ -72,7 +78,9 @@ const WorkProcessSection: React.FC = () => {
                   height={60}
                 />
               </div>
-              <h4 className="text-lg font-semibold">Packing and Loading</h4>
+              <h4 className="text-lg font-semibold font-poppins">
+                Packing and Loading
+              </h4>
               <p className="text-sm text-gray-500 mt-2">
                 Our team uses high-quality materials to pack your items
                 securely. We carefully load everything onto our trucks to ensure
@@ -89,7 +97,9 @@ const WorkProcessSection: React.FC = () => {
                   height={60}
                 />
               </div>
-              <h4 className="text-lg font-semibold">Safe Transportation</h4>
+              <h4 className="text-lg font-semibold font-poppins">
+                Safe Transportation
+              </h4>
               <p className="text-sm text-gray-500 mt-2">
                 Safety is our priority. Our experienced drivers choose the best
                 routes, and our trucks are thoroughly inspected for a smooth,
@@ -106,7 +116,7 @@ const WorkProcessSection: React.FC = () => {
                   height={60}
                 />
               </div>
-              <h4 className="text-lg font-semibold">
+              <h4 className="text-lg font-semibold font-poppins">
                 Unpacking and Settling-in
               </h4>
               <p className="text-sm text-gray-500 mt-2">

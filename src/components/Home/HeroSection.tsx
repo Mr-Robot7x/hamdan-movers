@@ -19,7 +19,7 @@ function HeroSection() {
       />
       <div className={`md:basis-2/4 basis-full z-20 `}>
         <h1 className="md:text-[55px]">{t("headingTitle")}</h1>
-        <h3 className="mt-6 font-[poppins] font-medium">{t("SubTitle")}</h3>
+        <h3 className="mt-6 font-poppins">{t("SubTitle")}</h3>
         <p className="gr mt-3">{t("description")}</p>
         <div className="mt-4 flex gap-x-5">
           <Button>{b("Contact Us")}</Button>

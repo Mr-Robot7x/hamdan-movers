@@ -36,7 +36,7 @@ function CommercialOfficeMovers() {
                 <div className=" flex items-center justify-start md:px-8 px-8 rounded-3xl shadow-xl shadow-neutral-100 lg:w-[480px] md:w-[80%] w-full h-[400px] bg-gradient-to-b from-yellow-100 via-white to-white">
                   <div className="flex flex-col md:gap-y-5 gap-y-3">
                     <div className="">
-                      <h3 className="font-[poppins] font-semibold md:text-[18px] text-[16px] text-black">
+                      <h3 className="font-poppins font-semibold md:text-[18px] text-[16px] text-black">
                         Kitchen:{" "}
                         <span className="font-normal">
                           Glassware, plates, cutlery, pots, and pans
@@ -44,7 +44,7 @@ function CommercialOfficeMovers() {
                       </h3>
                     </div>
                     <div className="">
-                      <h3 className="font-[poppins] font-semibold md:text-[18px] text-[16px] text-black">
+                      <h3 className="font-poppins font-semibold md:text-[18px] text-[16px] text-black">
                         Living Room:{" "}
                         <span className="font-normal">
                           TV, sound system, books, plants, decor, pillows, and
@@ -53,7 +53,7 @@ function CommercialOfficeMovers() {
                       </h3>
                     </div>
                     <div className="">
-                      <h3 className="font-[poppins] font-semibold md:text-[18px] text-[16px] text-black">
+                      <h3 className="font-poppins font-semibold md:text-[18px] text-[16px] text-black">
                         Walk-in Wardrobe:{" "}
                         <span className="font-normal">
                           Clothing, shoes, jackets, and accessories
@@ -61,7 +61,7 @@ function CommercialOfficeMovers() {
                       </h3>
                     </div>
                     <div className="">
-                      <h3 className="font-[poppins] font-semibold md:text-[18px] text-[16px] text-black">
+                      <h3 className="font-poppins font-semibold md:text-[18px] text-[16px] text-black">
                         Bedroom:{" "}
                         <span className="font-normal">
                           Pillows, bed linen, children’s toys, and towels
@@ -69,7 +69,7 @@ function CommercialOfficeMovers() {
                       </h3>
                     </div>
                     <div className="">
-                      <h3 className="font-[poppins] font-semibold md:text-[18px] text-[16px] text-black">
+                      <h3 className="font-poppins font-semibold md:text-[18px] text-[16px] text-black">
                         Entire Home:{" "}
                         <span className="font-normal">
                           All rooms and their respective items

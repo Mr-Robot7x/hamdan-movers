@@ -15,7 +15,7 @@ function PickUpRentalServices() {
             <h2 className="text-white md:text-start text-center">
               Our Pickup Rent Services In Dubia
             </h2>
-            <h3 className="font-[poppins] text-yellow-400 md:text-[22px] text-[18px] mt-4 font-medium md:text-start text-center ">
+            <h3 className="font-poppins text-yellow-400 md:text-[22px] text-[18px] mt-4 font-medium md:text-start text-center ">
               Fast, Flexible, And Convenient Pickup Rentals At Your Service In
               Dubai
             </h3>
@@ -52,7 +52,7 @@ function PickUpRentalServices() {
       </div>
       <div className="w-full md:w-11/12 flex justify-center gap-y-6 flex-col items-center">
         <div className="w-4/5">
-          <h2 className="font-medium text-center font-[poppins]">
+          <h2 className="font-medium text-center font-poppins">
             We have following size of a Pickup Truck that is Appropriate for
             your needs
           </h2>
@@ -68,7 +68,7 @@ function PickUpRentalServices() {
                 className="object-cover rounded-2xl"
               />
             </div>
-            <h3 className="font-[poppins] text-center mt-5 mb-1">
+            <h3 className="font-poppins text-center mt-5 mb-1">
               1.5 Ton Pickup Truck Rental <br /> in UAE
             </h3>
             <p className="mt-2 md:px-3">
@@ -95,7 +95,7 @@ function PickUpRentalServices() {
                 className="object-cover rounded-2xl"
               />
             </div>
-            <h3 className="font-[poppins] text-center mt-5 mb-1">
+            <h3 className="font-poppins text-center mt-5 mb-1">
               3 Ton Pickup Truck for rent <br /> in UAE
             </h3>
             <p className="mt-2 md:px-3">

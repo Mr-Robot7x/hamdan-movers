@@ -36,7 +36,7 @@ function WhatsAppButton() {
           }}
           className="p-5 fixed md:bottom-16 bottom-[76px] md:right-16 right-8 rounded-s-3xl rounded-t-3xl bg-white/70 drop-shadow-2xl backdrop-blur-2xl md:w-96 w-[88%] z-50"
         >
-          <h3 className="font-[poppins]">Hi Here, How We Can Help You !</h3>
+          <h3 className="font-poppins"> We Can Help You !</h3>
           <div className="flex flex-col mt-5">
             <div>
               <p className="text-[18px] mb-2 font-semibold">Phone Number</p>

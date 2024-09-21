@@ -8,7 +8,7 @@ function ServiceTopSection() {
       <div className="grid md:grid-cols-2 grid-cols-1 md:gap-x-4 gap-y-9 items-center md:ml-[60px]">
         <div className="min-h-40 ">
           <h1>Professional Moving and Packing Services In Dubai</h1>
-          <h3 className="font-[poppins] md:text-[22px] mt-4">
+          <h3 className="font-poppins22px] mt-4">
             Your Trusted Partner for a Stress Free Moving
           </h3>
           <p className="mt-2">

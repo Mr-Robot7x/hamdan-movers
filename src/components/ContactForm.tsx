@@ -13,17 +13,20 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-const ContactUs: React.FC = () => {
+import Link from "next/link";
+import Image from "next/image";
+import wave from "../../public/images/wave.png";
+const ContactUs = ({ isPage = false }: { isPage?: boolean }) => {
   const [data, setData] = useState<{
     name: string;
-    email: string;
+
     phone: string;
     location: string;
     service: string;
     description: string;
   }>({
     name: "",
-    email: "",
+
     phone: "",
     location: "",
     service: "",
@@ -45,18 +48,20 @@ const ContactUs: React.FC = () => {
     <div className="bg-white w-full md:w-11/12">
       <div className="max-w-5xl px-4 xl:px-0 py-10 lg:py-10 mx-auto">
         {/* Title */}
-        <div className="max-w-3xl mb-10 lg:mb-14">
-          <h2 className="">Contact us</h2>
-          <p className="mt-3 gr">
-            Ready to make your move? Contact Hamdan and Packers today!
-          </p>
-        </div>
+        {!isPage ? (
+          <div className="max-w-3xl mb-10 lg:mb-14">
+            <h2 className="">Contact us</h2>
+            <p className="mt-3 gr">
+              Ready to make your move? Contact Hamdan and Packers today!
+            </p>
+          </div>
+        ) : null}
         {/* End Title */}
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 lg:gap-x-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 lg:gap-x-16 font-poppins ">
           <div className="md:order-2 border-b border-neutral-800 pb-10 mb-10 md:border-b-0 md:pb-0 md:mb-0">
-            <form onSubmit={(e) => handleContact(e)}>
+            <form onSubmit={(e) => handleContact(e)} className="">
               <div className="space-y-4">
                 {/* Input */}
                 <div className="relative">
@@ -79,25 +84,7 @@ const ContactUs: React.FC = () => {
                 {/* End Input */}
 
                 {/* Input */}
-                <div className="relative">
-                  <input
-                    type="email"
-                    id="hs-tac-input-email"
-                    className="border border-neutral-200 peer p-4 block w-full focus:border-neutral-400 transition-all shadow-md shadow-neutral-50 rounded-lg text-sm text-black placeholder:text-transparent focus:outline-none focus:ring-0 disabled:opacity-50 disabled:pointer-events-none focus:pt-6 focus:pb-2 [&:not(:placeholder-shown)]:pt-6 [&:not(:placeholder-shown)]:pb-2 autofill:pt-6 autofill:pb-2"
-                    required
-                    value={data.email}
-                    onChange={(e) =>
-                      setData({ ...data, email: e.target.value })
-                    }
-                    placeholder="Email address"
-                  />
-                  <label
-                    htmlFor="hs-tac-input-email"
-                    className="absolute top-0 start-0 p-4 h-full gr text-sm truncate pointer-events-none transition-all border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none peer-focus:text-xs peer-focus:-translate-y-[12px] peer-focus:gr peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:-translate-y-[10px] peer-[:not(:placeholder-shown)]:gr"
-                  >
-                    Email Address
-                  </label>
-                </div>
+
                 {/* End Input */}
 
                 {/* Input */}
@@ -239,7 +226,7 @@ const ContactUs: React.FC = () => {
             <div className="flex gap-x-5">
               <IconLocationPin className="text-[#FF5F00]" />
               <div>
-                <h3 className="font-semibold font-[poppins] text-lg text-black">
+                <h3 className="font-semibold font-poppins text-lg text-black">
                   Office
                 </h3>
                 <address className="mt-1 not-italic gr">
@@ -253,10 +240,13 @@ const ContactUs: React.FC = () => {
             <div className="flex gap-x-5">
               <PhoneForwardedIcon className="text-[#FF5F00]" />
               <div>
-                <h3 className="font-semibold font-[poppins] text-lg text-black">
+                <h3 className="font-semibold font-poppins text-lg text-black">
                   Phone
                 </h3>
-                <p className="mt-1 gr">056 6651978, 050 3626685</p>
+                <p className="mt-1 gr">
+                  <Link href={"tel:+971566651978"}>+971 566651978</Link> <br />
+                  <Link href={"tel:+971505626685"}>+971 505626685</Link>
+                </p>
               </div>
             </div>
             {/* End Item */}
@@ -265,16 +255,20 @@ const ContactUs: React.FC = () => {
             <div className="flex gap-x-5">
               <MailsIcon className="text-[#FF5F00]" />
               <div>
-                <h3 className="font-semibold font-[poppins] text-lg text-black">
+                <h3 className="font-semibold font-poppins text-lg text-black">
                   Email
                 </h3>
-                <p className="mt-1 gr">hussain43ahmad@gmail.com</p>
+                <p className="mt-1 gr">
+                  <Link href={"mailto:hussain43ahmad@gmail.com"}>
+                    hussain43ahmad@gmail.com
+                  </Link>
+                </p>
               </div>
             </div>
             <div className="flex gap-x-5">
               <IconHours24 className="text-[#FF5F00]" />
               <div>
-                <h3 className="font-semibold font-[poppins] text-lg text-black">
+                <h3 className="font-semibold font-poppins text-lg text-black">
                   Opening Hours
                 </h3>
                 <p className="mt-1 gr">Open 24 Hours</p>
