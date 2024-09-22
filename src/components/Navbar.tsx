@@ -21,7 +21,7 @@ function Navbar() {
 
   return (
     <>
-      <header className="w-full fixed left-0 flex flex-col items-center justify-center z-[200]">
+      <header className="w-full fixed left-0 flex flex-col items-center justify-center z-[200] font-poppins">
         <nav className="border flex relative justify-between items-center md:px-4 px-2 md:w-11/12 bg-white my-3 md:mt-1 mt-0 md:h-[82px] h-[68px] shadow-2xl shadow-neutral-200/80 md:rounded-full rounded-none w-full">
           <div className="md:w-36 w-[120px] h-14 relative">
             <Image
@@ -73,19 +73,19 @@ function Navbar() {
                         <ul className="p-4">
                           <Link
                             className="block text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-3xl active:scale-[0.98] relative"
-                            href={"/"}
+                            href={"/pickup-rental-trucks-in-dubai"}
                           >
                             Dubai
                           </Link>
                           <Link
                             className="block text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-3xl active:scale-[0.98] relative"
-                            href={"/"}
+                            href={"/pickup-rental-trucks-in-sharjah"}
                           >
                             Sharjah
                           </Link>
                           <Link
                             className="block text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-3xl active:scale-[0.98] relative"
-                            href={"/"}
+                            href={"/pickup-rental-trucks-in-ajman"}
                           >
                             Ajman
                           </Link>

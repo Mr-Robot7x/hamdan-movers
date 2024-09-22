@@ -5,9 +5,7 @@ import Link from "next/link";
 function OurServices() {
   return (
     <div className="md:w-11/12 w-full md:mt-5">
-      <h2 className="text-center">
-        Our Top Class <span className="t-grd">Services</span>
-      </h2>
+      <h2 className="text-center">Our Moving Services In UAE</h2>
       <p className="text-center mt-5 md:text-[17px] md:px-16">
         At Hamdan Movers and Packers, we offer a complete solution for all your
         moving needs. With over 10 years of experience, we provide reliable,
@@ -16,7 +14,7 @@ function OurServices() {
       </p>
       <div className="w-full mt-14 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
         {/* Local Moving */}
-        <div className="shadow-xl shadow-neutral-200/50 border border-neutral-200 bg-white md:py-7 py-5 px-4 min-h-32 rounded-2xl">
+        <div className="bg-white shadow-lg shadow-neutral-100 border border-neutral-100 rounded-3xl py-5 px-4">
           <div className="mb-1 flex w-full justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -122,23 +120,24 @@ function OurServices() {
               </g>
             </svg>
           </div>
-          <h4 className="text-center mt-2">Local Moving Services</h4>
+          <h4 className="text-center mt-2 font-poppins">
+            Local Moving Services
+          </h4>
           <p className="gr md:leading-5 mt-1 text-[15.3px] text-center">
             Our local moving services ensure a smooth, quick, and reliable
             transition within your city or town, using local expertise for a
             hassle-free move.
           </p>
-          <div className="flex gap-x-3 w-full mt-5">
-            <Button size={"sm"}>Book Now</Button>
+          <div className="mt-5">
             <Link href={"/services/local-residential-movers"}>
-              <Button size={"sm"} variant={"secondary"}>
+              <Button size={"sm"} variant={"outline"}>
                 Service Details
               </Button>
             </Link>
           </div>
         </div>
         {/* Commercial  Moving */}
-        <div className="shadow-xl shadow-neutral-200/50 border border-neutral-200 bg-white md:py-7 py-5 px-4 min-h-32 rounded-2xl">
+        <div className="bg-white shadow-lg shadow-neutral-100 border border-neutral-100 rounded-3xl py-5 px-4">
           <div className="mb-1 flex w-full justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -348,22 +347,23 @@ function OurServices() {
               </g>
             </svg>
           </div>
-          <h4 className="text-center mt-2">Commercial Moving Services</h4>
+          <h4 className="text-center mt-2 font-poppins">
+            Commercial Moving Services
+          </h4>
           <p className="gr md:leading-5 mt-1 text-[15.3px] text-center">
             We handle every detail of your office relocation, minimizing
             downtime and ensuring a smooth, efficient commercial move.
           </p>
-          <div className="flex gap-x-3 w-full mt-5">
-            <Button size={"sm"}>Book Now</Button>
+          <div className="mt-5">
             <Link href={"/services/commerical-office-movers"}>
-              <Button size={"sm"} variant={"secondary"}>
+              <Button size={"sm"} variant={"outline"}>
                 Service Details
               </Button>
             </Link>
           </div>
         </div>
         {/* Packing and Unpacking */}
-        <div className="shadow-xl shadow-neutral-200/50 border border-neutral-200 bg-white md:py-7 py-5 px-4 min-h-32 rounded-2xl">
+        <div className="bg-white shadow-lg shadow-neutral-100 border border-neutral-100 rounded-3xl py-5 px-4">
           <div className="mb-1 flex w-full justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -522,22 +522,24 @@ function OurServices() {
               </g>
             </svg>
           </div>
-          <h4 className="text-center mt-2">Packing and Unpacking</h4>
+          <h4 className="text-center mt-2 font-poppins">
+            Packing and Unpacking
+          </h4>
           <p className="gr md:leading-5 mt-1 text-[15.3px] text-center">
-            Our expert team offers secure packing and careful unpacking,
-            guaranteeing a stress-free moving experience for your belongings.
+            Our expert team offers secure and reliable packing and careful
+            unpacking, guaranteeing a stress-free moving experience for your
+            belongings.
           </p>
-          <div className="flex gap-x-3 w-full mt-5">
-            <Button size={"sm"}>Book Now</Button>
+          <div className="mt-5">
             <Link href={"/services/packing-services"}>
-              <Button size={"sm"} variant={"secondary"}>
+              <Button size={"sm"} variant={"outline"}>
                 Service Details
               </Button>
             </Link>
           </div>
         </div>
         {/* Storage Soluations */}
-        <div className="shadow-xl shadow-neutral-200/50 border border-neutral-200 bg-white md:py-7 py-5 px-4 min-h-32 rounded-2xl">
+        <div className="bg-white shadow-lg shadow-neutral-100 border border-neutral-100 rounded-3xl py-5 px-4">
           <div className="mb-1 flex w-full justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -684,23 +686,22 @@ function OurServices() {
               </g>
             </svg>
           </div>
-          <h4 className="text-center mt-2">Storage Solutions</h4>
+          <h4 className="text-center mt-2 font-poppins">Storage Solutions</h4>
           <p className="gr md:leading-5 mt-1 text-[15.3px] text-center">
             Our climate-controlled storage solutions for clients provide safe,
             flexible short-term or long-term storage during your transition and
             moving.
           </p>
-          <div className="flex gap-x-3 w-full mt-5">
-            <Button size={"sm"}>Book Now</Button>
+          <div className="mt-5">
             <Link href={"/services/storage-services"}>
-              <Button size={"sm"} variant={"secondary"}>
+              <Button size={"sm"} variant={"outline"}>
                 Service Details
               </Button>
             </Link>
           </div>
         </div>
         {/* Specialty moving */}
-        <div className="shadow-xl shadow-neutral-200/50 border border-neutral-200 bg-white md:py-7 py-5 px-4 min-h-32 rounded-2xl">
+        <div className="bg-white shadow-lg shadow-neutral-100 border border-neutral-100 rounded-3xl py-5 px-4">
           <div className="mb-1 flex w-full justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -883,22 +884,23 @@ function OurServices() {
               </g>
             </svg>
           </div>
-          <h4 className="text-center mt-2">Specialty Moving Services</h4>
+          <h4 className="text-center mt-2 font-poppins">
+            Specialty Moving Services
+          </h4>
           <p className="gr md:leading-5 mt-1 text-[15.3px] text-center">
             We specialize in moving valuable items like pianos, antiques, and
             artwork, treating each piece with utmost care and professionalism.
           </p>
-          <div className="flex gap-x-3 w-full mt-5">
-            <Button size={"sm"}>Book Now</Button>
+          <div className="mt-5">
             <Link href={"/services/speciality-moving"}>
-              <Button size={"sm"} variant={"secondary"}>
+              <Button size={"sm"} variant={"outline"}>
                 Service Details
               </Button>
             </Link>
           </div>
         </div>
         {/* International Moving */}
-        <div className="shadow-xl shadow-neutral-200/50 border border-neutral-200 bg-white md:py-7 py-5 px-4 min-h-32 rounded-2xl">
+        <div className="bg-white shadow-lg shadow-neutral-100 border border-neutral-100 rounded-3xl py-5 px-4">
           <div className="mb-1 flex w-full justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -988,15 +990,16 @@ function OurServices() {
               </g>
             </svg>
           </div>
-          <h4 className="text-center mt-2">International Moving Services</h4>
+          <h4 className="text-center mt-2 font-poppins">
+            International Moving Services
+          </h4>
           <p className="gr md:leading-5 mt-1 text-[15.3px] text-center">
             We make international moves to Gulf countries stress-free, handling
             packing and customs paperwork to ensure a seamless process.
           </p>
-          <div className="flex gap-x-3 w-full mt-5">
-            <Button size={"sm"}>Book Now</Button>
+          <div className="mt-5">
             <Link href={"/services/international-moving"}>
-              <Button size={"sm"} variant={"secondary"}>
+              <Button size={"sm"} variant={"outline"}>
                 Service Details
               </Button>
             </Link>

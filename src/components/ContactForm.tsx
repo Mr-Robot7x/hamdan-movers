@@ -14,8 +14,6 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import Link from "next/link";
-import Image from "next/image";
-import wave from "../../public/images/wave.png";
 const ContactUs = ({ isPage = false }: { isPage?: boolean }) => {
   const [data, setData] = useState<{
     name: string;

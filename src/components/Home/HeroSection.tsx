@@ -3,6 +3,7 @@ import React from "react";
 import heroImage from "../../../public/images/main-section-image.jpg";
 import { Button } from "../ui/button";
 import { useLocale, useTranslations } from "next-intl";
+import Link from "next/link";
 function HeroSection() {
   const locale = useLocale();
   const t = useTranslations("heroSection");
@@ -10,14 +11,37 @@ function HeroSection() {
   return (
     <div
       dir={locale === "ar" ? "rtl" : "ltr"}
-      className="relative md:w-11/12 w-full flex-wrap md:mt-36 mt-32 items-center flex justify-evenly gap-y-8"
+      className="relative md:w-11/12 md:mt-36 mt-32 min-h-44"
     >
-      <img
-        src="/images/waves.png"
-        alt="waves image"
-        className="w-full z-10 absolute top-10 opacity-10 right-0"
-      />
-      <div className={`md:basis-2/4 basis-full z-20 `}>
+      <h1 className="md:text-center text-start leading-[53px] text-[55px] md:text-[60px] md:pb-8 pb-2">
+        {t("headingTitle")}
+      </h1>
+      <div className="md:mt-10 mt-6 w-full grid md:grid-cols-2 grid-cols-1 md:pl-16 md:gap-x-0 gap-y-8">
+        <div className="md:mb-0 pb-7 md:pr-10 md:mt-2 md:border-none border-b border-neutral-400">
+          <h2 className="font-poppins font-normal">{t("SubTitle")}</h2>
+          <p className="mt-6">{t("description")}</p>
+          <div className="w-full flex md:gap-x-3 md:flex-row flex-col gap-y-3 mt-4">
+            <Link href={"tel:tel:+971566651978"}>
+              <Button>Call Now : +971 56 6651978</Button>
+            </Link>
+            <Link href={"/services"}>
+              <Button variant={"secondary"}>Our Services</Button>
+            </Link>
+          </div>
+        </div>
+        <div className=" flex md:border-l md:border-neutral-400 justify-center">
+          <div className="md:w-96 w-[350px] bg-gradient-to-t from-slate-50 to-slate-100 h-96 relative">
+            <Image
+              src={heroImage}
+              alt="Best Moving Company UAE | Hamdan Mover"
+              className="object-cover absolute"
+              fill
+              placeholder="blur"
+            />
+          </div>
+        </div>
+      </div>
+      {/* <div className={`md:basis-2/4 basis-full z-20 `}>
         <h1 className="md:text-[55px]">{t("headingTitle")}</h1>
         <h3 className="mt-6 font-poppins">{t("SubTitle")}</h3>
         <p className="gr mt-3">{t("description")}</p>
@@ -36,7 +60,7 @@ function HeroSection() {
           className="drop-shadow-2xl object-cover"
           style={{ borderRadius: "31% 69% 82% 18% / 30% 35% 65% 70% " }}
         />
-      </div>
+      </div> */}
     </div>
   );
 }

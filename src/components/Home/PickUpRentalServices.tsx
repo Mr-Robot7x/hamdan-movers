@@ -15,7 +15,7 @@ function PickUpRentalServices() {
             <h2 className="text-white md:text-start text-center">
               Our Pickup Rent Services In Dubia
             </h2>
-            <h3 className="font-poppins text-yellow-400 md:text-[22px] text-[18px] mt-4 font-medium md:text-start text-center ">
+            <h3 className="font-poppins text-[#FF5F00] md:text-[22px] text-[18px] mt-4 font-medium md:text-start text-center ">
               Fast, Flexible, And Convenient Pickup Rentals At Your Service In
               Dubai
             </h3>

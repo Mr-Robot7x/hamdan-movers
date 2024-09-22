@@ -19,7 +19,7 @@ svg {
 }
 h1,
 h2 {
- font-family: var(--playfair);
+ font-family: 'Playfair Display'
 }
 h5 {
   @apply tracking-wide text-black font-semibold text-[17px]
@@ -43,7 +43,7 @@ h1, h2, h3 {
     }
 h1 {
   
-  @apply md:text-[45px] font-semibold text-[35px] md:leading-[60px] leading-[42px]
+  @apply text-[#023246] md:text-[45px] font-medium text-[35px] md:leading-[60px] leading-[42px]
 }
 h2 {
   font-weight: 500;
@@ -319,4 +319,8 @@ small{
   display: flex;
   justify-content: space-between;
   padding: 50px;
+}
+
+.cus-shad {
+  box-shadow: 0 4px 10px 6px rgba(0,0,0,0.04);
 }

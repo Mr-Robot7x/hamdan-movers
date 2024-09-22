@@ -2,83 +2,93 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { IconBrandWhatsapp } from "@tabler/icons-react";
+import { Button } from "./ui/button";
+import { X } from "lucide-react";
+import Link from "next/link";
 function WhatsAppButton() {
   const [open, setOpen] = useState(false);
   return (
     <>
       <div
         onClick={(e) => setOpen((p) => !p)}
-        className="active:scale-[0.98] transition-all fixed p-3 bg-gradient-to-b from-white to-yellow-100 
-    drop-shadow-2xl rounded-full bottom-4 right-4 z-[500] "
+        className="cursor-pointer active:scale-[0.98] transition-all fixed p-2 rounded-full bottom-4 right-4 z-[500] "
       >
         <Image
           src={"/images/whatsapp-icon.png"}
           alt="whatsapp icon"
-          width={40}
-          height={40}
+          width={45}
+          height={45}
+          quality={90}
+          className="drop-shadow-xl"
         />
       </div>
-      {open ? (
-        <motion.div
-          initial={{
-            opacity: 0,
-          }}
-          animate={{
-            opacity: 1,
-          }}
-          transition={{
-            ease: "linear",
-            duration: 0.1,
-          }}
-          exit={{
-            opacity: 0,
-            scale: 1,
-          }}
-          className="p-5 fixed md:bottom-16 bottom-[76px] md:right-16 right-8 rounded-s-3xl rounded-t-3xl bg-white/70 drop-shadow-2xl backdrop-blur-2xl md:w-96 w-[88%] z-50"
-        >
-          <h3 className="font-poppins"> We Can Help You !</h3>
-          <div className="flex flex-col mt-5">
-            <div>
-              <p className="text-[18px] mb-2 font-semibold">Phone Number</p>
-              <button className="w-full items-center p-2 rounded-lg flex gap-x-4 bg-white">
-                <img
-                  src={"/images/phone-icon.png"}
-                  alt="phone icon"
-                  className="w-9"
-                />
-                <b className="text-[17px] font-medium">+056 6651978</b>
-              </button>
-              <button className="w-full items-center mt-2 p-2 rounded-lg flex gap-x-4 bg-white">
-                <img
-                  src={"/images/phone-icon.png"}
-                  alt="phone icon"
-                  className="w-9"
-                />
-                <b className="text-[17px] font-medium">+923471309916</b>
-              </button>
-            </div>
-            <div className="mt-3">
-              <p className="text-[18px] mb-2 font-semibold">WhatsApp Number</p>
-              <button className="w-full items-center p-2 rounded-lg flex gap-x-4 bg-white">
-                <img
-                  src={"/images/whatsapp2-icon.png"}
-                  alt="phone icon"
-                  className="w-9"
-                />
-                <b className="text-[17px] font-medium">+923471309916</b>
-              </button>
-              <button className="w-full items-center mt-2 p-2 rounded-lg flex gap-x-4 bg-white">
-                <img
-                  src={"/images/whatsapp2-icon.png"}
-                  alt="phone icon"
-                  className="w-9"
-                />
-                <b className="text-[17px] font-medium">+923471309916</b>
-              </button>
+      {open && (
+        <div className="w-full h-full bg-black/50 fixed top-0 left-0 z-[400] flex items-center justify-center">
+          <div className="md:w-[450px] w-[95%] h-auto bg-white drop-shadow-2xl rounded-3xl py-10 px-3 relative">
+            <Button
+              size={"icon"}
+              variant={"ghost"}
+              className="absolute top-3 right-3"
+              onClick={(e) => setOpen((p) => !p)}
+            >
+              <X />
+            </Button>
+            <h3 className="font-normal text-center">Hi there !</h3>
+            <h3 className="font-normal text-center">How we can help you ?</h3>
+            <div className="flex gap-y-5 mt-10 w-full flex-col">
+              <div className="w-full bg-gradient-to-r from-white to-gray-50 md:px-4 px-2 py-3 border rounded-3xl">
+                <p className="text-[23px] tracking-wider font-medium text-black">
+                  +971 56 6651978
+                </p>
+                <div className="w-full flex gap-x-4 mt-3">
+                  <Link
+                    href={
+                      "https://wa.me/+971566651978?text=I%20need%20a%20service"
+                    }
+                  >
+                    <Button
+                      size={"sm"}
+                      className="bg-green-500 flex gap-x-1 items-center"
+                    >
+                      <IconBrandWhatsapp className="w-7 h-7" /> WhatsApp
+                    </Button>
+                  </Link>
+                  <Link href={"tel:+971566651978"}>
+                    <Button size={"sm"} variant={"outline"}>
+                      Call Now
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+              <div className="w-full bg-gradient-to-r from-white to-gray-50 md:px-4 px-2 py-3 border rounded-3xl">
+                <p className="text-[23px] tracking-wider font-medium text-black">
+                  +971 050 3626685
+                </p>
+                <div className="w-full flex gap-x-4 mt-3">
+                  <Link
+                    href={
+                      "https://wa.me/+9710503626685?text=I%20need%20a%20service"
+                    }
+                  >
+                    <Button
+                      size={"sm"}
+                      className="bg-green-500 flex gap-x-1 items-center"
+                    >
+                      <IconBrandWhatsapp className="w-7 h-7" /> WhatsApp
+                    </Button>
+                  </Link>
+                  <Link href={"tel:+9710503626685"}>
+                    <Button size={"sm"} variant={"outline"}>
+                      Call Now
+                    </Button>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
-        </motion.div>
-      ) : null}
+        </div>
+      )}
     </>
   );
 }
