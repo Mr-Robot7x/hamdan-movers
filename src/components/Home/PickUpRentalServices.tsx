@@ -26,18 +26,12 @@ function PickUpRentalServices() {
               moving items or transporting goods, our diverse fleet is ready to
               serve you.
             </p>
-            <div className="flex md:flex-row flex-col gap-y-3 md:gap-x-3 mt-5">
-              <Link href={"tel:+971 56 6651978"}>
-                <Button>
-                  +971 56 6651978 <PhoneOutgoingIcon className="w-5 h-5 ml-2" />
-                </Button>
-              </Link>
-              <Link href={"tel:+971 50 3626685"}>
-                <Button variant={"light"}>
-                  +971 50 3626685 <PhoneOutgoingIcon className="w-5 h-5 ml-2" />
-                </Button>
-              </Link>
-            </div>
+
+            <Link href={"tel:+971 56 6651978"}>
+              <Button className="mt-5">
+                +971 56 6651978 <PhoneOutgoingIcon className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
           </div>
           <div className="relative h-72 w-full rounded-2xl">
             <Image
@@ -51,10 +45,10 @@ function PickUpRentalServices() {
         </div>
       </div>
       <div className="w-full md:w-11/12 flex justify-center gap-y-6 flex-col items-center">
-        <div className="w-4/5">
+        <div className="md:w-4/5">
           <h2 className="font-medium text-center font-poppins">
             We have following size of a Pickup Truck that is Appropriate for
-            your needs
+            your needs.
           </h2>
         </div>
         <div className="w-full grid lg:grid-flow-col md:grid-flow-row grid-flow-row md:grid-col-2 md:gap-x-8 gap-y-8 md:px-24 mt-8">

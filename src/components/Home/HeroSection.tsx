@@ -11,9 +11,9 @@ function HeroSection() {
   return (
     <div
       dir={locale === "ar" ? "rtl" : "ltr"}
-      className="relative md:w-11/12 md:mt-36 mt-32 min-h-44"
+      className="relative md:w-11/12 md:mt-40 mt-32"
     >
-      <h1 className="md:text-center text-start leading-[53px] text-[55px] md:text-[60px] md:pb-8 pb-2">
+      <h1 className="md:text-center text-start leading-[53px] text-[50px] md:text-[60px] md:pb-8 pb-2">
         {t("headingTitle")}
       </h1>
       <div className="md:mt-10 mt-6 w-full grid md:grid-cols-2 grid-cols-1 md:pl-16 md:gap-x-0 gap-y-8">

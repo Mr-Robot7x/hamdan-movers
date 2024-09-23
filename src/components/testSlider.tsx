@@ -1,25 +1,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
-
 interface CardSliderProps {
   cards: {
-    id: number;
-    title: string;
-    description: string;
-
-    authorName: string;
-    authorRole: string;
-    rating: number;
-  }[];
-}
-interface CardSliderProps {
-  cards: {
-    id: number;
-    title: string;
-    description: string;
-
-    authorName: string;
-    authorRole: string;
+    name: string;
+    location: string;
+    date: string;
+    testimonial: string;
     rating: number;
   }[];
   autoScroll?: boolean; // Optional prop to enable auto-scrolling
@@ -28,7 +14,7 @@ interface CardSliderProps {
 const CardSlider: React.FC<CardSliderProps> = ({
   cards,
   autoScroll = true,
-  scrollInterval = 4000,
+  scrollInterval = 6000,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   useEffect(() => {
@@ -68,24 +54,30 @@ const CardSlider: React.FC<CardSliderProps> = ({
     <div className="slider-container">
       <div className="slider-wrapper">
         <div
-          className="slider"
+          className="slider md:w-full w-[350px]"
           style={{
             transform: `translateX(-${currentIndex * 100}%)`,
           }}
         >
           {cards.map((card) => (
-            <div className="card md:w-full w-[115px]" key={card.id}>
-              <div className="card-header">{renderStars(card.rating)}</div>
+            <div className="card md:w-full h-auto" key={card.name}>
+              <div className="card-header">
+                {renderStars(card.rating)}{" "}
+                <span className="text-[11px] gr ml-2 font-poppins">
+                  {card.rating} / 5
+                </span>
+              </div>
               <div className="card-body ">
                 <div>
-                  <h3 className="font-semibold">{card.authorName}</h3>
-                  <p className="text-sm text-gray-500">{card.authorRole}</p>
+                  <h3 className="font-semibold">{card.name}</h3>
+                  <p className="text-sm text-gray-500">{card.location}</p>
                 </div>
                 <div className="ml-auto text-4xl text-gray-300">❝</div>
               </div>
-              <p className="card-description mt-4 text-gray-600">
-                {card.description}
+              <p className="card-description mt-1 text-gray-600">
+                {card.testimonial}
               </p>
+              <small className="text-[#FF5F00]">Moved On: {card.date}</small>
             </div>
           ))}
         </div>
@@ -96,7 +88,8 @@ const CardSlider: React.FC<CardSliderProps> = ({
         {cards.map((_, index) => (
           <span
             key={index}
-            className={`h-2 w-2 rounded-full mx-1 ${
+            onClick={() => setCurrentIndex(index)}
+            className={`h-2 w-2 rounded-full mx-1 cursor-pointer ${
               currentIndex === index ? "bg-gray-800" : "bg-gray-400"
             }`}
           ></span>

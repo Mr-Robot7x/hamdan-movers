@@ -4,14 +4,13 @@ import Image from "next/image";
 import React from "react";
 import aboutUsImg from "../../../../public/images/about-us.jpg";
 import ownerImage from "../../../../public/images/owner-ahmad-hussain.jpg";
-import backgroundImage from "../../../../public/images/hamdan-movers.jpg";
 import {
   IconBrandFacebook,
   IconBrandWhatsapp,
   IconMail,
 } from "@tabler/icons-react";
 import WhyChooseUs from "@/components/Home/WhyChooseUs";
-import AboutTestimonal from "@/components/aboutTestimonials";
+import TestimonialSection from "@/components/Testimonials";
 const AboutUsSection = () => {
   return (
     <>
@@ -20,7 +19,7 @@ const AboutUsSection = () => {
       <div className="w-full flex flex-col items-center justify-center gap-y-16">
         <div className="w-full md:w-11/12 md:mt-[160px] mt-36">
           <div className="w-full">
-            <h1 className="font-medium text-[70px] border-b-[2px] pb-6 border-black">
+            <h1 className="font-medium md:text-[70px] text-[60px] border-b-[2px] pb-6 border-black">
               About Us
             </h1>
             <div className="w-full grid md:grid-cols-2 grid-cols-1 md:gap-x-4 gap-y-9 md:mt-16 mt-10 md:ml-12">
@@ -87,7 +86,7 @@ const AboutUsSection = () => {
             </div>
           </div>
         </div>
-        {/* {Owner Section} */}
+
         <div className="mt-16 w-full md:w-11/12  min-h-40">
           <h2 className="text-center md:text-[55px] text-[50px] leading-[45px]">
             About The Owner
@@ -128,24 +127,7 @@ const AboutUsSection = () => {
             </div>
           </div>
         </div>
-
-        <div
-          className="w-full relative h-[400px] bg-cover bg-center md:mb-32 mb-44"
-          style={{
-            backgroundImage: `url(${backgroundImage.src})`,
-          }}
-        >
-          <div className="absolute inset-0 bg-[#023246] opacity-85"></div>
-          <div className="relative z-10 flex flex-col items-center justify-center">
-            <h2 className="text-center text-white ts mt-16 md:text-[50px] text-[42px] leading-[55px]">
-              What Our Customers Are Talking <br /> About Us
-            </h2>
-            <div className="bg-gradient-to-t from bg-white/50 to-white backdrop-blur-md rounded-3xl w-full md:w-11/12 min-h-40 mt-16">
-              <AboutTestimonal />
-            </div>
-          </div>
-        </div>
-        {/* {Branding Section} */}
+        <TestimonialSection />
         <WhyChooseUs />
       </div>
 

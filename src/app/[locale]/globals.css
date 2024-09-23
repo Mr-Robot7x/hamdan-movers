@@ -19,7 +19,7 @@ svg {
 }
 h1,
 h2 {
- font-family: 'Playfair Display'
+ font-family: 'playfair display', serif;
 }
 h5 {
   @apply tracking-wide text-black font-semibold text-[17px]
@@ -186,7 +186,6 @@ small{
 /* Card wrapper */
 .slider-wrapper {
   display: flex;
-  overflow: hidden;
 }
 
 /* Slider track */
@@ -201,7 +200,6 @@ small{
   padding: 20px;
   background-color: #fafafa;
   border-radius: 10px;
-  text-align: left;
 }
 
 /* Card header for star ratings */
@@ -219,6 +217,7 @@ small{
   margin-top: 10px;
   font-size: 14px;
   color: #666;
+  text-wrap: wrap;
 }
 
 /* Slider buttons */

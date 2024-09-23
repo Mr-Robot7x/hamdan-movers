@@ -9,6 +9,8 @@ import {
   IconMapPin,
   IconMenu2,
   IconPhone,
+  IconSettingsAutomation,
+  IconSettingsCode,
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import { ChevronDown, MapPin, Phone, TimerIcon, X } from "lucide-react";
@@ -99,7 +101,9 @@ function Navbar() {
                         <ul className="p-4">
                           <Link
                             className="block text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-3xl active:scale-[0.98] relative"
-                            href={"/"}
+                            href={
+                              "/services-locations/movers-and-packers-dubai"
+                            }
                           >
                             Dubai
                           </Link>
