@@ -10,6 +10,17 @@
 html {
   scroll-behavior: smooth;
 }
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+  /* Hide scrollbar in Chrome/Safari/Edge */
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* Hide scrollbar in IE 10+ */
+  scrollbar-width: none;
+  /* Hide scrollbar in Firefox */
+}
 body {
   /* font-family: "poppins", sans-serif; */
   @apply antialiased;

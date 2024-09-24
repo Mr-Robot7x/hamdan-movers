@@ -4,12 +4,8 @@ import React from "react";
 import ImageSrc from "../../../../public/images/movers-in-dubai.jpeg";
 import PerServiceSec from "@/components/perServiceSec";
 import Benifits from "@/components/Benifits";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import ajmanImage from "../../../../public/images/ajman-image.jpg";
-import sharjahImage from "../../../../public/images/sharjah-image.jpg";
-import dubaiImage from "../../../../public/images/dubai-image.jpg";
-import Image from "next/image";
+import { StickyScrollRevealDemo } from "@/components/StickyScrollRevealDemo";
+
 function ServicesLocations() {
   return (
     <>
@@ -22,7 +18,10 @@ function ServicesLocations() {
           description="We provide reliable moving services across Dubai, Sharjah, Ajman, and the surrounding areas. Our goal is to make your move as smooth and stress-free as possible. With a skilled team and the right equipment, we handle every aspect of your move, whether it’s for your home or business."
         />
         <Benifits />
-        <div className="grid grid-cols-1 md:grid-cols-2 w-full md:w-11/12 mt-5 min-h-40 gap-x-4">
+        <div className="w-full">
+          <StickyScrollRevealDemo />
+        </div>
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 w-full md:w-11/12 mt-5 min-h-40 gap-x-4">
           <div className="min-h-32">
             <ul className="mt-5 flex flex-col gap-y-4">
               <li className="border-b pb-2">
@@ -124,7 +123,7 @@ function ServicesLocations() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
       <Footer />
     </>
