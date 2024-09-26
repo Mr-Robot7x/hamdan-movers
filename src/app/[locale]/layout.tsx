@@ -44,7 +44,11 @@ export default function RootLayout({
             //     ? arabic.className
             //     : playfair.className + poppins.className
             // }`}
-            className={`${poppins.className} ${playfair.className}`}
+            className={`${
+              locale === "ar"
+                ? "font-arabic"
+                : `${poppins.className} ${playfair.className}`
+            }`}
           >
             {children}
           </main>

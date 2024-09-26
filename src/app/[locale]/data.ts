@@ -30,7 +30,7 @@ export const navItems: { name: string; link: string; sub?: boolean }[] = [
 export const subServices: { name: string; link: string }[] = [
   {
     name: "Local Moving",
-    link: "/services/local-moving",
+    link: "/services/local-residential-movers",
   },
   {
     name: "Commercial  Moving",

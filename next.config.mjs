@@ -6,7 +6,7 @@ const withNextIntl = createNextIntlPlugin();
 
 // Configure the bundle analyzer plugin
 const bundleAnalyzer = withBundleAnalyzer({
-  enabled: process.env.ANALYZE === "true",
+  enabled: process.env.ANALYZE === "false",
   openAnalyzer: false,
 });
 

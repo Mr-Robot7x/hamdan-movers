@@ -1,110 +1,132 @@
-import { IconBrandFacebook, IconBrandWhatsapp } from "@tabler/icons-react";
-import { LucidePhone } from "lucide-react";
 import Image from "next/image";
 import React from "react";
-
+import logo from "../../../public/images/hamdan-mover-logo.png";
+import {
+  IconBrandFacebook,
+  IconBrandTiktok,
+  IconBrandTwitter,
+  IconBrandWhatsapp,
+} from "@tabler/icons-react";
+import { Button } from "../ui/button";
+import { Facebook, Instagram, PhoneCallIcon } from "lucide-react";
+import Link from "next/link";
+import { subServices } from "@/app/[locale]/data";
 function Footer() {
   return (
-    <footer className="mt-4 relative overflow-hidden py-10 border rounded-3xl mb-2 bg-gradient-to-b from-transparent via-transparent to-[#ED852F]/30">
-      <div className="relative z-10 mx-auto max-w-7xl px-4">
-        <div className="-m-6 flex flex-wrap justify-evenly">
-          <div className="w-full p-6 md:w-1/2 lg:w-5/12">
-            <div className="flex h-full flex-col justify-between">
-              <div className="mb-4 inline-flex items-center">
-                {/* <Image
-                  src={"/images/KSM-LOGO.png"}
-                  width={200}
-                  height={200}
-                  alt="Al Khajista Shifting Movers"
-                /> */}
-                <h3>LOGO</h3>
-              </div>
-              <div>
-                <p className="md:mb-4 mb-0 text-base font-medium">
-                  Safe & Secure Moves Across Dubai
-                </p>
-                <p className=" text-sm text-gray-600">
-                  &copy; Copyright {new Date().getFullYear()}. All Rights
-                  Reserved by Al Khajista Shifting Movers.
-                </p>
-              </div>
-            </div>
+    <footer className="w-full mt-16 py-7 md:px-10 h-auto">
+      <div className="grid md:grid-cols-3 grid-cols-1 gap-y-8">
+        <div className="col-span-1">
+          <div className="w-40 h-24 relative bg-gray-200">
+            <Image
+              alt="Hamdan Movers Logo"
+              src={logo}
+              fill
+              placeholder="blur"
+              className="object-contain absolute"
+            />
           </div>
-          <div className="w-full p-6 md:w-1/2 lg:w-2/12">
-            <div className="h-full">
-              <h3 className="tracking-px mb-5 text-xs font-semibold uppercase text-gray-500">
-                Company
-              </h3>
-              <ul>
-                <li className="mb-4">
-                  <a
-                    className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                    href="#"
-                  >
-                    Home
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a
-                    className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                    href="#"
-                  >
-                    Services
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a
-                    className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                    href="#"
-                  >
-                    Our Gallary
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a
-                    className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                    href="#"
-                  >
-                    About Us
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="w-full p-6 md:w-1/2 lg:w-1/5">
-            <div className="h-full">
-              <h3 className="tracking-px mb-4  text-xs font-semibold uppercase text-gray-500">
-                Support
-              </h3>
-              <ul>
-                <li className="mb-4">
-                  <a
-                    className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                    href="#"
-                  >
-                    Contact Us
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a
-                    className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                    href="#"
-                  >
-                    Terms and conditions
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                    href="#"
-                  >
-                    Privacy Policy
-                  </a>
-                </li>
-              </ul>
-            </div>
+          <h2 className="text-[28px] mt-3">Hamdan Movers and Packers</h2>
+          <p className="gr">UAE&lsquo;s No.1 Moving And Packing Company</p>
+          <div className="flex gap-x-3 mt-5">
+            <Button size={"icon"}>
+              <IconBrandFacebook />
+            </Button>
+            <Button size={"icon"}>
+              <Instagram />
+            </Button>
+            <Button size={"icon"}>
+              <IconBrandTiktok />
+            </Button>
+            <Button size={"icon"}>
+              <IconBrandTwitter />
+            </Button>
+            <Button size={"icon"}>
+              <IconBrandWhatsapp />
+            </Button>
           </div>
         </div>
+        <div className="col-span-2 flex md:flex-row flex-col gap-y-5 justify-between md:px-7">
+          <div className="flex flex-col gap-y-4 font-poppins">
+            <h4>Main Pages</h4>
+            <ul className="flex flex-col gap-y-3">
+              <Link href="/">
+                <li>Home</li>
+              </Link>
+              <Link href="/services">
+                <li>Services</li>
+              </Link>
+              <Link href="/about-us">
+                <li>About Us</li>
+              </Link>
+              <Link href="/contact-us">
+                <li>Contact Us</li>
+              </Link>
+
+              <Link href="/services-locations">
+                <li>Services Locations</li>
+              </Link>
+
+              <Link href="/">
+                <li>Terms and Conditions</li>
+              </Link>
+              <Link href="/">
+                <li>Privacy Policy</li>
+              </Link>
+            </ul>
+          </div>
+          <div className="flex flex-col gap-y-4 font-poppins">
+            <h4>Services</h4>
+            <ul className="flex flex-col gap-y-3">
+              {subServices.map((service, i) => (
+                <Link href={service.link} key={i}>
+                  <li>{service.name}</li>
+                </Link>
+              ))}
+              <Link href="/pickup-rental-trucks">
+                <li>Pickup Car For Rent</li>
+              </Link>
+            </ul>
+          </div>
+          <div className="flex flex-col gap-y-4 font-poppins">
+            <h4>Services Locations</h4>
+            <ul className="flex flex-col gap-y-3">
+              <Link href={"/services-locations/movers-and-packers-dubai"}>
+                <li>Movers in Dubai</li>
+              </Link>
+              <Link href={"/services-locations/movers-and-packers-sharjah"}>
+                <li>Movers in Sharjah</li>
+              </Link>
+              <Link href={"/services-locations/movers-and-packers-ajman"}>
+                <li>Movers in Ajman</li>
+              </Link>
+              <Link href={"/pickup-rental-trucks-in-dubai"}>
+                <li>Pickup Car Rent Dubai</li>
+              </Link>
+              <Link href={"/pickup-rental-trucks-in-sharjah"}>
+                <li>Pickup Car Rent Sharjah</li>
+              </Link>
+              <Link href={"/pickup-rental-trucks-in-ajman"}>
+                <li>Pickup Car Rent Ajman</li>
+              </Link>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div className="w-full min-h-3 mt-6">
+        <p className="gr text-center">
+          &copy; Copyright {new Date().getFullYear()}. All Rights Reserved by
+          Hamdan Movers and Packer.
+          <br />
+          Develop By{" "}
+          <Link
+            className="pb"
+            href={
+              "https://wa.me/+923471309916?text=Hello%20Mashal,%20I%20Need%20Your%20Service%20!"
+            }
+          >
+            Mashal Horara
+          </Link>
+        </p>
       </div>
     </footer>
   );

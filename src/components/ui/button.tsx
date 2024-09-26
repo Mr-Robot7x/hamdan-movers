@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
-
+import { useLocale } from "next-intl";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
@@ -27,7 +27,7 @@ const buttonVariants = cva(
         default: "py-3 px-6 rounded-full",
         sm: "py-2 px-4 rounded-full",
         lg: "h-11 rounded-md px-8",
-        icon: "h-12 w-12 rounded-full",
+        icon: "relative h-12 w-12 rounded-full",
       },
     },
     defaultVariants: {
@@ -45,10 +45,14 @@ export interface ButtonProps
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
+    const locale = useLocale();
     const Comp = asChild ? Slot : "button";
     return (
       <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
+        dir={locale === "ar" ? "rtl" : "ltr"}
+        className={`font-poppins ${cn(
+          buttonVariants({ variant, size, className })
+        )}`}
         ref={ref}
         {...props}
       />

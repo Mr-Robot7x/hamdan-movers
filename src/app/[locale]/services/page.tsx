@@ -1,6 +1,8 @@
 import Benifits from "@/components/Benifits";
+import ContactUs from "@/components/ContactForm";
 import Footer from "@/components/Home/Footer";
 import OurServices from "@/components/Home/OurServices";
+import PickUpRentalServices from "@/components/Home/PickUpRentalServices";
 
 import Navbar from "@/components/Navbar";
 import HealthcareSlider from "@/components/OtherMovingServices";
@@ -21,7 +23,9 @@ function page() {
         <Benifits />
         <OurServices />
         <HealthcareSlider />
+        <PickUpRentalServices />
         <TestimonialSection />
+        <ContactUs />
       </div>
 
       <Footer />

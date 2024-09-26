@@ -6,6 +6,7 @@ import HeroSection from "@/components/Home/HeroSection";
 import OurServices from "@/components/Home/OurServices";
 import PickUpRentalServices from "@/components/Home/PickUpRentalServices";
 import WhyChooseUs from "@/components/Home/WhyChooseUs";
+import Locations from "@/components/Locations";
 import Navbar from "@/components/Navbar";
 import OtherMovingServices from "@/components/OtherMovingServices";
 import PricingList from "@/components/PricingList";
@@ -26,6 +27,7 @@ function page() {
         <OtherMovingServices />
         <WhyChooseUs />
         <PickUpRentalServices />
+        <Locations />
         <WorkProcessSection />
         <PricingList />
 

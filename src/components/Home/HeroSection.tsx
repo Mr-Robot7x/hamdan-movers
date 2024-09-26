@@ -13,23 +13,55 @@ function HeroSection() {
       dir={locale === "ar" ? "rtl" : "ltr"}
       className="relative md:w-11/12 md:mt-40 mt-32"
     >
-      <h1 className="md:text-center text-start leading-[53px] text-[50px] md:text-[60px] md:pb-8 pb-2">
+      <h1
+        className={`md:text-center text-start ${
+          locale === "ar"
+            ? "md:text-[50px] leading-[71px] text-[48px]"
+            : "leading-[53px] text-[50px] md:text-[60px]"
+        }  md:pb-8 pb-2`}
+      >
         {t("headingTitle")}
       </h1>
-      <div className="md:mt-10 mt-6 w-full grid md:grid-cols-2 grid-cols-1 md:pl-16 md:gap-x-0 gap-y-8">
-        <div className="md:mb-0 pb-7 md:pr-10 md:mt-2 md:border-none border-b border-neutral-400">
-          <h2 className="font-poppins font-normal">{t("SubTitle")}</h2>
-          <p className="mt-6">{t("description")}</p>
+      <div
+        className={`${
+          locale === "ar" ? "md:pr-16" : "md:pl-16"
+        } md:mt-10 mt-6 w-full grid md:grid-cols-2 grid-cols-1 md:gap-x-0 gap-y-8`}
+      >
+        <div
+          className={`
+            ${locale === "ar" ? "md:pl-10" : "md:pr-10"}
+           md:mb-0 pb-7 md:mt-2 md:border-none border-b border-neutral-400`}
+        >
+          <h2
+            className={`${
+              locale === "ar"
+                ? "md:leading-[65px] leading-[53px]"
+                : "font-poppins"
+            } font-normal`}
+          >
+            {t("SubTitle")}
+          </h2>
+          <p
+            className={`${
+              locale === "ar" ? "font-arabic md:leading-8 leading-7" : ""
+            } mt-6`}
+          >
+            {t("description")}
+          </p>
           <div className="w-full flex md:gap-x-3 md:flex-row flex-col gap-y-3 mt-4">
             <Link href={"tel:tel:+971566651978"}>
-              <Button>Call Now : +971 56 6651978</Button>
+              <Button>{b("call now")} : +971 56 6651978</Button>
             </Link>
             <Link href={"/services"}>
-              <Button variant={"secondary"}>Our Services</Button>
+              <Button variant={"secondary"}>{b("Our Services")}</Button>
             </Link>
           </div>
         </div>
-        <div className=" flex md:border-l md:border-neutral-400 justify-center">
+        <div
+          className={`${
+            locale === "ar" ? "md:border-r" : "md:border-l"
+          } flex md:border-neutral-400 justify-center`}
+        >
           <div className="md:w-96 w-[350px] bg-gradient-to-t from-slate-50 to-slate-100 h-96 relative">
             <Image
               src={heroImage}

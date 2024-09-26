@@ -5,6 +5,7 @@ import {
 } from "@tabler/icons-react";
 import { HeartHandshake, LucideSettings2, PartyPopperIcon } from "lucide-react";
 import { Button } from "../ui/button";
+import Link from "next/link";
 function BrandingContent() {
   return (
     <>
@@ -69,7 +70,9 @@ function BrandingContent() {
               </p>
 
               <div className="flex justify-center md:justify-start space-x-4 md:mb-8 mb-4">
-                <Button>Contact Us</Button>
+                <Link href={"/contact-us"}>
+                  <Button>Contact Us</Button>
+                </Link>
               </div>
             </div>
           </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import imageSrc from "../../../public/images/professional-moving-company-hamdan.jpg";
 import Image from "next/image";
+import Link from "next/link";
 const WhyChooseUs: React.FC = () => {
   return (
     <>
@@ -27,28 +28,28 @@ const WhyChooseUs: React.FC = () => {
                 Why Choose Us
               </h3>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                We Are Professional Moving Company In Dubai
+                We Are Professional Moving Company In UAE
               </h2>
               <p className="text-gray-600 mb-6">
-                We provide top-tier moving services in Sharjah, backed by a
-                skilled team and the latest equipment. We value client feedback,
+                We provide top-tier moving services in UAE, backed by a skilled
+                team and the latest equipment. We value client feedback,
                 continuously improving our services to ensure safe, timely
                 moves. Count on us for a smooth, efficient relocation experience
               </p>
 
               <div className="flex justify-center md:justify-start space-x-4 mb-8">
-                <a
-                  href="#"
-                  className="bg-[#287094] text-white py-3 px-6 rounded-full hover:bg-blue-600 transition duration-300"
+                <Link
+                  href={"/about-us"}
+                  className="bg-[#287094] text-white py-3 font-poppins px-6 rounded-full hover:bg-blue-600 transition duration-300"
                 >
                   Know More
-                </a>
-                <a
-                  href="#"
-                  className="bg-[#FF5F00] text-white py-3 px-6 rounded-full hover:bg-yellow-600 transition duration-300"
+                </Link>
+                <Link
+                  className="bg-[#FF5F00] font-poppins text-white py-3 px-6 rounded-full hover:bg-yellow-600 transition duration-300"
+                  href={"/contact-us"}
                 >
                   Contact Us
-                </a>
+                </Link>
               </div>
 
               <div className="flex justify-center md:justify-start space-x-8 text-gray-800">

@@ -2,10 +2,12 @@ import React from "react";
 import { Button } from "../ui/button";
 import Link from "next/link";
 
-function OurServices() {
+function OurServices({ title, city }: { title?: string; city?: string }) {
   return (
     <div className="md:w-11/12 w-full md:mt-5">
-      <h2 className="text-center">Our Moving Services In UAE</h2>
+      <h2 className="text-center">
+        {title ? title : "Our Moving Services In UAE"}
+      </h2>
       <p className="text-center mt-5 md:text-[17px] md:px-16">
         At Hamdan Movers and Packers, we offer a complete solution for all your
         moving needs. With over 10 years of experience, we provide reliable,
@@ -121,7 +123,7 @@ function OurServices() {
             </svg>
           </div>
           <h4 className="text-center mt-2 font-poppins">
-            Local Moving Services
+            Local Moving Services <br /> {city && `In ${city}`}
           </h4>
           <p className="gr md:leading-5 mt-1 text-[15.3px] text-center">
             Our local moving services ensure a smooth, quick, and reliable
@@ -348,7 +350,7 @@ function OurServices() {
             </svg>
           </div>
           <h4 className="text-center mt-2 font-poppins">
-            Commercial Moving Services
+            Commercial Moving Services <br /> {city && `In ${city}`}
           </h4>
           <p className="gr md:leading-5 mt-1 text-[15.3px] text-center">
             We handle every detail of your office relocation, minimizing
@@ -523,7 +525,7 @@ function OurServices() {
             </svg>
           </div>
           <h4 className="text-center mt-2 font-poppins">
-            Packing and Unpacking
+            Packing and Unpacking <br /> {city && `In ${city}`}
           </h4>
           <p className="gr md:leading-5 mt-1 text-[15.3px] text-center">
             Our expert team offers secure and reliable packing and careful
@@ -686,7 +688,9 @@ function OurServices() {
               </g>
             </svg>
           </div>
-          <h4 className="text-center mt-2 font-poppins">Storage Solutions</h4>
+          <h4 className="text-center mt-2 font-poppins">
+            Storage Solutions <br /> {city && `In ${city}`}
+          </h4>
           <p className="gr md:leading-5 mt-1 text-[15.3px] text-center">
             Our climate-controlled storage solutions for clients provide safe,
             flexible short-term or long-term storage during your transition and
@@ -885,7 +889,7 @@ function OurServices() {
             </svg>
           </div>
           <h4 className="text-center mt-2 font-poppins">
-            Specialty Moving Services
+            Specialty Moving Services <br /> {city && `In ${city}`}
           </h4>
           <p className="gr md:leading-5 mt-1 text-[15.3px] text-center">
             We specialize in moving valuable items like pianos, antiques, and
@@ -991,7 +995,7 @@ function OurServices() {
             </svg>
           </div>
           <h4 className="text-center mt-2 font-poppins">
-            International Moving Services
+            International Moving Services <br /> {city && `In ${city}`}
           </h4>
           <p className="gr md:leading-5 mt-1 text-[15.3px] text-center">
             We make international moves to Gulf countries stress-free, handling

@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "./ui/button";
 
-function Benifits() {
+function Benifits({ city }: { city?: string }) {
   return (
     <div className="md:mt-14 mt-8 mb-5 w-full md:w-11/12 grid md:grid-cols-2 md:gap-x-5 gap-y-7 grid-cols-1 items-center">
       <div className="px-3 md:px-0 flex flex-wrap md:gap-5 gap-y-5 md:order-1 order-2">
@@ -48,10 +48,11 @@ function Benifits() {
       <div className="md:p-4 p-0 md:order-2 order-1">
         <h2>Benefits You Get When You Use Our Services</h2>
         <p className="mt-5">
-          We offers comprehensive moving services across the UAE, including
-          local and long-distance moves, packing, specialized handling, and
-          custom crating. We handle residential, commercial, and emergency
-          relocations for a seamless, stress-free experience.
+          We offers comprehensive moving services across the{" "}
+          {city ? city : "UAE"}, including local and long-distance moves,
+          packing, specialized handling, and custom crating. We handle
+          residential, commercial, and emergency relocations for a seamless,
+          stress-free experience.
         </p>
         <Button className="mt-4">Contact Now</Button>
       </div>

@@ -17,6 +17,7 @@ import shorttermImg from "../../../../../public/images/short-term.jpg";
 import residentalImg from "../../../../../public/images/residential-storage.jpg";
 import commericalImg from "../../../../../public/images/commercial-storage.jpg";
 import Image from "next/image";
+import TestimonialSection from "@/components/Testimonials";
 function StorageServices() {
   return (
     <>
@@ -184,6 +185,7 @@ function StorageServices() {
             },
           ]}
         />
+        <TestimonialSection />
       </div>
 
       <Footer />

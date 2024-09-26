@@ -2,7 +2,8 @@ import React from "react";
 import imageSrc from "../../public/images/pricing-image.jpg";
 import Image from "next/image";
 import PricingTable from "./PricingTable";
-function PricingList() {
+import { Button } from "./ui/button";
+function PricingList({ city }: { city?: string }) {
   return (
     <div className="w-full md:w-11/12 mt-5">
       <section className=" rounded-3xl md:py-10 md:px-10 px-1">
@@ -24,12 +25,7 @@ function PricingList() {
             </p>
 
             <div className="flex justify-center md:justify-start space-x-4 mb-8">
-              <a
-                href="#"
-                className="bg-[#287094] text-white py-3 px-6 rounded-full hover:bg-blue-600 transition duration-300"
-              >
-                Pricing List
-              </a>
+              <Button variant={"light"}>Pricing List</Button>
             </div>
           </div>
 
@@ -50,7 +46,7 @@ function PricingList() {
       </section>
       <div className=" mt-5  flex justify-center">
         <div className=" w-full md:w-10/12 rounded-3xl md:p-5 py-5 px-0">
-          <div>
+          <div className="font-poppins">
             <h2>How We Calculate Moving Costs</h2>
             <p className="my-4">
               We maintain open communication about all costs from the get-go,
@@ -92,20 +88,21 @@ function PricingList() {
               <PricingTable />
             </div>
           </div>
-          <div className="mt-10">
+          <div className="mt-10 font-poppins">
             <h2>
-              Understanding Moving Prices and What Affects On Prices In UAE
+              Understanding Moving Prices and What Affects On Prices In{" "}
+              {city ? city : "UAE"}
             </h2>
             <p className="my-4">
-              When planning a move in the UAE, understanding what influences the
-              cost can help you make informed decisions. Various factors, such
-              as the distance of your move, the size and weight of your
-              belongings, and any special handling requirements, all contribute
-              to the final price. Additionally, aspects like the number of
-              movers needed, the type of vehicle required, and the complexity of
-              the move (e.g., stairs, narrow streets) can impact the cost. By
-              knowing these factors upfront, you can better budget for your move
-              and avoid unexpected fees.
+              When planning a move in the {city ? city : "UAE"}, understanding
+              what influences the cost can help you make informed decisions.
+              Various factors, such as the distance of your move, the size and
+              weight of your belongings, and any special handling requirements,
+              all contribute to the final price. Additionally, aspects like the
+              number of movers needed, the type of vehicle required, and the
+              complexity of the move (e.g., stairs, narrow streets) can impact
+              the cost. By knowing these factors upfront, you can better budget
+              for your move and avoid unexpected fees.
             </p>
             <h5>Factors Affecting the Cost</h5>
             <p className="mt-2">

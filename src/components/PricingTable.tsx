@@ -4,7 +4,7 @@ import { movingData } from "../components/ui/pricingData";
 
 const PricingTable: React.FC = () => {
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto font-poppins">
       <table className="min-w-full rounded-lg table-auto border-collapse border border-gray-300">
         <thead>
           <tr className="bg-gray-100">

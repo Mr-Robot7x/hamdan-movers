@@ -9,7 +9,7 @@ import Image from "next/image";
 import { faqs } from "@/app/[locale]/data";
 export function FAQs() {
   return (
-    <div className="w-full md:w-11/12 flex flex-col items-center justify-center">
+    <div className="w-full md:w-11/12 flex flex-col items-center justify-center font-poppins">
       <div className="w-40 h-40 relative">
         <Image
           src={faqsImage}

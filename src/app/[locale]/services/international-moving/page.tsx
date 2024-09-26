@@ -14,6 +14,7 @@ import packingIcon from "../../../../../public/images/packing-unpacking.png";
 import moveIcon from "../../../../../public/images/safe-transportation.png";
 import settingIcon from "../../../../../public/images/home-setting-icon.png";
 import Image from "next/image";
+import TestimonialSection from "@/components/Testimonials";
 function InternationalMovingService() {
   return (
     <>
@@ -129,6 +130,7 @@ function InternationalMovingService() {
             },
           ]}
         />
+        <TestimonialSection />
       </div>
 
       <Footer />

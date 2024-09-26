@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 const HealthcareSlider: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -52,21 +53,28 @@ const HealthcareSlider: React.FC = () => {
           }}
         >
           {cardData.map((card, index) => (
-            <div key={index} className="min-w-[100%] md:min-w-[33.33%] p-2">
-              <div className="p-4 border rounded-lg shadow-lg shadow-neutral-100 flex flex-col items-center">
-                <div className="md:w-80 w-[280px] h-48 bg-gray-100 rounded-lg relative overflow-hidden">
-                  <Image
-                    alt={card.title}
-                    src={card.imgSrc}
-                    fill
-                    className="object-cover rounded-lg shadow-xl transition-transform hover:scale-105"
-                  />
+            <Link
+              key={index}
+              href={`/services/speciality-moving#${card.title
+                .split(" ")
+                .join("-")}`}
+            >
+              <div className="min-w-[100%] md:min-w-[33.33%] p-2">
+                <div className="p-4 border rounded-lg shadow-lg shadow-neutral-100 flex flex-col items-center">
+                  <div className="md:w-80 w-[280px] h-48 bg-gray-100 rounded-lg relative overflow-hidden">
+                    <Image
+                      alt={card.title}
+                      src={card.imgSrc}
+                      fill
+                      className="object-cover rounded-lg shadow-xl transition-transform hover:scale-105"
+                    />
+                  </div>
+                  <p className="mt-4 text-center text-lg font-semibold">
+                    {card.title}
+                  </p>
                 </div>
-                <p className="mt-4 text-center text-lg font-semibold">
-                  {card.title}
-                </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

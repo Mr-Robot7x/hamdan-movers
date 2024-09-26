@@ -19,6 +19,7 @@ import cratingImg from "../../../../../public/images/crating.jpg";
 import specialtyImg from "../../../../../public/images/Specialty.jpg";
 
 import Image from "next/image";
+import TestimonialSection from "@/components/Testimonials";
 function SpecialityMovingService() {
   return (
     <>
@@ -189,6 +190,7 @@ function SpecialityMovingService() {
             },
           ]}
         />
+        <TestimonialSection />
       </div>
 
       <Footer />

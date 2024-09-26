@@ -28,10 +28,7 @@ body {
 svg {
   @apply drop-shadow w-7 h-7
 }
-h1,
-h2 {
- font-family: 'playfair display', serif;
-}
+
 h5 {
   @apply tracking-wide text-black font-semibold text-[17px]
 }

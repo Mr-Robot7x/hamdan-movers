@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import {
   IconBrandWhatsapp,
+  IconLanguage,
   IconMailFast,
   IconMapPin,
   IconMenu2,
@@ -16,21 +17,22 @@ import { motion } from "framer-motion";
 import { ChevronDown, MapPin, Phone, TimerIcon, X } from "lucide-react";
 import Image from "next/image";
 import logo from "../../public/images/hamdan-mover-logo.png";
+import translateImg from "../../public/images/language-translate.png";
 function Navbar() {
   const [infoDetailOpen, setInfoDetailOpen] = useState(false);
   const [subServicesMenu, setsubServicesMenu] = useState(false);
   const [sideMenu, setSideMenu] = useState(false);
+  const [langChange, setLangChange] = useState(false);
 
   return (
     <>
       <header className="w-full fixed left-0 flex flex-col items-center justify-center z-[200] font-poppins">
         <nav className="border flex relative justify-between items-center md:px-4 px-2 md:w-11/12 bg-white my-3 md:mt-1 mt-0 md:h-[82px] h-[68px] shadow-2xl shadow-neutral-200/80 md:rounded-full rounded-none w-full">
-          <div className="md:w-36 w-[120px] h-14 relative">
+          <div className="md:w-36 w-[100px] h-14 relative md:mr-0 mr-2">
             <Image
               src={logo}
               fill
               placeholder="blur"
-              quality={100}
               priority
               sizes="100"
               className=" object-contain absolute"
@@ -47,7 +49,7 @@ function Navbar() {
                   }`}
                 >
                   <Link
-                    className={`font-poppins text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-3xl active:scale-[0.98]`}
+                    className={`font-poppins text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-3 text-center transition-all rounded-3xl active:scale-[0.98]`}
                     href={item.link}
                   >
                     {item.name}
@@ -109,13 +111,17 @@ function Navbar() {
                           </Link>
                           <Link
                             className="block text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-3xl active:scale-[0.98] relative"
-                            href={"/"}
+                            href={
+                              "/services-locations/movers-and-packers-sharjah"
+                            }
                           >
                             Sharjah
                           </Link>
                           <Link
                             className="block text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-3xl active:scale-[0.98] relative"
-                            href={"/"}
+                            href={
+                              "/services-locations/movers-and-packers-ajman"
+                            }
                           >
                             Ajman
                           </Link>
@@ -129,15 +135,41 @@ function Navbar() {
           </div>
           <div className="flex gap-x-2 flex-row-reverse">
             <Button className="md:block hidden">Contact Now</Button>
-            <div className="md:hidden flex items-center justify-center px-2 py-[6px] rounded-md active:scale-[0.98] transition-all bg-[#FF5F00]">
+
+            <div className="md:hidden flex items-center justify-center px-2 md:py-[6px] py-0   rounded-md active:scale-[0.98] transition-all bg-[#FF5F00]">
               <IconMenu2
                 className="text-white"
                 onClick={() => setSideMenu((prev) => !prev)}
               />
             </div>
+            <div className="w-9 mt-2 h-9 relative flex items-center justify-center">
+              <Image
+                onClick={(e) => setLangChange((prev) => !prev)}
+                alt="language changing icon"
+                src={translateImg}
+                fill
+                className="object-contain saturate-150"
+              />
+              {langChange ? (
+                <div className="flex flex-col gap-y-2 px-2 py-4 w-52 h-auto bg-white drop-shadow-2xl absolute -bottom-36 -left-1/2 -translate-x-1/2 rounded-3xl">
+                  <Link
+                    href={"/ar"}
+                    className="w-full py-3 text-center rounded-3xl hover:bg-slate-50 transition-all border border-neutral-200"
+                  >
+                    Arabic
+                  </Link>
+                  <Link
+                    href={"/en"}
+                    className="w-full py-3 text-center rounded-3xl hover:bg-slate-50 transition-all border border-neutral-200"
+                  >
+                    English
+                  </Link>
+                </div>
+              ) : null}
+            </div>
             <div
               onClick={(e) => setInfoDetailOpen((prev) => !prev)}
-              className="md:hidden w-16 h-10 rounded-3xl flex items-center justify-between p-[6px] border border-neutral-200 hover:border-neutral-300"
+              className="md:hidden md:w-[73px] w-16 md:h-12 h-10 md:mt-0 mt-1 rounded-3xl flex items-center justify-between p-[6px] border border-neutral-200 hover:border-neutral-300"
             >
               <IconPhone className="pr" />
               <ChevronDown

@@ -1,7 +1,7 @@
 import Footer from "@/components/Home/Footer";
 import Navbar from "@/components/Navbar";
 import PerServiceSec from "@/components/perServiceSec";
-import imageSrc from "../../../../../public/images/local-moving-service.jpeg";
+import imageSrc from "../../../../../public/images/local-moving-service.jpg";
 import hireUsImage from "../../../../../public/images/hire-us.avif";
 import React from "react";
 import ServiceDetails from "@/components/ServiceDetails";
@@ -13,6 +13,7 @@ import initialConts from "../../../../../public/images/Initial-Consultation-icon
 import packingIcon from "../../../../../public/images/packing-unpacking.png";
 import moveIcon from "../../../../../public/images/safe-transportation.png";
 import settingIcon from "../../../../../public/images/home-setting-icon.png";
+import TestimonialSection from "@/components/Testimonials";
 function LocalResidentailMovers() {
   return (
     <>
@@ -83,6 +84,7 @@ function LocalResidentailMovers() {
             },
           ]}
         />
+        <TestimonialSection />
       </div>
 
       <Footer />

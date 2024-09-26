@@ -13,6 +13,7 @@ import initialConts from "../../../../../public/images/Initial-Consultation-icon
 import packingIcon from "../../../../../public/images/packing-unpacking.png";
 import moveIcon from "../../../../../public/images/safe-transportation.png";
 import settingIcon from "../../../../../public/images/home-setting-icon.png";
+import TestimonialSection from "@/components/Testimonials";
 function CommercialOfficeMovers() {
   return (
     <>
@@ -92,6 +93,7 @@ function CommercialOfficeMovers() {
             },
           ]}
         />
+        <TestimonialSection />
       </div>
 
       <Footer />
