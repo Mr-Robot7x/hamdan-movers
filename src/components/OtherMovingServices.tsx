@@ -47,9 +47,7 @@ const HealthcareSlider: React.FC = () => {
     <div className="w-full max-w-6xl mx-auto  md:p-4 p-0 relative">
       <h2
         dir={locale === "ar" ? "rtl" : "ltr"}
-        className={`mb-4 ${
-          locale == "ar" ? "font-arabic font-bold" : "font-poppins"
-        }`}
+        className={`mb-4 ${locale == "ar" ? "font-arabic font-bold" : ""}`}
       >
         {t("title")}
       </h2>

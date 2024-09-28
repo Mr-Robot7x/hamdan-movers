@@ -3,6 +3,7 @@ import "./globals.css";
 import { Amiri, Poppins, Playfair_Display } from "next/font/google";
 import { Metadata } from "next";
 import { NextIntlClientProvider, useMessages } from "next-intl";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 export const metadata: Metadata = {
   title: "Hamdan Mover and Packer",
   robots: {
@@ -62,6 +63,7 @@ export default function RootLayout({
           </NextIntlClientProvider>
           <WhatsAppButton />
         </div>
+        <SpeedInsights />
       </body>
     </html>
   );
