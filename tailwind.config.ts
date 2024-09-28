@@ -24,7 +24,7 @@ const config = {
     },
     extend: {
       fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
+        poppins: ["var(--poppins)", "sans-serif"],
         arabic: ["Amiri", "sans-serif"],
         playfair: ["var(--playfair)", "serif"],
       },
