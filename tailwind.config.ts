@@ -25,7 +25,7 @@ const config = {
     extend: {
       fontFamily: {
         poppins: ["var(--poppins)", "sans-serif"],
-        arabic: ["Amiri", "sans-serif"],
+        arabic: ["var(--arabic)", "sans-serif"],
         playfair: ["var(--playfair)", "serif"],
       },
       colors: {
