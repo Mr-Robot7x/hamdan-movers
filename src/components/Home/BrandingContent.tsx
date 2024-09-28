@@ -2,54 +2,90 @@ import {
   IconTruckDelivery,
   IconZoomMoney,
   IconClock24,
+  IconUsersGroup,
 } from "@tabler/icons-react";
-import { HeartHandshake, LucideSettings2, PartyPopperIcon } from "lucide-react";
+import { HeartHandshake, PartyPopperIcon } from "lucide-react";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
 function BrandingContent() {
+  const locale = useLocale();
+  const t = useTranslations("BrandingContent");
+  const b = useTranslations("buttons");
   return (
     <>
       <div className="w-full md:w-11/12 mt-5">
-        <section className="rounded-3xl md:py-16 pt-10  md:px-10 px-0">
+        <section
+          dir={locale === "ar" ? "rtl" : "ltr"}
+          className="rounded-3xl md:py-16 pt-10  md:px-10 px-0"
+        >
           <div className="md:mr-3 container mx-auto flex flex-col md:flex-row items-center">
             {/* Left Side - Image */}
             <div className="md:w-1/2 flex order-2  justify-center">
               <div className=" flex items-center justify-start md:px-8 px-8 rounded-3xl shadow-xl shadow-neutral-100 lg:w-[420px] md:w-[80%] w-full h-[400px] bg-white border">
-                <div className="flex flex-col md:gap-y-7 gap-y-5">
+                <div
+                  className={`${
+                    locale === "ar" ? "font-arabic" : "font-poppins"
+                  } flex flex-col md:gap-y-7 gap-y-5`}
+                >
                   <div className="flex gap-x-5 items-center">
                     <IconTruckDelivery className="text-[#105572]" />
-                    <h3 className="font-poppins font-medium md:text-[21px] text-[18px] text-black">
-                      Best Moving Services
+                    <h3
+                      className={`md:text-[21px] text-[18px] text-black ${
+                        locale === "ar" ? "font-bold" : "font-medium"
+                      }`}
+                    >
+                      {t("one")}
                     </h3>
                   </div>
                   <div className="flex gap-x-5 items-center">
                     <IconZoomMoney className="text-[#105572]" />
-                    <h3 className="font-poppins font-medium md:text-[21px] text-[18px] text-black">
-                      No Hidden Charges
+                    <h3
+                      className={`md:text-[21px] text-[18px] text-black ${
+                        locale === "ar" ? "font-bold" : "font-medium"
+                      }`}
+                    >
+                      {t("two")}
                     </h3>
                   </div>
                   <div className="flex gap-x-5 items-center">
                     <PartyPopperIcon className="text-[#105572]" />
-                    <h3 className="font-poppins font-medium md:text-[21px] text-[18px] text-black">
-                      Over 6+ Years Experience
+                    <h3
+                      className={`md:text-[21px] text-[18px] text-black ${
+                        locale === "ar" ? "font-bold" : "font-medium"
+                      }`}
+                    >
+                      {t("three")}
                     </h3>
                   </div>
                   <div className="flex gap-x-5 items-center">
                     <IconClock24 className="text-[#105572]" />
-                    <h3 className="font-poppins font-medium md:text-[21px] text-[18px] text-black">
-                      24 Hours Availabe
+                    <h3
+                      className={`md:text-[21px] text-[18px] text-black ${
+                        locale === "ar" ? "font-bold" : "font-medium"
+                      }`}
+                    >
+                      {t("four")}
+                    </h3>
+                  </div>
+                  <div className="flex gap-x-5 items-center">
+                    <IconUsersGroup className="text-[#105572]" />
+                    <h3
+                      className={`md:text-[21px] text-[18px] text-black ${
+                        locale === "ar" ? "font-bold" : "font-medium"
+                      }`}
+                    >
+                      {t("five")}
                     </h3>
                   </div>
                   <div className="flex gap-x-5 items-center">
                     <HeartHandshake className="text-[#105572]" />
-                    <h3 className="font-poppins font-medium md:text-[21px] text-[18px] text-black">
-                      Friendly Staff
-                    </h3>
-                  </div>
-                  <div className="flex gap-x-5 items-center">
-                    <LucideSettings2 className="text-[#105572]" />
-                    <h3 className="font-poppins font-medium md:text-[21px] text-[18px] text-black">
-                      Personalized Service
+                    <h3
+                      className={`md:text-[21px] text-[18px] text-black ${
+                        locale === "ar" ? "font-bold" : "font-medium"
+                      }`}
+                    >
+                      {t("six")}
                     </h3>
                   </div>
                 </div>
@@ -57,21 +93,29 @@ function BrandingContent() {
             </div>
 
             {/* Right Side - Content */}
-            <div className="order-1 md:-mt-0 -mt-10 p-4 md:w-1/2 md:pl-10 text-center md:text-left">
-              <h2 className="">
-                Professional Home And Office Relocation Company In UAE
+            <div
+              className={`${
+                locale === "ar" ? "md:text-right" : "md:text-left"
+              } order-1 md:-mt-0 -mt-10 md:p-4 py-4 px-2 md:w-1/2 md:pl-10 text-center`}
+            >
+              <h2
+                className={
+                  locale === "ar" ? "md:leading-[45px] leading-10" : ""
+                }
+              >
+                {t("title")}
               </h2>
-              <p className="mb-6 md:mt-2 mt-3">
-                Looking for affordable and reliable movers in UAE? Look no
-                further.We make every move hassle-free. From expert packaging to
-                safe transportation, we ensure your home or office relocation is
-                handled with care and professionalism, ensuring you a seamless
-                experience every step of the way.
+              <p
+                className={`${
+                  locale === "ar" ? "font-arabic ar-p mt-4" : "md:mt-2 mt-3"
+                } mb-6`}
+              >
+                {t("description")}
               </p>
 
               <div className="flex justify-center md:justify-start space-x-4 md:mb-8 mb-4">
                 <Link href={"/contact-us"}>
-                  <Button>Contact Us</Button>
+                  <Button>{b("Contact Us")}</Button>
                 </Link>
               </div>
             </div>

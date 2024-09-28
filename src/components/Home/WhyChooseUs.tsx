@@ -2,7 +2,12 @@ import React from "react";
 import imageSrc from "../../../public/images/professional-moving-company-hamdan.jpg";
 import Image from "next/image";
 import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
+import { Button } from "../ui/button";
 const WhyChooseUs: React.FC = () => {
+  const locale = useLocale();
+  const t = useTranslations("whyChooseUs");
+  const b = useTranslations("buttons");
   return (
     <>
       <div className="w-full md:w-11/12 mt-5">
@@ -23,43 +28,67 @@ const WhyChooseUs: React.FC = () => {
             </div>
 
             {/* Right Side - Content */}
-            <div className="md:-ml-28 md:-mt-0 z-20 -mt-20 rounded-lg shadow-lg shadow-neutral-100 bg-white p-4 md:w-1/2 md:pl-10 text-center md:text-left">
+            <div
+              dir={locale === "ar" ? "rtl" : "ltr"}
+              className={`
+                ${
+                  locale === "ar"
+                    ? "md:text-right md:pr-10 "
+                    : "md:text-left md:pl-10"
+                }
+                md:-ml-28 md:-mt-0 z-20 -mt-20 rounded-lg shadow-lg shadow-neutral-100 bg-white p-4 md:w-1/2 text-center `}
+            >
               <h3 className="text-[#FF5F00] text-sm uppercase font-bold mb-2">
-                Why Choose Us
+                {t("top")}
               </h3>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                We Are Professional Moving Company In UAE
+              <h2
+                className={`text-3xl font-bold text-gray-900 mb-4 ${
+                  locale === "ar" ? "leading-10" : ""
+                }`}
+              >
+                {t("title")}
               </h2>
-              <p className="text-gray-600 mb-6">
-                We provide top-tier moving services in UAE, backed by a skilled
-                team and the latest equipment. We value client feedback,
-                continuously improving our services to ensure safe, timely
-                moves. Count on us for a smooth, efficient relocation experience
+              <p
+                className={`text-gray-600 mb-6 ${
+                  locale === "ar" ? "font-arabic md:leading-7" : ""
+                }`}
+              >
+                {t("description")}
               </p>
 
-              <div className="flex justify-center md:justify-start space-x-4 mb-8">
-                <Link
-                  href={"/about-us"}
-                  className="bg-[#287094] text-white py-3 font-poppins px-6 rounded-full hover:bg-blue-600 transition duration-300"
-                >
-                  Know More
+              <div className="flex item-center gap-x-4 mb-8">
+                <Link href={"/contact-us"}>
+                  <Button>{b("Contact Us")}</Button>
                 </Link>
-                <Link
-                  className="bg-[#FF5F00] font-poppins text-white py-3 px-6 rounded-full hover:bg-yellow-600 transition duration-300"
-                  href={"/contact-us"}
-                >
-                  Contact Us
+                <Link href={"/about-us"}>
+                  <Button variant={"light"}>{b("Know More")}</Button>
                 </Link>
               </div>
 
-              <div className="flex justify-center md:justify-start space-x-8 text-gray-800">
+              <div className="flex justify-center md:justify-start gap-x-8 text-gray-800">
                 <div className="text-center">
-                  <h3 className="text-3xl font-bold">6+</h3>
-                  <p className="text-gray-600">Years of Experience</p>
+                  <h3 dir="ltr" className="text-3xl font-bold">
+                    6+
+                  </h3>
+                  <p
+                    className={`text-gray-600 ${
+                      locale === "ar" ? "font-arabic ar-p font-bold" : ""
+                    }`}
+                  >
+                    {t("years")}
+                  </p>
                 </div>
                 <div className="text-center">
-                  <h3 className="text-3xl font-bold">412+</h3>
-                  <p className="text-gray-600">Project Completed</p>
+                  <h3 dir="ltr" className="text-3xl font-bold">
+                    412+
+                  </h3>
+                  <p
+                    className={`text-gray-600 ${
+                      locale === "ar" ? "font-arabic ar-p font-bold" : ""
+                    }`}
+                  >
+                    {t("projects")}
+                  </p>
                 </div>
               </div>
             </div>

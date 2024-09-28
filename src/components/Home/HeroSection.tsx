@@ -41,18 +41,14 @@ function HeroSection() {
           >
             {t("SubTitle")}
           </h2>
-          <p
-            className={`${
-              locale === "ar"
-                ? "mt-3 font-arabic md:leading-8 leading-7 text-[17px]"
-                : "mt-6"
-            }`}
-          >
+          <p className={`${locale === "ar" ? "mt-3 ar-p" : "mt-6"}`}>
             {t("description")}
           </p>
           <div className="w-full flex md:gap-x-3 md:flex-row flex-col gap-y-3 mt-4">
             <Link href={"tel:tel:+971566651978"}>
-              <Button>{b("call now")} : +971 56 6651978</Button>
+              <Button>
+                {b("call now")} : <span dir="ltr">+971 56 6651978</span>
+              </Button>
             </Link>
             <Link href={"/services"}>
               <Button variant={"secondary"}>{b("Our Services")}</Button>
@@ -75,26 +71,6 @@ function HeroSection() {
           </div>
         </div>
       </div>
-      {/* <div className={`md:basis-2/4 basis-full z-20 `}>
-        <h1 className="md:text-[55px]">{t("headingTitle")}</h1>
-        <h3 className="mt-6 font-poppins">{t("SubTitle")}</h3>
-        <p className="gr mt-3">{t("description")}</p>
-        <div className="mt-4 flex gap-x-5">
-          <Button>{b("Contact Us")}</Button>
-          <Button variant={"secondary"}>{b("Our Services")}</Button>
-        </div>
-      </div>
-      <div className=" md:w-[400px] w-80 h-80 md:h-[400px] relative z-20">
-        <Image
-          src={heroImage}
-          fill
-          placeholder="blur"
-          quality={80}
-          alt="Hamdan movers"
-          className="drop-shadow-2xl object-cover"
-          style={{ borderRadius: "31% 69% 82% 18% / 30% 35% 65% 70% " }}
-        />
-      </div> */}
     </div>
   );
 }

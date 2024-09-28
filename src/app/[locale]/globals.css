@@ -81,6 +81,9 @@ p, li{
   background: #023246;
 
 }
+.ar-p {
+  @apply font-arabic md:leading-8 leading-7 md:text-[19px] text-[18px]
+}
 small{
   font-family: 'poppins';
 }

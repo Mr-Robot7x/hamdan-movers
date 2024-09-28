@@ -1,15 +1,20 @@
 import React from "react";
 import Image from "next/image";
+import { useLocale, useTranslations } from "next-intl";
 
 const WorkProcessSection: React.FC = () => {
+  const t = useTranslations("workProcess");
+  const locale = useLocale();
   return (
     <div className="w-full md:w-11/12">
       <section className="work-process-section">
         <div className="container mx-auto text-center">
           <h2 className="text-xl font-bold text-gray-800">
-            <span className="text-[#FF5F00]">Work Process</span>
+            <span className="text-[#FF5F00]">{t("heading")}</span>
           </h2>
-          <h2 className=" my-4">Our Moving Process</h2>
+          <h2 className={`my-4 ${locale === "ar" ? "font-bold" : ""}`}>
+            {t("title")}
+          </h2>
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 mt-12">
             {/* Step 1 */}
             <div className="step flex flex-col items-center shadow-xl shadow-neutral-50 p-2 rounded-2xl">
@@ -22,12 +27,21 @@ const WorkProcessSection: React.FC = () => {
                   height={60}
                 />
               </div>
-              <h4 className="text-lg font-semibold font-poppins">
-                Book Your Service
+              <h4
+                className={` ${
+                  locale === "ar"
+                    ? "font-arabic text-2xl"
+                    : "text-lg font-semibold font-poppins"
+                }`}
+              >
+                {t("one.tit")}
               </h4>
-              <p className="text-sm text-gray-500 mt-2">
-                Start with a quick call or an in-person chat. We’ll go over your
-                moving needs and handle all the details to make it easy for you.
+              <p
+                className={` text-gray-500 mt-2 ${
+                  locale === "ar" ? "ar-p" : "text-sm"
+                }`}
+              >
+                {t("one.desc")}
               </p>
             </div>
             <div className="step flex flex-col items-center shadow-xl shadow-neutral-50 p-2 rounded-2xl">
@@ -40,13 +54,21 @@ const WorkProcessSection: React.FC = () => {
                   height={60}
                 />
               </div>
-              <h4 className="text-lg font-semibold font-poppins">
-                Before We Move
+              <h4
+                className={` ${
+                  locale === "ar"
+                    ? "font-arabic text-2xl"
+                    : "text-lg font-semibold font-poppins"
+                }`}
+              >
+                {t("two.tit")}
               </h4>
-              <p className="text-sm text-gray-500 mt-2">
-                We’ll visit your place to assess what needs moving. This helps
-                us plan packing and ensure a smooth moving day with no
-                surprises.
+              <p
+                className={` text-gray-500 mt-2 ${
+                  locale === "ar" ? "ar-p" : "text-sm"
+                }`}
+              >
+                {t("two.desc")}
               </p>
             </div>
             <div className="step flex flex-col items-center shadow-xl shadow-neutral-50 p-2 rounded-2xl">
@@ -59,13 +81,21 @@ const WorkProcessSection: React.FC = () => {
                   height={60}
                 />
               </div>
-              <h4 className="text-lg font-semibold font-poppins">
-                The Move Plan
+              <h4
+                className={` ${
+                  locale === "ar"
+                    ? "font-arabic text-2xl"
+                    : "text-lg font-semibold font-poppins"
+                }`}
+              >
+                {t("three.tit")}
               </h4>
-              <p className="text-sm text-gray-500 mt-2">
-                Once we’ve discussed your needs, we create a detailed plan for
-                your move—covering timing, crew size, and costs—so everything
-                runs smoothly.
+              <p
+                className={` text-gray-500 mt-2 ${
+                  locale === "ar" ? "ar-p" : "text-sm"
+                }`}
+              >
+                {t("three.desc")}
               </p>
             </div>
             <div className="step flex flex-col items-center shadow-xl shadow-neutral-50 p-2 rounded-2xl">
@@ -78,13 +108,21 @@ const WorkProcessSection: React.FC = () => {
                   height={60}
                 />
               </div>
-              <h4 className="text-lg font-semibold font-poppins">
-                Packing and Loading
+              <h4
+                className={` ${
+                  locale === "ar"
+                    ? "font-arabic text-2xl"
+                    : "text-lg font-semibold font-poppins"
+                }`}
+              >
+                {t("four.tit")}
               </h4>
-              <p className="text-sm text-gray-500 mt-2">
-                Our team uses high-quality materials to pack your items
-                securely. We carefully load everything onto our trucks to ensure
-                your belongings stay safe during the move.
+              <p
+                className={` text-gray-500 mt-2 ${
+                  locale === "ar" ? "ar-p" : "text-sm"
+                }`}
+              >
+                {t("four.desc")}
               </p>
             </div>
             <div className="step flex flex-col items-center shadow-xl shadow-neutral-50 p-2 rounded-2xl">
@@ -97,13 +135,21 @@ const WorkProcessSection: React.FC = () => {
                   height={60}
                 />
               </div>
-              <h4 className="text-lg font-semibold font-poppins">
-                Safe Transportation
+              <h4
+                className={` ${
+                  locale === "ar"
+                    ? "font-arabic text-2xl"
+                    : "text-lg font-semibold font-poppins"
+                }`}
+              >
+                {t("five.tit")}
               </h4>
-              <p className="text-sm text-gray-500 mt-2">
-                Safety is our priority. Our experienced drivers choose the best
-                routes, and our trucks are thoroughly inspected for a smooth,
-                secure move.
+              <p
+                className={` text-gray-500 mt-2 ${
+                  locale === "ar" ? "ar-p" : "text-sm"
+                }`}
+              >
+                {t("five.desc")}
               </p>
             </div>
             <div className="step flex flex-col items-center shadow-xl shadow-neutral-50 p-2 rounded-2xl">
@@ -116,12 +162,21 @@ const WorkProcessSection: React.FC = () => {
                   height={60}
                 />
               </div>
-              <h4 className="text-lg font-semibold font-poppins">
-                Unpacking and Settling-in
+              <h4
+                className={` ${
+                  locale === "ar"
+                    ? "font-arabic text-2xl"
+                    : "text-lg font-semibold font-poppins"
+                }`}
+              >
+                {t("six.tit")}
               </h4>
-              <p className="text-sm text-gray-500 mt-2">
-                We’ll unpack your belongings and help set everything up just the
-                way you like it, ensuring you feel at home before we leave.
+              <p
+                className={` text-gray-500 mt-2 ${
+                  locale === "ar" ? "ar-p" : "text-sm"
+                }`}
+              >
+                {t("six.desc")}
               </p>
             </div>
           </div>

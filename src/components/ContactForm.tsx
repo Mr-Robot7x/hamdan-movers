@@ -14,7 +14,10 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
 const ContactUs = ({ isPage = false }: { isPage?: boolean }) => {
+  const t = useTranslations("contact");
+  const locale = useLocale();
   const [data, setData] = useState<{
     name: string;
 
@@ -47,10 +50,13 @@ const ContactUs = ({ isPage = false }: { isPage?: boolean }) => {
       <div className="max-w-5xl px-4 xl:px-0 py-10 lg:py-10 mx-auto">
         {/* Title */}
         {!isPage ? (
-          <div className="max-w-3xl mb-10 lg:mb-14">
-            <h2 className="">Contact us</h2>
-            <p className="mt-3 gr">
-              Ready to make your move? Contact Hamdan and Packers today!
+          <div
+            dir={locale === "ar" ? "rtl" : "ltr"}
+            className=" mb-10 lg:mb-14"
+          >
+            <h2 className={locale === "ar" ? "font-bold" : ""}>{t("title")}</h2>
+            <p className={`${locale === "ar" ? "ar-p text-2xl" : ""} mt-3 gr`}>
+              {t("desc")}
             </p>
           </div>
         ) : null}
@@ -224,11 +230,21 @@ const ContactUs = ({ isPage = false }: { isPage?: boolean }) => {
             <div className="flex gap-x-5">
               <IconLocationPin className="text-[#FF5F00]" />
               <div>
-                <h3 className="font-semibold font-poppins text-lg text-black">
-                  Office
+                <h3
+                  className={`text-black ${
+                    locale === "ar"
+                      ? "font-bold font-arabic text-2xl"
+                      : "font-semibold text-lg font-poppins"
+                  }`}
+                >
+                  {t("office")}
                 </h3>
-                <address className="mt-1 not-italic gr">
-                  Estiqlal Road Abushagara Sharjah
+                <address
+                  className={`mt-1 not-italic gr ${
+                    locale === "ar" ? "ar-p" : ""
+                  }`}
+                >
+                  {t("address")}
                 </address>
               </div>
             </div>
@@ -238,8 +254,14 @@ const ContactUs = ({ isPage = false }: { isPage?: boolean }) => {
             <div className="flex gap-x-5">
               <PhoneForwardedIcon className="text-[#FF5F00]" />
               <div>
-                <h3 className="font-semibold font-poppins text-lg text-black">
-                  Phone
+                <h3
+                  className={`text-black ${
+                    locale === "ar"
+                      ? "font-bold font-arabic text-2xl"
+                      : "font-semibold text-lg font-poppins"
+                  }`}
+                >
+                  {t("phone")}
                 </h3>
                 <p className="mt-1 gr">
                   <Link href={"tel:+971566651978"}>+971 566651978</Link> <br />
@@ -253,8 +275,14 @@ const ContactUs = ({ isPage = false }: { isPage?: boolean }) => {
             <div className="flex gap-x-5">
               <MailsIcon className="text-[#FF5F00]" />
               <div>
-                <h3 className="font-semibold font-poppins text-lg text-black">
-                  Email
+                <h3
+                  className={`text-black ${
+                    locale === "ar"
+                      ? "font-bold font-arabic text-2xl"
+                      : "font-semibold text-lg font-poppins"
+                  }`}
+                >
+                  {t("email")}
                 </h3>
                 <p className="mt-1 gr">
                   <Link href={"mailto:hussain43ahmad@gmail.com"}>
@@ -266,10 +294,19 @@ const ContactUs = ({ isPage = false }: { isPage?: boolean }) => {
             <div className="flex gap-x-5">
               <IconHours24 className="text-[#FF5F00]" />
               <div>
-                <h3 className="font-semibold font-poppins text-lg text-black">
-                  Opening Hours
+                <h3
+                  className={`text-black ${
+                    locale === "ar"
+                      ? "font-bold font-arabic text-2xl"
+                      : "font-semibold text-lg font-poppins"
+                  }`}
+                >
+                  {t("openinghour")}
                 </h3>
-                <p className="mt-1 gr">Open 24 Hours</p>
+                <p className={`mt-1 gr ${locale === "ar" ? "ar-p" : ""}`}>
+                  {" "}
+                  {t("hours")}
+                </p>
               </div>
             </div>
             {/* End Item */}

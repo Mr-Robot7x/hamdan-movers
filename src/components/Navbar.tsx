@@ -1,29 +1,107 @@
 "use client";
-import { navItems, subServices } from "@/app/[locale]/data";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Button } from "./ui/button";
-import {
-  IconBrandWhatsapp,
-  IconLanguage,
-  IconMailFast,
-  IconMapPin,
-  IconMenu2,
-  IconPhone,
-  IconSettingsAutomation,
-  IconSettingsCode,
-} from "@tabler/icons-react";
+import { IconMapPin, IconMenu2, IconPhone } from "@tabler/icons-react";
 import { motion } from "framer-motion";
-import { ChevronDown, MapPin, Phone, TimerIcon, X } from "lucide-react";
+import { ChevronDown, Phone, TimerIcon, X } from "lucide-react";
 import Image from "next/image";
 import logo from "../../public/images/hamdan-mover-logo.png";
 import translateImg from "../../public/images/language-translate.png";
+import { useLocale, useTranslations } from "next-intl";
 function Navbar() {
+  const t = useTranslations("navitems");
+  const b = useTranslations("buttons");
+  const navItems: { name: string; link: string; sub?: boolean }[] = [
+    {
+      name: t("home"),
+      link: "/",
+    },
+    {
+      name: t("service"),
+      link: "/services",
+      sub: true,
+    },
+    {
+      name: t("rent-services"),
+      link: "/pickup-rental-trucks",
+    },
+    {
+      name: t("moving-locations"),
+      link: "/services-locations",
+    },
+
+    {
+      name: t("about-us"),
+      link: "/about-us",
+    },
+    {
+      name: t("contact-us"),
+      link: "/contact-us",
+    },
+  ];
+
+  const subServices: { name: string; link: string }[] = [
+    {
+      name: t("services-sub.local"),
+      link: "/services/local-residential-movers",
+    },
+    {
+      name: t("services-sub.commercial"),
+      link: "/services/commerical-office-movers",
+    },
+    {
+      name: t("services-sub.packing"),
+      link: "/services/packing-services",
+    },
+    {
+      name: t("services-sub.storage"),
+      link: "/services/storage-services",
+    },
+    {
+      name: t("services-sub.specialty"),
+      link: "/services/speciality-moving",
+    },
+    {
+      name: t("services-sub.international"),
+      link: "/services/international-moving",
+    },
+  ];
+  const locations: { name: string; link: string }[] = [
+    {
+      name: t("sub-menu-all.dubai"),
+      link: "/services-locations/movers-and-packers-dubai",
+    },
+    {
+      name: t("sub-menu-all.sharjah"),
+      link: "/services-locations/movers-and-packers-sharjah",
+    },
+    {
+      name: t("sub-menu-all.ajman"),
+      link: "/services-locations/movers-and-packers-ajman",
+    },
+  ];
+  const rent: { name: string; link: string }[] = [
+    {
+      name: t("sub-menu-all.dubai"),
+      link: "/pickup-rental-trucks-in-dubai",
+    },
+    {
+      name: t("sub-menu-all.sharjah"),
+      link: "/pickup-rental-trucks-in-sharjah",
+    },
+    {
+      name: t("sub-menu-all.ajman"),
+      link: "/pickup-rental-trucks-in-ajman",
+    },
+  ];
+  const locale = useLocale();
   const [infoDetailOpen, setInfoDetailOpen] = useState(false);
   const [subServicesMenu, setsubServicesMenu] = useState(false);
   const [sideMenu, setSideMenu] = useState(false);
   const [langChange, setLangChange] = useState(false);
-
+  const [location, setlocation] = useState(false);
+  const [rental, setrental] = useState(false);
   return (
     <>
       <header className="w-full fixed left-0 flex flex-col items-center justify-center z-[200] font-poppins">
@@ -49,7 +127,11 @@ function Navbar() {
                   }`}
                 >
                   <Link
-                    className={`font-poppins text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-3 text-center transition-all rounded-3xl active:scale-[0.98]`}
+                    className={` text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-3 text-center transition-all rounded-3xl active:scale-[0.98] ${
+                      locale === "ar"
+                        ? "font-arabic font-bold text-xl leading-4"
+                        : "font-poppins"
+                    }`}
                     href={item.link}
                   >
                     {item.name}
@@ -61,7 +143,9 @@ function Navbar() {
                           {subServices.map((sub, i) => (
                             <Link
                               key={i}
-                              className="block text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-3xl active:scale-[0.98] relative"
+                              className={`block text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-3xl active:scale-[0.98] relative ${
+                                locale === "ar" ? "font-arabic font-bold" : ""
+                              }`}
                               href={sub.link}
                             >
                               {sub.name}
@@ -75,24 +159,17 @@ function Navbar() {
                     <>
                       <div className="hidden group-hover:block w-80 bg-white drop-shadow-2xl h-auto absolute -bottom-40 left-0 rounded-3xl">
                         <ul className="p-4">
-                          <Link
-                            className="block text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-3xl active:scale-[0.98] relative"
-                            href={"/pickup-rental-trucks-in-dubai"}
-                          >
-                            Dubai
-                          </Link>
-                          <Link
-                            className="block text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-3xl active:scale-[0.98] relative"
-                            href={"/pickup-rental-trucks-in-sharjah"}
-                          >
-                            Sharjah
-                          </Link>
-                          <Link
-                            className="block text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-3xl active:scale-[0.98] relative"
-                            href={"/pickup-rental-trucks-in-ajman"}
-                          >
-                            Ajman
-                          </Link>
+                          {rent.map((loc, i) => (
+                            <Link
+                              key={i}
+                              className={`block text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-3xl active:scale-[0.98] relative ${
+                                locale === "ar" ? "font-arabic font-bold" : ""
+                              }`}
+                              href={loc.link}
+                            >
+                              {loc.name}
+                            </Link>
+                          ))}
                         </ul>
                       </div>
                     </>
@@ -101,30 +178,17 @@ function Navbar() {
                     <>
                       <div className="hidden group-hover:block w-80 bg-white drop-shadow-2xl h-auto absolute -bottom-40 left-0 rounded-3xl">
                         <ul className="p-4">
-                          <Link
-                            className="block text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-3xl active:scale-[0.98] relative"
-                            href={
-                              "/services-locations/movers-and-packers-dubai"
-                            }
-                          >
-                            Dubai
-                          </Link>
-                          <Link
-                            className="block text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-3xl active:scale-[0.98] relative"
-                            href={
-                              "/services-locations/movers-and-packers-sharjah"
-                            }
-                          >
-                            Sharjah
-                          </Link>
-                          <Link
-                            className="block text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-3xl active:scale-[0.98] relative"
-                            href={
-                              "/services-locations/movers-and-packers-ajman"
-                            }
-                          >
-                            Ajman
-                          </Link>
+                          {locations.map((loc, i) => (
+                            <Link
+                              key={i}
+                              className={`block text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-3xl active:scale-[0.98] relative ${
+                                locale === "ar" ? "font-arabic font-bold" : ""
+                              }`}
+                              href={loc.link}
+                            >
+                              {loc.name}
+                            </Link>
+                          ))}
                         </ul>
                       </div>
                     </>
@@ -134,7 +198,7 @@ function Navbar() {
             </ul>
           </div>
           <div className="flex gap-x-2 flex-row-reverse">
-            <Button className="md:block hidden">Contact Now</Button>
+            <Button className="md:block hidden">{b("contact-now")}</Button>
 
             <div className="md:hidden flex items-center justify-center px-2 md:py-[6px] py-0   rounded-md active:scale-[0.98] transition-all bg-[#FF5F00]">
               <IconMenu2
@@ -229,7 +293,7 @@ function Navbar() {
             opacity: 0,
             right: "-100%",
           }}
-          className="w-4/5 h-screen bg-white/80 backdrop-blur-md fixed top-0 right-0 z-[201]"
+          className="w-4/5 h-full overflow-y-auto bg-white/80 backdrop-blur-md fixed top-0 right-0 z-[201] pb-5"
         >
           <div className="mt-14">
             <ul>
@@ -241,9 +305,11 @@ function Navbar() {
                   {item?.sub ? (
                     <>
                       <div className="flex flex-col">
-                        <div className="flex gap-x-4 items-center">
+                        <div className="flex gap-x-5 items-center">
                           <Link
-                            className="active:text-[#287094]"
+                            className={`active:text-[#287094] ${
+                              locale === "ar" ? "ar-p" : "font-poppins"
+                            }`}
                             href={item.link}
                           >
                             {item.name}
@@ -260,7 +326,11 @@ function Navbar() {
                             {subServices.map((ser, i) => (
                               <Link
                                 href={ser.link}
-                                className="block font-normal my-1"
+                                className={`block my-3 ${
+                                  locale === "ar"
+                                    ? "ar-p"
+                                    : "font-normal font-poppins"
+                                }`}
                                 key={i}
                               >
                                 {ser.name}
@@ -271,7 +341,59 @@ function Navbar() {
                       </div>
                     </>
                   ) : (
-                    <Link href={item.link}> {item.name}</Link>
+                    <>
+                      <Link href={item.link}> {item.name}</Link>
+                      {index === 2 && (
+                        <ChevronDown
+                          className={`w-6 h-6 transition-transform inline-block ml-5 ${
+                            rental ? "rotate-180" : "rotate-0"
+                          }`}
+                          onClick={() => setrental((prev) => !prev)}
+                        />
+                      )}
+                      {index === 2 && rental && (
+                        <div className="w-full px-5 block transition-all duration-300">
+                          {rent.map((loc, i) => (
+                            <Link
+                              href={loc.link}
+                              className={`block my-3 ${
+                                locale === "ar"
+                                  ? "ar-p"
+                                  : "font-normal font-poppins"
+                              }`}
+                              key={i}
+                            >
+                              {loc.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                      {index === 3 && (
+                        <ChevronDown
+                          className={`w-6 h-6 transition-transform inline-block ml-5 ${
+                            location ? "rotate-180" : "rotate-0"
+                          }`}
+                          onClick={() => setlocation((prev) => !prev)}
+                        />
+                      )}
+                      {index === 3 && location && (
+                        <div className="w-full px-5 block transition-all duration-300">
+                          {locations.map((loc, i) => (
+                            <Link
+                              href={loc.link}
+                              className={`block my-3 ${
+                                locale === "ar"
+                                  ? "ar-p"
+                                  : "font-normal font-poppins"
+                              }`}
+                              key={i}
+                            >
+                              {loc.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </>
                   )}
                 </div>
               ))}

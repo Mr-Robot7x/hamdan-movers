@@ -3,19 +3,20 @@ import React, { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import Image from "next/image";
 import Link from "next/link";
-
+import { useLocale, useTranslations } from "next-intl";
 const HealthcareSlider: React.FC = () => {
+  const t = useTranslations("otherMovingServices");
+  const locale = useLocale();
   const [currentIndex, setCurrentIndex] = useState(0);
-
   const cardData = [
-    { imgSrc: "/images/apartement-moving.avif", title: "Apartment Moving" },
-    { imgSrc: "/images/villa-moving.jpg", title: "Villa Moving" },
+    { imgSrc: "/images/apartement-moving.avif", title: t("apartment") },
+    { imgSrc: "/images/villa-moving.jpg", title: t("villa") },
     {
       imgSrc: "/images/office-relocation.jpg",
-      title: "Office Relocation",
+      title: t("office"),
     },
-    { imgSrc: "/images/home-cleaning.webp", title: "Home Cleaning" },
-    { imgSrc: "/images/furniture-cleaning.webp", title: "Furniture Cleaning" },
+    { imgSrc: "/images/home-cleaning.webp", title: t("home") },
+    { imgSrc: "/images/furniture-cleaning.webp", title: t("furniture") },
   ];
 
   const cardsToShow = 3;
@@ -44,7 +45,14 @@ const HealthcareSlider: React.FC = () => {
   }, [currentIndex, slidesToShow]);
   return (
     <div className="w-full max-w-6xl mx-auto  md:p-4 p-0 relative">
-      <h2 className=" mb-4">Other Moving Services</h2>
+      <h2
+        dir={locale === "ar" ? "rtl" : "ltr"}
+        className={`mb-4 ${
+          locale == "ar" ? "font-arabic font-bold" : "font-poppins"
+        }`}
+      >
+        {t("title")}
+      </h2>
       <div className="overflow-hidden w-full">
         <div
           className="flex transition-transform duration-500 py-3 md:px-5 px-2"
@@ -69,7 +77,13 @@ const HealthcareSlider: React.FC = () => {
                       className="object-cover rounded-lg shadow-xl transition-transform hover:scale-105"
                     />
                   </div>
-                  <p className="mt-4 text-center text-lg font-semibold">
+                  <p
+                    className={`mt-4 text-center font-semibold ${
+                      locale === "ar"
+                        ? "font-arabic ar-p font-bold"
+                        : "text-lg font-poppins"
+                    }`}
+                  >
                     {card.title}
                   </p>
                 </div>

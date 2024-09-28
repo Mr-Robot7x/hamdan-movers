@@ -6,30 +6,49 @@ import truck2 from "../../../public/images/3-tom.jpg";
 import truck1 from "../../../public/images/1.5-ton-truck.jpg";
 import Link from "next/link";
 import { PhoneForwardedIcon, PhoneOutgoingIcon } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
 function PickUpRentalServices({ city }: { city?: string }) {
+  const t = useTranslations("pickup");
+  const locale = useLocale();
   return (
     <>
-      <div className="w-full md:rounded-[50px] rounded-2xl md:px-0 px-2 b-bg flex justify-center">
-        <div className="md:w-11/12 md:py-14 py-8 w-full grid md:grid-cols-2 grid-cols-1 justify-evenly gap-x-5 md:ml-16 md:gap-0 gap-y-1">
+      <div className="w-full  md:px-0 px-2 b-bg flex justify-center">
+        <div
+          dir={locale === "ar" ? "rtl" : "ltr"}
+          className={`
+            ${locale === "ar" ? "md:mr-16" : "md:ml-16"}
+            
+            md:w-11/12 md:py-14 py-8 w-full grid md:grid-cols-2 grid-cols-1 justify-evenly gap-x-5 md:gap-0 gap-y-1
+            `}
+        >
           <div className="">
-            <h2 className="text-white md:text-start text-center">
-              Our Pickup Cars For Rent Services In {city ? city : "UAE"}
+            <h2
+              className={`text-white md:text-start text-center ${
+                locale === "ar" ? "font-bold" : ""
+              }`}
+            >
+              {t("title")} {city ? city : "UAE"}
             </h2>
-            <h3 className="font-poppins text-[#FF5F00] md:text-[22px] text-[18px] mt-8 font-medium md:text-start text-center ">
-              Fast, Flexible, And Convenient Pickup Cars For Rental Service In{" "}
-              {city ? city : "UAE"}
+            <h3
+              className={`${
+                locale === "ar"
+                  ? "font-arabic md:text-[25px] text-[20px]"
+                  : "font-poppins md:text-[22px] text-[18px]"
+              } text-[#FF5F00]  mt-8 font-medium md:text-start text-center `}
+            >
+              {t("SubTitle")} {city ? city : "UAE"}
             </h3>
-            <p className="text-white mt-3 font-light">
-              Looking for a reliable pickup rental service in{" "}
-              {city ? city : "UAE"}? We offer a range of pickups tailored to
-              meet your transportation needs, ensuring a smooth and hassle-free
-              experience. Whether you&apos;re moving items or transporting
-              goods, our diverse fleet is ready to serve you.
+            <p
+              className={`text-white ${
+                locale === "ar" ? "mt-4 ar-p" : "mt-3 font-light"
+              }`}
+            >
+              {t("desc1")} {city ? city : "UAE"}? {t("desc2")}
             </p>
 
-            <Link href={"tel:+971 56 6651978"}>
-              <Button className="mt-5">
-                +971 56 6651978 <PhoneOutgoingIcon className="w-5 h-5 ml-2" />
+            <Link href={"tel:+971566651978"}>
+              <Button dir="ltr" className="mt-5">
+                +971 566651978 <PhoneOutgoingIcon className="w-5 h-5 ml-2" />
               </Button>
             </Link>
           </div>
@@ -46,9 +65,14 @@ function PickUpRentalServices({ city }: { city?: string }) {
       </div>
       <div className="w-full md:w-11/12 flex justify-center gap-y-6 flex-col items-center">
         <div className="md:w-4/5">
-          <h2 className="font-medium text-center font-poppins">
-            We have following size of a Pickup Truck that is Appropriate for
-            your needs.
+          <h2
+            className={`text-center ${
+              locale === "ar"
+                ? "font-arabic font-bold leading-[45px]"
+                : "font-medium font-poppins"
+            }`}
+          >
+            {t("size")}
           </h2>
         </div>
         <div className="w-full grid lg:grid-flow-col md:grid-flow-row grid-flow-row md:grid-col-2 md:gap-x-8 gap-y-8 md:px-24 mt-8">
@@ -62,19 +86,36 @@ function PickUpRentalServices({ city }: { city?: string }) {
                 className="object-cover rounded-2xl"
               />
             </div>
-            <h3 className="font-poppins text-center mt-5 mb-1">
-              1.5 Ton Pickup Truck For Rental <br /> in {city ? city : "UAE"}
+            <h3
+              className={`text-center mt-5 mb-1 ${
+                locale === "ar"
+                  ? "font-arabic font-bold leading-9"
+                  : "font-poppins"
+              }`}
+            >
+              {t("one.title")} <br /> {t("one.in")}{" "}
+              {city
+                ? city
+                : locale === "ar"
+                ? "الإمارات العربية المتحدة"
+                : "UAE"}
             </h3>
-            <p className="mt-2 md:px-3">
-              Need reliable transportation for home, office, or goods
-              relocation? Rent our 1.5 ton pickup truck in {city ? city : "UAE"}{" "}
-              for safe, easy, and hassle-free moves. With competitive pricing
-              and top-notch service, we ensure your items are transported
-              smoothly every time.
+            <p
+              className={`mt-2 md:px-3 ${
+                locale === "ar" ? "font-arabic text-right ar-p" : ""
+              }`}
+            >
+              {t("one.desc")}{" "}
+              {city
+                ? city
+                : locale === "ar"
+                ? "الإمارات العربية المتحدة"
+                : "UAE"}{" "}
+              {t("one.desc2")}
             </p>
             <div className="w-full flex gap-x-3 mt-5 justify-center">
               <Link href={"tel:+971545019655"}>
-                <Button variant={"light"} className="flex gap-x-2">
+                <Button dir="ltr" variant={"light"} className="flex gap-x-2">
                   <PhoneForwardedIcon className="w-5 h-5" /> +971 54 501 9655
                 </Button>
               </Link>
@@ -90,19 +131,36 @@ function PickUpRentalServices({ city }: { city?: string }) {
                 className="object-cover rounded-2xl"
               />
             </div>
-            <h3 className="font-poppins text-center mt-5 mb-1">
-              3 Ton Pickup Truck For Rent <br /> In {city ? city : "UAE"}
+            <h3
+              className={`text-center mt-5 mb-1 ${
+                locale === "ar"
+                  ? "font-arabic font-bold leading-9"
+                  : "font-poppins"
+              }`}
+            >
+              {t("two.title")} <br /> {t("two.in")}{" "}
+              {city
+                ? city
+                : locale === "ar"
+                ? "الإمارات العربية المتحدة"
+                : "UAE"}
             </h3>
-            <p className="mt-2 md:px-3">
-              For seamless transportation of heavy cargo, home relocations, or
-              office moves, rent our 3 ton pickup in {city ? city : "UAE"}. We
-              offer comprehensive services, including loading and unloading,
-              ensuring stress-free and secure delivery of your belongings to
-              their destination.
+            <p
+              className={`mt-2 md:px-3 ${
+                locale === "ar" ? "font-arabic text-right ar-p" : ""
+              }`}
+            >
+              {t("two.desc")}{" "}
+              {city
+                ? city
+                : locale === "ar"
+                ? "الإمارات العربية المتحدة"
+                : "UAE"}{" "}
+              {t("two.desc2")}
             </p>
             <div className="w-full flex gap-x-3 mt-5 justify-center">
               <Link href={"tel:+971503626685"}>
-                <Button className="flex gap-x-2">
+                <Button dir="ltr" className="flex gap-x-2">
                   <PhoneForwardedIcon className="w-5 h-5" /> +971 503626685
                 </Button>
               </Link>

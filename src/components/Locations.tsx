@@ -4,30 +4,51 @@ import dubaiImage from "../../public/images/dubai-image.jpg";
 import sharjahImage from "../../public/images/sharjah-image.jpg";
 import { Button } from "./ui/button";
 import Image from "next/image";
+import { useLocale, useTranslations } from "next-intl";
 function Locations() {
+  const t = useTranslations("locations");
+  const b = useTranslations("buttons");
+  const locale = useLocale();
   return (
     <div className="w-full md:w-11/12 md:mt-5 mt-0">
       <div className="min-h-32">
-        <ul className="mt-5 flex flex-col md:gap-y-0  gap-y-10 md:ml-20">
+        <ul
+          className={`mt-5 flex flex-col md:gap-y-0  gap-y-10 ${
+            locale === "ar" ? "md:ml-20" : "md:ml-20"
+          }`}
+        >
           <li className="grid md:grid-cols-2 grid-cols-1 items-center">
             <div>
               <Link href={"/services-locations/movers-and-packers-dubai"}>
-                <h3>Moving Services In Dubai</h3>
+                <h3
+                  className={`${
+                    locale === "ar"
+                      ? "text-right font-arabic font-bold"
+                      : "text-left"
+                  }`}
+                >
+                  {t("dubai.title")}
+                </h3>
               </Link>
-              <p className="md:mt-5 mt-3">
-                Looking for reliable moving services in Dubai? Our skilled team
-                offers hassle-free residential and commercial relocations,
-                including expert packing, furniture assembly, and secure
-                transportation. Whether local or long-distance, we ensure a
-                smooth, stress-free move.
+              <p
+                className={`md:mt-5 mt-3 ${
+                  locale === "ar" ? "text-right font-arabic ar-p" : "text-left"
+                }`}
+              >
+                {t("dubai.desc")}
               </p>
-              <div className="flex gap-x-2 mt-5">
+              <div
+                dir={locale === "ar" ? "rtl" : "ltr"}
+                className="flex gap-x-2 mt-5"
+              >
                 <Link href={"tel:+971566651978"}>
-                  <Button size={"sm"}>+971 56 665 1978</Button>
+                  <Button dir="ltr" size={"sm"}>
+                    +971 56 665 1978
+                  </Button>
                 </Link>
                 <Link href={"/services-locations/movers-and-packers-dubai"}>
                   <Button size={"sm"} variant={"secondary"}>
-                    see more
+                    {b("View More")}
                   </Button>
                 </Link>
               </div>
@@ -60,22 +81,26 @@ function Locations() {
             </div>
             <div>
               <Link href={"/services-locations/movers-and-packers-sharjah"}>
-                <h3>Moving Services In Sharjah</h3>
+                <h3
+                  className={`${
+                    locale === "ar" ? "font-arabic font-bold" : ""
+                  }`}
+                >
+                  {t("sharjah.title")}
+                </h3>
               </Link>
-              <p className="md:mt-5 mt-3">
-                Seeking dependable moving services in Sharjah? Our experienced
-                team provides seamless residential and commercial relocations,
-                featuring professional packing, furniture assembly, and safe
-                transportation. Whether you&lsquo;re moving locally or
-                long-distance, we guarantee a smooth, stress-free experience.
+              <p className={`md:mt-5 mt-3 ${locale === "ar" ? "ar-p" : ""}`}>
+                {t("sharjah.desc")}
               </p>
               <div className="flex gap-x-2 mt-5">
                 <Link href={"tel:+971566651978"}>
-                  <Button size={"sm"}>+971 56 665 1978</Button>
+                  <Button dir="ltr" size={"sm"}>
+                    +971 56 665 1978
+                  </Button>
                 </Link>
                 <Link href={"/services-locations/movers-and-packers-sharjah"}>
                   <Button size={"sm"} variant={"secondary"}>
-                    see more
+                    {b("View More")}
                   </Button>
                 </Link>
               </div>
@@ -84,22 +109,35 @@ function Locations() {
           <li className="grid md:grid-cols-2 grid-cols-1 items-center">
             <div>
               <Link href={"/services-locations/movers-and-packers-ajman"}>
-                <h3>Moving Services In Ajman</h3>
+                <h3
+                  className={`${
+                    locale === "ar"
+                      ? "text-right font-arabic font-bold"
+                      : "text-left"
+                  }`}
+                >
+                  {t("ajman.title")}
+                </h3>
               </Link>
-              <p className="md:mt-5 mt-3">
-                Find reliable moving services in Ajman! Our skilled team
-                delivers hassle-free residential and commercial relocations with
-                expert packing, efficient furniture assembly, and secure
-                transportation. Whether local or long-distance, we guarantee a
-                smooth, stress-free move.
+              <p
+                className={`md:mt-5 mt-3 ${
+                  locale === "ar" ? "text-right font-arabic ar-p" : "text-left"
+                }`}
+              >
+                {t("ajman.desc")}
               </p>
-              <div className="flex gap-x-2 mt-5">
+              <div
+                dir={locale === "ar" ? "rtl" : "ltr"}
+                className="flex gap-x-2 mt-5"
+              >
                 <Link href={"tel:+971566651978"}>
-                  <Button size={"sm"}>+971 56 665 1978</Button>
+                  <Button dir="ltr" size={"sm"}>
+                    +971 56 665 1978
+                  </Button>
                 </Link>
                 <Link href={"/services-locations/movers-and-packers-ajman"}>
                   <Button size={"sm"} variant={"secondary"}>
-                    see more
+                    {b("View More")}
                   </Button>
                 </Link>
               </div>

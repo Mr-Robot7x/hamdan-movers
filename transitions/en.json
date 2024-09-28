@@ -12,6 +12,291 @@
     "Pricing List": "Pricing List",
     "Send Now": "Send Now",
     "Our Services": "Our Services",
-    "call now": "Call Now"
+    "call now": "Call Now",
+    "pricing": "Pricing List",
+    "contact-now": "Contact Now"
+  },
+  "BrandingContent": {
+    "title": "Professional Home And Office Relocation Company In UAE",
+    "description": "Looking for affordable and reliable movers in UAE? Look no further.We make every move hassle-free. From expert packaging to safe transportation, we ensure your home or office relocation is handled with care and professionalism, ensuring you a seamless experience every step of the way.",
+    "one": "Best Moving Services",
+    "two": "No Hidden Charges",
+    "three": "Over 6+ Years Experience",
+    "four": "24 Hours Available",
+    "five": "Trusted by 100+ Clients",
+    "six": "Friendly Staff"
+  },
+  "services": {
+    "title": "Our Moving Services In UAE",
+    "description": "At Hamdan Movers and Packers, we offer a complete solution for all your moving needs. With over 6 years of experience, we provide reliable, efficient, and tailored services to meet every client’s unique requirements.",
+    "local": {
+      "title": "Local Moving Services",
+      "desc": "Our local moving services ensure a smooth, quick, and reliable transition within your city or town, using local expertise for a hassle-free move."
+    },
+    "commercial": {
+      "title": "Commercial Moving Services",
+      "desc": "We handle every detail of your office relocation, minimizing downtime and ensuring a smooth, efficient commercial move."
+    },
+    "packing": {
+      "title": "Packing and Unpacking",
+      "desc": "Our expert team offers secure and reliable packing and careful unpacking, guaranteeing a stress-free moving experience for your belongings."
+    },
+    "storage": {
+      "title": "Storage Solutions",
+      "desc": "Our climate-controlled storage solutions for clients provide safe, flexible short-term or long-term storage during your transition and moving."
+    },
+    "specialty": {
+      "title": "Specialty Moving Services",
+      "desc": "We specialize in moving valuable items like pianos, antiques, and artwork, treating each piece with utmost care and professionalism."
+    },
+    "international": {
+      "title": "International Moving Services",
+      "desc": "We make international moves to Gulf countries stress-free, handling packing and customs paperwork to ensure a seamless process."
+    }
+  },
+  "otherMovingServices": {
+    "title": "Other Moving Services",
+    "apartment": "Apartment Moving",
+    "villa": "Villa Moving",
+    "office": "Office Relocation",
+    "home": "Home Cleaning",
+    "furniture": "Furniture Cleaning"
+  },
+  "whyChooseUs": {
+    "top": "WHY CHOOSE US",
+    "title": "We Are Professional Moving Company In UAE",
+    "description": "We're experts in helping people move in the UAE. Our team is made up of experienced professionals who know exactly what they're doing. We have all the latest equipment and technology to make your move as smooth as possible. We value your feedback and are always looking for ways to improve our services. Trust us to handle your move with care and efficiency.",
+    "years": "Years Of Experience",
+    "projects": "Projects Completed"
+  },
+  "pickup": {
+    "title": "Our Pickup Cars For Rent Services In",
+    "SubTitle": "Fast, Flexible, And Convenient Pickup Cars For Rental Service In",
+    "desc1": "Need a pickup truck to rent in the ",
+    "desc2": " We have many different sizes to choose from. We'll make sure you have a great experience. Whether you're moving things or carrying stuff, we're ready to help.",
+    "size": "We have following size of a Pickup Truck that is Appropriate for your needs.",
+    "one": {
+      "title": "1.5 Ton Pickup Truck For Rent",
+      "in": "in",
+      "desc": "Need a pickup truck to move your home, office, or other belongings in the",
+      "desc2": "Our 1.5-ton pickup trucks are perfect for safe and easy transportation. We offer competitive rates and excellent service, so you can trust us to handle your move without any hassle"
+    },
+    "two": {
+      "title": "3 Ton Pickup Truck For Rental",
+      "in": "in",
+      "desc": "Need to move heavy cargo, relocate your home, or move your office in the",
+      "desc2": "Our 3-ton pickup trucks are the perfect solution. We offer a complete moving service, including loading and unloading, so you can relax and let us handle everything. Your belongings will arrive safely and on time."
+    }
+  },
+  "locations": {
+    "dubai": {
+      "title": "Moving Services In Dubai",
+      "desc": "Need a professional moving company in Dubai? Our experienced team specializes in residential and commercial relocations. We handle everything from packing and unpacking to furniture assembly and transportation. Whether you're moving across town or across the country, we'll make sure your move is smooth and stress-free."
+    },
+    "sharjah": {
+      "title": "Moving Services In Sharjah",
+      "desc": "Seeking dependable moving services in Sharjah? Our experienced team provides seamless residential and commercial relocations, featuring professional packing, furniture assembly, and safe transportation. Whether you‘re moving locally or long-distance, we guarantee a smooth, stress-free experience."
+    },
+    "ajman": {
+      "title": "Moving Services In Ajman",
+      "desc": "Seeking dependable moving services in Ajman? Our experienced team provides seamless residential and commercial relocations, featuring professional packing, furniture assembly, and safe transportation. Whether you‘re moving locally or long-distance, we guarantee a smooth, stress-free experience."
+    }
+  },
+  "workProcess": {
+    "heading": "Work Process",
+    "title": "Our Moving Process",
+    "one": {
+      "tit": "Book Your Service",
+      "desc": "Start with a quick call or an in-person chat. We’ll go over your moving needs and handle all the details to make it easy for you."
+    },
+    "two": {
+      "tit": "Before We Move",
+      "desc": "We’ll visit your place to assess what needs moving. This helps us plan packing and ensure a smooth moving day with no surprises."
+    },
+    "three": {
+      "tit": "The Move Plan",
+      "desc": "Once we’ve discussed your needs, we create a detailed plan for your move—covering timing, crew size, and costs—so everything runs smoothly."
+    },
+    "four": {
+      "tit": "Packing and Loading",
+      "desc": "Our team uses high-quality materials to pack your items securely. We carefully load everything onto our trucks to ensure your belongings stay safe during the move."
+    },
+    "five": {
+      "tit": "Safe Transportation",
+      "desc": "Safety is our priority. Our experienced drivers choose the best routes, and our trucks are thoroughly inspected for a smooth, secure move."
+    },
+    "six": {
+      "tit": "Unpacking and Settling-in",
+      "desc": "We’ll unpack your belongings and help set everything up just the way you like it, ensuring you feel at home before we leave."
+    }
+  },
+  "pricingContent": {
+    "top": "Our Pricing",
+    "title": "Affordable and Clear Moving Prices",
+    "desc": "At Hamdan Movers and Packers, we ensure transparency with no hidden fees, offering top-quality moving services at fair rates. Our team of trained professionals and efficient processes guarantee that every dollar spent brings you peace of mind and a seamless moving experience.",
+    "list": {
+      "title": "How We Calculate Moving Costs",
+      "desc": "We maintain open communication about all costs from the get-go, ensuring you won’t find any unexpected fees or charges on your final bill. It’s all about trust, and we aim to build that with every client.",
+      "sub-heading": "How We Price Our Moving Services",
+      "one": "Distance of the Move: The length of the journey directly affects the cost.",
+      "two": "Volume and Weight of Items: Larger or heavier loads require more effort and resources.",
+      "three": "Special Handling Requirements: Items needing special care, like fragile or valuable goods, impact pricing.",
+      "four": "Logistical Considerations: Access challenges, transportation, and other operational aspects are factored in.",
+      "five": "How careful consideration of these factors ensures an accurate and fair estimate.",
+      "six": "Reinforce the idea that the price reflects the true effort and resources dedicated to the move.",
+      "table-title": "Our Pricing List"
+    }
+  },
+  "content": {
+    "title": "Understanding Moving Prices and What Affects On Prices In",
+    "desc1": " When planning a move in the",
+    "desc2": "understanding what influences the cost can help you make informed decisions. Various factors, such as the distance of your move, the size and weight of your belongings, and any special handling requirements, all contribute to the final price. Additionally, aspects like the number of movers needed, the type of vehicle required, and the complexity of the move (e.g., stairs, narrow streets) can impact the cost. By knowing these factors upfront, you can better budget for your move and avoid unexpected fees.",
+
+    "sub1": "Factors Affecting the Cost",
+    "sub-desc1": "The cost of moving is far from a one-size-fits-all solution. It fluctuates based on several key factors, including the number of items, their weight, and whether any special handling is required. Even the date of your move can influence the price. Additionally, movers with a strong reputation, particularly in areas like Sharjah, may charge a premium, but this often reflects the high-quality service they provide.",
+
+    "sub2": "Additional Services and Their Charges",
+    "sub-desc2": "Beyond the basic moving service, there are additional options to consider, such as packing, storage, and furniture assembly, each of which comes with an extra cost. Specialized packing materials for fragile or valuable items can also increase the total. These add-ons provide convenience but should be factored into your overall budget.",
+    "sub2-sub-title": "Common Additional Services",
+    "sub2-li1": {
+      "title": "Packing Supplies:",
+      "desc": "Many moving companies offer packing supplies like boxes, bubble wrap, and tape for purchase."
+    },
+    "sub2-li2": {
+      "title": "Packing Services:",
+      "desc": "Some companies provide professional packing services, which can save you time and effort."
+    },
+    "sub2-li3": {
+      "title": "Disassembly and Assembly:",
+      "desc": "For furniture and appliances that require disassembly and assembly, additional fees may apply."
+    },
+    "sub2-li4": {
+      "title": "Storage:",
+      "desc": "If you need to store your belongings temporarily, moving companies like us often offer storage solutions."
+    },
+    "sub2-li5": {
+      "title": "Piano Moving:",
+      "desc": "Moving pianos is a specialized task and may incur additional charges."
+    },
+    "sub2-li6": {
+      "title": "Pool Table Moving:",
+      "desc": "Similar to pianos, moving pool tables requires special handling and may be more expensive."
+    },
+    "sub2-li7": {
+      "title": "Hazardous Materials Handling:",
+      "desc": "If you have hazardous materials, such as chemicals or flammable substances, there may be specific regulations and additional fees."
+    },
+    "sub2-sub-title2": "Factors Affecting Charges",
+    "sub2-li8": {
+      "title": "Volume of Items:",
+      "desc": "The more items you need packed or stored, the higher the cost."
+    },
+    "sub2-li9": {
+      "title": "Type of Items:",
+      "desc": "Fragile or oversized items may require additional care and increase the cost."
+    },
+    "sub2-li10": {
+      "title": "Distance:",
+      "desc": " The distance between your origin and destination can affect the overall cost of additional services."
+    },
+    "sub2-li11": {
+      "title": "Moving Company Policies:",
+      "desc": "  Different companies may have varying rates and policies for additional services."
+    },
+
+    "sub3": "How Distance and Size of Move Impact Cost",
+    "sub-desc3-1": "In simple terms, the farther you move and the more belongings you have, the higher the cost. Relocating across",
+    "sub-desc3-2": "will typically be more expensive than a move within the same neighborhood. Likewise, moving a four-bedroom  house will cost significantly more than shifting a studio apartment. The scale and distance of the move directly impact the overall price.",
+
+    "sub4": "Ways to Get the Best Value for Your Money",
+    "sub-desc4": " While price is important, value is what truly matters. To maximize your investment, it&apos;s wise to gather multiple quotes from different movers. Compare not only the prices but also the services they offer. Take the time to read reviews and see which company provides the best balance of cost and quality. Also, staying flexible with your moving dates can often help you secure a better deal."
+  },
+  "table": {
+    "heading1": "Moving Size",
+    "heading2": "Moving Trucks Required",
+    "heading3": "Crew Size",
+    "heading4": "Moving Cost",
+    "row1": {
+      "one": "Studio apartment",
+      "two": "1 BHK",
+      "three": "2 BHK",
+      "four": "3 BHK",
+      "five": "4 BHK",
+      "six": "2 Bedroom Villa Moving",
+      "seven": "3 Bedroom Villa Moving",
+      "eight": "4 Bedroom Villa Moving"
+    }
+  },
+  "testimonials": {
+    "title": "What Our Client's Said",
+    "key1": "Your Requirement Is Our Wish",
+    "key2": "Safe & Secure Move",
+    "key3": "Moving Is Quick & Easy",
+    "key4": "Moving Is Quick & Easy",
+    "key5": "Delivery On Time",
+    "key6": "We Are Affordable",
+    "key7": "Transporting Goods"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "desc": "Ready to make your move? Contact Hamdan and Packers today!",
+    "address": "Estiqlal Road Abushagara Sharjah",
+    "office": "Office",
+    "phone": "Phone",
+    "email": "Email",
+    "openinghour": "Opening Hours",
+    "hours": "Open 24 Hours"
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "one": {
+      "ques": "What payment methods do you accept?",
+      "ans": "We accept various payment methods, including cash, credit card, and online bank transfers. Payment can be made before or after the completion of services as per the terms agreed upon."
+    },
+    "two": {
+      "ques": "How can I book a moving service?",
+      "ans": "You can easily book any of our services through our website by clicking the Book Now button on the relevant service page, or you can contact us directly via phone or email."
+    },
+    "three": {
+      "ques": "What areas do you cover for moving services?",
+      "ans": "We provide local moving services within Sharjah and Dubai, along with international moving services to Gulf countries. Our team is equipped to handle moves within the UAE and beyond."
+    },
+    "four": {
+      "ques": "What is included in your commercial moving service?",
+      "ans": "Our commercial moving services cover every aspect of office relocation, including disassembly, packing, transportation, and reassembly at the new location. We focus on minimizing downtime to ensure a smooth transition for your business."
+    },
+    "five": {
+      "ques": "Do you provide storage solutions?",
+      "ans": "Yes, we offer flexible short-term and long-term storage options in climate-controlled units to keep your items safe during the transition or for longer durations as needed."
+    },
+    "six": {
+      "ques": "Can you handle international moves?",
+      "ans": "Yes, we provide international moving services, especially to Gulf countries. This includes packing, customs paperwork, and transportation to ensure a seamless international relocation."
+    },
+    "seven": {
+      "ques": "Do you offer cleaning services?",
+      "ans": "Yes, we offer home cleaning and furniture cleaning services to ensure your space is spotless before or after a move. Our professional team uses high-quality products to leave your home or furniture in top condition."
+    }
+  },
+  "navitems": {
+    "home": "Home",
+    "service": "Services",
+    "rent-services": "Rent Services",
+    "moving-locations": "Moving Locations",
+    "about-us": "About Us",
+    "contact-us": "Contact Us",
+    "services-sub": {
+      "local": "Local Moving",
+      "commercial": "Commerical Moving",
+      "packing": "Packing and Unpacking",
+      "storage": "Storage Solutions",
+      "specialty": "Specialty Moving",
+      "international": "International Moving"
+    },
+    "sub-menu-all": {
+      "dubai": "Dubai",
+      "sharjah": "Sharjah",
+      "ajman": "Ajman"
+    }
   }
 }

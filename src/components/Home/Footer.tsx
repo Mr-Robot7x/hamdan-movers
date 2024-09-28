@@ -10,8 +10,35 @@ import {
 import { Button } from "../ui/button";
 import { Facebook, Instagram, PhoneCallIcon } from "lucide-react";
 import Link from "next/link";
-import { subServices } from "@/app/[locale]/data";
+import { useLocale, useTranslations } from "next-intl";
 function Footer() {
+  const t = useTranslations("navitems");
+  const subServices: { name: string; link: string }[] = [
+    {
+      name: t("services-sub.local"),
+      link: "/services/local-residential-movers",
+    },
+    {
+      name: t("services-sub.commercial"),
+      link: "/services/commerical-office-movers",
+    },
+    {
+      name: t("services-sub.packing"),
+      link: "/services/packing-services",
+    },
+    {
+      name: t("services-sub.storage"),
+      link: "/services/storage-services",
+    },
+    {
+      name: t("services-sub.specialty"),
+      link: "/services/speciality-moving",
+    },
+    {
+      name: t("services-sub.international"),
+      link: "/services/international-moving",
+    },
+  ];
   return (
     <footer className="w-full mt-16 py-7 md:px-10 h-auto">
       <div className="grid md:grid-cols-3 grid-cols-1 gap-y-8">
@@ -112,14 +139,14 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="w-full min-h-3 mt-6">
+      <div className="w-full min-h-3 mt-10">
         <p className="gr text-center">
           &copy; Copyright {new Date().getFullYear()}. All Rights Reserved by
           Hamdan Movers and Packer.
           <br />
           Develop By{" "}
           <Link
-            className="pb"
+            className="text-[#FF5F00]"
             href={
               "https://wa.me/+923471309916?text=Hello%20Mashal,%20I%20Need%20Your%20Service%20!"
             }

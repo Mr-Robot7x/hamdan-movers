@@ -1,18 +1,21 @@
 import React from "react";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
 
 function OurServices({ title, city }: { title?: string; city?: string }) {
+  const locale = useLocale();
+  const t = useTranslations("services");
+  const b = useTranslations("buttons");
   return (
     <div className="md:w-11/12 w-full md:mt-5">
-      <h2 className="text-center">
-        {title ? title : "Our Moving Services In UAE"}
-      </h2>
-      <p className="text-center mt-5 md:text-[17px] md:px-16">
-        At Hamdan Movers and Packers, we offer a complete solution for all your
-        moving needs. With over 10 years of experience, we provide reliable,
-        efficient, and tailored services to meet every client’s unique
-        requirements.
+      <h2 className="text-center">{title ? title : t("title")}</h2>
+      <p
+        className={`text-center mt-5 md:px-16${
+          locale === "ar" ? "ar-p font-arabic" : "md:text-[17px]"
+        }`}
+      >
+        {t("description")}
       </p>
       <div className="w-full mt-14 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
         {/* Local Moving */}
@@ -122,18 +125,28 @@ function OurServices({ title, city }: { title?: string; city?: string }) {
               </g>
             </svg>
           </div>
-          <h4 className="text-center mt-2 font-poppins">
-            Local Moving Services <br /> {city && `In ${city}`}
+          <h4
+            className={`text-center mt-2 ${
+              locale === "ar"
+                ? "font-arabic font-bold text-[25px]"
+                : "font-poppins"
+            }`}
+          >
+            {t("local.title")} <br /> {city && `In ${city}`}
           </h4>
-          <p className="gr md:leading-5 mt-1 text-[15.3px] text-center">
-            Our local moving services ensure a smooth, quick, and reliable
-            transition within your city or town, using local expertise for a
-            hassle-free move.
+          <p
+            className={`gr text-center ${
+              locale === "ar"
+                ? "font-arabic ar-p mt-3"
+                : "text-[15.3px] mt-1 md:leading-5 font-poppins"
+            }`}
+          >
+            {t("local.desc")}
           </p>
           <div className="mt-5">
             <Link href={"/services/local-residential-movers"}>
               <Button size={"sm"} variant={"outline"}>
-                Service Details
+                {b("Service Detail")}
               </Button>
             </Link>
           </div>
@@ -349,17 +362,28 @@ function OurServices({ title, city }: { title?: string; city?: string }) {
               </g>
             </svg>
           </div>
-          <h4 className="text-center mt-2 font-poppins">
-            Commercial Moving Services <br /> {city && `In ${city}`}
+          <h4
+            className={`text-center mt-2 ${
+              locale === "ar"
+                ? "font-arabic font-bold text-[25px]"
+                : "font-poppins"
+            }`}
+          >
+            {t("commercial.title")} <br /> {city && `In ${city}`}
           </h4>
-          <p className="gr md:leading-5 mt-1 text-[15.3px] text-center">
-            We handle every detail of your office relocation, minimizing
-            downtime and ensuring a smooth, efficient commercial move.
+          <p
+            className={`gr text-center ${
+              locale === "ar"
+                ? "font-arabic ar-p mt-3"
+                : "text-[15.3px] mt-1 md:leading-5 font-poppins"
+            }`}
+          >
+            {t("commercial.desc")}
           </p>
           <div className="mt-5">
             <Link href={"/services/commerical-office-movers"}>
               <Button size={"sm"} variant={"outline"}>
-                Service Details
+                {b("Service Detail")}
               </Button>
             </Link>
           </div>
@@ -524,18 +548,28 @@ function OurServices({ title, city }: { title?: string; city?: string }) {
               </g>
             </svg>
           </div>
-          <h4 className="text-center mt-2 font-poppins">
-            Packing and Unpacking <br /> {city && `In ${city}`}
+          <h4
+            className={`text-center mt-2 ${
+              locale === "ar"
+                ? "font-arabic font-bold text-[25px]"
+                : "font-poppins"
+            }`}
+          >
+            {t("packing.title")} <br /> {city && `In ${city}`}
           </h4>
-          <p className="gr md:leading-5 mt-1 text-[15.3px] text-center">
-            Our expert team offers secure and reliable packing and careful
-            unpacking, guaranteeing a stress-free moving experience for your
-            belongings.
+          <p
+            className={`gr text-center ${
+              locale === "ar"
+                ? "font-arabic ar-p mt-3"
+                : "text-[15.3px] mt-1 md:leading-5 font-poppins"
+            }`}
+          >
+            {t("packing.desc")}
           </p>
           <div className="mt-5">
             <Link href={"/services/packing-services"}>
               <Button size={"sm"} variant={"outline"}>
-                Service Details
+                {b("Service Detail")}
               </Button>
             </Link>
           </div>
@@ -688,18 +722,28 @@ function OurServices({ title, city }: { title?: string; city?: string }) {
               </g>
             </svg>
           </div>
-          <h4 className="text-center mt-2 font-poppins">
-            Storage Solutions <br /> {city && `In ${city}`}
+          <h4
+            className={`text-center mt-2 ${
+              locale === "ar"
+                ? "font-arabic font-bold text-[25px]"
+                : "font-poppins"
+            }`}
+          >
+            {t("storage.title")} <br /> {city && `In ${city}`}
           </h4>
-          <p className="gr md:leading-5 mt-1 text-[15.3px] text-center">
-            Our climate-controlled storage solutions for clients provide safe,
-            flexible short-term or long-term storage during your transition and
-            moving.
+          <p
+            className={`gr text-center ${
+              locale === "ar"
+                ? "font-arabic ar-p mt-3"
+                : "text-[15.3px] mt-1 md:leading-5 font-poppins"
+            }`}
+          >
+            {t("storage.desc")}
           </p>
           <div className="mt-5">
             <Link href={"/services/storage-services"}>
               <Button size={"sm"} variant={"outline"}>
-                Service Details
+                {b("Service Detail")}
               </Button>
             </Link>
           </div>
@@ -888,17 +932,28 @@ function OurServices({ title, city }: { title?: string; city?: string }) {
               </g>
             </svg>
           </div>
-          <h4 className="text-center mt-2 font-poppins">
-            Specialty Moving Services <br /> {city && `In ${city}`}
+          <h4
+            className={`text-center mt-2 ${
+              locale === "ar"
+                ? "font-arabic font-bold text-[25px]"
+                : "font-poppins"
+            }`}
+          >
+            {t("specialty.title")} <br /> {city && `In ${city}`}
           </h4>
-          <p className="gr md:leading-5 mt-1 text-[15.3px] text-center">
-            We specialize in moving valuable items like pianos, antiques, and
-            artwork, treating each piece with utmost care and professionalism.
+          <p
+            className={`gr text-center ${
+              locale === "ar"
+                ? "font-arabic ar-p mt-3"
+                : "text-[15.3px] mt-1 md:leading-5 font-poppins"
+            }`}
+          >
+            {t("specialty.desc")}
           </p>
           <div className="mt-5">
             <Link href={"/services/speciality-moving"}>
               <Button size={"sm"} variant={"outline"}>
-                Service Details
+                {b("Service Detail")}
               </Button>
             </Link>
           </div>
@@ -994,17 +1049,29 @@ function OurServices({ title, city }: { title?: string; city?: string }) {
               </g>
             </svg>
           </div>
-          <h4 className="text-center mt-2 font-poppins">
-            International Moving Services <br /> {city && `In ${city}`}
+          <h4
+            className={`text-center mt-2 ${
+              locale === "ar"
+                ? "font-arabic font-bold text-[25px]"
+                : "font-poppins"
+            }`}
+          >
+            {t("international.title")}
+            <br /> {city && `In ${city}`}
           </h4>
-          <p className="gr md:leading-5 mt-1 text-[15.3px] text-center">
-            We make international moves to Gulf countries stress-free, handling
-            packing and customs paperwork to ensure a seamless process.
+          <p
+            className={`gr text-center ${
+              locale === "ar"
+                ? "font-arabic ar-p mt-3"
+                : "text-[15.3px] mt-1 md:leading-5 font-poppins"
+            }`}
+          >
+            {t("international.desc")}
           </p>
           <div className="mt-5">
             <Link href={"/services/international-moving"}>
               <Button size={"sm"} variant={"outline"}>
-                Service Details
+                {b("Service Detail")}
               </Button>
             </Link>
           </div>

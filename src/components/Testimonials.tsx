@@ -3,6 +3,7 @@ import React from "react";
 import CardSlider from "./testSlider";
 import Image from "next/image";
 import testimonialImage from "../../public/images/testimonels.jpg";
+import { useLocale, useTranslations } from "next-intl";
 export const testimonials: {
   name: string;
   location: string;
@@ -93,6 +94,8 @@ export const testimonials: {
 ];
 
 const TestimonialSection: React.FC = () => {
+  const t = useTranslations("testimonials");
+  const locale = useLocale();
   return (
     <section className="w-full md:w-11/12 py-12 px-4">
       <div className="container mx-auto flex flex-col lg:flex-row items-center">
@@ -108,27 +111,35 @@ const TestimonialSection: React.FC = () => {
               alt="feedback image | hamdan movers"
             />
           </div>
-          {/* <img
-            src="/images/testimonels.jpg"
-            alt="Mover holding box"
-            className="md:w-96 md:h-[500px] h-96 rounded-lg shadow-lg"
-          /> */}
         </div>
 
         {/* Right Side: Testimonial Content */}
-        <div className="md:mr-20  mr-0 md:pl-4 pl-0 lg:w-1/2 lg:ml-12 ml-0 mt-8 lg:mt-0">
-          <h2 className=" mb-4">What Our Client&apos;s Said</h2>
+        <div
+          className={`md:mr-20  mr-0 md:pl-4 pl-0 lg:w-1/2 lg:ml-12 ml-0 mt-8 lg:mt-0`}
+        >
+          <h2
+            className={
+              locale === "ar"
+                ? "font-arabic md:text-right text-center font-bold"
+                : "mb-4 md:text-left text-center"
+            }
+          >
+            {t("title")}
+          </h2>
 
-          <ul className="w-max mb-6 flex md:flex-row flex-col gap-5 text-lg text-gray-700 mt-10">
+          <ul
+            dir={locale === "ar" ? "rtl" : "ltr"}
+            className={`list-disc mb-6 flex md:flex-row flex-col mdLgap-10 gap-5 md:px-0 px-10 text-lg text-gray-700 mt-10`}
+          >
             <div className="flex flex-col gap-y-2">
-              <li>✔ Your Requirement Is Our Wish</li>
-              <li>✔ Moving Is Quick & Easy</li>
-              <li>✔ We Are Affordable</li>
+              <li className={locale === "ar" ? "ar-p" : ""}>{t("key1")}</li>
+              <li className={locale === "ar" ? "ar-p" : ""}>{t("key2")}</li>
+              <li className={locale === "ar" ? "ar-p" : ""}>{t("key3")}</li>
             </div>
             <div className="flex flex-col gap-y-2">
-              <li>✔ Safe & Secure Move</li>
-              <li>✔ Delivery On Time</li>
-              <li>✔ Transporting Goods</li>
+              <li className={locale === "ar" ? "ar-p" : ""}>{t("key4")}</li>
+              <li className={locale === "ar" ? "ar-p" : ""}>{t("key5")}</li>
+              <li className={locale === "ar" ? "ar-p" : ""}>{t("key6")}</li>
             </div>
           </ul>
 
