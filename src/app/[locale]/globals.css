@@ -36,7 +36,7 @@ h4 {
   @apply md:text-[21px] text-[19px] md:leading-7 leading-6 font-medium
 }
 h1, h2, h3 {
-  @apply tracking-wide  text-[#023246]
+  @apply tracking-wide  text-[#023246] font-playfair
 }
     ol.custom-symbol {
       list-style-type: none;

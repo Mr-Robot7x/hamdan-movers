@@ -26,6 +26,7 @@ const config = {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
         arabic: ["Amiri", "sans-serif"],
+        playfair: ["Playfair Display", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",

@@ -54,7 +54,7 @@ export default function RootLayout({
               className={`${
                 locale === "ar"
                   ? `${arabic.className}`
-                  : `${poppins.className} ${playfair.className}`
+                  : `${poppins.className} ${playfair.variable}`
               }`}
             >
               {children}
