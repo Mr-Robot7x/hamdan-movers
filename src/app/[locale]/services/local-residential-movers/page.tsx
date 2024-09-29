@@ -14,7 +14,10 @@ import packingIcon from "../../../../../public/images/packing-unpacking.png";
 import moveIcon from "../../../../../public/images/safe-transportation.png";
 import settingIcon from "../../../../../public/images/home-setting-icon.png";
 import TestimonialSection from "@/components/Testimonials";
+import { useTranslations } from "next-intl";
 function LocalResidentailMovers() {
+  const t = useTranslations("local");
+  const b = useTranslations("buttons");
   return (
     <>
       <Navbar />
@@ -23,37 +26,33 @@ function LocalResidentailMovers() {
         className=" w-full flex flex-col justify-center items-center gap-y-16"
       >
         <PerServiceSec
-          title="Local Residentail Movers In UAE"
-          subTitle="Efficient Apartment and House Moving Services in UAE"
-          description="At Hamdan Movers and Packers, we aim to be your top choice for local residential moving in UAE. We’re not just movers, we provide outstanding customer service for a stress-free relocation. Whether you're moving to a new home, villa, or apartment, trust us for a smooth and hassle-free experience."
+          title={t("title")}
+          subTitle={t("sub")}
+          description={t("desc")}
           image={imageSrc}
         />
         <ServiceDetails
-          title="Residential Moving Experts in UAE"
-          description="Hamdan Movers and Packers provide a comprehensive range of services to
-        handle every aspect of your move."
+          title={t("part1.title")}
+          description={t("part1.sm-desc")}
           boxs={[
             {
-              heading: "  Professional Packing for Safe Moving",
-              desc: " Our expert packers and movers are trained to handle everything from large furniture to fragile heirlooms, ensuring your belongings are securely packed for safe transport across UAE.",
+              heading: t("part1.point1"),
+              desc: t("part1.desc1"),
             },
             {
-              heading: "Secure and Stress-Free Transport Across UAE",
-              desc: "On moving day, our team handles everything, loading your items onto our modern, well-maintained trucks and transporting them safely to your new home. We ensure careful handling and secure transport across UAE.",
+              heading: t("part1.point2"),
+              desc: t("part1.desc2"),
             },
             {
-              heading: " Professional Unpacking Solutions for a Smooth Move",
-              desc: "Upon arriving at your new home, we provide expert unloading and unpacking services to help you settle in quickly. Our goal is to transform your new residence into a comfortable and welcoming home.",
+              heading: t("part1.point3"),
+              desc: t("part1.desc3"),
             },
           ]}
         />
         <ServiceHire
-          title="Hire Us For Your's Local Residentail Moving In UAE"
-          desciption="Choose us for reliable, efficient, and stress-free local residential moving services. Our expert team ensures safe handling of your belongings, from packing to transport, providing a seamless relocation experience within UAE."
-          keyPoints={[
-            "Expertise in Local Residential Moving",
-            "Dedicated Service for Residential Moves",
-          ]}
+          title={t("hire.title")}
+          desciption={t("hire.desc")}
+          keyPoints={[t("hire.key1"), t("hire.key2")]}
           image={hireUsImage}
         />
         <ContactUs />
@@ -63,23 +62,23 @@ function LocalResidentailMovers() {
         <ServiceMovingProcess
           boxs={[
             {
-              heading: "Pre-Move Consultation",
-              desc: "Start your move with a personalized consultation. We assess your needs, address challenges, and provide a clear moving plan with a detailed estimate, ensuring no surprises.",
+              heading: t("process.one.title"),
+              desc: t("process.one.desc"),
               image: initialConts,
             },
             {
-              heading: "Packing and Preparation",
-              desc: "Our expert packers carefully handle and protect your items for the journey. Using top-quality packing materials and efficient techniques, we ensure everything is securely packed and ready for a smooth move.",
+              heading: t("process.two.title"),
+              desc: t("process.two.desc"),
               image: packingIcon,
             },
             {
-              heading: "The Move",
-              desc: "Our experienced moving team carefully loads your belongings into our trucks and ensures each item is handled with care throughout the entire journey, delivering everything safely to your new home",
+              heading: t("process.three.title"),
+              desc: t("process.three.desc"),
               image: moveIcon,
             },
             {
-              heading: "Unpacking and Settling In",
-              desc: "Upon arrival at your new home, we'll assist with unpacking and setting up your space, ensuring everything is placed according to your preferences for a smooth transition and immediate comfort.",
+              heading: t("process.four.title"),
+              desc: t("process.four.desc"),
               image: settingIcon,
             },
           ]}

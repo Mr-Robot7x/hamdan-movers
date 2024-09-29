@@ -46,7 +46,7 @@ const ContactUs = ({ isPage = false }: { isPage?: boolean }) => {
   };
 
   return (
-    <div className="bg-white w-full md:w-11/12">
+    <div id="contact" className="bg-white w-full md:w-11/12">
       <div className="max-w-5xl px-4 xl:px-0 py-10 lg:py-10 mx-auto">
         {/* Title */}
         {!isPage ? (

@@ -324,5 +324,44 @@
       "title": "Trained Team",
       "desc": "Our skilled professionals handle your belongings with utmost care."
     }
+  },
+  "local": {
+    "title": "Local Residentail Movers In UAE",
+    "sub": "Efficient Apartment and House Moving Services in UAE",
+    "desc": "At Hamdan Movers and Packers, we aim to be your top choice for local residential moving in UAE. We’re not just movers, we provide outstanding customer service for a stress-free relocation. Whether you're moving to a new home, villa, or apartment, trust us for a smooth and hassle-free experience.",
+    "part1": {
+      "title": "Residential Moving Experts in UAE",
+      "sm-desc": "Hamdan Movers and Packers provide a comprehensive range of services to handle every aspect of your move.",
+      "point1": "Professional Packing for Safe Moving",
+      "desc1": "Our expert packers and movers are trained to handle everything from large furniture to fragile heirlooms, ensuring your belongings are securely packed for safe transport across UAE.",
+      "point2": "Secure and Stress-Free Transport Across UAE",
+      "desc2": "On moving day, our team handles everything, loading your items onto our modern, well-maintained trucks and transporting them safely to your new home. We ensure careful handling and secure transport across UAE.",
+      "point3": "Professional Unpacking Solutions for a Smooth Move",
+      "desc3": "Upon arriving at your new home, we provide expert unloading and unpacking services to help you settle in quickly. Our goal is to transform your new residence into a comfortable and welcoming home."
+    },
+    "hire": {
+      "title": "Hire Us For Your's Local Residentail Moving In UAE",
+      "desc": "Choose us for reliable, efficient, and stress-free local residential moving services. Our expert team ensures safe handling of your belongings, from packing to transport, providing a seamless relocation experience within UAE.",
+      "key1": "Expertise in Local Residential Moving",
+      "key2": "Dedicated Service for Residential Moves"
+    },
+    "process": {
+      "one": {
+        "title": "Pre-Move Consultation",
+        "desc": "Start your move with a personalized consultation. We assess your needs, address challenges, and provide a clear moving plan with a detailed estimate, ensuring no surprises."
+      },
+      "two": {
+        "title": "Packing and Preparation",
+        "desc": "Our expert packers carefully handle and protect your items for the journey. Using top-quality packing materials and efficient techniques, we ensure everything is securely packed and ready for a smooth move."
+      },
+      "three": {
+        "title": "The Move",
+        "desc": "Our experienced moving team carefully loads your belongings into our trucks and ensures each item is handled with care throughout the entire journey, delivering everything safely to your new home"
+      },
+      "four": {
+        "title": "Unpacking and Settling In",
+        "desc": "Upon arrival at your new home, we'll assist with unpacking and setting up your space, ensuring everything is placed according to your preferences for a smooth transition and immediate comfort."
+      }
+    }
   }
 }
