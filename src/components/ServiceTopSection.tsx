@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import serviceImage from "../../public/images/services-image.jpg";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
+import { PhoneForwarded } from "lucide-react";
 function ServiceTopSection() {
   const locale = useLocale();
   const t = useTranslations("service");
@@ -32,8 +33,9 @@ function ServiceTopSection() {
           <p className={locale === "ar" ? "ar-p mt-3" : "mt-2"}>{t("desc")}</p>
           <div className="w-full flex gap-x-5 mt-5">
             <Link className="" href={"tel:+971566651978"}>
-              <Button>
-                {b("call now")} : <span dir="ltr">+971 566651978 </span>
+              <Button dir="ltr">
+                <PhoneForwarded className="mr-2 w-5 h-5" />{" "}
+                <span dir="ltr">+971 566651978 </span>
               </Button>
             </Link>
             <Link href={"#services"}>
