@@ -14,7 +14,10 @@ import packingIcon from "../../../../../public/images/packing-unpacking.png";
 import moveIcon from "../../../../../public/images/safe-transportation.png";
 import settingIcon from "../../../../../public/images/home-setting-icon.png";
 import TestimonialSection from "@/components/Testimonials";
+import { useTranslations } from "next-intl";
 function CommercialOfficeMovers() {
+  const p = useTranslations("service-process");
+  const t = useTranslations("commerical");
   return (
     <>
       <Navbar />
@@ -23,46 +26,41 @@ function CommercialOfficeMovers() {
         className=" w-full flex flex-col justify-center items-center gap-y-16"
       >
         <PerServiceSec
-          title="Commercial  Office Moving Services in UAE"
-          subTitle="Expert Office Moving Services for a Smooth Business Transition in UAE"
-          description="Hamdan Movers and Packers offer fully insured, 24/7 Office Moving Services in UAE. We provide customized relocation solutions with GPS-tracked fleets and handle Certificate of Insurance at no extra cost. With flexible scheduling and expertise in UAE’s unique moving challenges, we ensure a seamless, stress-free office move."
+          title={t("title")}
+          subTitle={t("sub")}
+          description={t("desc")}
           image={imageSrc}
         />
         <ServiceDetails
-          title="Commercial  Moving Experts in UAE"
-          description="Hamdan Movers and Packers provide a comprehensive range of services to
-        handle every aspect of your move."
+          title={t("part1.title")}
+          description={t("part1.sm-desc")}
           boxs={[
             {
-              heading: " Experienced and Professional Team",
-              desc: " At Hamdan Movers and Packers, our expert team ensures smooth, professional office moves of any size. With years of experience, our skilled packers and drivers handle every detail with care, providing top-quality Office Moving Services.",
+              heading: t("part1.point1"),
+              desc: t("part1.desc1"),
             },
             {
-              heading: "Customized Moving Plans",
-              desc: "Our flexible Office Moving Service is tailored to meet your unique needs. Whether relocating a small office locally or a large corporate office across regions, our friendly team works with you to create a customized moving plan that fits your timeline.",
+              heading: t("part1.point2"),
+              desc: t("part1.desc2"),
             },
             {
-              heading: " Professional Equipment and Furniture Moving Services",
-              desc: "Our Office Moving Service ensures the safe packing, transport, and setup of office equipment and furniture. Trained movers handle all items with care, ensuring they arrive and are ready for use at your new location.",
+              heading: t("part1.point3"),
+              desc: t("part1.desc3"),
             },
             {
-              heading: "Best Storage Solutions",
-              desc: "As part of our Office Moving Service, we provide secure short-term and long-term storage solutions for office items. Our safe, monitored storage facilities ensure your equipment and furniture are protected until ready for relocation.",
+              heading: t("part1.point4"),
+              desc: t("part1.desc4"),
             },
             {
-              heading: " Professional Unpacking Solutions for a Smooth Move",
-              desc: "Upon arriving at your new home, we provide expert unloading and unpacking services to help you settle in quickly. Our goal is to transform your new residence into a comfortable and welcoming home.",
+              heading: t("part1.point5"),
+              desc: t("part1.desc5"),
             },
           ]}
         />
         <ServiceHire
-          title="Hire Us For Your's Commercial  Office Moving In UAE"
-          desciption="Choose us for reliable, efficient, and stress-free local residential moving services. Our expert team ensures safe handling of your belongings, from packing to transport, providing a seamless relocation experience within UAE."
-          keyPoints={[
-            "Expertise in Commercial Moving",
-            "Efficient Execution and Post-Move Support",
-            "Comprehensive Office Moving Services",
-          ]}
+          title={t("hire.title")}
+          desciption={t("hire.desc")}
+          keyPoints={[t("hire.key1"), t("hire.key2"), t("hire.key3")]}
           image={hireUsImage}
         />
         <ContactUs />
@@ -72,23 +70,23 @@ function CommercialOfficeMovers() {
         <ServiceMovingProcess
           boxs={[
             {
-              heading: "Pre-Move Consultation",
-              desc: "Start your move with a personalized consultation. We assess your needs, address challenges, and provide a clear moving plan with a detailed estimate, ensuring no surprises.",
+              heading: p("one.title"),
+              desc: p("one.desc"),
               image: initialConts,
             },
             {
-              heading: "Packing and Preparation",
-              desc: "Our expert packers carefully handle and protect your items for the journey. Using top-quality packing materials and efficient techniques, we ensure everything is securely packed and ready for a smooth move.",
+              heading: p("two.title"),
+              desc: p("two.desc"),
               image: packingIcon,
             },
             {
-              heading: "The Move",
-              desc: "Our experienced moving team carefully loads your belongings into our trucks and ensures each item is handled with care throughout the entire journey, delivering everything safely to your new home",
+              heading: p("three.title"),
+              desc: p("three.desc"),
               image: moveIcon,
             },
             {
-              heading: "Unpacking and Settling In",
-              desc: "Upon arrival at your new home, we'll assist with unpacking and setting up your space, ensuring everything is placed according to your preferences for a smooth transition and immediate comfort.",
+              heading: p("four.title"),
+              desc: p("four.desc"),
               image: settingIcon,
             },
           ]}

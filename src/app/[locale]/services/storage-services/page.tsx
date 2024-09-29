@@ -18,7 +18,11 @@ import residentalImg from "../../../../../public/images/residential-storage.jpg"
 import commericalImg from "../../../../../public/images/commercial-storage.jpg";
 import Image from "next/image";
 import TestimonialSection from "@/components/Testimonials";
+import { useLocale, useTranslations } from "next-intl";
 function StorageServices() {
+  const p = useTranslations("service-process");
+  const t = useTranslations("storage");
+  const locale = useLocale();
   return (
     <>
       <Navbar />
@@ -27,20 +31,26 @@ function StorageServices() {
         className=" w-full flex flex-col justify-center items-center gap-y-16"
       >
         <PerServiceSec
-          title="Storage Services in UAE"
-          subTitle="Secure, Climate-Controlled Storage Solutions | Short and Long-Term Options"
-          description="Need secure, climate-controlled storage? Our clean, air-conditioned units protect your belongings from damage, whether for short or long-term storage. Ideal for moving, downsizing, or extra space, with 24/7 monitoring and easy access for peace of mind."
+          title={t("title")}
+          subTitle={t("sub")}
+          description={t("desc")}
           image={imageSrc}
         />
         <div className="w-full md:w-11/12 min-h-32 mt-8">
-          <h2 className="text-center">
-            We offer a variety of storage types <br /> to meet your needs
+          <h2
+            className={`text-center ${
+              locale === "ar" ? "font-arabic font-bold" : ""
+            }`}
+          >
+            {t("plus.title")} <br />
+            {t("plus.title2")}
           </h2>
-          <p className="text-center md:px-16 mt-3">
-            At Hamdan Movers and Packer, we offer tailored storage solutions for
-            personal items, office equipment, and even vehicles. From small
-            units to large commercial spaces, our facilities meet all needs,
-            including specialty storage for valuables.
+          <p
+            className={`text-center md:px-16 mt-3 ${
+              locale === "ar" ? "ar-p" : ""
+            }`}
+          >
+            {t("plus.desc")}
           </p>
           <div className="w-full md:grid-flow-col grid-flow-row grid md:grid-col-2 md:gap-x-8 gap-y-8 md:px-24 mt-8">
             <div className="min-h-32 bg-neutral-50 border border-neutral-200 rounded-3xl flex items-center flex-col py-4 px-2">
@@ -53,14 +63,21 @@ function StorageServices() {
                   className="object-cover rounded-2xl"
                 />
               </div>
-              <h3 className="font-poppins text-center mt-4">
-                Short Term Storage
+              <h3
+                className={`text-center mt-4 ${
+                  locale === "ar"
+                    ? "font-arabic font-bold mb-1"
+                    : "font-poppins"
+                }`}
+              >
+                {t("plus.one.bold")}
               </h3>
-              <p className="mt-2 md:px-3">
-                Need short-term storage for office equipment? Hamdan Movers
-                offers secure, convenient solutions for renovations or
-                relocations. Store your items safely for days or weeks with
-                flexible options.
+              <p
+                className={`mt-2 md:px-3 ${
+                  locale === "ar" ? "ar-p text-right" : ""
+                }`}
+              >
+                {t("plus.one.cont")}
               </p>
             </div>
             <div className="min-h-32 bg-neutral-50 border border-neutral-200 rounded-3xl flex items-center col-span-1 flex-col py-4 px-2">
@@ -73,14 +90,21 @@ function StorageServices() {
                   className="object-cover rounded-2xl"
                 />
               </div>
-              <h3 className="font-poppins text-center mt-4">
-                Long Term Storage
+              <h3
+                className={`text-center mt-4 ${
+                  locale === "ar"
+                    ? "font-arabic font-bold mb-1"
+                    : "font-poppins"
+                }`}
+              >
+                {t("plus.two.bold")}
               </h3>
-              <p className="mt-2 md:px-3">
-                Need long-term storage for downsizing, seasonal items, or
-                documents? Hamdan Movers offers secure, flexible storage
-                solutions for extended durations, keeping your belongings safe
-                for as long as needed.
+              <p
+                className={`mt-2 md:px-3 ${
+                  locale === "ar" ? "ar-p text-right" : ""
+                }`}
+              >
+                {t("plus.two.cont")}
               </p>
             </div>
           </div>
@@ -95,14 +119,21 @@ function StorageServices() {
                   className="object-cover rounded-2xl"
                 />
               </div>
-              <h3 className="font-poppins text-center mt-4">
-                Residential Storage
+              <h3
+                className={`text-center mt-4 ${
+                  locale === "ar"
+                    ? "font-arabic font-bold mb-1"
+                    : "font-poppins"
+                }`}
+              >
+                {t("plus.three.bold")}
               </h3>
-              <p className="mt-2 md:px-3">
-                Need more space in UAE? Hamdan Movers offers secure residential
-                storage for home improvements, decluttering, or moving. Our
-                accessible, secure units keep your belongings safe and
-                protected.
+              <p
+                className={`mt-2 md:px-3 ${
+                  locale === "ar" ? "ar-p text-right" : ""
+                }`}
+              >
+                {t("plus.three.cont")}
               </p>
             </div>
             <div className="min-h-32 bg-neutral-50 border border-neutral-200 rounded-3xl flex items-center col-span-1 flex-col py-4 px-2">
@@ -115,48 +146,51 @@ function StorageServices() {
                   className="object-cover rounded-2xl"
                 />
               </div>
-              <h3 className="font-poppins text-center mt-4">
-                Commercial Storage
+              <h3
+                className={`text-center mt-4 ${
+                  locale === "ar"
+                    ? "font-arabic font-bold mb-1"
+                    : "font-poppins"
+                }`}
+              >
+                {t("plus.four.bold")}
               </h3>
-              <p className="mt-2 md:px-3">
-                Businesses in need of extra space? Hamdan Movers offers flexible
-                commercial storage for surplus inventory, office furniture, and
-                important documents. Our solutions help optimize your workspace
-                and improve efficiency.
+              <p
+                className={`mt-2 md:px-3 ${
+                  locale === "ar" ? "ar-p text-right" : ""
+                }`}
+              >
+                {t("plus.four.cont")}
               </p>
             </div>
           </div>
         </div>
         <ServiceDetails
-          title="Why Choose Our Storage Services In UAE"
-          description="With years of experience, Hamdan Movers ensures safe and efficient storage for all your items. Trust us for reliable, professional service."
+          title={t("part1.title")}
+          description={t("part1.sm-desc")}
           boxs={[
             {
-              heading: "Proven Experience and Expertise",
-              desc: "We have years of industry experience, making us a reliable partner for your storage needs. Our team of professionals is adept at handling a wide array of items, ensuring they are stored safely and efficiently.",
+              heading: t("part1.point1"),
+              desc: t("part1.desc1"),
             },
             {
-              heading: "Competitive and Affordable Pricing",
-              desc: "We believe that top-notch storage services should be accessible to all. With that in mind, we’ve structured our pricing to be competitive and transparent, providing excellent value to our customers.",
+              heading: t("part1.point2"),
+              desc: t("part1.desc2"),
             },
             {
-              heading: "Dedicated Customer Service",
-              desc: "Customer service is at the heart of our operations. Our team is dedicated to providing you with a seamless storage experience. From the moment you get in touch with us, to the time you collect your stored items, we are with you every step of the way.",
+              heading: t("part1.point3"),
+              desc: t("part1.desc3"),
             },
             {
-              heading: "Best Storage Solutions",
-              desc: "As part of our Office Moving Service, we provide secure short-term and long-term storage solutions for office items. Our safe, monitored storage facilities ensure your equipment and furniture are protected until ready for relocation.",
+              heading: t("part1.point4"),
+              desc: t("part1.desc4"),
             },
           ]}
         />
         <ServiceHire
-          title="Hire Us For Your's Storage Services In UAE"
-          desciption="Choose us for reliable, efficient, and stress-free Storage services. Our expert team ensures safe handling of your belongings, from packing to transport, providing a seamless storage experience within UAE."
-          keyPoints={[
-            "Secure, Climate-Controlled Storage Facilities",
-            "Comprehensive Packing and Unpacking Services",
-            "Friendly, Expert Staff Ready to Assist",
-          ]}
+          title={t("hire.title")}
+          desciption={t("hire.desc")}
+          keyPoints={[t("hire.key1"), t("hire.key2"), t("hire.key3")]}
           image={hireUsImage}
         />
         <ContactUs />
@@ -164,23 +198,23 @@ function StorageServices() {
         <ServiceMovingProcess
           boxs={[
             {
-              heading: "Pre-Move Consultation",
-              desc: "Start your move with a personalized consultation. We assess your needs, address challenges, and provide a clear moving plan with a detailed estimate, ensuring no surprises.",
+              heading: p("one.title"),
+              desc: p("one.desc"),
               image: initialConts,
             },
             {
-              heading: "Packing and Preparation",
-              desc: "Our expert packers carefully handle and protect your items for the journey. Using top-quality packing materials and efficient techniques, we ensure everything is securely packed and ready for a smooth move.",
+              heading: p("two.title"),
+              desc: p("two.desc"),
               image: packingIcon,
             },
             {
-              heading: "The Move",
-              desc: "Our experienced moving team carefully loads your belongings into our trucks and ensures each item is handled with care throughout the entire journey, delivering everything safely to your new home",
+              heading: p("three.title"),
+              desc: p("three.desc"),
               image: moveIcon,
             },
             {
-              heading: "Unpacking and Settling In",
-              desc: "Upon arrival at your new home, we'll assist with unpacking and setting up your space, ensuring everything is placed according to your preferences for a smooth transition and immediate comfort.",
+              heading: p("four.title"),
+              desc: p("four.desc"),
               image: settingIcon,
             },
           ]}

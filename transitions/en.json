@@ -304,6 +304,24 @@
     "sub": "Your Trusted Partner for a Stress Free Moving",
     "desc": "Hamdan Movers & Packers helps you move easily within the UAE. We pack your things carefully, transport them safely, and unpack them at your new home. We can help with both local and international moves. Trust us for a stress-free relocation."
   },
+  "service-process": {
+    "one": {
+      "title": "Pre-Move Consultation",
+      "desc": "Start your move with a personalized consultation. We assess your needs, address challenges, and provide a clear moving plan with a detailed estimate, ensuring no surprises."
+    },
+    "two": {
+      "title": "Packing and Preparation",
+      "desc": "Our expert packers carefully handle and protect your items for the journey. Using top-quality packing materials and efficient techniques, we ensure everything is securely packed and ready for a smooth move."
+    },
+    "three": {
+      "title": "The Move",
+      "desc": "Our experienced moving team carefully loads your belongings into our trucks and ensures each item is handled with care throughout the entire journey, delivering everything safely to your new home"
+    },
+    "four": {
+      "title": "Unpacking and Settling In",
+      "desc": "Upon arrival at your new home, we'll assist with unpacking and setting up your space, ensuring everything is placed according to your preferences for a smooth transition and immediate comfort."
+    }
+  },
   "benifits": {
     "title": "Benefits You Get When You Use Our Services",
     "desc1": "We offers comprehensive moving services across the",
@@ -344,24 +362,211 @@
       "desc": "Choose us for reliable, efficient, and stress-free local residential moving services. Our expert team ensures safe handling of your belongings, from packing to transport, providing a seamless relocation experience within UAE.",
       "key1": "Expertise in Local Residential Moving",
       "key2": "Dedicated Service for Residential Moves"
+    }
+  },
+  "commerical": {
+    "title": "Commercial Office Moving Services in UAE",
+    "sub": "Expert Office Moving Services for a Smooth Business Transition in UAE",
+    "desc": "Hamdan Movers and Packers offer fully insured, 24/7 Office Moving Services in UAE. We provide customized relocation solutions with GPS-tracked fleets and handle Certificate of Insurance at no extra cost. With flexible scheduling and expertise in UAE’s unique moving challenges, we ensure a seamless, stress-free office move.",
+    "part1": {
+      "title": "Commercial Moving Experts in UAE",
+      "sm-desc": "Hamdan Movers and Packers provide a comprehensive range of services to handle every aspect of your move.",
+      "point1": "Experienced and Professional Team",
+      "desc1": "At Hamdan Movers and Packers, our expert team ensures smooth, professional office moves of any size. With years of experience, our skilled packers and drivers handle every detail with care, providing top-quality Office Moving Services.",
+      "point2": "Customized Moving Plans",
+      "desc2": "Our flexible Office Moving Service is tailored to meet your unique needs. Whether relocating a small office locally or a large corporate office across regions, our friendly team works with you to create a customized moving plan that fits your timeline.",
+      "point3": "Professional Equipment and Furniture Moving Services",
+      "desc3": "Our Office Moving Service ensures the safe packing, transport, and setup of office equipment and furniture. Trained movers handle all items with care, ensuring they arrive and are ready for use at your new location.",
+      "point4": "Best Storage Solutions",
+      "desc4": "As part of our Office Moving Service, we provide secure short-term and long-term storage solutions for office items. Our safe, monitored storage facilities ensure your equipment and furniture are protected until ready for relocation.",
+      "point5": "Professional Unpacking Solutions for a Smooth Move",
+      "desc5": "Upon arriving at your new home, we provide expert unloading and unpacking services to help you settle in quickly. Our goal is to transform your new residence into a comfortable and welcoming home."
     },
-    "process": {
+    "hire": {
+      "title": "Hire Us For Your's Commercial  Office Moving In UAE",
+      "desc": "Choose us for professional and reliable commercial office moving services in the UAE. Our expert team ensures the safe handling of your office equipment and furniture, from packing to transport, providing a seamless and stress-free relocation experience within the UAE.",
+      "key1": "Expertise in Commercial Moving",
+      "key2": "Efficient Execution and Post-Move Support",
+      "key3": "Comprehensive Office Moving Services"
+    }
+  },
+  "packing": {
+    "title": "Professional Packing Services in UAE",
+    "sub": "Expert Packing Solutions for Safe and Secure Relocations Across the UAE",
+    "desc": "Hamdan Movers and Packers provide expert packing services across the UAE, ensuring your belongings are safely packed and arrive in perfect condition. Our skilled team uses high-quality materials and techniques, offering reliable packing solutions for both local and long-distance moves in UAE.",
+    "plus": {
+      "title": "Flexible Packing Services, Pack a Room or Your Whole Home",
+      "desc": "With Hamdan Movers and Packers, the choice is yours. We’ve got you covered whether you need us to handle a single room or your entire home. Common packing and unpacking services we offer include:",
       "one": {
-        "title": "Pre-Move Consultation",
-        "desc": "Start your move with a personalized consultation. We assess your needs, address challenges, and provide a clear moving plan with a detailed estimate, ensuring no surprises."
+        "bold": "Kitchen",
+        "cont": "Glassware, plates, cutlery, pots, and pans"
       },
       "two": {
-        "title": "Packing and Preparation",
-        "desc": "Our expert packers carefully handle and protect your items for the journey. Using top-quality packing materials and efficient techniques, we ensure everything is securely packed and ready for a smooth move."
+        "bold": "Living Room",
+        "cont": "TV, sound system, books, plants, decor, pillows, and curtains"
       },
       "three": {
-        "title": "The Move",
-        "desc": "Our experienced moving team carefully loads your belongings into our trucks and ensures each item is handled with care throughout the entire journey, delivering everything safely to your new home"
+        "bold": "Walk-in Wardrobe",
+        "cont": "Clothing, shoes, jackets, and accessories"
       },
       "four": {
-        "title": "Unpacking and Settling In",
-        "desc": "Upon arrival at your new home, we'll assist with unpacking and setting up your space, ensuring everything is placed according to your preferences for a smooth transition and immediate comfort."
+        "bold": "Bedroom",
+        "cont": "Pillows, bed linen, children’s toys, and towels"
+      },
+      "five": {
+        "bold": "Entire Home",
+        "cont": "All rooms and their respective items"
       }
+    },
+    "part1": {
+      "title": "Packing and Unpacking Experts in UAE",
+      "sm-desc": "Hamdan Movers and Packers provide a comprehensive range of services to handle every aspect of your move.",
+
+      "point1": "Experienced and Professional Team",
+      "desc1": "At Hamdan Movers and Packers, our expert team ensures smooth, professional office moves of any size. With years of experience, our skilled packers and drivers handle every detail with care, providing top-quality Packing and Unpacking Services.",
+
+      "point2": "Customized Moving Plans",
+      "desc2": "Our flexible Packing and Unpacking Service is tailored to meet your unique needs. Whether you need help packing a small room or unpacking a large office, our friendly team works with you to create a customized plan that fits your timeline and ensures a smooth transition.",
+
+      "point3": "Professional Equipment and Furniture Moving Services",
+      "desc3": "Our Packing and Unpacking Service ensures the safe handling and organization of your belongings. Whether packing up your entire office or unpacking at the new location, our trained professionals manage every detail with care, ensuring everything arrives and is set up ready for use."
+    },
+    "hire": {
+      "title": "Hire Us For Your's Packing/Unpacking Services In UAE",
+      "desc": "Choose us for reliable, efficient, and stress-free Packing and Unpacking services. Our expert team ensures safe handling of your belongings, from packing to transport, providing a seamless relocation experience within UAE.",
+      "key1": "Expertise in Packing/Unpacking",
+      "key2": "Efficient Execution and Post-Move Support",
+      "key3": "Comprehensive Office Packing Services"
+    }
+  },
+  "storage": {
+    "title": "Best Storage Services in UAE",
+    "sub": "Secure, Climate-Controlled Storage Solutions | Short and Long-Term Options",
+    "desc": "Need secure, climate-controlled storage? Our clean, air-conditioned units protect your belongings from damage, whether for short or long-term storage. Ideal for moving, downsizing, or extra space, with 24/7 monitoring and easy access for peace of mind",
+    "plus": {
+      "title": " We offer a variety of storage types",
+      "title2": "to meet your needs",
+      "desc": "At Hamdan Movers and Packer, we offer tailored storage solutions for personal items, office equipment, and even vehicles. From small units to large commercial spaces, our facilities meet all needs, including specialty storage for valuables.",
+      "one": {
+        "bold": "Short Term Storage",
+        "cont": " Need short-term storage for office equipment? Hamdan Movers offers secure, convenient solutions for renovations or  relocations. Store your items safely for days or weeks with  flexible options."
+      },
+      "two": {
+        "bold": "Long Term Storage",
+        "cont": "Need long-term storage for downsizing, seasonal items, or  documents? Hamdan Movers offers secure, flexible storage  solutions for extended durations, keeping your belongings safe for as long as needed."
+      },
+      "three": {
+        "bold": " Residential Storage",
+        "cont": "Need more space in UAE? Hamdan Movers offers secure residential  storage for home improvements, decluttering, or moving. Our  accessible, secure units keep your belongings safe and protected."
+      },
+      "four": {
+        "bold": "Commercial Storage",
+        "cont": "Businesses in need of extra space? Hamdan Movers offers flexible commercial storage for surplus inventory, office furniture, and important documents. Our solutions help optimize your workspace and improve efficiency."
+      }
+    },
+    "part1": {
+      "title": "Why Choose Our Storage Services In UAE",
+      "sm-desc": "With years of experience, Hamdan Movers ensures safe and efficient storage for all your items. Trust us for reliable, professional service.",
+
+      "point1": "Proven Experience and Expertise",
+      "desc1": "We have years of industry experience, making us a reliable partner for your storage needs. Our team of professionals is adept at handling a wide array of items, ensuring they are stored safely and efficiently.",
+
+      "point2": "Competitive and Affordable Pricing",
+      "desc2": "We believe that top-notch storage services should be accessible to all. With that in mind, we’ve structured our pricing to be competitive and transparent, providing excellent value to our customers.",
+
+      "point3": "Dedicated Customer Service",
+      "desc3": "Customer service is at the heart of our operations. Our team is dedicated to providing you with a seamless storage experience. From the moment you get in touch with us, to the time you collect your stored items, we are with you every step of the way.",
+      "point4": "Best Storage Solutions",
+      "desc4": "As part of our Office Moving Service, we provide secure short-term and long-term storage solutions for office items. Our safe, monitored storage facilities ensure your equipment and furniture are protected until ready for relocation."
+    },
+    "hire": {
+      "title": "Hire Us For Your's Storage Services In UAE",
+      "desc": "Choose us for reliable, efficient, and stress-free Storage services. Our expert team ensures safe handling of your belongings, from packing to transport, providing a seamless storage experience within UAE.",
+      "key1": "Secure, Climate-Controlled Storage Facilities",
+      "key2": "Comprehensive Packing and Unpacking Services",
+      "key3": "Friendly, Expert Staff Ready to Assist"
+    }
+  },
+  "speciality": {
+    "title": "Expert Moving Solutions for Specialized Items in UAE",
+    "sub": "Professional Specialty Movers for Unique Items in the UAE",
+    "desc": "Specialty moving requires expert care for fragile, valuable, or bulky items. Hamdan Movers ensures safe transport for everything from art to pianos with professional handling and the right equipment. Trust us to protect your valuables during the move",
+    "plus": {
+      "title": "Types of Specialty Moving Service",
+      "title2": "We Offer In UAE",
+      "desc": "Hamdan Movers expertly handles art, antiques, pianos, pool tables, and specialty appliances. With custom packing, advanced equipment, and trained movers, we ensure safe, damage-free transport. Custom crating and packing services available for extra protection.",
+      "one": {
+        "bold": " Art and Antique Moving",
+        "cont": "At Hamdan Movers, we expertly handle art and antiques with precision and care. Using specialized packing materials and  techniques, we ensure your valuable pieces are protected and safely transported."
+      },
+      "two": {
+        "bold": "Piano Moving",
+        "cont": "Pianos are delicate and require expert handling. Our specialized equipment and skilled movers ensure your piano is safely transported and arrives in perfect condition."
+      },
+      "three": {
+        "bold": "Crating & Packing Services",
+        "cont": "Moving specialty appliances like wine coolers and commercial refrigerators requires expert care. Hamdan Movers ensures safe transport of sensitive items, keeping them in top condition throughout the move."
+      },
+      "four": {
+        "bold": "Specialty Appliance Moving",
+        "cont": "Need extra protection? Our custom crating and packing services provide tailored solutions for your items, ensuring maximum security and reducing the risk of damage during transit."
+      }
+    },
+    "part1": {
+      "title": "Speciality Moving Experts in UAE",
+      "sm-desc": "Hamdan Movers and Packers provide a comprehensive range of services to handle every aspect of your move.",
+
+      "point1": "Experienced Team",
+      "desc1": "Our team has extensive experience in specialty moves, from delicate antiques to heavy pianos. We ensure every item is handled with expert care, using specialized techniques for safe and secure transport.",
+
+      "point2": "Advanced Equipment",
+      "desc2": "We use top-tier equipment, including custom crates and padded blankets, to protect your belongings. Our advanced tools minimize damage risk and ensure secure transport for items of all shapes and sizes.",
+
+      "point3": "Personalized Service",
+      "desc3": "Every move is unique, and we offer personalized solutions to meet your specific needs. From start to finish, we provide a seamless, stress-free experience, ensuring every detail is tailored to your requirements.",
+      "point4": "Comprehensive Insurance",
+      "desc4": "As part of our Speciality Moving, we provide secure short-term and long-term storage solutions for office items. Our safe, monitored storage facilities ensure your equipment and furniture are protected until ready for relocation.",
+      "point5": "Trusted and Secure",
+      "desc5": "With a reputation for trust and security, we handle every specialty move with precision and care. You can count on us to transport your valuable items safely and securely, ensuring a smooth experience."
+    },
+    "hire": {
+      "title": "Hire Us For Your's Speciality Moving In UAE",
+      "desc": "Choose us for reliable, efficient, and stress-free local Speciality Moving. Our expert team ensures safe handling of your belongings, from packing to transport, providing a seamless Speciality Moving experience within UAE.",
+      "key1": "Art and Antique Moving",
+      "key2": "Piano Moving",
+      "key3": "Pool Table Moving and many more.."
+    }
+  },
+  "international": {
+    "title": "International Moving Services in UAE",
+    "sub": "Safe and Timely International Deliveries From UAE to anywhere in the world",
+    "desc": "International moving made easy with Hamdan Movers. Our expert team handles packing, shipping, customs, and door-to-door delivery, ensuring a smooth, stress-free experience. Trust us for seamless, professional service on your move abroad.",
+    "part1": {
+      "title": "International Moving Experts in UAE",
+      "sm-desc": "Hamdan Movers and Packers provide a comprehensive range of services to handle every aspect of your move.",
+
+      "point1": "Cheap International Movers",
+      "desc1": "We provides budget-friendly, reliable services tailored to your needs. From expert packing and shipping to seamless customs clearance, we ensure your belongings are safely transported. Enjoy a smooth, stress-free international move with our experienced team by your side.",
+
+      "point2": "Customized Moving Plans",
+      "desc2": "International moving with Hamdan Movers is designed to fit your unique needs. Whether relocating across borders or overseas, our expert team creates a customized moving plan, handling everything from packing to delivery. Enjoy a seamless, stress-free move with our reliable service.",
+
+      "point3": "Personal Coordinator",
+      "desc3": "We provides expert Customs Clearance services for international moves. We handle all paperwork, regulations, and legal requirements to ensure your belongings pass through customs smoothly and without delays, making your move hassle-free and efficient.",
+
+      "point4": "Expert Logistics and Shipping for International Moves",
+      "desc4": "Reliable logistics and shipping are key to a smooth international move. Hamdan Movers offers global tracking, air and sea freight options, and expert handling of all necessary documentation for a hassle-free experience."
+    },
+    "hire": {
+      "title": "Hire Us For Your's International Moving In UAE",
+      "desc": "Start your international journey with ease. Hamdan Movers provides professional, stress-free moving services. Contact us today for a personalized quote and expert assistance for a smooth, hassle-free move.",
+      "key1": "Expertise in International Moving",
+      "key2": "Efficient Execution and Post-Move Support",
+      "key3": "Comprehensive International Moving Services"
+    },
+    "pricing": {
+      "title": "Cost of International Moving in UAE",
+      "desc": "International moving costs in the UAE vary from AED 7,000 to AED 30,000, depending on factors like destination, item volume, and services needed. Costs are influenced by transport method (air or sea), distance, and additional services like packing or storage. For an accurate estimate, request a detailed quote tailored to your needs."
     }
   }
 }

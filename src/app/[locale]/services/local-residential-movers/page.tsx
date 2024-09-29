@@ -17,7 +17,7 @@ import TestimonialSection from "@/components/Testimonials";
 import { useTranslations } from "next-intl";
 function LocalResidentailMovers() {
   const t = useTranslations("local");
-  const b = useTranslations("buttons");
+  const p = useTranslations("service-process");
   return (
     <>
       <Navbar />
@@ -62,23 +62,23 @@ function LocalResidentailMovers() {
         <ServiceMovingProcess
           boxs={[
             {
-              heading: t("process.one.title"),
-              desc: t("process.one.desc"),
+              heading: p("one.title"),
+              desc: p("one.desc"),
               image: initialConts,
             },
             {
-              heading: t("process.two.title"),
-              desc: t("process.two.desc"),
+              heading: p("two.title"),
+              desc: p("two.desc"),
               image: packingIcon,
             },
             {
-              heading: t("process.three.title"),
-              desc: t("process.three.desc"),
+              heading: p("three.title"),
+              desc: p("three.desc"),
               image: moveIcon,
             },
             {
-              heading: t("process.four.title"),
-              desc: t("process.four.desc"),
+              heading: p("four.title"),
+              desc: p("four.desc"),
               image: settingIcon,
             },
           ]}
