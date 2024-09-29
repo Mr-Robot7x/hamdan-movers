@@ -298,5 +298,31 @@
       "sharjah": "Sharjah",
       "ajman": "Ajman"
     }
+  },
+  "service": {
+    "title": "Professional Moving and Packing Services In UAE",
+    "sub": "Your Trusted Partner for a Stress Free Moving",
+    "desc": "Hamdan Movers & Packers helps you move easily within the UAE. We pack your things carefully, transport them safely, and unpack them at your new home. We can help with both local and international moves. Trust us for a stress-free relocation."
+  },
+  "benifits": {
+    "title": "Benefits You Get When You Use Our Services",
+    "desc1": "We offers comprehensive moving services across the",
+    "desc2": "including local and long-distance moves, packing, specialized handling, and custom crating. We handle residential, commercial, and emergency relocations for a seamless, stress-free experience.",
+    "one": {
+      "title": "Affordable Pricing",
+      "desc": "Competitive rates to fit any budget without compromising on quality."
+    },
+    "two": {
+      "title": "Reliable Service",
+      "desc": "Trust us for dependable, top-notch moving solutions every time."
+    },
+    "three": {
+      "title": "Detailed Planning",
+      "desc": "Every aspect of your move is meticulously organized for efficiency."
+    },
+    "four": {
+      "title": "Trained Team",
+      "desc": "Our skilled professionals handle your belongings with utmost care."
+    }
   }
 }

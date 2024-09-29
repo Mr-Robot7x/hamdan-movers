@@ -8,8 +8,14 @@ function OurServices({ title, city }: { title?: string; city?: string }) {
   const t = useTranslations("services");
   const b = useTranslations("buttons");
   return (
-    <div className="md:w-11/12 w-full md:mt-5">
-      <h2 className="text-center">{title ? title : t("title")}</h2>
+    <div id="services" className="md:w-11/12 w-full md:mt-5">
+      <h2
+        className={`text-center ${
+          locale === "ar" ? "font-arabic font-bold" : ""
+        }`}
+      >
+        {title ? title : t("title")}
+      </h2>
       <p
         className={`text-center mt-5 md:px-16${
           locale === "ar" ? "ar-p font-arabic" : "md:text-[17px]"

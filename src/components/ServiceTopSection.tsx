@@ -2,24 +2,43 @@ import Image from "next/image";
 import React from "react";
 import { Button } from "./ui/button";
 import serviceImage from "../../public/images/services-image.jpg";
+import { useLocale, useTranslations } from "next-intl";
+import Link from "next/link";
 function ServiceTopSection() {
+  const locale = useLocale();
+  const t = useTranslations("service");
+  const b = useTranslations("buttons");
   return (
     <div className="w-full md:w-11/12 md:mt-[160px] mt-32">
-      <div className="grid md:grid-cols-2 grid-cols-1 md:gap-x-4 gap-y-9 items-center md:ml-[60px]">
+      <div
+        dir={locale === "ar" ? "rtl" : "ltr"}
+        className={`grid md:grid-cols-2 grid-cols-1 md:gap-x-4 gap-y-9 items-center ${
+          locale === "ar" ? "md:mr-[60px]" : "md:ml-[60px]"
+        }`}
+      >
         <div className="min-h-40 ">
-          <h1>Professional Moving and Packing Services In Dubai</h1>
-          <h3 className="font-poppins22px] mt-4">
-            Your Trusted Partner for a Stress Free Moving
+          <h1 className={locale === "ar" ? "font-arabic font-bold" : ""}>
+            {t("title")}
+          </h1>
+          <h3
+            className={`   ${
+              locale === "ar"
+                ? "font-arabic text-[26px] md:mt-4 mt-6"
+                : "font-poppins text-[22px] mt-4"
+            }`}
+          >
+            {t("sub")}
           </h3>
-          <p className="mt-2">
-            Dar Al Salam Movers and Packers offers reliable Local &
-            International Moving, Commercial Relocation, Packing, Storage, and
-            Cleaning Services. Whether it&lsquo;s a villa, office, or apartment,
-            we ensure a smooth, hassle-free move every time.
-          </p>
+          <p className={locale === "ar" ? "ar-p mt-3" : "mt-2"}>{t("desc")}</p>
           <div className="w-full flex gap-x-5 mt-5">
-            <Button>Contact Now</Button>
-            <Button variant={"secondary"}>See More</Button>
+            <Link className="" href={"tel:+971566651978"}>
+              <Button>
+                {b("call now")} : <span dir="ltr">+971 566651978 </span>
+              </Button>
+            </Link>
+            <Link href={"#services"}>
+              <Button variant={"secondary"}>{b("Our Services")}</Button>
+            </Link>
           </div>
         </div>
         <div className="flex justify-center">

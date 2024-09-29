@@ -63,12 +63,12 @@ function WhatsAppButton() {
               </div>
               <div className="w-full bg-gradient-to-r from-white to-gray-50 md:px-4 px-2 py-3 border rounded-3xl">
                 <p className="text-[23px] tracking-wider font-medium text-black">
-                  +971 050 3626685
+                  +971 50 3626685
                 </p>
                 <div className="w-full flex gap-x-4 mt-3">
                   <Link
                     href={
-                      "https://wa.me/+9710503626685?text=I%20need%20a%20service"
+                      "https://wa.me/+971503626685?text=I%20need%20a%20service"
                     }
                   >
                     <Button
@@ -78,7 +78,7 @@ function WhatsAppButton() {
                       <IconBrandWhatsapp className="w-7 h-7" /> WhatsApp
                     </Button>
                   </Link>
-                  <Link href={"tel:+9710503626685"}>
+                  <Link href={"tel:+971503626685"}>
                     <Button size={"sm"} variant={"outline"}>
                       Call Now
                     </Button>
