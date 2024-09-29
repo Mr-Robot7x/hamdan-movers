@@ -7,8 +7,8 @@ import { motion } from "framer-motion";
 import { ChevronDown, Phone, TimerIcon, X } from "lucide-react";
 import Image from "next/image";
 import logo from "../../public/images/hamdan-mover-logo.png";
-import translateImg from "../../public/images/language-translate.png";
 import { useLocale, useTranslations } from "next-intl";
+import LocaleSwitcher from "./LocaleChange";
 function Navbar() {
   const t = useTranslations("navitems");
   const b = useTranslations("buttons");
@@ -99,7 +99,7 @@ function Navbar() {
   const [infoDetailOpen, setInfoDetailOpen] = useState(false);
   const [subServicesMenu, setsubServicesMenu] = useState(false);
   const [sideMenu, setSideMenu] = useState(false);
-  const [langChange, setLangChange] = useState(false);
+
   const [location, setlocation] = useState(false);
   const [rental, setrental] = useState(false);
   return (
@@ -206,31 +206,7 @@ function Navbar() {
                 onClick={() => setSideMenu((prev) => !prev)}
               />
             </div>
-            <div className="w-9 mt-2 h-9 relative flex items-center justify-center">
-              <Image
-                onClick={(e) => setLangChange((prev) => !prev)}
-                alt="language changing icon"
-                src={translateImg}
-                fill
-                className="object-contain saturate-150"
-              />
-              {langChange ? (
-                <div className="flex flex-col gap-y-2 px-2 py-4 w-52 h-auto bg-white drop-shadow-2xl absolute -bottom-36 -left-1/2 -translate-x-1/2 rounded-3xl">
-                  <Link
-                    href={"/ar"}
-                    className="w-full py-3 text-center rounded-3xl hover:bg-slate-50 transition-all border border-neutral-200"
-                  >
-                    Arabic
-                  </Link>
-                  <Link
-                    href={"/en"}
-                    className="w-full py-3 text-center rounded-3xl hover:bg-slate-50 transition-all border border-neutral-200"
-                  >
-                    English
-                  </Link>
-                </div>
-              ) : null}
-            </div>
+            <LocaleSwitcher />
             <div
               onClick={(e) => setInfoDetailOpen((prev) => !prev)}
               className="md:hidden md:w-[73px] w-16 md:h-12 h-10 md:mt-0 mt-1 rounded-3xl flex items-center justify-between p-[6px] border border-neutral-200 hover:border-neutral-300"

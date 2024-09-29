@@ -32,7 +32,9 @@ function BrandingContent() {
                     <IconTruckDelivery className="text-[#105572]" />
                     <h3
                       className={`md:text-[21px] text-[18px] text-black ${
-                        locale === "ar" ? "font-bold" : "font-medium"
+                        locale === "ar"
+                          ? "font-bold"
+                          : "font-medium font-poppins"
                       }`}
                     >
                       {t("one")}
@@ -42,7 +44,9 @@ function BrandingContent() {
                     <IconZoomMoney className="text-[#105572]" />
                     <h3
                       className={`md:text-[21px] text-[18px] text-black ${
-                        locale === "ar" ? "font-bold" : "font-medium"
+                        locale === "ar"
+                          ? "font-bold"
+                          : "font-medium font-poppins"
                       }`}
                     >
                       {t("two")}
@@ -52,7 +56,9 @@ function BrandingContent() {
                     <PartyPopperIcon className="text-[#105572]" />
                     <h3
                       className={`md:text-[21px] text-[18px] text-black ${
-                        locale === "ar" ? "font-bold" : "font-medium"
+                        locale === "ar"
+                          ? "font-bold"
+                          : "font-medium font-poppins"
                       }`}
                     >
                       {t("three")}
@@ -62,7 +68,9 @@ function BrandingContent() {
                     <IconClock24 className="text-[#105572]" />
                     <h3
                       className={`md:text-[21px] text-[18px] text-black ${
-                        locale === "ar" ? "font-bold" : "font-medium"
+                        locale === "ar"
+                          ? "font-bold"
+                          : "font-medium font-poppins"
                       }`}
                     >
                       {t("four")}
@@ -72,7 +80,9 @@ function BrandingContent() {
                     <IconUsersGroup className="text-[#105572]" />
                     <h3
                       className={`md:text-[21px] text-[18px] text-black ${
-                        locale === "ar" ? "font-bold" : "font-medium"
+                        locale === "ar"
+                          ? "font-bold"
+                          : "font-medium font-poppins"
                       }`}
                     >
                       {t("five")}
@@ -82,7 +92,9 @@ function BrandingContent() {
                     <HeartHandshake className="text-[#105572]" />
                     <h3
                       className={`md:text-[21px] text-[18px] text-black ${
-                        locale === "ar" ? "font-bold" : "font-medium"
+                        locale === "ar"
+                          ? "font-bold"
+                          : "font-medium font-poppins"
                       }`}
                     >
                       {t("six")}

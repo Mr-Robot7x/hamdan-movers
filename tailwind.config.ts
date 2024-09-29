@@ -24,9 +24,12 @@ const config = {
     },
     extend: {
       fontFamily: {
-        poppins: ["var(--poppins)", "sans-serif"],
-        arabic: ["var(--arabic)", "sans-serif"],
-        playfair: ["var(--playfair)", "serif"],
+        // poppins: ["var(--poppins)", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+        // arabic: ["var(--arabic)", "sans-serif"],
+        arabic: ["Amiri", "sans-serif"],
+        // playfair: ["var(--playfair)", "serif"],
+        playfair: ["Playfair Display", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",
