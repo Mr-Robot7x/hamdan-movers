@@ -156,10 +156,7 @@ function PerServiceSec() {
                   locale === "ar" ? "font-bold" : "font-poppins"
                 }`}
               >
-                {tt("one.title")} <br />{" "}
-                {locale !== "ar"
-                  ? `${tt("one.in")} UAE`
-                  : `UAE ${tt("one.in")}`}
+                {tt("one.title")} <br /> {locale !== "ar" ? ` UAE` : `UAE `}
               </h3>
               <p
                 className={`mt-2 md:px-3 ${
@@ -191,10 +188,7 @@ function PerServiceSec() {
                   locale === "ar" ? "font-bold" : "font-poppins"
                 }`}
               >
-                {tt("two.title")} <br />{" "}
-                {locale !== "ar"
-                  ? `${tt("two.in")} UAE`
-                  : `UAE ${tt("two.in")}`}
+                {tt("two.title")} <br /> {locale !== "ar" ? ` UAE` : `UAE `}
               </h3>
               <p
                 className={`mt-2 md:px-3 ${
