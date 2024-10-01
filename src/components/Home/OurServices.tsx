@@ -17,8 +17,8 @@ function OurServices({ title, city }: { title?: string; city?: string }) {
         {title ? title : t("title")}
       </h2>
       <p
-        className={`text-center mt-5 md:px-16${
-          locale === "ar" ? "ar-p font-arabic" : "md:text-[17px]"
+        className={`text-center mt-5 ${
+          locale === "ar" ? "ar-p " : "md:text-[17px]"
         }`}
       >
         {t("description")}
@@ -138,7 +138,7 @@ function OurServices({ title, city }: { title?: string; city?: string }) {
                 : "font-poppins"
             }`}
           >
-            {t("local.title")} <br /> {city && `In ${city}`}
+            {t("local.title")} <br /> {city && `${city}`}
           </h4>
           <p
             className={`gr text-center ${
@@ -375,7 +375,7 @@ function OurServices({ title, city }: { title?: string; city?: string }) {
                 : "font-poppins"
             }`}
           >
-            {t("commercial.title")} <br /> {city && `In ${city}`}
+            {t("commercial.title")} <br /> {city && `${city}`}
           </h4>
           <p
             className={`gr text-center ${
@@ -561,7 +561,7 @@ function OurServices({ title, city }: { title?: string; city?: string }) {
                 : "font-poppins"
             }`}
           >
-            {t("packing.title")} <br /> {city && `In ${city}`}
+            {t("packing.title")} <br /> {city && `${city}`}
           </h4>
           <p
             className={`gr text-center ${
@@ -735,7 +735,7 @@ function OurServices({ title, city }: { title?: string; city?: string }) {
                 : "font-poppins"
             }`}
           >
-            {t("storage.title")} <br /> {city && `In ${city}`}
+            {t("storage.title")} <br /> {city && `${city}`}
           </h4>
           <p
             className={`gr text-center ${
@@ -945,7 +945,7 @@ function OurServices({ title, city }: { title?: string; city?: string }) {
                 : "font-poppins"
             }`}
           >
-            {t("specialty.title")} <br /> {city && `In ${city}`}
+            {t("specialty.title")} <br /> {city && `${city}`}
           </h4>
           <p
             className={`gr text-center ${
@@ -1063,7 +1063,7 @@ function OurServices({ title, city }: { title?: string; city?: string }) {
             }`}
           >
             {t("international.title")}
-            <br /> {city && `In ${city}`}
+            <br /> {city && `${city}`}
           </h4>
           <p
             className={`gr text-center ${

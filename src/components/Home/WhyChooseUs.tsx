@@ -43,7 +43,7 @@ const WhyChooseUs: React.FC = () => {
               </h3>
               <h2
                 className={`text-3xl font-bold text-gray-900 mb-4 ${
-                  locale === "ar" ? "leading-10" : ""
+                  locale === "ar" ? "leading-10 font-arabic" : ""
                 }`}
               >
                 {t("title")}

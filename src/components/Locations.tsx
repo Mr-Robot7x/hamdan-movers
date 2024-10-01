@@ -54,21 +54,21 @@ function Locations() {
               </div>
             </div>
             <div className="md:flex hidden justify-center">
-              <div className="md:w-96 h-96 bg-gradient-to-t from-gray-100 to-gray-300 rounded-3xl drop-shadow-xl overflow-hidden">
+              <div className="md:w-96 h-96 bg-gradient-to-t from-gray-100 to-gray-300 rounded-3xl drop-shadow-xl relative overflow-hidden">
                 <Image
                   alt="Moving In Dubai | hamdan Mover"
                   aria-label="dubai image"
                   src={dubaiImage}
                   fill
                   placeholder="blur"
-                  className="object-cover absolute"
+                  className="object-cover absoluteS"
                 />
               </div>
             </div>
           </li>
           <li className="grid md:grid-cols-2 grid-cols-1 items-center md:-ml-32">
             <div className="md:flex hidden justify-center">
-              <div className="md:w-96 h-96 bg-gradient-to-t from-gray-100 to-gray-300 rounded-3xl drop-shadow-xl overflow-hidden">
+              <div className="md:w-96 h-96 bg-gradient-to-t from-gray-100 to-gray-300 rounded-3xl drop-shadow-xl relative overflow-hidden">
                 <Image
                   alt="Moving In Dubai | hamdan Mover"
                   aria-label="dubai image"
@@ -143,7 +143,7 @@ function Locations() {
               </div>
             </div>
             <div className="md:flex hidden justify-center">
-              <div className="md:w-96 h-96 bg-gradient-to-t from-gray-100 to-gray-300 rounded-3xl drop-shadow-xl overflow-hidden">
+              <div className="md:w-96 h-96 bg-gradient-to-t from-gray-100 to-gray-300 rounded-3xl drop-shadow-xl relative overflow-hidden">
                 <Image
                   alt="Moving In Dubai | hamdan Mover"
                   aria-label="dubai image"

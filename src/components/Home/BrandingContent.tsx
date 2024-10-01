@@ -33,7 +33,7 @@ function BrandingContent() {
                     <h3
                       className={`md:text-[21px] text-[18px] text-black ${
                         locale === "ar"
-                          ? "font-bold"
+                          ? "font-bold font-arabic"
                           : "font-medium font-poppins"
                       }`}
                     >
@@ -45,7 +45,7 @@ function BrandingContent() {
                     <h3
                       className={`md:text-[21px] text-[18px] text-black ${
                         locale === "ar"
-                          ? "font-bold"
+                          ? "font-bold font-arabic"
                           : "font-medium font-poppins"
                       }`}
                     >
@@ -57,7 +57,7 @@ function BrandingContent() {
                     <h3
                       className={`md:text-[21px] text-[18px] text-black ${
                         locale === "ar"
-                          ? "font-bold"
+                          ? "font-bold font-arabic"
                           : "font-medium font-poppins"
                       }`}
                     >
@@ -69,7 +69,7 @@ function BrandingContent() {
                     <h3
                       className={`md:text-[21px] text-[18px] text-black ${
                         locale === "ar"
-                          ? "font-bold"
+                          ? "font-bold font-arabic"
                           : "font-medium font-poppins"
                       }`}
                     >
@@ -81,7 +81,7 @@ function BrandingContent() {
                     <h3
                       className={`md:text-[21px] text-[18px] text-black ${
                         locale === "ar"
-                          ? "font-bold"
+                          ? "font-bold font-arabic"
                           : "font-medium font-poppins"
                       }`}
                     >
@@ -93,7 +93,7 @@ function BrandingContent() {
                     <h3
                       className={`md:text-[21px] text-[18px] text-black ${
                         locale === "ar"
-                          ? "font-bold"
+                          ? "font-bold font-arabic"
                           : "font-medium font-poppins"
                       }`}
                     >
@@ -112,7 +112,9 @@ function BrandingContent() {
             >
               <h2
                 className={
-                  locale === "ar" ? "md:leading-[45px] leading-10" : ""
+                  locale === "ar"
+                    ? "md:leading-[45px] font-arabic font-bold leading-10"
+                    : ""
                 }
               >
                 {t("title")}

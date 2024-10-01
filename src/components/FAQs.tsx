@@ -54,7 +54,9 @@ export function FAQs() {
           className="object-contain absolute"
         />
       </div>
-      <h2 className="mt-5">Frequently Asked Questions</h2>
+      <h2 className={`mt-5 ${locale === "ar" ? "font-arabic font-bold" : ""}`}>
+        {t("title")}
+      </h2>
       <div className="mt-10 w-full md:w-11/12">
         <Accordion type="multiple" className="w-full">
           {faqs.map((faq, i) => (
@@ -64,7 +66,9 @@ export function FAQs() {
               value={faq.ques}
             >
               <AccordionTrigger
-                className={locale === "ar" ? "font-bold" : "font-medium"}
+                className={
+                  locale === "ar" ? "font-bold font-arabic" : "font-medium"
+                }
               >
                 {faq.ques}
               </AccordionTrigger>

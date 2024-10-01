@@ -76,14 +76,12 @@
     "desc2": " We have many different sizes to choose from. We'll make sure you have a great experience. Whether you're moving things or carrying stuff, we're ready to help.",
     "size": "We have following size of a Pickup Truck that is Appropriate for your needs.",
     "one": {
-      "title": "1.5 Ton Pickup Truck For Rent",
-      "in": "in",
+      "title": "1.5 Ton Pickup Truck For Rent in ",
       "desc": "Need a pickup truck to move your home, office, or other belongings in the",
       "desc2": "Our 1.5-ton pickup trucks are perfect for safe and easy transportation. We offer competitive rates and excellent service, so you can trust us to handle your move without any hassle"
     },
     "two": {
-      "title": "3 Ton Pickup Truck For Rental",
-      "in": "in",
+      "title": "3 Ton Pickup Truck For Rent in",
       "desc": "Need to move heavy cargo, relocate your home, or move your office in the",
       "desc2": "Our 3-ton pickup trucks are the perfect solution. We offer a complete moving service, including loading and unloading, so you can relax and let us handle everything. Your belongings will arrive safely and on time."
     }
@@ -567,6 +565,160 @@
     "pricing": {
       "title": "Cost of International Moving in UAE",
       "desc": "International moving costs in the UAE vary from AED 7,000 to AED 30,000, depending on factors like destination, item volume, and services needed. Costs are influenced by transport method (air or sea), distance, and additional services like packing or storage. For an accurate estimate, request a detailed quote tailored to your needs."
+    }
+  },
+  "pickup-trucks": {
+    "title": "Cheap Pickup Truck Rental In UAE",
+    "sub": " Cheap Pickup Truck Rentals for Business and Personal Use in UAE",
+    "desc": "Looking for reliable pickup rental services in UAE? Look no further! We offer a versatile fleet of pickups to meet all your transportation needs. Whether you need to move goods, transport items, or handle logistics, our pickup trucks provide a hassle-free and efficient solution tailored for every task.",
+    "part1": {
+      "title": "Professional and affordable car for rental in UAE",
+      "desc": "Hamdan Movers offers affordable 24/7 pickup rental services in Dubai, specializing in fast and efficient home, office, and furniture relocations. With a versatile fleet, we provide reliable transport for both light and heavy materials, ensuring seamless and affordable moves.",
+      "point1": "Certified Pickup Truck Rental In UAE",
+      "desc1": "Meeting our client's needs is paramount to our success. We hold certifications recognized globally within the industry, ensuring top-notch service for pickup rental trucks in UAE.",
+      "point2": "Dedicated Customer Care",
+      "desc2": "Our dedicated customer support team, made up of industry professionals, listens attentively to all client feedback with empathy and understanding. Additionally, we maintain open lines of communication for ongoing support with pickup rental in UAE.",
+      "point3": "Prioritizing Safety",
+      "desc3": "From regularly maintaining our vehicles to providing training for our drivers, we take proactive measures to minimize risks and keep our customers and their belongings safe throughout the travel.",
+      "point4": "Satisfaction Guaranteed",
+      "desc4": "We are dedicated to meeting customers' expectations with personalized and dependable services. We aim to provide a seamless, hassle-free experience, ensuring every customer feels content and assured in their choice of our services.",
+      "truckdesc": "Explore a variety of car sizes available for rental in the UAE, tailored to suit your travel needs, from compact cars to luxury SUVs.",
+      "truck-desc1": "Need reliable transportation for home, office, or goods relocation? Rent our 1.5 ton pickup truck in UAE for safe, easy, and hassle-free moves. With competitive pricing and top-notch  service, we ensure your items are transported smoothly every time.",
+      "truck-desc-2": " For seamless transportation of heavy cargo, home relocations, or office moves, rent our 3 ton pickup in UAE. We offer comprehensive services, including loading and unloading,  ensuring stress-free and secure delivery of your belongings to their destination."
+    },
+    "hire": "Why Choose Our 1.5 / 3 Ton Pickup Trucks For Rent",
+    "hire-desc": "Rent a 1.5 / 3 ton pickup truck for versatile, cost-effective transport of furniture, materials, and more. Enjoy convenience and reliability with well-maintained vehicles from a trusted provider in UAE",
+    "key1": "Flexibility: Handles various transportation needs",
+    "key2": "Budget-Friendly: Saves money and resources",
+    "key3": "Ease of Use: Simple and hassle-free",
+    "key4": "Trustworthiness: Dependable for every task"
+  },
+  "pickup-dubai": {
+    "title": "Cheap Pickup Truck Rental In Dubai",
+    "sub": " Affordable Pickup Truck Rentals for Business and Personal Use in Dubai",
+    "desc": " Searching for dependable pickup truck rental services in Dubai? Your solution is here! We provide a versatile fleet of pickup trucks to meet all your transportation needs. Whether it&lsquo;s  moving goods, transporting items, or managing logistics, our  pickups offer an efficient and hassle-free solution tailored to  every job.",
+    "part1": {
+      "title": "Reliable Car Rental Services, Dubai's Top Provider",
+      "desc": "We have trucks for all your moving needs. Whether you're moving a small apartment or a big office, we can help you move it all.",
+      "point1": "Certified Pickup Truck Rental In Dubai",
+      "desc1": "We're passionate about making your move easier. That's why we offer the best pickup truck rentals in Dubai. Our trucks are top-notch, and our service is even better. We're always here to help, whether you need help with your move or just want to rent a truck for the day. Choose us, and you'll see why we're the best in the business.",
+      "point2": "Personalized Customer Care Solutions for Pickup Rentals",
+      "desc2": "Our dedicated customer support team, consisting of industry experts, attentively listens to client feedback with empathy and understanding. We maintain open lines of communication for ongoing assistance with pickup truck rentals in Dubai, ensuring you receive the support you need at every step.",
+      "point3": "Safety First: Secure Pickup Truck Rentals in Dubai",
+      "desc3": "We prioritize safety in our pickup truck rental services by implementing proactive measures to minimize risks. Through regular vehicle maintenance and thorough driver training, we ensure the safety of our customers and their belongings throughout every journey in Dubai.",
+      "point4": "100% Satisfaction Guarantee on Pickup Truck Rentals",
+      "desc4": "We are committed to exceeding customer expectations with our personalized and reliable pickup truck rental services. Our aim is to provide a seamless, hassle-free experience, ensuring that every customer feels satisfied and confident in choosing us for their transportation needs.",
+      "truckdesc": "We Offer Various Car Sizes for Rental Services in Dubai: Choose from our 1.5-ton and 3-ton pickup trucks, ideal for all your transportation needs.",
+      "truck-desc1": "Need reliable transportation for home, office, or goods relocation in Dubai? Rent our 1.5-ton pickup truck for safe, easy, and hassle-free moves. With competitive pricing and  top-notch service, we ensure your items are transported smoothly every time.",
+      "truck-desc-2": " For seamless transportation of heavy cargo, home relocations, or office moves in Dubai, rent our 3-ton pickup truck. We provide comprehensive services, including loading and unloading, ensuring a stress-free and secure delivery of your belongings to their destination."
+    },
+    "hire": "Why Choose Our 1.5 / 3 Ton Pickup Trucks For Rent",
+    "hire-desc": "Rent a 1.5 / 3 ton pickup truck for versatile, cost-effective transport of furniture, materials, and more. Enjoy convenience and reliability with well-maintained vehicles from a trusted provider in Dubai",
+    "key1": "Flexibility: Handles various transportation needs",
+    "key2": "Budget-Friendly: Saves money and resources",
+    "key3": "Ease of Use: Simple and hassle-free",
+    "key4": "Trustworthiness: Dependable for every task"
+  },
+  "pickup-sharjah": {
+    "title": "Cheap Pickup Truck Rental In Sharjah",
+    "sub": " Cheap Pickup Truck Rentals for Business and Personal Use in Sharjah",
+    "desc": "Looking for reliable pickup rental services in Sharjah? Look no further! We offer a versatile fleet of pickups to meet all your transportation needs. Whether you need to move goods, transport items, or handle logistics, our pickup trucks provide a hassle-free and efficient solution tailored for every task.",
+    "part1": {
+      "title": "Professional and affordable car for rental in Sharjah",
+      "desc": "Hamdan Movers offers affordable 24/7 pickup rental services in Dubai, specializing in fast and efficient home, office, and furniture relocations. With a versatile fleet, we provide reliable transport for both light and heavy materials, ensuring seamless and affordable moves.",
+      "point1": "Certified Pickup Truck Rental In Sharjah",
+      "desc1": "Meeting our client's needs is paramount to our success. We hold certifications recognized globally within the industry, ensuring top-notch service for pickup rental trucks in Sharjah.",
+      "point2": "Dedicated Customer Care",
+      "desc2": "Our dedicated customer support team, made up of industry professionals, listens attentively to all client feedback with empathy and understanding. Additionally, we maintain open lines of communication for ongoing support with pickup rental in Sharjah.",
+      "point3": "Prioritizing Safety",
+      "desc3": "From regularly maintaining our vehicles to providing training for our drivers, we take proactive measures to minimize risks and keep our customers and their belongings safe throughout the travel.",
+      "point4": "Satisfaction Guaranteed",
+      "desc4": "We are dedicated to meeting customers' expectations with personalized and dependable services. We aim to provide a seamless, hassle-free experience, ensuring every customer feels content and assured in their choice of our services.",
+      "truckdesc": "Explore a variety of car sizes available for rental in the Sharjah, tailored to suit your travel needs, from compact cars to luxury SUVs.",
+      "truck-desc1": "Need reliable transportation for home, office, or goods relocation? Rent our 1.5 ton pickup truck in Sharjah for safe, easy, and hassle-free moves. With competitive pricing and top-notch  service, we ensure your items are transported smoothly every time.",
+      "truck-desc-2": " For seamless transportation of heavy cargo, home relocations, or office moves, rent our 3 ton pickup in Sharjah. We offer comprehensive services, including loading and unloading,  ensuring stress-free and secure delivery of your belongings to their destination."
+    },
+    "hire": "Why Choose Our 1.5 / 3 Ton Pickup Trucks For Rent",
+    "hire-desc": "Rent a 1.5 / 3 ton pickup truck for versatile, cost-effective transport of furniture, materials, and more. Enjoy convenience and reliability with well-maintained vehicles from a trusted provider in Sharjah",
+    "key1": "Flexibility: Handles various transportation needs",
+    "key2": "Budget-Friendly: Saves money and resources",
+    "key3": "Ease of Use: Simple and hassle-free",
+    "key4": "Trustworthiness: Dependable for every task"
+  },
+  "pickup-ajman": {
+    "title": "Cheap Pickup Truck Rental In Ajman",
+    "sub": " Cheap Pickup Truck Rentals for Business and Personal Use in Ajman",
+    "desc": "Looking for reliable pickup rental services in Ajman? Look no further! We offer a versatile fleet of pickups to meet all your transportation needs. Whether you need to move goods, transport items, or handle logistics, our pickup trucks provide a hassle-free and efficient solution tailored for every task.",
+    "part1": {
+      "title": "Professional and affordable car for rental in Ajman",
+      "desc": "Hamdan Movers offers affordable 24/7 pickup rental services in Dubai, specializing in fast and efficient home, office, and furniture relocations. With a versatile fleet, we provide reliable transport for both light and heavy materials, ensuring seamless and affordable moves.",
+      "point1": "Certified Pickup Truck Rental In Ajman",
+      "desc1": "Meeting our client's needs is paramount to our success. We hold certifications recognized globally within the industry, ensuring top-notch service for pickup rental trucks in Ajman.",
+      "point2": "Dedicated Customer Care",
+      "desc2": "Our dedicated customer support team, made up of industry professionals, listens attentively to all client feedback with empathy and understanding. Additionally, we maintain open lines of communication for ongoing support with pickup rental in Ajman.",
+      "point3": "Prioritizing Safety",
+      "desc3": "From regularly maintaining our vehicles to providing training for our drivers, we take proactive measures to minimize risks and keep our customers and their belongings safe throughout the travel.",
+      "point4": "Satisfaction Guaranteed",
+      "desc4": "We are dedicated to meeting customers' expectations with personalized and dependable services. We aim to provide a seamless, hassle-free experience, ensuring every customer feels content and assured in their choice of our services.",
+      "truckdesc": "Explore a variety of car sizes available for rental in the Ajman, tailored to suit your travel needs, from compact cars to luxury SUVs.",
+      "truck-desc1": "Need reliable transportation for home, office, or goods relocation? Rent our 1.5 ton pickup truck in Ajman for safe, easy, and hassle-free moves. With competitive pricing and top-notch  service, we ensure your items are transported smoothly every time.",
+      "truck-desc-2": " For seamless transportation of heavy cargo, home relocations, or office moves, rent our 3 ton pickup in Ajman. We offer comprehensive services, including loading and unloading,  ensuring stress-free and secure delivery of your belongings to their destination."
+    },
+    "hire": "Why Choose Our 1.5 / 3 Ton Pickup Trucks For Rent",
+    "hire-desc": "Rent a 1.5 / 3 ton pickup truck for versatile, cost-effective transport of furniture, materials, and more. Enjoy convenience and reliability with well-maintained vehicles from a trusted provider in Ajman",
+    "key1": "Flexibility: Handles various transportation needs",
+    "key2": "Budget-Friendly: Saves money and resources",
+    "key3": "Ease of Use: Simple and hassle-free",
+    "key4": "Trustworthiness: Dependable for every task"
+  },
+  "moving-locations": {
+    "title": "Professional Moving Services In UAE",
+    "sub": "We provide our best moving services in Dubai, Sharjah, Ajman and its surrounding areas.",
+    "desc": "We provide reliable moving services across Dubai, Sharjah, Ajman, and the surrounding areas. Our goal is to make your move as smooth and stress-free as possible. With a skilled team and the right equipment, we handle every aspect of your move, whether it’s for your home or business.",
+    "hire": {
+      "title": "Choose Best Moving Company In Your Location",
+      "desc": "Find the best moving company near you with ease. Explore top-rated local movers, compare services, and get hassle-free relocation. Whether it's a residential or commercial move, discover trusted professionals for a smooth, secure, and stress-free experience. Get quotes and expert guidance for your next move today!",
+      "key1": "Residential and Commercial Moving",
+      "key2": "Easily Available In Your's Locations"
+    }
+  },
+  "moving-dubai": {
+    "city": "Dubai",
+    "title": "Best Movers And Packers In Dubai",
+    "sub": "Cheap Moving and Packing Company In Dubai",
+    "desc": "Hamdan Movers and Packers delivers top-quality moving solutions across the Dubai for 6 years. Our full-service options cover local moving, long-distance moving, packing &amp; storage, and specialty relocation. Our team of experienced experts ensures a seamless move for houses, offices, or commercial spaces, making your transition quick and hassle-free.",
+    "ser-title": "Moving and Packing Services | Dubai",
+    "hire": {
+      "title": "Choose Best Moving Company In Dubai",
+      "desc": "Find the best moving company near you with ease. Explore top-rated local movers, compare services, and get hassle-free relocation. Whether it's a residential or commercial move, discover trusted professionals for a smooth, secure, and stress-free experience. Get quotes and expert guidance for your next move today!",
+      "key1": "Residential and Commercial Moving in Dubai",
+      "key2": "Easily Available In Dubai"
+    }
+  },
+  "moving-sharjah": {
+    "city": "Sharjah",
+    "title": "Best Movers And Packers In Sharjah",
+    "sub": "Cheap Moving and Packing Company In Sharjah",
+    "desc": "Hamdan Movers and Packers delivers top-quality moving solutions across the Sharjah for 6 years. Our full-service options cover local moving, long-distance moving, packing &amp; storage, and specialty relocation. Our team of experienced experts ensures a seamless move for houses, offices, or commercial spaces, making your transition quick and hassle-free.",
+    "ser-title": "Moving and Packing Services | Sharjah",
+    "hire": {
+      "title": "Choose Best Moving Company In Sharjah",
+      "desc": "Find the best moving company near you with ease. Explore top-rated local movers, compare services, and get hassle-free relocation. Whether it's a residential or commercial move, discover trusted professionals for a smooth, secure, and stress-free experience. Get quotes and expert guidance for your next move today!",
+      "key1": "Residential and Commercial Moving in Sharjah",
+      "key2": "Easily Available In Sharjah"
+    }
+  },
+  "moving-ajman": {
+    "city": "Ajman",
+    "title": "Best Movers And Packers In Ajman",
+    "sub": "Cheap Moving and Packing Company In Ajman",
+    "desc": "Hamdan Movers and Packers delivers top-quality moving solutions across the Ajman for 6 years. Our full-service options cover local moving, long-distance moving, packing &amp; storage, and specialty relocation. Our team of experienced experts ensures a seamless move for houses, offices, or commercial spaces, making your transition quick and hassle-free.",
+    "ser-title": "Moving and Packing Services | Ajman",
+    "hire": {
+      "title": "Choose Best Moving Company In Ajman",
+      "desc": "Find the best moving company near you with ease. Explore top-rated local movers, compare services, and get hassle-free relocation. Whether it's a residential or commercial move, discover trusted professionals for a smooth, secure, and stress-free experience. Get quotes and expert guidance for your next move today!",
+      "key1": "Residential and Commercial Moving in Ajman",
+      "key2": "Easily Available In Ajman"
     }
   }
 }

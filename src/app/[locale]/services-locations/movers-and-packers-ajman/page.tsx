@@ -13,35 +13,34 @@ import WorkProcessSection from "@/components/Process";
 import ContactUs from "@/components/ContactForm";
 import hireImage from "../../../../../public/images/hire.jpeg";
 import ServiceHire from "@/components/ServiceHire";
+import { useTranslations } from "next-intl";
 function MoversInAjman() {
+  const t = useTranslations("moving-ajman");
   return (
     <>
       <Navbar />
       <div className="w-full flex flex-col items-center justify-center gap-y-16">
         <PerServiceSec
-          title="Best Movers And Packers In Ajman"
-          description="Hamdan Movers and Packers delivers top-quality moving solutions across the Ajman for 6 years. Our full-service options cover local moving, long-distance moving, packing &amp; storage, and specialty relocation. Our team of experienced experts ensures a seamless move for houses, offices, or commercial spaces, making your transition quick and hassle-free."
+          title={t("title")}
+          description={t("desc")}
           image={imageSrc}
-          subTitle="Cheap Moving and Packing Company In Ajman"
+          subTitle={t("sub")}
         />
 
-        <OurServices title="Moving and Packing Services | Ajman" city="Ajman" />
+        <OurServices title={t("ser-title")} city={t("city")} />
         <OtherMovingServices />
         <div className="md:-mt-12 w-full flex justify-center">
-          <Benifits city="Ajman" />
+          <Benifits city={t("city")} />
         </div>
-        <PickUpRentalServices city="Ajman" />
+        <PickUpRentalServices city={t("city")} />
         <ServiceHire
-          title="Choose Best Moving Company In Ajman"
-          desciption="Find the best moving company near you with ease. Explore top-rated local movers, compare services, and get hassle-free relocation. Whether it's a residential or commercial move, discover trusted professionals for a smooth, secure, and stress-free experience. Get quotes and expert guidance for your next move today!"
+          title={t("hire.title")}
+          desciption={t("desc")}
           image={hireImage}
-          keyPoints={[
-            "Residential and Commercial Moving in Ajman",
-            "Easily Available In Ajman",
-          ]}
+          keyPoints={[t("hire.key1"), t("hire.key2")]}
         />
         <TestimonialSection />
-        <PricingList city="Ajman" />
+        <PricingList city={t("city")} />
         <WorkProcessSection />
         <ContactUs />
       </div>

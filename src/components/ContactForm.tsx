@@ -54,7 +54,9 @@ const ContactUs = ({ isPage = false }: { isPage?: boolean }) => {
             dir={locale === "ar" ? "rtl" : "ltr"}
             className=" mb-10 lg:mb-14"
           >
-            <h2 className={locale === "ar" ? "font-bold" : ""}>{t("title")}</h2>
+            <h2 className={locale === "ar" ? "font-bold font-arabic" : ""}>
+              {t("title")}
+            </h2>
             <p className={`${locale === "ar" ? "ar-p text-2xl" : ""} mt-3 gr`}>
               {t("desc")}
             </p>

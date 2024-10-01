@@ -29,7 +29,7 @@ function PerServiceSec({
           <h1
             className={
               locale === "ar"
-                ? "font-arabic font-bold md:leading-[65px] leading-[48px]"
+                ? "font-arabic font-bold md:leading-[60px] leading-[48px]"
                 : ""
             }
           >

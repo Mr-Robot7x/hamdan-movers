@@ -16,7 +16,7 @@ function HeroSection() {
       <h1
         className={`md:text-center text-start ${
           locale === "ar"
-            ? "md:text-[65px] tracking-normal font-bold leading-[58px] text-[55px]"
+            ? "md:text-[65px] tracking-normal font-arabic font-bold  leading-[58px] text-[55px]"
             : "leading-[53px] text-[50px] md:text-[60px]"
         }  md:pb-8 pb-2`}
       >
@@ -35,7 +35,7 @@ function HeroSection() {
           <h2
             className={`${
               locale === "ar"
-                ? "md:leading-[60px] -mt-2 tracking-normal leading-[45px]"
+                ? "md:leading-[60px] -mt-2 tracking-normal font-arabic leading-[45px]"
                 : "font-poppins font-normal"
             }`}
           >

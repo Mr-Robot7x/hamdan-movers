@@ -72,12 +72,18 @@ function PricingList({ city }: { city?: string }) {
           >
             <h3
               className={`text-[#FF5F00] uppercase ${
-                locale === "ar" ? " mb-4 text-base" : "text-sm font-bold mb-2"
+                locale === "ar"
+                  ? " mb-4 text-base font-arabic"
+                  : "text-sm font-bold mb-2"
               }`}
             >
               {t("top")}
             </h3>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <h2
+              className={`text-3xl font-bold text-gray-900 mb-4 ${
+                locale === "ar" ? "font-arabic" : ""
+              }`}
+            >
               {t("title")}
             </h2>
             <p

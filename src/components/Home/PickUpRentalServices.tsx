@@ -24,7 +24,7 @@ function PickUpRentalServices({ city }: { city?: string }) {
           <div className="">
             <h2
               className={`text-white md:text-start text-center ${
-                locale === "ar" ? "font-bold" : ""
+                locale === "ar" ? "font-bold font-arabic" : ""
               }`}
             >
               {t("title")} {city ? city : "UAE"}
@@ -93,7 +93,7 @@ function PickUpRentalServices({ city }: { city?: string }) {
                   : "font-poppins"
               }`}
             >
-              {t("one.title")} <br /> {t("one.in")}{" "}
+              {t("one.title")} <br />
               {city
                 ? city
                 : locale === "ar"
@@ -138,7 +138,7 @@ function PickUpRentalServices({ city }: { city?: string }) {
                   : "font-poppins"
               }`}
             >
-              {t("two.title")} <br /> {t("two.in")}{" "}
+              {t("two.title")} <br />
               {city
                 ? city
                 : locale === "ar"

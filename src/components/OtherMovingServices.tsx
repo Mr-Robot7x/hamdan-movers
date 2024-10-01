@@ -4,10 +4,13 @@ import { Button } from "./ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
+
 const HealthcareSlider: React.FC = () => {
   const t = useTranslations("otherMovingServices");
   const locale = useLocale();
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [visibleSlides, setVisibleSlides] = useState(3); // Default for desktop
+  const [autoScroll, setAutoScroll] = useState(true);
   const cardData = [
     { imgSrc: "/images/apartement-moving.avif", title: t("apartment") },
     { imgSrc: "/images/villa-moving.jpg", title: t("villa") },
@@ -18,87 +21,98 @@ const HealthcareSlider: React.FC = () => {
     { imgSrc: "/images/home-cleaning.webp", title: t("home") },
     { imgSrc: "/images/furniture-cleaning.webp", title: t("furniture") },
   ];
+  // Handle resizing for responsive behavior
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setVisibleSlides(3); // Show 3 slides in desktop view
+      } else {
+        setVisibleSlides(1); // Show 1 slide in mobile view
+      }
+    };
 
-  const cardsToShow = 3;
+    handleResize(); // Set on initial render
 
-  // Calculating number of visible slides based on screen size
-  const slidesToShow =
-    typeof window !== "undefined" && window.innerWidth < 768 ? 1 : cardsToShow;
+    window.addEventListener("resize", handleResize);
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === cardData.length - slidesToShow ? 0 : prevIndex + 1
-    );
-  };
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? cardData.length - slidesToShow : prevIndex - 1
-    );
-  };
+  // Auto-scroll logic
   useEffect(() => {
     const interval = setInterval(() => {
-      nextSlide();
-    }, 4000); // 4 seconds
+      if (autoScroll) {
+        setCurrentSlide((prev) =>
+          prev === cardData.length - visibleSlides ? 0 : prev + 1
+        );
+      }
+    }, 3000); // Auto-scroll every 3 seconds
 
-    return () => clearInterval(interval); // Cleanup the interval on component unmount
-  }, [currentIndex, slidesToShow]);
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, [currentSlide, visibleSlides, autoScroll]);
+
   return (
-    <div className="w-full max-w-6xl mx-auto  md:p-4 p-0 relative">
-      <h2
-        dir={locale === "ar" ? "rtl" : "ltr"}
-        className={`mb-4 ${locale == "ar" ? "font-arabic font-bold" : ""}`}
-      >
-        {t("title")}
-      </h2>
-      <div className="overflow-hidden w-full">
+    <div className="w-full max-w-6xl mx-auto">
+      <h2 className="font-semibold text-center mb-8">{t("title")}</h2>
+      <div className="relative overflow-hidden  py-5">
+        {/* Slider container */}
         <div
-          className="flex transition-transform duration-500 py-3 md:px-5 px-2"
+          className="flex transition-transform ease-in-out duration-500"
           style={{
-            transform: `translateX(-${(currentIndex * 95) / slidesToShow}%)`,
+            transform: `translateX(-${(currentSlide / visibleSlides) * 100}%)`,
           }}
         >
-          {cardData.map((card, index) => (
-            <Link
+          {cardData.map((slide, index) => (
+            <div
               key={index}
-              href={`/services/speciality-moving#${card.title
-                .split(" ")
-                .join("-")}`}
+              className={`w-full flex-shrink-0 px-2 ${
+                visibleSlides === 1 ? "sm:w-full" : "lg:w-1/3"
+              }`}
             >
-              <div className="min-w-[100%] md:min-w-[33.33%] p-2">
-                <div className="p-4 border rounded-lg shadow-lg shadow-neutral-100 flex flex-col items-center">
-                  <div className="md:w-80 w-[280px] h-48 bg-gray-100 rounded-lg relative overflow-hidden">
-                    <Image
-                      alt={card.title}
-                      src={card.imgSrc}
-                      fill
-                      className="object-cover rounded-lg shadow-xl transition-transform hover:scale-105"
-                    />
-                  </div>
-                  <p
-                    className={`mt-4 text-center font-semibold ${
+              <div className="bg-white rounded-lg shadow-lg shadow-neutral-100 overflow-hidden">
+                <div className="w-full md:h-56 h-48 bg-slate-100 relative">
+                  <Image
+                    alt={slide.title}
+                    src={slide.imgSrc}
+                    fill
+                    className="absolute object-cover"
+                  />
+                </div>
+                <div className="p-4 text-center">
+                  <h3
+                    className={` ${
                       locale === "ar"
-                        ? "font-arabic ar-p font-bold"
-                        : "text-lg font-poppins"
+                        ? "font-arabic font-bold text-xl"
+                        : "font-semibold text-lg"
                     }`}
                   >
-                    {card.title}
-                  </p>
+                    {slide.title}
+                  </h3>
                 </div>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
+
+        {/* Controls */}
       </div>
 
-      {/* Arrows */}
-      <div className="w-full flex justify-center gap-x-4 mt-2">
-        <Button size={"icon"} variant={"secondary"} onClick={prevSlide}>
-          &#10094;
-        </Button>
-        <Button size={"icon"} variant={"secondary"} onClick={nextSlide}>
-          &#10095;
-        </Button>
+      {/* Pagination indicators */}
+      <div className="flex justify-center space-x-2 mt-4">
+        {cardData
+          .slice(0, cardData.length - visibleSlides + 1)
+          .map((_, index) => (
+            <button
+              key={index}
+              className={`w-3 h-3 rounded-full ${
+                currentSlide === index ? "bg-black" : "bg-gray-400"
+              }`}
+              onClick={() => {
+                setAutoScroll(false); // Pause auto-scroll when clicking on pagination
+                setCurrentSlide(index);
+              }}
+            ></button>
+          ))}
       </div>
     </div>
   );
