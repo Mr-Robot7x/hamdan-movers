@@ -2,7 +2,7 @@ import React from "react";
 import Image, { StaticImageData } from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { Button } from "./ui/button";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 const ServiceHire = ({
   title,
   desciption,

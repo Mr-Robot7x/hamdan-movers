@@ -2,7 +2,7 @@ import Image, { StaticImageData } from "next/image";
 import React from "react";
 import { Button } from "./ui/button";
 import { useLocale, useTranslations } from "next-intl";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { PhoneForwarded } from "lucide-react";
 function PerServiceSec({
   title,

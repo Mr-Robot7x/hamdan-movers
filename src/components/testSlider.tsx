@@ -31,12 +31,6 @@ const CardSlider: React.FC<CardSliderProps> = ({
     setCurrentIndex((prevIndex) => (prevIndex + 1) % cards.length);
   };
 
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? cards.length - 1 : prevIndex - 1
-    );
-  };
-
   const renderStars = (rating: number) => {
     return [...Array(5)].map((star, index) => (
       <span

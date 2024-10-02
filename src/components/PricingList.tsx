@@ -3,7 +3,7 @@ import imageSrc from "../../public/images/pricing-image.jpg";
 import Image from "next/image";
 import PricingTable from "./PricingTable";
 import { Button } from "./ui/button";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { useLocale, useTranslations } from "next-intl";
 function PricingList({ city }: { city?: string }) {
   const t = useTranslations("pricingContent");

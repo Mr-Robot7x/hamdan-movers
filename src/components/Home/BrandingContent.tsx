@@ -6,7 +6,7 @@ import {
 } from "@tabler/icons-react";
 import { HeartHandshake, PartyPopperIcon } from "lucide-react";
 import { Button } from "../ui/button";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { useLocale, useTranslations } from "next-intl";
 function BrandingContent() {
   const locale = useLocale();

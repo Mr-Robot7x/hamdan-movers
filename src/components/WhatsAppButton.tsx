@@ -1,17 +1,16 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 import { IconBrandWhatsapp } from "@tabler/icons-react";
 import { Button } from "./ui/button";
 import { X } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 function WhatsAppButton() {
   const [open, setOpen] = useState(false);
   return (
     <>
       <div
-        onClick={(e) => setOpen((p) => !p)}
+        onClick={() => setOpen((p) => !p)}
         className="cursor-pointer active:scale-[0.98] transition-all fixed p-2 rounded-full bottom-4 right-4 z-[500] "
       >
         <Image
@@ -30,7 +29,7 @@ function WhatsAppButton() {
               size={"icon"}
               variant={"ghost"}
               className="absolute top-3 right-3"
-              onClick={(e) => setOpen((p) => !p)}
+              onClick={() => setOpen((p) => !p)}
             >
               <X />
             </Button>

@@ -1,234 +1,194 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
+
 .no-scrollbar::-webkit-scrollbar {
-  display: none;
-  /* Hide scrollbar in Chrome/Safari/Edge */
+    display: none;
+    /* Hide scrollbar in Chrome/Safari/Edge */
 }
 
 .no-scrollbar {
-  -ms-overflow-style: none;
-  /* Hide scrollbar in IE 10+ */
-  scrollbar-width: none;
-  /* Hide scrollbar in Firefox */
+    -ms-overflow-style: none;
+    /* Hide scrollbar in IE 10+ */
+    scrollbar-width: none;
+    /* Hide scrollbar in Firefox */
 }
+
 body {
-  /* font-family: "poppins", sans-serif; */
-  @apply antialiased;
+    /* font-family: "poppins", sans-serif; */
+    @apply antialiased;
 }
+
 svg {
-  @apply drop-shadow w-7 h-7
+    @apply drop-shadow w-7 h-7
 }
 
 h5 {
-  @apply tracking-wide text-black font-semibold text-[17px]
+    @apply tracking-wide text-black font-semibold text-[17px]
 }
+
 h4 {
-  @apply md:text-[21px] text-[19px] md:leading-7 leading-6 font-medium
+    @apply md:text-[21px] text-[19px] md:leading-7 leading-6 font-medium
 }
+
 h1, h2, h3 {
-  @apply tracking-wide  text-[#023246] font-playfair
+    @apply tracking-wide text-[#023246] font-playfair
 }
-    ol.custom-symbol {
-      list-style-type: none;
-      /* Remove default numbering */
-    }
-  
-    ol.custom-symbol li::before {
-      content: "\2713";
-      /* Custom symbol, like a checkmark */
-      margin-right: 10px;
-      /* Space between symbol and text */
-    }
+
+ol.custom-symbol {
+    list-style-type: none;
+    /* Remove default numbering */
+}
+
+ol.custom-symbol li::before {
+    content: "\2713";
+    /* Custom symbol, like a checkmark */
+    margin-right: 10px;
+    /* Space between symbol and text */
+}
+
 h1 {
-  
-  @apply text-[#023246] md:text-[45px] font-medium text-[35px] md:leading-[60px] leading-[42px]
+
+    @apply text-[#023246] md:text-[45px] font-medium text-[35px] md:leading-[60px] leading-[42px]
 }
+
 h2 {
-  font-weight: 500;
-  @apply md:text-[37px] text-[30px] leading-[35px] md:leading-10
+    font-weight: 500;
+    @apply md:text-[37px] text-[30px] leading-[35px] md:leading-10
 }
+
 h3 {
-  font-weight: 500;
-  @apply md:text-[26px] text-[23px] leading-[27px] md:leading-7 text-black
+    font-weight: 500;
+    @apply md:text-[26px] text-[23px] leading-[27px] md:leading-7 text-black
 }
-p, li{
-  @apply md:text-[16.5px] text-[15.5px] md:leading-6 leading-[22px] tracking-[0.5px] font-poppins
+
+p, li {
+    @apply md:text-[16.5px] text-[15.5px] md:leading-6 leading-[22px] tracking-[0.5px] font-poppins
 }
+
 .gr {
-  color: #464646;
+    color: #464646;
 }
+
 .pr {
-  @apply text-[#287094] 
+    @apply text-[#287094]
 }
+
 .pb {
-  @apply text-[#023246]
+    @apply text-[#023246]
 }
-.ts{
-  text-shadow: 0 2px 3px rgba(0,0,0,0.2);
-  filter: hue-rotate();
+
+.ts {
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    filter: hue-rotate();
 }
+
 .b-bg {
-  background: #023246;
+    background: #023246;
 
 }
+
 .ar-p {
-  @apply font-arabic md:leading-8 leading-7 md:text-[19px] text-[18px]
+    @apply font-arabic md:leading-8 leading-7 md:text-[19px] text-[18px]
 }
-small{
-  font-family: 'poppins';
+
+small {
+    font-family: 'poppins';
 }
+
 .t-grd {
-  background: -webkit-linear-gradient(45deg, #023246, #69c5f4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(45deg, #023246, #69c5f4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
 .b-btn {
-  background: -webkit-linear-gradient(45deg, #023246, #287094);
+    background: -webkit-linear-gradient(45deg, #023246, #287094);
 }
+
 .csom {
-  color: #09adff;
-  background: #FA6450;
-}
-@layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
-    --radius: 0.5rem;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
-  }
-
-  .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-  }
+    color: #09adff;
+    background: #FA6450;
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-}
 .color-changing-button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  color: white;
-  background-color: #3498db;
-  /* Starting color */
-  transition: all 0.3s ease;
-  filter: hue-rotate(0deg);
-  animation: hue-rotation 5s infinite linear;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    background-color: #3498db;
+    /* Starting color */
+    transition: all 0.3s ease;
+    filter: hue-rotate(0deg);
+    animation: hue-rotation 5s infinite linear;
 }
 
 @keyframes hue-rotation {
-  0% {
-    filter: hue-rotate(0deg);
-  }
+    0% {
+        filter: hue-rotate(0deg);
+    }
 
-  100% {
-    filter: hue-rotate(360deg);
-  }
+    100% {
+        filter: hue-rotate(360deg);
+    }
 }
 
 
 
 /* Card slider container */
 .slider-container {
-  position: relative;
-  margin: 0 auto;
-  overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 /* Card wrapper */
 .slider-wrapper {
-  display: flex;
+    display: flex;
 }
 
 /* Slider track */
 .slider {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
 /* Card styling */
 .card {
-  min-width: 100%;
-  padding: 20px;
-  background-color: #fafafa;
-  border-radius: 10px;
+    min-width: 100%;
+    padding: 20px;
+    background-color: #fafafa;
+    border-radius: 10px;
 }
 
 /* Card header for star ratings */
 .card-header {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 /* Individual card body */
 .card-body {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .card-description {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #666;
-  text-wrap: wrap;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+    text-wrap: wrap;
 }
 
 /* Slider buttons */
@@ -236,101 +196,101 @@ small{
 
 /* Pagination dots */
 .slider-dots {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 .slider-dots span {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  background-color: #888;
-  border-radius: 50%;
-  margin: 0 5px;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #888;
+    border-radius: 50%;
+    margin: 0 5px;
 }
 
 .slider-dots span.active {
-  background-color: #333;
+    background-color: #333;
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 50px;
-  background-color: #333;
-  color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background-color: #333;
+    color: white;
 }
 
 .navbar ul {
-  display: flex;
-  list-style: none;
+    display: flex;
+    list-style: none;
 }
 
 .navbar ul li {
-  margin: 0 20px;
+    margin: 0 20px;
 }
 
 .navbar ul li a {
-  color: white;
-  text-decoration: none;
+    color: white;
+    text-decoration: none;
 }
 
 .cta-button {
-  background-color: #FF7A59;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
+    background-color: #FF7A59;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
 .hero {
-  display: flex;
-  justify-content: space-between;
-  padding: 50px;
-  background-color: #f4f4f4;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #f4f4f4;
 }
 
 .hero-content h1 {
-  font-size: 48px;
+    font-size: 48px;
 }
 
 .service-cards {
-  display: flex;
-  justify-content: space-between;
-  padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
 }
 
 .service-card {
-  flex: 1;
-  margin: 0 20px;
-  background-color: white;
-  padding: 20px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin: 0 20px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .award-winning {
-  padding: 50px;
-  background-color: #f9f9f9;
+    padding: 50px;
+    background-color: #f9f9f9;
 }
 
 .testimonials {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .project-gallery {
-  display: flex;
-  justify-content: space-between;
-  padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
 }
 
 .work-steps {
-  display: flex;
-  justify-content: space-between;
-  padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
 }
 
 .cus-shad {
-  box-shadow: 0 4px 10px 6px rgba(0,0,0,0.04);
+    box-shadow: 0 4px 10px 6px rgba(0, 0, 0, 0.04);
 }

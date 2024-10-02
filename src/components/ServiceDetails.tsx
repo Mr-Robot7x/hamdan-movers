@@ -8,7 +8,7 @@ function ServiceDetails({
 }: {
   title: string;
   description: string;
-  boxs: { heading: string | any; desc: string }[];
+  boxs: { heading: string | null; desc: string }[];
 }) {
   const locale = useLocale();
   return (

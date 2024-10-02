@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import ajmanImage from "../../public/images/ajman-image.jpg";
 import dubaiImage from "../../public/images/dubai-image.jpg";
 import sharjahImage from "../../public/images/sharjah-image.jpg";

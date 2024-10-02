@@ -3,7 +3,7 @@ import React from "react";
 import { Button } from "./ui/button";
 import serviceImage from "../../public/images/services-image.jpg";
 import { useLocale, useTranslations } from "next-intl";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { PhoneForwarded } from "lucide-react";
 function ServiceTopSection() {
   const locale = useLocale();

@@ -175,7 +175,3 @@ const image = {
 const boxInfos = {
   padding: "20px",
 };
-
-const containerImageFooter = {
-  padding: "45px 0 0 0",
-};

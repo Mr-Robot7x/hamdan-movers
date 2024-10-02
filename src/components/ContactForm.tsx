@@ -3,18 +3,27 @@ import { IconHours24, IconLocationPin } from "@tabler/icons-react";
 import { MailsIcon, PhoneForwardedIcon } from "lucide-react";
 import { Button } from "./ui/button";
 import { FormEvent, useState } from "react";
-
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import Link from "next/link";
+const services = [
+  {
+    value: "home",
+    label: "Home",
+  },
+  {
+    value: "office",
+    label: "Office",
+  },
+  {
+    value: "event",
+    label: "Event",
+  },
+  {
+    value: "other",
+    label: "Other",
+  },
+];
+import { Link } from "@/i18n/routing";
 import { useLocale, useTranslations } from "next-intl";
+import CustomSelect from "./ui/select";
 const ContactUs = ({ isPage = false }: { isPage?: boolean }) => {
   const t = useTranslations("contact");
   const locale = useLocale();
@@ -35,7 +44,7 @@ const ContactUs = ({ isPage = false }: { isPage?: boolean }) => {
   });
   const handleContact = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    Object.keys(data).forEach((field, i) => {
+    Object.keys(data).forEach((field) => {
       if (!data[field as keyof typeof data]) {
         alert("Please fill all the fields");
         return;
@@ -140,55 +149,7 @@ const ContactUs = ({ isPage = false }: { isPage?: boolean }) => {
                 {/* {service select} */}
 
                 <div>
-                  <Select
-                    value={data.service}
-                    onValueChange={(e) => setData({ ...data, service: e })}
-                  >
-                    <SelectTrigger className="w-full">
-                      <SelectValue placeholder="Select a service" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectGroup>
-                        <SelectLabel>Top Services</SelectLabel>
-                        <SelectItem value="Local Moving Services">
-                          Local Moving Services
-                        </SelectItem>
-                        <SelectItem value="Commercial  Moving Services">
-                          Commercial Moving Services
-                        </SelectItem>
-                        <SelectItem value="Packing and Unpacking">
-                          Packing and Unpacking
-                        </SelectItem>
-                        <SelectItem value="Storage Solutions">
-                          Storage Solutions
-                        </SelectItem>
-                        <SelectItem value="Specialty Moving Services">
-                          Specialty Moving Services
-                        </SelectItem>
-                        <SelectItem value="International Moving Services">
-                          International Moving Services
-                        </SelectItem>
-                      </SelectGroup>
-                      <SelectGroup>
-                        <SelectLabel>Other Services</SelectLabel>
-                        <SelectItem value="Apartment Moving">
-                          Apartment Moving
-                        </SelectItem>
-                        <SelectItem value="Villa Moving">
-                          Villa Moving
-                        </SelectItem>
-                        <SelectItem value="Office Relocation">
-                          Office Relocation
-                        </SelectItem>
-                        <SelectItem value="Home Cleaning">
-                          Home Cleaning
-                        </SelectItem>
-                        <SelectItem value="Furniture Cleaning">
-                          Furniture Cleaning
-                        </SelectItem>
-                      </SelectGroup>
-                    </SelectContent>
-                  </Select>
+                  <CustomSelect options={services} onChange={() => {}} />
                 </div>
 
                 {/* Textarea */}

@@ -1,12 +1,7 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import faqsImage from "../../public/images/FAQs.png";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
+import Accordion from "./ui/accordion";
 export function FAQs() {
   const t = useTranslations("faqs");
   const locale = useLocale();
@@ -58,26 +53,7 @@ export function FAQs() {
         {t("title")}
       </h2>
       <div className="mt-10 w-full md:w-11/12">
-        <Accordion type="multiple" className="w-full">
-          {faqs.map((faq, i) => (
-            <AccordionItem
-              className={locale === "ar" ? "font-arabic" : "font-poppins"}
-              key={i}
-              value={faq.ques}
-            >
-              <AccordionTrigger
-                className={
-                  locale === "ar" ? "font-bold font-arabic" : "font-medium"
-                }
-              >
-                {faq.ques}
-              </AccordionTrigger>
-              <AccordionContent className={locale === "ar" ? "ar-p" : ""}>
-                {faq.ans}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <Accordion data={faqs} />
       </div>
     </div>
   );

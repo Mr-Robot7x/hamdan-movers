@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { IconMapPin, IconMenu2, IconPhone } from "@tabler/icons-react";
@@ -208,7 +208,7 @@ function Navbar() {
             </div>
             <LocaleSwitcher />
             <div
-              onClick={(e) => setInfoDetailOpen((prev) => !prev)}
+              onClick={() => setInfoDetailOpen((prev) => !prev)}
               className="md:hidden md:w-[73px] w-16 md:h-12 h-10 md:mt-0 mt-1 rounded-3xl flex items-center justify-between p-[6px] border border-neutral-200 hover:border-neutral-300"
             >
               <IconPhone className="pr" />

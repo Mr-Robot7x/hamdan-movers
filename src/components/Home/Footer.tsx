@@ -8,9 +8,9 @@ import {
   IconBrandWhatsapp,
 } from "@tabler/icons-react";
 import { Button } from "../ui/button";
-import { Facebook, Instagram, PhoneCallIcon } from "lucide-react";
-import Link from "next/link";
-import { useLocale, useTranslations } from "next-intl";
+import { Instagram } from "lucide-react";
+import {Link} from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 function Footer() {
   const t = useTranslations("navitems");
   const subServices: { name: string; link: string }[] = [

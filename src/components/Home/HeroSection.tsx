@@ -3,7 +3,7 @@ import React from "react";
 import heroImage from "../../../public/images/main-section-image.jpg";
 import { Button } from "../ui/button";
 import { useLocale, useTranslations } from "next-intl";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 function HeroSection() {
   const locale = useLocale();
   const t = useTranslations("heroSection");

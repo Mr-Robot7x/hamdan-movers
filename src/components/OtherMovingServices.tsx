@@ -1,8 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Button } from "./ui/button";
 import Image from "next/image";
-import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 
 const HealthcareSlider: React.FC = () => {
@@ -12,7 +10,7 @@ const HealthcareSlider: React.FC = () => {
   const [visibleSlides, setVisibleSlides] = useState(3); // Default for desktop
   const [autoScroll, setAutoScroll] = useState(true);
   const cardData = [
-    { imgSrc: "/images/apartement-moving.avif", title: t("apartment") },
+    { imgSrc: "/images/apartement-moving.jpg", title: t("apartment") },
     { imgSrc: "/images/villa-moving.jpg", title: t("villa") },
     {
       imgSrc: "/images/office-relocation.jpg",

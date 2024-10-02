@@ -4,7 +4,7 @@ import Image from "next/image";
 import imSrc from "../../../public/images/commercial-delivery-trucks-hamdan.png";
 import truck2 from "../../../public/images/3-tom.jpg";
 import truck1 from "../../../public/images/1.5-ton-truck.jpg";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { PhoneForwardedIcon, PhoneOutgoingIcon } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 function PickUpRentalServices({ city }: { city?: string }) {

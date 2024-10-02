@@ -1,7 +1,6 @@
 import Footer from "@/components/Home/Footer";
 import Navbar from "@/components/Navbar";
 import ContactUs from "@/components/ContactForm";
-import Image from "next/image";
 function ContactUsPage() {
   return (
     <>

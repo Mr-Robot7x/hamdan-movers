@@ -2,7 +2,6 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
-import Link from "next/link";
 import Image from "next/image";
 import transtImage from "../../public/images/language-translate.png";
 import { useState } from "react";
@@ -15,20 +14,17 @@ export default function LocaleSwitcher() {
   const pathname = usePathname(); // Get current path
   const [langChange, setLangChange] = useState(false);
   const changeLocale = (locale: string) => {
-    // Build the new locale URL
     const pathWithoutLocale = pathname.replace(`/${currentLocale}`, "") || "/";
 
-    // Build the new URL with the new locale
     const newPath = `/${locale}${pathWithoutLocale}`;
 
-    // Push the new locale and path
     router.push(newPath);
   };
 
   return (
     <div className="w-9 mt-2 h-9 relative flex items-center justify-center">
       <Image
-        onClick={(e) => setLangChange((prev) => !prev)}
+        onClick={() => setLangChange((prev) => !prev)}
         alt="language changing icon"
         src={transtImage}
         fill

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import serviceImage from "../../../../public/images/pickup-rent-services-3-trans.png";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Home/Footer";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import truck1 from "../../../../public/images/1.5-ton-truck.jpg";
 import truck2 from "../../../../public/images/3-tom.jpg";
 import truck3 from "../../../../public/images/pickup-rent-services-3.jpeg";

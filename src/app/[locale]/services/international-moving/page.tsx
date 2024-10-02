@@ -2,7 +2,7 @@ import Footer from "@/components/Home/Footer";
 import Navbar from "@/components/Navbar";
 import PerServiceSec from "@/components/perServiceSec";
 import imageSrc from "../../../../../public/images/international-service.jpg";
-import hireUsImage from "../../../../../public/images/hire-us.avif";
+import hireUsImage from "../../../../../public/images/hire-us.jpg";
 import React from "react";
 import ServiceDetails from "@/components/ServiceDetails";
 import ServiceHire from "@/components/ServiceHire";
