@@ -43,32 +43,16 @@ const PricingTable: React.FC = () => {
       <table className="min-w-full rounded-lg table-auto border-collapse border border-gray-300">
         <thead>
           <tr className="bg-gray-100">
-            <th
-              className={`md:px-4 px-1 py-4 border border-gray-300 ${
-                locale === "ar" ? "font-arabic text-right text-xl" : "text-left"
-              }`}
-            >
+            <th className={`px-1 py-4 border text-nowrap font-bold`}>
               {t("heading1")}
             </th>
-            <th
-              className={`md:px-4 px-1 py-4 border border-gray-300 ${
-                locale === "ar" ? "font-arabic text-right text-xl" : "text-left"
-              }`}
-            >
+            <th className={`px-1 py-4 border text-nowrap font-bold`}>
               {t("heading2")}
             </th>
-            <th
-              className={`md:px-4 px-1 py-4 border border-gray-300 ${
-                locale === "ar" ? "font-arabic text-right text-xl" : "text-left"
-              }`}
-            >
+            <th className={`px-1 py-4 border text-nowrap font-bold`}>
               {t("heading3")}
             </th>
-            <th
-              className={`md:px-4 px-1 py-4 border border-gray-300 ${
-                locale === "ar" ? "font-arabic text-right text-xl" : "text-left"
-              }`}
-            >
+            <th className={`px-1 py-4 border text-nowrap font-bold`}>
               {t("heading4")}
             </th>
           </tr>

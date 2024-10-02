@@ -43,7 +43,7 @@ function ServiceMovingProcess({
                     height={60}
                   />
                 </div>
-                <h4
+                <span
                   className={` ${
                     locale === "ar"
                       ? "font-bold font-arabic text-2xl"
@@ -51,7 +51,7 @@ function ServiceMovingProcess({
                   }`}
                 >
                   {box.heading}
-                </h4>
+                </span>
                 <p
                   className={` text-gray-500 mt-2 ${
                     locale === "ar" ? "text-[16.8px] font-arabic" : "text-sm"

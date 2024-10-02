@@ -4,6 +4,7 @@ import { getMessages } from "next-intl/server";
 import { Poppins, Amiri, Playfair_Display } from "next/font/google";
 import type { Metadata } from "next";
 import "./globals.css";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -49,10 +50,10 @@ export default async function RootLayout({
   const messages = await getMessages();
   return (
     <html lang={locale}>
-      <body className={`antialiased`}>
+      <body>
         <NextIntlClientProvider messages={messages}>
           <main
-            className={` ${
+            className={`container px-[10px] ${
               locale === "ar"
                 ? `${arabic.className}`
                 : `${poppins.className} ${playfair.variable}`
@@ -60,6 +61,7 @@ export default async function RootLayout({
           >
             {children}
           </main>
+          <WhatsAppButton />
         </NextIntlClientProvider>
         <SpeedInsights />
       </body>

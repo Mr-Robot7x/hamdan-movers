@@ -32,9 +32,9 @@ function PickUpRentalServices({ city }: { city?: string }) {
             <h3
               className={`${
                 locale === "ar"
-                  ? "font-arabic md:text-[25px] text-[20px]"
-                  : "font-poppins md:text-[22px] text-[18px]"
-              } text-[#FF5F00]  mt-8 font-medium md:text-start text-center `}
+                  ? "font-arabic md:text-[25px] text-[20px] text-right"
+                  : "font-poppins md:text-[22px] text-[18px] text-left"
+              } text-white  mt-8 font-medium `}
             >
               {t("SubTitle")} {city ? city : "UAE"}
             </h3>

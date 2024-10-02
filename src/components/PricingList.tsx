@@ -71,7 +71,7 @@ function PricingList({ city }: { city?: string }) {
             }`}
           >
             <h3
-              className={`text-[#FF5F00] uppercase ${
+              className={`text-[#db5e16] uppercase ${
                 locale === "ar"
                   ? " mb-4 text-base font-arabic"
                   : "text-sm font-bold mb-2"
@@ -133,9 +133,13 @@ function PricingList({ city }: { city?: string }) {
             <p className={locale === "ar" ? "ar-p mt-4" : "my-4"}>
               {t("list.desc")}
             </p>
-            <h5 className={locale === "ar" ? "mt-4 font-arabic text-2xl" : ""}>
+            <h3
+              className={
+                locale === "ar" ? "mt-4 font-arabic text-2xl" : "font-poppins"
+              }
+            >
               {t("list.sub-heading")}
-            </h5>
+            </h3>
             <ol className={`custom-symbol mt-4 flex flex-col gap-y-2 `}>
               <li className={locale === "ar" ? "ar-p" : ""}>{t("list.one")}</li>
               <li className={locale === "ar" ? "ar-p" : ""}>{t("list.two")}</li>
@@ -164,25 +168,29 @@ function PricingList({ city }: { city?: string }) {
             <p className={`${locale === "ar" ? "ar-p" : ""} my-4`}>
               {c("desc1")} {city ? city : "UAE"}, {c("desc2")}
             </p>
-            <h5 className={locale === "ar" ? "font-arabic text-2xl" : ""}>
+            <h3
+              className={
+                locale === "ar" ? "font-arabic text-2xl" : "font-poppins"
+              }
+            >
               {c("sub1")}
-            </h5>
+            </h3>
             <p className={`${locale === "ar" ? "ar-p" : ""} mt-2`}>
               {c("sub-desc1")}
             </p>
-            <h5
+            <h3
               className={`${
-                locale === "ar" ? "font-arabic text-2xl" : ""
+                locale === "ar" ? "font-arabic text-2xl" : "font-poppins"
               } mt-3`}
             >
               {c("sub2")}
-            </h5>
+            </h3>
             <p className={`${locale === "ar" ? "ar-p" : ""} mt-2`}>
               {c("sub-desc2")}
             </p>
             <h3
               className={`${
-                locale === "ar" ? "font-arabic text-3xl" : ""
+                locale === "ar" ? "font-arabic text-3xl" : "font-poppins"
               } mt-2`}
             >
               {c("sub2-sub-title")}
@@ -203,7 +211,7 @@ function PricingList({ city }: { city?: string }) {
             </ul>
             <h3
               className={`${
-                locale === "ar" ? "font-arabic text-3xl" : ""
+                locale === "ar" ? "font-arabic text-3xl" : "font-poppins"
               } mt-2`}
             >
               {c("sub2-sub-title2")}
@@ -222,23 +230,23 @@ function PricingList({ city }: { city?: string }) {
                 </li>
               ))}
             </ul>
-            <h5
+            <h3
               className={`mt-3 ${
-                locale === "ar" ? "font-arabic text-2xl" : ""
+                locale === "ar" ? "font-arabic text-2xl" : "font-poppins"
               }`}
             >
               {c("sub3")}
-            </h5>
+            </h3>
             <p className={`${locale === "ar" ? "ar-p" : ""} mt-2`}>
               {c("sub-desc3-1")} {city ? city : "UAE"} {c("sub-desc3-2")}
             </p>
-            <h5
+            <h3
               className={`mt-3 ${
-                locale === "ar" ? "font-arabic text-2xl" : ""
+                locale === "ar" ? "font-arabic text-2xl" : "font-poppins"
               }`}
             >
               {c("sub4")}
-            </h5>
+            </h3>
             <p className={`${locale === "ar" ? "ar-p" : ""} mt-2`}>
               {c("sub-desc4")}
             </p>

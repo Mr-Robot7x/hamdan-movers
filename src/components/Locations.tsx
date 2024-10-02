@@ -39,17 +39,13 @@ function Locations() {
               </p>
               <div
                 dir={locale === "ar" ? "rtl" : "ltr"}
-                className="flex gap-x-2 mt-5"
+                className="flex gap-x-5 mt-5"
               >
                 <Link href={"tel:+971566651978"}>
-                  <Button dir="ltr" size={"sm"}>
-                    +971 56 665 1978
-                  </Button>
+                  <Button dir="ltr">Call Now</Button>
                 </Link>
                 <Link href={"/services-locations/movers-and-packers-dubai"}>
-                  <Button size={"sm"} variant={"secondary"}>
-                    {b("View More")}
-                  </Button>
+                  <Button variant={"secondary"}>{b("View More")}</Button>
                 </Link>
               </div>
             </div>
@@ -92,16 +88,12 @@ function Locations() {
               <p className={`md:mt-5 mt-3 ${locale === "ar" ? "ar-p" : ""}`}>
                 {t("sharjah.desc")}
               </p>
-              <div className="flex gap-x-2 mt-5">
+              <div className="flex gap-x-5 mt-5">
                 <Link href={"tel:+971566651978"}>
-                  <Button dir="ltr" size={"sm"}>
-                    +971 56 665 1978
-                  </Button>
+                  <Button dir="ltr">Call Now</Button>
                 </Link>
                 <Link href={"/services-locations/movers-and-packers-sharjah"}>
-                  <Button size={"sm"} variant={"secondary"}>
-                    {b("View More")}
-                  </Button>
+                  <Button variant={"secondary"}>{b("View More")}</Button>
                 </Link>
               </div>
             </div>
@@ -128,17 +120,13 @@ function Locations() {
               </p>
               <div
                 dir={locale === "ar" ? "rtl" : "ltr"}
-                className="flex gap-x-2 mt-5"
+                className="flex gap-x-5 mt-5"
               >
                 <Link href={"tel:+971566651978"}>
-                  <Button dir="ltr" size={"sm"}>
-                    +971 56 665 1978
-                  </Button>
+                  <Button dir="ltr">Call Now</Button>
                 </Link>
                 <Link href={"/services-locations/movers-and-packers-ajman"}>
-                  <Button size={"sm"} variant={"secondary"}>
-                    {b("View More")}
-                  </Button>
+                  <Button variant={"secondary"}>{b("View More")}</Button>
                 </Link>
               </div>
             </div>

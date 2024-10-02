@@ -23,16 +23,14 @@ function WhatsAppButton() {
         />
       </div>
       {open && (
-        <div className="w-full h-full bg-black/50 fixed top-0 left-0 z-[400] flex items-center justify-center">
+        <div className="w-full h-full bg-black/50 fixed top-0 left-0 z-[400] flex items-center justify-center ">
           <div className="md:w-[450px] w-[95%] h-auto bg-white drop-shadow-2xl rounded-3xl py-10 px-3 relative">
-            <Button
-              size={"icon"}
-              variant={"ghost"}
-              className="absolute top-3 right-3"
+            <X
               onClick={() => setOpen((p) => !p)}
-            >
-              <X />
-            </Button>
+              strokeWidth={1.2}
+              className="absolute top-3 right-3 w-9 h-9"
+            />
+
             <h3 className="font-normal text-center">Hi there !</h3>
             <h3 className="font-normal text-center">How we can help you ?</h3>
             <div className="flex gap-y-5 mt-10 w-full flex-col">

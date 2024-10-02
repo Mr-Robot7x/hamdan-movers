@@ -2,7 +2,7 @@
   "heroSection": {
     "headingTitle": "Hamdan Movers And Packers",
     "SubTitle": "UAE's No.1 Moving And Packing Company",
-    "description": "Hamdan Movers and Packers is serving you with the top quality of moving solutions for the 6 years in UAE. Our full-service options include local moving, long-distance moving, packing & storage services and specialty relocation solutions. We employ experts who are experienced in moving houses, office or commercial spaces so you can move effortlessly and have a convenient transition real quick."
+    "description": "Hamdan Movers and Packers is serving you with the top quality of moving solutions for the 6 years in UAE. "
   },
   "buttons": {
     "View More": "View More",
@@ -18,7 +18,7 @@
   },
   "BrandingContent": {
     "title": "Professional Home And Office Relocation Company In UAE",
-    "description": "Looking for affordable and reliable movers in UAE? Look no further.We make every move hassle-free. From expert packaging to safe transportation, we ensure your home or office relocation is handled with care and professionalism, ensuring you a seamless experience every step of the way.",
+    "description": "Our full-service options include local moving, long-distance moving, packing & storage services and specialty relocation solutions. We employ experts who are experienced in moving houses, office or commercial spaces so you can move effortlessly and have a convenient transition real quick.",
     "one": "Best Moving Services",
     "two": "No Hidden Charges",
     "three": "Over 6+ Years Experience",
@@ -210,19 +210,19 @@
     "sub-desc4": " While price is important, value is what truly matters. To maximize your investment, it&apos;s wise to gather multiple quotes from different movers. Compare not only the prices but also the services they offer. Take the time to read reviews and see which company provides the best balance of cost and quality. Also, staying flexible with your moving dates can often help you secure a better deal."
   },
   "table": {
-    "heading1": "Moving Size",
-    "heading2": "Moving Trucks Required",
+    "heading1": "Size",
+    "heading2": "Trucks Required",
     "heading3": "Crew Size",
-    "heading4": "Moving Cost",
+    "heading4": "Cost",
     "row1": {
       "one": "Studio apartment",
       "two": "1 BHK",
       "three": "2 BHK",
       "four": "3 BHK",
       "five": "4 BHK",
-      "six": "2 Bedroom Villa Moving",
-      "seven": "3 Bedroom Villa Moving",
-      "eight": "4 Bedroom Villa Moving"
+      "six": "2 Bedroom Villa",
+      "seven": "3 Bedroom Villa",
+      "eight": "4 Bedroom Villa"
     }
   },
   "testimonials": {

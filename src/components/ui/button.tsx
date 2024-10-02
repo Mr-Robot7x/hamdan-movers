@@ -19,7 +19,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 const buttonVariants: Record<ButtonVariant, string> = {
   default:
-    "bg-[#FF5F00] hover:bg-[#FF5F00]/80 transition duration-300 text-white",
+    "bg-gradient-to-t from-[#d74613] to-[#FF5F00] hover:bg-[#FF5F00]/80 transition duration-300 text-white",
   destructive: "bg-red-500 text-white hover:bg-red-600",
   outline:
     "border border-[#023246] text-[#023246] hover:bg-[#287094] hover:text-white hover:border-transparent",
@@ -51,7 +51,7 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <button
-      className={`${variantClasses} ${sizeClasses} ${className}`}
+      className={`inline-flex transition-all items-center justify-center whitespace-nowrap font-medium disabled:pointer-events-none disabled:opacity-50 font-poppins ${variantClasses} ${sizeClasses} ${className}`}
       {...props}
     >
       {children}

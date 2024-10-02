@@ -127,21 +127,21 @@ const TestimonialSection: React.FC = () => {
             {t("title")}
           </h2>
 
-          <ul
+          <div
             dir={locale === "ar" ? "rtl" : "ltr"}
-            className={`list-disc mb-6 flex md:flex-row flex-col mdLgap-10 gap-5 md:px-0 px-10 text-lg text-gray-700 mt-10`}
+            className={`mb-6 flex md:flex-row flex-col md-gap-10 gap-5 md:px-0 px-10 text-gray-700 mt-10`}
           >
-            <div className="flex flex-col gap-y-2">
+            <ul className="list-disc flex flex-col gap-y-2 text-lg md:ml-2">
               <li className={locale === "ar" ? "ar-p" : ""}>{t("key1")}</li>
               <li className={locale === "ar" ? "ar-p" : ""}>{t("key2")}</li>
               <li className={locale === "ar" ? "ar-p" : ""}>{t("key3")}</li>
-            </div>
-            <div className="flex flex-col gap-y-2">
+            </ul>
+            <ul className="list-disc flex flex-col gap-y-2 text-lg md:ml-6">
               <li className={locale === "ar" ? "ar-p" : ""}>{t("key4")}</li>
               <li className={locale === "ar" ? "ar-p" : ""}>{t("key5")}</li>
               <li className={locale === "ar" ? "ar-p" : ""}>{t("key6")}</li>
-            </div>
-          </ul>
+            </ul>
+          </div>
 
           <CardSlider cards={testimonials} />
         </div>

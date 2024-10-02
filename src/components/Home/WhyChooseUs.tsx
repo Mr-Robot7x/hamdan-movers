@@ -38,7 +38,7 @@ const WhyChooseUs: React.FC = () => {
                 }
                 md:-ml-28 md:-mt-0 z-20 -mt-20 rounded-lg shadow-lg shadow-neutral-100 bg-white p-4 md:w-1/2 text-center `}
             >
-              <h3 className="text-[#FF5F00] text-sm uppercase font-bold mb-2">
+              <h3 className="text-[#db5e16] text-sm uppercase font-bold mb-2">
                 {t("top")}
               </h3>
               <h2

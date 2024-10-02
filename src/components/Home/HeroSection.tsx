@@ -41,12 +41,12 @@ function HeroSection() {
           >
             {t("SubTitle")}
           </h2>
-          <p className={`${locale === "ar" ? "mt-3 ar-p" : "mt-6"}`}>
+          <p className={`${locale === "ar" ? "mt-3 ar-p" : "mt-3"}`}>
             {t("description")}
           </p>
           <div className="w-full flex md:gap-x-3 md:flex-row flex-col gap-y-3 mt-4">
-            <Link href={"tel:tel:+971566651978"}>
-              <Button>
+            <Link aria-label="call now" href={"tel:tel:+971566651978"}>
+              <Button className="">
                 {b("call now")} : <span dir="ltr">+971 56 6651978</span>
               </Button>
             </Link>
@@ -60,7 +60,7 @@ function HeroSection() {
             locale === "ar" ? "md:border-r" : "md:border-l"
           } flex md:border-neutral-400 justify-center`}
         >
-          <div className="md:w-96 w-[350px] bg-gradient-to-t from-slate-50 to-slate-100 h-96 relative">
+          <div className="md:w-96 w-[330px] bg-gradient-to-t from-slate-50 to-slate-100 h-80 md:h-96 relative">
             <Image
               src={heroImage}
               alt="Best Moving Company UAE | Hamdan Mover"

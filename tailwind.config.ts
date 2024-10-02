@@ -7,14 +7,21 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: "0rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
     extend: {
       fontFamily: {
-        poppins: ["var(--poppins)", "sans-serif"],
-        // poppins: ["Poppins", "sans-serif"],
-        arabic: ["var(--arabic)", "sans-serif"],
-        // arabic: ["Amiri", "sans-serif"],
-        playfair: ["var(--playfair)", "serif"],
-        // playfair: ["Playfair Display", "serif"],
+        // poppins: ["var(--poppins)", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+        // arabic: ["var(--arabic)", "sans-serif"],
+        arabic: ["Amiri", "sans-serif"],
+        // playfair: ["var(--playfair)", "serif"],
+        playfair: ["Playfair Display", "serif"],
       },
       colors: {
         background: "var(--background)",

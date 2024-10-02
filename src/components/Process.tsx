@@ -27,7 +27,7 @@ const WorkProcessSection: React.FC = () => {
                   height={60}
                 />
               </div>
-              <h4
+              <span
                 className={` ${
                   locale === "ar"
                     ? "font-arabic text-2xl"
@@ -35,7 +35,7 @@ const WorkProcessSection: React.FC = () => {
                 }`}
               >
                 {t("one.tit")}
-              </h4>
+              </span>
               <p
                 className={` text-gray-500 mt-2 ${
                   locale === "ar" ? "ar-p" : "text-sm"
@@ -54,7 +54,7 @@ const WorkProcessSection: React.FC = () => {
                   height={60}
                 />
               </div>
-              <h4
+              <span
                 className={` ${
                   locale === "ar"
                     ? "font-arabic text-2xl"
@@ -62,7 +62,7 @@ const WorkProcessSection: React.FC = () => {
                 }`}
               >
                 {t("two.tit")}
-              </h4>
+              </span>
               <p
                 className={` text-gray-500 mt-2 ${
                   locale === "ar" ? "ar-p" : "text-sm"
@@ -81,7 +81,8 @@ const WorkProcessSection: React.FC = () => {
                   height={60}
                 />
               </div>
-              <h4
+              <span
+                aria-label="Icon Button"
                 className={` ${
                   locale === "ar"
                     ? "font-arabic text-2xl"
@@ -89,7 +90,7 @@ const WorkProcessSection: React.FC = () => {
                 }`}
               >
                 {t("three.tit")}
-              </h4>
+              </span>
               <p
                 className={` text-gray-500 mt-2 ${
                   locale === "ar" ? "ar-p" : "text-sm"
@@ -108,7 +109,7 @@ const WorkProcessSection: React.FC = () => {
                   height={60}
                 />
               </div>
-              <h4
+              <span
                 className={` ${
                   locale === "ar"
                     ? "font-arabic text-2xl"
@@ -116,7 +117,7 @@ const WorkProcessSection: React.FC = () => {
                 }`}
               >
                 {t("four.tit")}
-              </h4>
+              </span>
               <p
                 className={` text-gray-500 mt-2 ${
                   locale === "ar" ? "ar-p" : "text-sm"
@@ -135,7 +136,7 @@ const WorkProcessSection: React.FC = () => {
                   height={60}
                 />
               </div>
-              <h4
+              <span
                 className={` ${
                   locale === "ar"
                     ? "font-arabic text-2xl"
@@ -143,7 +144,7 @@ const WorkProcessSection: React.FC = () => {
                 }`}
               >
                 {t("five.tit")}
-              </h4>
+              </span>
               <p
                 className={` text-gray-500 mt-2 ${
                   locale === "ar" ? "ar-p" : "text-sm"
@@ -162,7 +163,7 @@ const WorkProcessSection: React.FC = () => {
                   height={60}
                 />
               </div>
-              <h4
+              <span
                 className={` ${
                   locale === "ar"
                     ? "font-arabic text-2xl"
@@ -170,7 +171,7 @@ const WorkProcessSection: React.FC = () => {
                 }`}
               >
                 {t("six.tit")}
-              </h4>
+              </span>
               <p
                 className={` text-gray-500 mt-2 ${
                   locale === "ar" ? "ar-p" : "text-sm"

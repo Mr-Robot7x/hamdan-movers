@@ -100,7 +100,7 @@ const HealthcareSlider: React.FC = () => {
         {cardData
           .slice(0, cardData.length - visibleSlides + 1)
           .map((_, index) => (
-            <button
+            <span
               key={index}
               className={`w-3 h-3 rounded-full ${
                 currentSlide === index ? "bg-black" : "bg-gray-400"
@@ -109,7 +109,7 @@ const HealthcareSlider: React.FC = () => {
                 setAutoScroll(false); // Pause auto-scroll when clicking on pagination
                 setCurrentSlide(index);
               }}
-            ></button>
+            ></span>
           ))}
       </div>
     </div>
