@@ -51,7 +51,7 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <button
-      className={`inline-flex transition-all items-center justify-center whitespace-nowrap font-medium disabled:pointer-events-none disabled:opacity-50 font-poppins ${variantClasses} ${sizeClasses} ${className}`}
+      className={`font-poppins inline-flex transition-all items-center justify-center whitespace-nowrap font-medium disabled:pointer-events-none disabled:opacity-50 ${variantClasses} ${sizeClasses} ${className}`}
       {...props}
     >
       {children}

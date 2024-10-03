@@ -125,7 +125,6 @@ function Navbar() {
             <Image
               src={logo}
               fill
-              placeholder="blur"
               priority
               sizes="100"
               className=" object-contain absolute"
