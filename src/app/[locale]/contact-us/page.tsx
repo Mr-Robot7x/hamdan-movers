@@ -1,19 +1,30 @@
 import Footer from "@/components/Home/Footer";
 import Navbar from "@/components/Navbar";
 import ContactUs from "@/components/ContactForm";
+import { useLocale, useTranslations } from "next-intl";
 function ContactUsPage() {
+  const locale = useLocale();
+  const t = useTranslations("contact-p");
   return (
     <>
       <Navbar />
       <div className="w-full flex flex-col items-center justify-center gap-y-16">
         <div className="w-full md:w-11/12 md:mt-[160px] mt-36">
           <div className="flex items-center w-full flex-col">
-            <h1 className="text-center mb-3 font-medium text-[60px]">
-              Contact Us
+            <h1
+              className={`text-center mb-3 text-[60px] ${
+                locale === "ar" ? "font-arabic font-bold" : "font-medium"
+              }`}
+            >
+              {t("title")}
             </h1>
-            <h2 className="text-center md:mt-0 mt-3">
+            <h2
+              className={`text-center ${
+                locale === "ar" ? "mt-3 font-arabic" : "md:mt-0 mt-3"
+              }`}
+            >
               {" "}
-              To Make Your Move Meaningful
+              {t("sub")}
             </h2>
           </div>
 

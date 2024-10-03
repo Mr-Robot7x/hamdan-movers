@@ -22,10 +22,10 @@ function HeroSection() {
       >
         <div className="">
           <h1
-            className={`pb-2 ${
+            className={`pb-2 font-arabic${
               locale === "ar"
-                ? "leading-[53px] md:text-[55px] text-[50px] text-right font-bold"
-                : "leading-[53px] md:text-[50px] text-[45px]"
+                ? " md:text-[55px] text-right font-bold"
+                : "md:text-[50px]"
             }`}
           >
             {t("headingTitle")}
@@ -61,8 +61,8 @@ function HeroSection() {
               locale === "ar" ? "mt-10" : "mt-6"
             }`}
           >
-            <div className="bg-gradient-to-br from-white via-white to-[#ff5e002d] rounded-2xl p-4">
-              <div className="w-14 mx-auto mb-4 h-14 rounded-full relative">
+            <div className="bg-gradient-to-br shadow-md shadow-neutral-100 from-white via-white to-[#ff5e0015] rounded-2xl p-4">
+              <div className="w-11 mx-auto mb-4 h-11 rounded-full relative">
                 <Image
                   alt="800+ clients reviews"
                   src={client}
@@ -75,8 +75,8 @@ function HeroSection() {
                 {t("box22")}
               </h3>
             </div>
-            <div className="bg-gradient-to-br from-white via-white to-[#ff5e002d] rounded-2xl p-4">
-              <div className="w-14 mx-auto bg-red-50 mb-4 h-14 rounded-full relative">
+            <div className="bg-gradient-to-br shadow-md shadow-neutral-100 from-white via-white to-[#ff5e0015] rounded-2xl p-4">
+              <div className="w-11 mx-auto mb-4 h-11 rounded-full relative">
                 <Image
                   alt="24 hours support"
                   src={hours}
@@ -95,7 +95,7 @@ function HeroSection() {
         <div className="flex justify-center">
           <form
             dir=""
-            className="bg-white md:p-4 p-3 shadow-2xl shadow-black/10 rounded-3xl md:w-[85%] w-full  flex items-center justify-center flex-col"
+            className="bg-white md:p-4 p-3 shadow-lg shadow-black/5 rounded-3xl md:w-[85%] w-full  flex items-center justify-center flex-col"
           >
             <h3 className="text-center mb-6 mt-4">{t("form-h")}</h3>
             <input

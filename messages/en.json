@@ -730,5 +730,25 @@
       "key1": "Residential and Commercial Moving in Ajman",
       "key2": "Easily Available In Ajman"
     }
+  },
+  "about us": {
+    "title": "About Us",
+    "sub": "Professional Moving Solutions for Dubai, Sharjah, and Ajman Residents.",
+    "desc": "We are trusted movers in Dubai for safe and reliable moving services. Whether it's a local or international move, we handle everything from cars to pianos with care, ensuring your belongings arrive on time and without damage",
+    "key1": "Professional team for efficient packing",
+    "key2": "Trusted by clients in Dubai, Sharjah, Ajman",
+    "key3": "Dedicated to quality service delivery",
+    "key4": "Focus on customer satisfaction",
+    "key5": "Corporate relocations and IT equipment moving",
+    "owner": {
+      "title": "About The Owner",
+      "name": "Ahmad Hussain",
+      "sub": "(CEO at Hamdan Movers and Packer)",
+      "desc": "As a owner of Hamdan Movers and Packer, My first duty is to provide seamless moving and logistics services that exceed customer expectations. My aims is to simplify the moving process, making it stress-free and efficient for every client. Our vision is to be the go-to moving and logistics partner in the UAE, recognized for our reliability, professionalism, and customer-centric approach."
+    }
+  },
+  "contact-p": {
+    "title": "Contact Us",
+    "sub": "To Make Your Move Meaningful"
   }
 }

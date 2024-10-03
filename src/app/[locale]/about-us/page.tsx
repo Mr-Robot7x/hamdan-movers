@@ -11,7 +11,10 @@ import {
 } from "@tabler/icons-react";
 import WhyChooseUs from "@/components/Home/WhyChooseUs";
 import TestimonialSection from "@/components/Testimonials";
+import { useLocale, useTranslations } from "next-intl";
 const AboutUsSection = () => {
+  const t = useTranslations("about us");
+  const locale = useLocale();
   return (
     <>
       <Navbar />
@@ -19,55 +22,93 @@ const AboutUsSection = () => {
       <div className="w-full flex flex-col items-center justify-center gap-y-16">
         <div className="w-full md:w-11/12 md:mt-[160px] mt-36">
           <div className="w-full">
-            <h1 className="font-medium md:text-[70px] text-[60px] border-b-[2px] pb-6 border-black">
-              About Us
+            <h1
+              className={`md:text-[70px] text-[60px] border-b-[2px] pb-6 border-black ${
+                locale === "ar"
+                  ? "font-bold font-arabic text-right"
+                  : "font-medium"
+              }`}
+            >
+              {t("title")}
             </h1>
-            <div className="w-full grid md:grid-cols-2 grid-cols-1 md:gap-x-4 gap-y-9 md:mt-16 mt-10 md:ml-12">
+            <div
+              dir={locale === "ar" ? "rtl" : "ltr"}
+              className={`w-full grid md:grid-cols-2 grid-cols-1 md:gap-x-4 gap-y-9 md:mt-16 mt-10 ${
+                locale === "ar" ? "md:mr-12" : "md:ml-12"
+              }`}
+            >
               <div className="min-h-32">
-                <h2 className="font-poppins font-normal md:leading-[50px] leading-10">
-                  Professional Moving Solutions for Dubai, Sharjah, and Ajman
-                  Residents.
+                <h2
+                  className={`font-normal md:leading-[50px] leading-10 ${
+                    locale === "ar" ? "font-arabic" : "font-poppins"
+                  }`}
+                >
+                  {t("sub")}
                 </h2>
                 <p
                   style={{
-                    fontStyle: "italic",
+                    fontStyle: `${locale === "ar" ? "none" : "italic"}`,
                   }}
-                  className="mt-5 text-[19px] leading-7"
+                  className={`mt-5 text-[19px] leading-7 ${
+                    locale === "ar" ? "ar-p" : ""
+                  }`}
                 >
-                  We are trusted movers in Dubai for safe and reliable moving
-                  services. Whether it&apos;s a local or international move, we
-                  handle everything from cars to pianos with care, ensuring your
-                  belongings arrive on time and without damage
+                  {t("desc")}
                 </p>
                 <div className="mt-5 flex flex-col gap-y-2">
                   <div className="">
-                    <p className="font-medium md:text-[19px] flex gap-x-1 text-[17px] text-wrap">
-                      <span className="text-[#FF5F00]">-</span> Professional
-                      team for efficient packing
+                    <p
+                      className={`flex gap-x-1 text-wrap ${
+                        locale === "ar"
+                          ? " font-bold ar-p"
+                          : "text-[17px] font-medium md:text-[19px]"
+                      }`}
+                    >
+                      <span className="text-[#FF5F00]">-</span> {t("key1")}
                     </p>
                   </div>
                   <div className="">
-                    <p className="font-medium md:text-[19px] flex gap-x-1 text-[17px] text-wrap">
-                      <span className="text-[#FF5F00]">-</span> Trusted by
-                      clients in Dubai, Sharjah, Ajman
+                    <p
+                      className={`flex gap-x-1 text-wrap ${
+                        locale === "ar"
+                          ? " font-bold ar-p"
+                          : "text-[17px] font-medium md:text-[19px]"
+                      }`}
+                    >
+                      <span className="text-[#FF5F00]">-</span> {t("key2")}
                     </p>
                   </div>
                   <div className="">
-                    <p className="font-medium md:text-[19px] flex gap-x-1 text-[17px] text-wrap">
-                      <span className="text-[#FF5F00]">-</span> Dedicated to
-                      quality service delivery
+                    <p
+                      className={`flex gap-x-1 text-wrap ${
+                        locale === "ar"
+                          ? " font-bold ar-p"
+                          : "text-[17px] font-medium md:text-[19px]"
+                      }`}
+                    >
+                      <span className="text-[#FF5F00]">-</span> {t("key3")}
                     </p>
                   </div>
                   <div className="">
-                    <p className="font-medium md:text-[19px] flex gap-x-1 text-[17px] text-wrap">
-                      <span className="text-[#FF5F00]">-</span> Focus on
-                      customer satisfaction
+                    <p
+                      className={`flex gap-x-1 text-wrap ${
+                        locale === "ar"
+                          ? " font-bold ar-p"
+                          : "text-[17px] font-medium md:text-[19px]"
+                      }`}
+                    >
+                      <span className="text-[#FF5F00]">-</span> {t("key4")}
                     </p>
                   </div>
                   <div className="">
-                    <p className="font-medium md:text-[19px] flex gap-x-1 text-[17px] text-wrap">
-                      <span className="text-[#FF5F00]">-</span> Corporate
-                      relocations and IT equipment moving
+                    <p
+                      className={`flex gap-x-1 text-wrap ${
+                        locale === "ar"
+                          ? " font-bold ar-p"
+                          : "text-[17px] font-medium md:text-[19px]"
+                      }`}
+                    >
+                      <span className="text-[#FF5F00]">-</span> {t("key5")}
                     </p>
                   </div>
                 </div>
@@ -88,8 +129,12 @@ const AboutUsSection = () => {
         </div>
 
         <div className="mt-16 w-full md:w-11/12  min-h-40">
-          <h2 className="text-center md:text-[55px] text-[50px] leading-[45px]">
-            About The Owner
+          <h2
+            className={`text-center md:text-[55px] text-[50px] leading-[45px] ${
+              locale === "ar" ? " font-bold font-arabic" : ""
+            }`}
+          >
+            {t("owner.title")}
           </h2>
           <div className="w-full grid md:grid-cols-2 grid-cols-1 mt-14 md:gap-0 gap-y-16 items-center">
             <div className="min-h-32  flex justify-center">
@@ -104,20 +149,26 @@ const AboutUsSection = () => {
               </div>
             </div>
             <div className="min-h-32 md:mt-3">
-              <h3 className="text-[40px] font-poppins font-normal md:text-start text-center">
-                Ahmad Hussain
+              <h3
+                className={`text-[40px] md:text-start text-center ${
+                  locale === "ar"
+                    ? "font-arabic font-bold mb-5"
+                    : " font-poppins font-normal"
+                }`}
+              >
+                {t("owner.name")}
               </h3>
               <p className="gr font-light mt-2 md:text-start text-center">
-                (CEO at Hamdan Movers and Packer)
+                {t("owner.sub")}
               </p>
-              <p className="mt-5 md:text-[18px] text-[16px] md:leading-7">
-                As a owner of Hamdan Movers and Packer, My first duty is to
-                provide seamless moving and logistics services that exceed
-                customer expectations. My aims is to simplify the moving
-                process, making it stress-free and efficient for every client.
-                Our vision is to be the go-to moving and logistics partner in
-                the UAE, recognized for our reliability, professionalism, and
-                customer-centric approach.
+              <p
+                className={`mt-5 ${
+                  locale === "ar"
+                    ? "ar-p"
+                    : " md:text-[18px] text-[16px] md:leading-7"
+                }`}
+              >
+                {t("owner.desc")}
               </p>
               <div className="w-full flex gap-x-2 mt-3">
                 <IconBrandFacebook className="border p-1 rounded-2xl w-12 h-12 text-[#023246] hover:bg-[#023246] hover:text-white transition-colors" />

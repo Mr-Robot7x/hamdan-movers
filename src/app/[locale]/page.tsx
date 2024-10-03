@@ -1,4 +1,3 @@
-import ContactUs from "@/components/ContactForm";
 import FAQs from "@/components/FAQs";
 import BrandingContent from "@/components/Home/BrandingContent";
 import Footer from "@/components/Home/Footer";
@@ -29,10 +28,8 @@ function page() {
         <PickUpRentalServices />
         <Locations />
         <WorkProcessSection />
-        <PricingList />
-
+        <PricingList isHome={true} />
         <TestimonialSection />
-        <ContactUs />
         <FAQs />
       </div>
 

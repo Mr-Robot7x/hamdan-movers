@@ -5,7 +5,13 @@ import PricingTable from "./PricingTable";
 import { Button } from "./ui/button";
 import { Link } from "@/i18n/routing";
 import { useLocale, useTranslations } from "next-intl";
-function PricingList({ city }: { city?: string }) {
+function PricingList({
+  city,
+  isHome = false,
+}: {
+  city?: string;
+  isHome?: boolean;
+}) {
   const t = useTranslations("pricingContent");
   const b = useTranslations("buttons");
   const c = useTranslations("content");
@@ -161,96 +167,100 @@ function PricingList({ city }: { city?: string }) {
               <PricingTable />
             </div>
           </div>
-          <div className="md:mt-16 mt-10 font-poppins">
-            <h2 className={`${locale === "ar" ? "font-arabic font-bold" : ""}`}>
-              {c("title")} {city ? city : "UAE"}
-            </h2>
-            <p className={`${locale === "ar" ? "ar-p" : ""} my-4`}>
-              {c("desc1")} {city ? city : "UAE"}, {c("desc2")}
-            </p>
-            <h3
-              className={
-                locale === "ar" ? "font-arabic text-2xl" : "font-poppins"
-              }
-            >
-              {c("sub1")}
-            </h3>
-            <p className={`${locale === "ar" ? "ar-p" : ""} mt-2`}>
-              {c("sub-desc1")}
-            </p>
-            <h3
-              className={`${
-                locale === "ar" ? "font-arabic text-2xl" : "font-poppins"
-              } mt-3`}
-            >
-              {c("sub2")}
-            </h3>
-            <p className={`${locale === "ar" ? "ar-p" : ""} mt-2`}>
-              {c("sub-desc2")}
-            </p>
-            <h3
-              className={`${
-                locale === "ar" ? "font-arabic text-3xl" : "font-poppins"
-              } mt-2`}
-            >
-              {c("sub2-sub-title")}
-            </h3>
-            <ul
-              style={{
-                listStyleType: "circle",
-              }}
-              className={`my-4 flex flex-col gap-y-1 ${
-                locale === "ar" ? "mr-5" : "ml-5"
-              }`}
-            >
-              {lis.map((li, i) => (
-                <li className={locale === "ar" ? "ar-p gr" : ""} key={i}>
-                  {li.title} : {li.desc}
-                </li>
-              ))}
-            </ul>
-            <h3
-              className={`${
-                locale === "ar" ? "font-arabic text-3xl" : "font-poppins"
-              } mt-2`}
-            >
-              {c("sub2-sub-title2")}
-            </h3>
-            <ul
-              style={{
-                listStyleType: "circle",
-              }}
-              className={`my-4 flex flex-col gap-y-1 ${
-                locale === "ar" ? "mr-5" : "ml-5"
-              }`}
-            >
-              {lis2.map((li, i) => (
-                <li className={locale === "ar" ? "ar-p gr" : ""} key={i}>
-                  {li.title} : {li.desc}
-                </li>
-              ))}
-            </ul>
-            <h3
-              className={`mt-3 ${
-                locale === "ar" ? "font-arabic text-2xl" : "font-poppins"
-              }`}
-            >
-              {c("sub3")}
-            </h3>
-            <p className={`${locale === "ar" ? "ar-p" : ""} mt-2`}>
-              {c("sub-desc3-1")} {city ? city : "UAE"} {c("sub-desc3-2")}
-            </p>
-            <h3
-              className={`mt-3 ${
-                locale === "ar" ? "font-arabic text-2xl" : "font-poppins"
-              }`}
-            >
-              {c("sub4")}
-            </h3>
-            <p className={`${locale === "ar" ? "ar-p" : ""} mt-2`}>
-              {c("sub-desc4")}
-            </p>
-          </div>
+          {!isHome && (
+            <div className="md:mt-16 mt-10 font-poppins">
+              <h2
+                className={`${locale === "ar" ? "font-arabic font-bold" : ""}`}
+              >
+                {c("title")} {city ? city : "UAE"}
+              </h2>
+              <p className={`${locale === "ar" ? "ar-p" : ""} my-4`}>
+                {c("desc1")} {city ? city : "UAE"}, {c("desc2")}
+              </p>
+              <h3
+                className={
+                  locale === "ar" ? "font-arabic text-2xl" : "font-poppins"
+                }
+              >
+                {c("sub1")}
+              </h3>
+              <p className={`${locale === "ar" ? "ar-p" : ""} mt-2`}>
+                {c("sub-desc1")}
+              </p>
+              <h3
+                className={`${
+                  locale === "ar" ? "font-arabic text-2xl" : "font-poppins"
+                } mt-3`}
+              >
+                {c("sub2")}
+              </h3>
+              <p className={`${locale === "ar" ? "ar-p" : ""} mt-2`}>
+                {c("sub-desc2")}
+              </p>
+              <h3
+                className={`${
+                  locale === "ar" ? "font-arabic text-3xl" : "font-poppins"
+                } mt-2`}
+              >
+                {c("sub2-sub-title")}
+              </h3>
+              <ul
+                style={{
+                  listStyleType: "circle",
+                }}
+                className={`my-4 flex flex-col gap-y-1 ${
+                  locale === "ar" ? "mr-5" : "ml-5"
+                }`}
+              >
+                {lis.map((li, i) => (
+                  <li className={locale === "ar" ? "ar-p gr" : ""} key={i}>
+                    {li.title} : {li.desc}
+                  </li>
+                ))}
+              </ul>
+              <h3
+                className={`${
+                  locale === "ar" ? "font-arabic text-3xl" : "font-poppins"
+                } mt-2`}
+              >
+                {c("sub2-sub-title2")}
+              </h3>
+              <ul
+                style={{
+                  listStyleType: "circle",
+                }}
+                className={`my-4 flex flex-col gap-y-1 ${
+                  locale === "ar" ? "mr-5" : "ml-5"
+                }`}
+              >
+                {lis2.map((li, i) => (
+                  <li className={locale === "ar" ? "ar-p gr" : ""} key={i}>
+                    {li.title} : {li.desc}
+                  </li>
+                ))}
+              </ul>
+              <h3
+                className={`mt-3 ${
+                  locale === "ar" ? "font-arabic text-2xl" : "font-poppins"
+                }`}
+              >
+                {c("sub3")}
+              </h3>
+              <p className={`${locale === "ar" ? "ar-p" : ""} mt-2`}>
+                {c("sub-desc3-1")} {city ? city : "UAE"} {c("sub-desc3-2")}
+              </p>
+              <h3
+                className={`mt-3 ${
+                  locale === "ar" ? "font-arabic text-2xl" : "font-poppins"
+                }`}
+              >
+                {c("sub4")}
+              </h3>
+              <p className={`${locale === "ar" ? "ar-p" : ""} mt-2`}>
+                {c("sub-desc4")}
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </div>
