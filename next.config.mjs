@@ -4,7 +4,7 @@ import withBundleAnalyzer from "@next/bundle-analyzer";
 const withNextIntl = createNextIntlPlugin();
 
 const bundleAnalyzer = withBundleAnalyzer({
-  enabled: process.env.ANALYZE === "false",
+  enabled: process.env.ANALYZE === "true",
   openAnalyzer: false,
 });
 
