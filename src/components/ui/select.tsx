@@ -10,12 +10,14 @@ interface CustomSelectProps {
   options: Option[];
   placeholder?: string;
   onChange: (selectedOption: Option) => void;
+  className?: string;
 }
 
 const CustomSelect: React.FC<CustomSelectProps> = ({
   options,
   placeholder = "Select an option",
   onChange,
+  className,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<Option | null>(null);
@@ -31,9 +33,9 @@ const CustomSelect: React.FC<CustomSelectProps> = ({
   };
 
   return (
-    <div className="relative w-64">
+    <div className={`relative w-full `}>
       <div
-        className="flex justify-between items-center border border-gray-300 rounded-lg p-3 cursor-pointer bg-white"
+        className={`flex justify-between items-center border border-gray-300 p-3 cursor-pointer ${className}`}
         onClick={toggleDropdown}
       >
         <span>{selectedOption ? selectedOption.label : placeholder}</span>

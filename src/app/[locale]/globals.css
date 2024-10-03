@@ -56,7 +56,11 @@ ol.custom-symbol li::before {
     margin-right: 10px;
     /* Space between symbol and text */
 }
-
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 h1 {
 
     @apply text-[#023246] md:text-[45px] font-medium text-[35px] md:leading-[60px] leading-[42px]

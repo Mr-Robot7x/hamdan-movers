@@ -1,6 +1,6 @@
 "use client";
 import { Link } from "@/i18n/routing";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import { IconMapPin, IconMenu2, IconPhone } from "@tabler/icons-react";
 import { motion } from "framer-motion";
@@ -99,13 +99,28 @@ function Navbar() {
   const [infoDetailOpen, setInfoDetailOpen] = useState(false);
   const [subServicesMenu, setsubServicesMenu] = useState(false);
   const [sideMenu, setSideMenu] = useState(false);
-
+  const [navAni, setNavAni] = useState(false);
   const [location, setlocation] = useState(false);
   const [rental, setrental] = useState(false);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      document.addEventListener("scroll", () => {
+        if (window.scrollY > 30) {
+          setNavAni(true);
+        } else {
+          setNavAni(false);
+        }
+      });
+    }
+  }, []);
   return (
     <>
       <header className="w-full fixed left-0 flex flex-col items-center justify-center z-[200] font-poppins">
-        <nav className="border flex relative justify-between items-center md:px-4 px-2 md:w-11/12 bg-white my-3 md:mt-1 mt-0 md:h-[82px] h-[68px] shadow-2xl shadow-neutral-200/80 md:rounded-full rounded-none w-full">
+        <nav
+          className={`border flex relative justify-between items-center md:px-4 px-2 md:w-11/12 bg-white my-3 ${
+            !navAni ? "md:mt-5" : "shadow-lg shadow-neutral-100"
+          } mt-0 md:h-[82px] h-[68px] md:rounded-full rounded-none w-full transition-all`}
+        >
           <div className="md:w-36 w-[100px] h-14 relative md:mr-0 mr-2">
             <Image
               src={logo}

@@ -1,50 +1,30 @@
+"use client";
 import Image from "next/image";
 import React from "react";
-import heroImage from "../../../public/images/main-section-image.jpg";
 import { Button } from "../ui/button";
-import { useLocale, useTranslations } from "next-intl";
+import client from "../../../public/images/800+-clients-reviews.png";
+import hours from "../../../public/images/24-hours-icon.png";
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
+import CustomSelect from "../ui/select";
+import { SendIcon } from "lucide-react";
 function HeroSection() {
-  const locale = useLocale();
-  const t = useTranslations("heroSection");
+  // const locale = useLocale();
+  // const t = useTranslations("heroSection");
   const b = useTranslations("buttons");
   return (
-    <div
-      dir={locale === "ar" ? "rtl" : "ltr"}
-      className="relative md:w-11/12 md:mt-40 mt-32"
-    >
-      <h1
-        className={`md:text-center text-start ${
-          locale === "ar"
-            ? "md:text-[65px] tracking-normal font-arabic font-bold  leading-[58px] text-[55px]"
-            : "leading-[53px] text-[50px] md:text-[60px]"
-        }  md:pb-8 pb-2`}
-      >
-        {t("headingTitle")}
-      </h1>
-      <div
-        className={`${
-          locale === "ar" ? "md:pr-16" : "md:pl-16"
-        } md:mt-10 mt-6 w-full grid md:grid-cols-2 grid-cols-1 md:gap-x-0 gap-y-8`}
-      >
-        <div
-          className={`
-            ${locale === "ar" ? "md:pl-10" : "md:pr-10"}
-           md:mb-0 pb-7 md:mt-2 md:border-none border-b border-neutral-400`}
-        >
-          <h2
-            className={`${
-              locale === "ar"
-                ? "md:leading-[60px] -mt-2 tracking-normal font-arabic leading-[45px]"
-                : "font-poppins font-normal"
-            }`}
-          >
-            {t("SubTitle")}
+    <section id="home" className=" md:mt-36 mt-32 w-full flex justify-center">
+      <div className="md:ml-7 w-full md:w-11/12  grid md:grid-cols-2 grid-cols-1 md:gap-x-4 gap-y-9 items-center">
+        <div className="">
+          <h1 className="md:leading-[53px]">Hamdan Movers and Packers</h1>
+          <h2 className="font-poppins md:text-[28px] text-[24px] mt-4 mb-2 font-light md:leading-8 leading-7">
+            UAE&apos;s Best Moving and Packing Company
           </h2>
-          <p className={`${locale === "ar" ? "mt-3 ar-p" : "mt-3"}`}>
-            {t("description")}
+          <p className="text-[18px] font-light">
+            Hamdan Movers and Packers is serving you with the top quality of
+            moving solutions for the 6 years in UAE.
           </p>
-          <div className="w-full flex md:gap-x-3 md:flex-row flex-col gap-y-3 mt-4">
+          <div className="w-full flex md:gap-x-3 md:flex-row flex-col gap-y-3 mt-6">
             <Link aria-label="call now" href={"tel:tel:+971566651978"}>
               <Button className="">
                 {b("call now")} : <span dir="ltr">+971 56 6651978</span>
@@ -54,24 +34,94 @@ function HeroSection() {
               <Button variant={"secondary"}>{b("Our Services")}</Button>
             </Link>
           </div>
-        </div>
-        <div
-          className={`${
-            locale === "ar" ? "md:border-r" : "md:border-l"
-          } flex md:border-neutral-400 justify-center`}
-        >
-          <div className="md:w-96 w-[330px] bg-gradient-to-t from-slate-50 to-slate-100 h-80 md:h-96 relative">
-            <Image
-              src={heroImage}
-              alt="Best Moving Company UAE | Hamdan Mover"
-              className="object-cover absolute"
-              fill
-              placeholder="blur"
-            />
+          <div className="w-full mt-6 grid md:grid-cols-2 grid-cols-1 gap-6 text-center">
+            <div className="bg-gradient-to-br from-white via-white to-[#ff5e002d] rounded-2xl p-4">
+              <div className="w-14 mx-auto mb-4 h-14 rounded-full relative">
+                <Image
+                  alt="800+ clients reviews"
+                  src={client}
+                  fill
+                  className="object-contain absolute"
+                />
+              </div>
+              <h3>
+                800+ <br />
+                Clients Reviews
+              </h3>
+            </div>
+            <div className="bg-gradient-to-br from-white via-white to-[#ff5e002d] rounded-2xl p-4">
+              <div className="w-14 mx-auto bg-red-50 mb-4 h-14 rounded-full relative">
+                <Image
+                  alt="24 hours support"
+                  src={hours}
+                  fill
+                  className="object-contain absolute"
+                />
+              </div>
+              <h3>
+                24/7 <br /> Customer Support
+              </h3>
+            </div>
           </div>
         </div>
+
+        <div className=" flex justify-center">
+          <form className="bg-white md:p-4 p-3 shadow-2xl shadow-black/10 rounded-3xl md:w-11/12 w-full  flex items-center justify-center flex-col">
+            <h3 className="text-center mb-6 mt-4">
+              Let’s Make Your Move Easy!
+            </h3>
+            <input
+              name="name"
+              placeholder="Your Name"
+              type="text"
+              className="bg-gray-50 w-full mt-3 p-4 outline-none rounded-3xl focus:shadow-md transition-shadow"
+            />
+            <input
+              name="phone"
+              placeholder="Phone Number"
+              type="number"
+              className="bg-gray-50 w-full mt-3 p-4 outline-none rounded-3xl focus:shadow-md transition-shadow"
+            />
+            <input
+              name="name"
+              placeholder="Your Address"
+              type="text"
+              className="bg-gray-50 w-full mt-3 p-4 outline-none rounded-3xl focus:shadow-md transition-shadow"
+            />
+            <CustomSelect
+              className="border-none bg-gray-50 mt-3 p-4 rounded-3xl focus:shadow-md transition-shadow"
+              options={[
+                {
+                  label: "Moving",
+                  value: "Moving",
+                },
+                {
+                  label: "Packaging",
+                  value: "Packaging",
+                },
+                {
+                  label: "Delivery",
+                  value: "Delivery",
+                },
+              ]}
+              onChange={(option) => {
+                console.log(option);
+              }}
+              placeholder="Service"
+            />
+            <textarea
+              className="w-full h-28 bg-gray-50 mt-3 p-4 outline-none rounded-3xl focus:shadow-md transition-shadow"
+              placeholder="your message"
+              name="message"
+              id=""
+            ></textarea>
+            <Button type="submit" className="mt-3">
+              Send Now <SendIcon className="ml-2 w-6 h-6" strokeWidth={1.5} />
+            </Button>
+          </form>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 
