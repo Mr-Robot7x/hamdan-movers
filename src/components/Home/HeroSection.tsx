@@ -22,9 +22,9 @@ function HeroSection() {
       >
         <div className="">
           <h1
-            className={`pb-2 font-arabic${
+            className={`pb-2 ${
               locale === "ar"
-                ? " md:text-[55px] text-right font-bold"
+                ? "md:text-[55px] text-right font-bold"
                 : "md:text-[50px]"
             }`}
           >
