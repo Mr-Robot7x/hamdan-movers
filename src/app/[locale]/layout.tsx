@@ -26,9 +26,6 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Hamdan Mover and Packer",
-  description:
-    "Hamdan Movers and Packers has been providing top-quality moving services in the UAE for over 6 years. We offer local and long-distance moving, packing, storage, and specialty relocation solutions. Our experienced team ensures a smooth, hassle-free move for homes, offices, and commercial spaces. Move with ease and convenience with Hamdan Movers!",
   robots: {
     index: true,
     follow: true,

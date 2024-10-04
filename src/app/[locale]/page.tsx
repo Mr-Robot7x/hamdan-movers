@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     url: process.env.PUBLIC_URL,
     siteName: "Hamdan Movers",
     images: {
-      url: `${process.env.PUBLIC_URL}/hamdan-mover-logo.png`,
+      url: `${process.env.PUBLIC_URL}/images/hamdan-mover-logo.png`,
       alt: "Hamdan Movers Logo",
     },
     type: "website",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     description:
       "Are you searching for reliable movers in Dubai? Look no further than Hamdan Movers. Our professional moving and packing services are tailored to your specific needs. As the best movers and packers in Dubai, we ensure a seamless and cost-effective relocation experience. Contact us now for a free quote and let our expert team handle your move!",
     site: process.env.PUBLIC_URL,
-    images: `${process.env.PUBLIC_URL}/hamdan-mover-logo.png`,
+    images: `${process.env.PUBLIC_URL}/images/hamdan-mover-logo.png`,
     card: "summary_large_image",
     creator: "@hamdanmovers",
   },
