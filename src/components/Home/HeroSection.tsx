@@ -22,8 +22,8 @@ function HeroSection() {
       >
         <div className="">
           <h1
-            className={`pb-2 ${
-              locale === "ar" ? "md:text-[55px] text-right font-bold" : ""
+            className={`${
+              locale === "ar" ? "md:text-[55px] text-right font-bold pb-2" : ""
             }`}
           >
             {t("headingTitle")}
