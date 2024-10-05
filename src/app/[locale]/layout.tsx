@@ -1,4 +1,3 @@
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { Poppins, Amiri, Playfair_Display } from "next/font/google";
@@ -60,7 +59,6 @@ export default async function RootLayout({
           </main>
           <WhatsAppButton />
         </NextIntlClientProvider>
-        <SpeedInsights />
       </body>
     </html>
   );
