@@ -21,9 +21,51 @@ import specialtyImg from "../../../../../public/images/Specialty.jpg";
 import Image from "next/image";
 import TestimonialSection from "@/components/Testimonials";
 import { useLocale, useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import { Metadata } from "next";
+
+interface Params {
+  params: {
+    locale: string;
+  };
+}
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  const locale = params.locale;
+  const t = await getTranslations({ locale, namespace: "meta-service" });
+
+  return {
+    title: "Professional Specialty Movers for Unique Items in the UAE",
+    description:
+      "Specialty moving requires expert care for fragile, valuable, or bulky items. Hamdan Movers ensures safe transport for everything from art to pianos with professional handling and the right equipment. Trust us to protect your valuables during the move",
+    alternates: {
+      canonical: `${process.env.PUBLIC_URL}/services/speciality-moving`,
+      languages: {
+        ar: `${process.env.PUBLIC_URL}/ar/services/speciality-moving`,
+        en: `${process.env.PUBLIC_URL}/en/services/speciality-moving`,
+      },
+    },
+    openGraph: {
+      title: t("title"),
+      description: t("desc"),
+      url: `${process.env.PUBLIC_URL}/services/speciality-moving`,
+      siteName: t("site-Info.name"),
+      locale: locale,
+      type: "website",
+      alternateLocale: ["ar", "en"],
+      countryName: t("site-Info.country"),
+      faxNumbers: ["+971566651978", "+971545019655", "+971503626685"],
+      phoneNumbers: ["+971566651978", "+971545019655", "+971503626685"],
+      images: {
+        url: `${process.env.PUBLIC_URL}/images/hamdan-mover-logo.png`,
+        alt: "Hamdan Movers Logo",
+      },
+    },
+  };
+}
+
 function SpecialityMovingService() {
   const p = useTranslations("service-process");
-  const t = useTranslations("storage");
+  const t = useTranslations("speciality");
   const locale = useLocale();
   return (
     <>

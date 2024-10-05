@@ -2,6 +2,48 @@ import Footer from "@/components/Home/Footer";
 import Navbar from "@/components/Navbar";
 import ContactUs from "@/components/ContactForm";
 import { useLocale, useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import { Metadata } from "next";
+
+interface Params {
+  params: {
+    locale: string;
+  };
+}
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  const locale = params.locale;
+  const t = await getTranslations({ locale, namespace: "meta-service" });
+
+  return {
+    title: "Contact Us | Hamdan Movers",
+    description:
+      "We're experts in helping people move in the UAE. Our team is made up of experienced professionals who know exactly what they're doing. We have all the latest equipment and technology to make your move as smooth as possible. We value your feedback and are always looking for ways to improve our services. Trust us to handle your move with care and efficiency.",
+    alternates: {
+      canonical: `${process.env.PUBLIC_URL}/contact-us`,
+      languages: {
+        ar: `${process.env.PUBLIC_URL}/ar/contact-us`,
+        en: `${process.env.PUBLIC_URL}/en/contact-us`,
+      },
+    },
+    openGraph: {
+      title: t("title"),
+      description: t("desc"),
+      url: `${process.env.PUBLIC_URL}/contact-us`,
+      siteName: t("site-Info.name"),
+      locale: locale,
+      type: "website",
+      alternateLocale: ["ar", "en"],
+      countryName: t("site-Info.country"),
+      faxNumbers: ["+971566651978", "+971545019655", "+971503626685"],
+      phoneNumbers: ["+971566651978", "+971545019655", "+971503626685"],
+      images: {
+        url: `${process.env.PUBLIC_URL}/images/hamdan-mover-logo.png`,
+        alt: "Hamdan Movers Logo",
+      },
+    },
+  };
+}
+
 function ContactUsPage() {
   const locale = useLocale();
   const t = useTranslations("contact-p");

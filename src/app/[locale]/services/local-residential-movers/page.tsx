@@ -15,6 +15,48 @@ import moveIcon from "../../../../../public/images/safe-transportation.png";
 import settingIcon from "../../../../../public/images/home-setting-icon.png";
 import TestimonialSection from "@/components/Testimonials";
 import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import { Metadata } from "next";
+
+interface Params {
+  params: {
+    locale: string;
+  };
+}
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  const locale = params.locale;
+  const t = await getTranslations({ locale, namespace: "meta-service" });
+
+  return {
+    title:
+      "Local Moving Services in Dubai, UAE | Moving Services Near You - Hamdan Moverd",
+    description:
+      "Hamdan Movers & Packers helps you move easily within the UAE. We pack your things carefully, transport them safely, and unpack them at your new home. We can help with both local and international moves. Trust us for a stress-free relocation.",
+    alternates: {
+      canonical: `${process.env.PUBLIC_URL}/services/local-residential-movers`,
+      languages: {
+        ar: `${process.env.PUBLIC_URL}/ar/services/local-residential-movers`,
+        en: `${process.env.PUBLIC_URL}/en/services/local-residential-movers`,
+      },
+    },
+    openGraph: {
+      title: t("title"),
+      description: t("desc"),
+      url: `${process.env.PUBLIC_URL}/services/local-residential-movers`,
+      siteName: t("site-Info.name"),
+      locale: locale,
+      type: "website",
+      alternateLocale: ["ar", "en"],
+      countryName: t("site-Info.country"),
+      faxNumbers: ["+971566651978", "+971545019655", "+971503626685"],
+      phoneNumbers: ["+971566651978", "+971545019655", "+971503626685"],
+      images: {
+        url: `${process.env.PUBLIC_URL}/images/hamdan-mover-logo.png`,
+        alt: "Hamdan Movers Logo",
+      },
+    },
+  };
+}
 function LocalResidentailMovers() {
   const t = useTranslations("local");
   const p = useTranslations("service-process");

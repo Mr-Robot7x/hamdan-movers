@@ -212,7 +212,9 @@ function Navbar() {
             </ul>
           </div>
           <div className="flex gap-x-2 flex-row-reverse">
-            <Button className="md:block hidden">{b("contact-now")}</Button>
+            <Link href={"/contact-us"}>
+              <Button className="md:block hidden">{b("contact-now")}</Button>
+            </Link>
 
             <div className="md:hidden flex items-center justify-center px-2 md:py-[6px] py-0   rounded-md active:scale-[0.98] transition-all bg-[#FF5F00]">
               <IconMenu2
@@ -392,14 +394,12 @@ function Navbar() {
           <div className="mt-7 flex w-full justify-center">
             <Button size={"lg"}>Contact Now</Button>
           </div>
-          <Button
+
+          <X
             onClick={() => setSideMenu(false)}
-            className="absolute top-4 right-4"
-            variant={"secondary"}
-            size={"icon"}
-          >
-            <X />
-          </Button>
+            strokeWidth={1}
+            className="absolute cursor-pointer active:scale-95 transition-transform top-4 right-4 h-12 w-12 rounded-full bg-gray-50 p-2"
+          />
         </motion.div>
       ) : null}
     </>

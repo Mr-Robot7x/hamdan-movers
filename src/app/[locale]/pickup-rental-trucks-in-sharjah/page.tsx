@@ -14,6 +14,49 @@ import ContactUs from "@/components/ContactForm";
 import { PhoneForwardedIcon } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import TestimonialSection from "@/components/Testimonials";
+import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
+
+interface Params {
+  params: {
+    locale: string;
+  };
+}
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  const locale = params.locale;
+  const t = await getTranslations({ locale, namespace: "meta-service" });
+
+  return {
+    title:
+      "Cheap Pickup Truck Rentals for Business and Personal Use in Sharjah",
+    description:
+      "Looking for reliable pickup rental services in Sharjah? Look no further! We offer a versatile fleet of pickups to meet all your transportation needs. Whether you need to move goods, transport items, or handle logistics, our pickup trucks provide a hassle-free and efficient solution tailored for every task.",
+    alternates: {
+      canonical: `${process.env.PUBLIC_URL}/pickup-rental-trucks-in-sharjah`,
+      languages: {
+        ar: `${process.env.PUBLIC_URL}/ar/pickup-rental-trucks-in-sharjah`,
+        en: `${process.env.PUBLIC_URL}/en/pickup-rental-trucks-in-sharjah`,
+      },
+    },
+    openGraph: {
+      title: t("title"),
+      description: t("desc"),
+      url: `${process.env.PUBLIC_URL}/pickup-rental-trucks-in-sharjah`,
+      siteName: t("site-Info.name"),
+      locale: locale,
+      type: "website",
+      alternateLocale: ["ar", "en"],
+      countryName: t("site-Info.country"),
+      faxNumbers: ["+971566651978", "+971545019655", "+971503626685"],
+      phoneNumbers: ["+971566651978", "+971545019655", "+971503626685"],
+      images: {
+        url: `${process.env.PUBLIC_URL}/images/hamdan-mover-logo.png`,
+        alt: "Hamdan Movers Logo",
+      },
+    },
+  };
+}
+
 function PerServiceSec() {
   const locale = useLocale();
   const t = useTranslations("pickup-sharjah");

@@ -14,6 +14,48 @@ import ContactUs from "@/components/ContactForm";
 import { PhoneForwardedIcon } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import TestimonialSection from "@/components/Testimonials";
+import { getTranslations } from "next-intl/server";
+import { Metadata } from "next";
+
+interface Params {
+  params: {
+    locale: string;
+  };
+}
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  const locale = params.locale;
+  const t = await getTranslations({ locale, namespace: "meta-service" });
+
+  return {
+    title:
+      "Affordable Pickup Truck Rentals for Business and Personal Use in Dubai",
+    description:
+      "Searching for dependable pickup truck rental services in Dubai? Your solution is here! We provide a versatile fleet of pickup trucks to meet all your transportation needs. Whether it&lsquo;s moving goods, transporting items, or managing logistics, our pickups offer an efficient and hassle-free solution tailored to every job.",
+    alternates: {
+      canonical: `${process.env.PUBLIC_URL}/pickup-rental-trucks-in-dubai`,
+      languages: {
+        ar: `${process.env.PUBLIC_URL}/ar/pickup-rental-trucks-in-dubai`,
+        en: `${process.env.PUBLIC_URL}/en/pickup-rental-trucks-in-dubai`,
+      },
+    },
+    openGraph: {
+      title: t("title"),
+      description: t("desc"),
+      url: `${process.env.PUBLIC_URL}/pickup-rental-trucks-in-dubai`,
+      siteName: t("site-Info.name"),
+      locale: locale,
+      type: "website",
+      alternateLocale: ["ar", "en"],
+      countryName: t("site-Info.country"),
+      faxNumbers: ["+971566651978", "+971545019655", "+971503626685"],
+      phoneNumbers: ["+971566651978", "+971545019655", "+971503626685"],
+      images: {
+        url: `${process.env.PUBLIC_URL}/images/hamdan-mover-logo.png`,
+        alt: "Hamdan Movers Logo",
+      },
+    },
+  };
+}
 
 function PerServiceSec() {
   const locale = useLocale();

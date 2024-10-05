@@ -8,6 +8,7 @@ type ButtonVariant =
   | "ghost"
   | "link"
   | "light"
+  | "whatsapp"
   | "white";
 
 type ButtonSize = "default" | "sm" | "lg" | "icon";
@@ -28,6 +29,7 @@ const buttonVariants: Record<ButtonVariant, string> = {
   ghost: "hover:bg-accent hover:text-accent-foreground",
   link: "text-primary underline-offset-4 hover:underline",
   light: "bg-[#287094] text-white",
+  whatsapp: "bg-green-500",
   white:
     "bg-white text-[#023246] hover:bg-[#287094] hover:text-white hover:border-transparent",
 };

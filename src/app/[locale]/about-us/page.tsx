@@ -12,6 +12,48 @@ import {
 import WhyChooseUs from "@/components/Home/WhyChooseUs";
 import TestimonialSection from "@/components/Testimonials";
 import { useLocale, useTranslations } from "next-intl";
+import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
+
+interface Params {
+  params: {
+    locale: string;
+  };
+}
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  const locale = params.locale;
+  const t = await getTranslations({ locale, namespace: "meta-service" });
+
+  return {
+    title: "About Us | Hamdan Movers",
+    description:
+      "We are trusted movers in Dubai for safe and reliable moving services. Whether it's a local or international move, we handle everything from cars to pianos with care, ensuring your belongings arrive on time and without damage.",
+    alternates: {
+      canonical: `${process.env.PUBLIC_URL}/services-locations/about-us`,
+      languages: {
+        ar: `${process.env.PUBLIC_URL}/ar/services-locations/about-us`,
+        en: `${process.env.PUBLIC_URL}/en/services-locations/about-us`,
+      },
+    },
+    openGraph: {
+      title: t("title"),
+      description: t("desc"),
+      url: `${process.env.PUBLIC_URL}/services-locations/about-us`,
+      siteName: t("site-Info.name"),
+      locale: locale,
+      type: "website",
+      alternateLocale: ["ar", "en"],
+      countryName: t("site-Info.country"),
+      faxNumbers: ["+971566651978", "+971545019655", "+971503626685"],
+      phoneNumbers: ["+971566651978", "+971545019655", "+971503626685"],
+      images: {
+        url: `${process.env.PUBLIC_URL}/images/hamdan-mover-logo.png`,
+        alt: "Hamdan Movers Logo",
+      },
+    },
+  };
+}
+
 const AboutUsSection = () => {
   const t = useTranslations("about us");
   const locale = useLocale();

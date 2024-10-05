@@ -11,9 +11,50 @@ import truck3 from "../../../../public/images/pickup-rent-services-3.jpeg";
 import ServiceHire from "@/components/ServiceHire";
 import ContactUs from "@/components/ContactForm";
 
+interface Params {
+  params: {
+    locale: string;
+  };
+}
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  const locale = params.locale;
+  const t = await getTranslations({ locale, namespace: "meta-service" });
+
+  return {
+    title: "Cheap pickup rental services in Ajman",
+    description:
+      "Rent a 1.5 / 3 ton pickup truck for versatile, cost-effective transport of furniture, materials, and more. Enjoy convenience and reliability with well-maintained vehicles from a trusted provider in Ajman",
+    alternates: {
+      canonical: `${process.env.PUBLIC_URL}/pickup-rental-trucks-in-ajman`,
+      languages: {
+        ar: `${process.env.PUBLIC_URL}/ar/pickup-rental-trucks-in-ajman`,
+        en: `${process.env.PUBLIC_URL}/en/pickup-rental-trucks-in-ajman`,
+      },
+    },
+    openGraph: {
+      title: t("title"),
+      description: t("desc"),
+      url: `${process.env.PUBLIC_URL}/pickup-rental-trucks-in-ajman`,
+      siteName: t("site-Info.name"),
+      locale: locale,
+      type: "website",
+      alternateLocale: ["ar", "en"],
+      countryName: t("site-Info.country"),
+      faxNumbers: ["+971566651978", "+971545019655", "+971503626685"],
+      phoneNumbers: ["+971566651978", "+971545019655", "+971503626685"],
+      images: {
+        url: `${process.env.PUBLIC_URL}/images/hamdan-mover-logo.png`,
+        alt: "Hamdan Movers Logo",
+      },
+    },
+  };
+}
+
 import { PhoneForwardedIcon } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import TestimonialSection from "@/components/Testimonials";
+import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 function PerServiceSec() {
   const locale = useLocale();
   const t = useTranslations("pickup-ajman");

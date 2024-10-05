@@ -19,6 +19,49 @@ import commericalImg from "../../../../../public/images/commercial-storage.jpg";
 import Image from "next/image";
 import TestimonialSection from "@/components/Testimonials";
 import { useLocale, useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import { Metadata } from "next";
+
+interface Params {
+  params: {
+    locale: string;
+  };
+}
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  const locale = params.locale;
+  const t = await getTranslations({ locale, namespace: "meta-service" });
+
+  return {
+    title:
+      "Best Storage Units In Dubai, UAE | Short and Long-Term Options - Hamdan Movers",
+    description:
+      "Need secure, climate-controlled storage? Our clean, air-conditioned units protect your belongings from damage, whether for short or long-term storage. Ideal for moving, downsizing, or extra space, with 24/7 monitoring and easy access for peace of mind",
+    alternates: {
+      canonical: `${process.env.PUBLIC_URL}/services/storage-services`,
+      languages: {
+        ar: `${process.env.PUBLIC_URL}/ar/services/storage-services`,
+        en: `${process.env.PUBLIC_URL}/en/services/storage-services`,
+      },
+    },
+    openGraph: {
+      title: t("title"),
+      description: t("desc"),
+      url: `${process.env.PUBLIC_URL}/services/storage-services`,
+      siteName: t("site-Info.name"),
+      locale: locale,
+      type: "website",
+      alternateLocale: ["ar", "en"],
+      countryName: t("site-Info.country"),
+      faxNumbers: ["+971566651978", "+971545019655", "+971503626685"],
+      phoneNumbers: ["+971566651978", "+971545019655", "+971503626685"],
+      images: {
+        url: `${process.env.PUBLIC_URL}/images/hamdan-mover-logo.png`,
+        alt: "Hamdan Movers Logo",
+      },
+    },
+  };
+}
+
 function StorageServices() {
   const p = useTranslations("service-process");
   const t = useTranslations("storage");

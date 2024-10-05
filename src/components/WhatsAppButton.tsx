@@ -46,7 +46,8 @@ function WhatsAppButton() {
                   >
                     <Button
                       size={"sm"}
-                      className="bg-green-500 flex gap-x-1 items-center"
+                      variant="whatsapp"
+                      className="flex gap-x-1 text-white ts hover:bg-green-600 items-center"
                     >
                       <IconBrandWhatsapp className="w-7 h-7" /> WhatsApp
                     </Button>
@@ -70,7 +71,8 @@ function WhatsAppButton() {
                   >
                     <Button
                       size={"sm"}
-                      className="bg-green-500 flex gap-x-1 items-center"
+                      variant="whatsapp"
+                      className="flex gap-x-1 text-white ts hover:bg-green-600 items-center"
                     >
                       <IconBrandWhatsapp className="w-7 h-7" /> WhatsApp
                     </Button>

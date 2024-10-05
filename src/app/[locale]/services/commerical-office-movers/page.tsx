@@ -15,6 +15,49 @@ import moveIcon from "../../../../../public/images/safe-transportation.png";
 import settingIcon from "../../../../../public/images/home-setting-icon.png";
 import TestimonialSection from "@/components/Testimonials";
 import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import { Metadata } from "next";
+
+interface Params {
+  params: {
+    locale: string;
+  };
+}
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  const locale = params.locale;
+  const t = await getTranslations({ locale, namespace: "meta-service" });
+
+  return {
+    title:
+      "Commercial Moving Services in Dubai, UAE | Commercial Moving Services Near You - Hamdan Movers",
+    description:
+      "Hamdan Movers and Packers offer fully insured, 24/7 Office Moving Services in UAE. We provide customized relocation solutions with GPS-tracked fleets and handle Certificate of Insurance at no extra cost. With flexible scheduling and expertise in UAE’s unique moving challenges, we ensure a seamless, stress-free office move.",
+    alternates: {
+      canonical: `${process.env.PUBLIC_URL}/services/commerical-office-movers`,
+      languages: {
+        ar: `${process.env.PUBLIC_URL}/ar/services/commerical-office-movers`,
+        en: `${process.env.PUBLIC_URL}/en/services/commerical-office-movers`,
+      },
+    },
+    openGraph: {
+      title: t("title"),
+      description: t("desc"),
+      url: `${process.env.PUBLIC_URL}/services/commerical-office-movers`,
+      siteName: t("site-Info.name"),
+      locale: locale,
+      type: "website",
+      alternateLocale: ["ar", "en"],
+      countryName: t("site-Info.country"),
+      faxNumbers: ["+971566651978", "+971545019655", "+971503626685"],
+      phoneNumbers: ["+971566651978", "+971545019655", "+971503626685"],
+      images: {
+        url: `${process.env.PUBLIC_URL}/images/hamdan-mover-logo.png`,
+        alt: "Hamdan Movers Logo",
+      },
+    },
+  };
+}
+
 function CommercialOfficeMovers() {
   const p = useTranslations("service-process");
   const t = useTranslations("commerical");

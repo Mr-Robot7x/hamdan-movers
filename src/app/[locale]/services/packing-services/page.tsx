@@ -17,6 +17,48 @@ import { Button } from "@/components/ui/button";
 import TestimonialSection from "@/components/Testimonials";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import { Metadata } from "next";
+
+interface Params {
+  params: {
+    locale: string;
+  };
+}
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  const locale = params.locale;
+  const t = await getTranslations({ locale, namespace: "meta-service" });
+
+  return {
+    title: "Professional Packing Services in Dubai, UAE | Hamdan Movers",
+    description:
+      "Hamdan Movers and Packers provide expert packing services across the UAE, ensuring your belongings are safely packed and arrive in perfect condition. Our skilled team uses high-quality materials and techniques, offering reliable packing solutions for both local and long-distance moves in UAE.",
+    alternates: {
+      canonical: `${process.env.PUBLIC_URL}/services/packing-services`,
+      languages: {
+        ar: `${process.env.PUBLIC_URL}/ar/services/packing-services`,
+        en: `${process.env.PUBLIC_URL}/en/services/packing-services`,
+      },
+    },
+    openGraph: {
+      title: t("title"),
+      description: t("desc"),
+      url: `${process.env.PUBLIC_URL}/services/packing-services`,
+      siteName: t("site-Info.name"),
+      locale: locale,
+      type: "website",
+      alternateLocale: ["ar", "en"],
+      countryName: t("site-Info.country"),
+      faxNumbers: ["+971566651978", "+971545019655", "+971503626685"],
+      phoneNumbers: ["+971566651978", "+971545019655", "+971503626685"],
+      images: {
+        url: `${process.env.PUBLIC_URL}/images/hamdan-mover-logo.png`,
+        alt: "Hamdan Movers Logo",
+      },
+    },
+  };
+}
+
 function CommercialOfficeMovers() {
   const locale = useLocale();
   const t = useTranslations("packing");
