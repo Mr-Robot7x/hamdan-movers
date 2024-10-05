@@ -39,8 +39,10 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: t("title"),
-      description: t("desc"),
+      title:
+        "Affordable Pickup Truck Rentals for Business and Personal Use in Dubai",
+      description:
+        "Searching for dependable pickup truck rental services in Dubai? Your solution is here! We provide a versatile fleet of pickup trucks to meet all your transportation needs. Whether it&lsquo;s moving goods, transporting items, or managing logistics, our pickups offer an efficient and hassle-free solution tailored to every job.",
       url: `${process.env.PUBLIC_URL}/pickup-rental-trucks-in-dubai`,
       siteName: t("site-Info.name"),
       locale: locale,

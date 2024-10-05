@@ -44,8 +44,10 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: t("title"),
-      description: t("desc"),
+      title:
+        "Best Storage Units In Dubai, UAE | Short and Long-Term Options - Hamdan Movers",
+      description:
+        "Need secure, climate-controlled storage? Our clean, air-conditioned units protect your belongings from damage, whether for short or long-term storage. Ideal for moving, downsizing, or extra space, with 24/7 monitoring and easy access for peace of mind",
       url: `${process.env.PUBLIC_URL}/services/storage-services`,
       siteName: t("site-Info.name"),
       locale: locale,

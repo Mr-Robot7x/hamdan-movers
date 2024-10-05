@@ -41,8 +41,9 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: t("title"),
-      description: t("desc"),
+      title: "Professional Packing Services in Dubai, UAE | Hamdan Movers",
+      description:
+        "Hamdan Movers and Packers provide expert packing services across the UAE, ensuring your belongings are safely packed and arrive in perfect condition. Our skilled team uses high-quality materials and techniques, offering reliable packing solutions for both local and long-distance moves in UAE.",
       url: `${process.env.PUBLIC_URL}/services/packing-services`,
       siteName: t("site-Info.name"),
       locale: locale,

@@ -36,8 +36,9 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: t("title"),
-      description: t("desc"),
+      title: "About Us | Hamdan Movers",
+      description:
+        "We are trusted movers in Dubai for safe and reliable moving services. Whether it's a local or international move, we handle everything from cars to pianos with care, ensuring your belongings arrive on time and without damage.",
       url: `${process.env.PUBLIC_URL}/services-locations/about-us`,
       siteName: t("site-Info.name"),
       locale: locale,

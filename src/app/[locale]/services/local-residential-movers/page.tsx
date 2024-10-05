@@ -40,8 +40,10 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: t("title"),
-      description: t("desc"),
+      title:
+        "Local Moving Services in Dubai, UAE | Moving Services Near You - Hamdan Moverd",
+      description:
+        "Hamdan Movers & Packers helps you move easily within the UAE. We pack your things carefully, transport them safely, and unpack them at your new home. We can help with both local and international moves. Trust us for a stress-free relocation.",
       url: `${process.env.PUBLIC_URL}/services/local-residential-movers`,
       siteName: t("site-Info.name"),
       locale: locale,

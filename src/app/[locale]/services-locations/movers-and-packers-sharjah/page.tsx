@@ -38,8 +38,9 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: t("title"),
-      description: t("desc"),
+      title: "Cheap Moving and Packing Company In Sharjah | Hamdan Movers",
+      description:
+        "We offers comprehensive moving services across the Sharjah, including local and long-distance moves, packing, specialized handling, and custom crating. We handle residential, commercial, and emergency relocations for a seamless, stress-free experience.",
       url: `${process.env.PUBLIC_URL}/services-locations/movers-and-packers-sharjah`,
       siteName: t("site-Info.name"),
       locale: locale,

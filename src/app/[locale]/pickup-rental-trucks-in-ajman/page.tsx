@@ -32,8 +32,9 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: t("title"),
-      description: t("desc"),
+      title: "Cheap pickup rental services in Ajman",
+      description:
+        "Rent a 1.5 / 3 ton pickup truck for versatile, cost-effective transport of furniture, materials, and more. Enjoy convenience and reliability with well-maintained vehicles from a trusted provider in Ajman",
       url: `${process.env.PUBLIC_URL}/pickup-rental-trucks-in-ajman`,
       siteName: t("site-Info.name"),
       locale: locale,

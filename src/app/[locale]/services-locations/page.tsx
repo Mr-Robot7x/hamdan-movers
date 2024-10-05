@@ -35,8 +35,10 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: t("title"),
-      description: t("desc"),
+      title:
+        "Moving Services in Dubai, Sharjah, Ajman and its surrounding areas.",
+      description:
+        "Find the best moving company near you with ease. Explore top-rated local movers, compare services, and get hassle-free relocation. Whether it's a residential or commercial move, discover trusted professionals for a smooth, secure, and stress-free experience. Get quotes and expert guidance for your next move today!",
       url: `${process.env.PUBLIC_URL}/services-locations`,
       siteName: t("site-Info.name"),
       locale: locale,

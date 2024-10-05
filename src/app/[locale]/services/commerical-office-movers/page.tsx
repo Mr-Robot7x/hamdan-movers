@@ -40,8 +40,10 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: t("title"),
-      description: t("desc"),
+      title:
+        "Commercial Moving Services in Dubai, UAE | Commercial Moving Services Near You - Hamdan Movers",
+      description:
+        "Hamdan Movers and Packers offer fully insured, 24/7 Office Moving Services in UAE. We provide customized relocation solutions with GPS-tracked fleets and handle Certificate of Insurance at no extra cost. With flexible scheduling and expertise in UAE’s unique moving challenges, we ensure a seamless, stress-free office move.",
       url: `${process.env.PUBLIC_URL}/services/commerical-office-movers`,
       siteName: t("site-Info.name"),
       locale: locale,

@@ -41,8 +41,10 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: t("title"),
-      description: t("desc"),
+      title:
+        "Safe and Timely International Deliveries From UAE to anywhere in the world",
+      description:
+        "International moving made easy with Hamdan Movers. Our expert team handles packing, shipping, customs, and door-to-door delivery, ensuring a smooth, stress-free experience. Trust us for seamless, professional service on your move abroad.",
       url: `${process.env.PUBLIC_URL}/services/international-moving`,
       siteName: t("site-Info.name"),
       locale: locale,

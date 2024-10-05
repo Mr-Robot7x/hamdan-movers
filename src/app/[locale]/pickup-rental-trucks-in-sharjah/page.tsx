@@ -39,8 +39,10 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: t("title"),
-      description: t("desc"),
+      title:
+        "Cheap Pickup Truck Rentals for Business and Personal Use in Sharjah",
+      description:
+        "Looking for reliable pickup rental services in Sharjah? Look no further! We offer a versatile fleet of pickups to meet all your transportation needs. Whether you need to move goods, transport items, or handle logistics, our pickup trucks provide a hassle-free and efficient solution tailored for every task.",
       url: `${process.env.PUBLIC_URL}/pickup-rental-trucks-in-sharjah`,
       siteName: t("site-Info.name"),
       locale: locale,

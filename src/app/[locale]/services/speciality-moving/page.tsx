@@ -45,8 +45,9 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: t("title"),
-      description: t("desc"),
+      title: "Professional Specialty Movers for Unique Items in the UAE",
+      description:
+        "Specialty moving requires expert care for fragile, valuable, or bulky items. Hamdan Movers ensures safe transport for everything from art to pianos with professional handling and the right equipment. Trust us to protect your valuables during the move",
       url: `${process.env.PUBLIC_URL}/services/speciality-moving`,
       siteName: t("site-Info.name"),
       locale: locale,
