@@ -29,9 +29,9 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 
   return {
     title:
-      "Local Moving Services in Dubai, UAE | Moving Services Near You - Hamdan Moverd",
+      "Best Movers Near You | Professional House Moving Services - Hamdan Movers",
     description:
-      "Hamdan Movers & Packers helps you move easily within the UAE. We pack your things carefully, transport them safely, and unpack them at your new home. We can help with both local and international moves. Trust us for a stress-free relocation.",
+      "Are you searching for top-quality movers in your area? Hamdan Movers offers expert house moving and packing services all over the UAE. We take care of everything from packing your stuff to safely moving it to your new home. Pick us for a stress-free moving experience.",
     alternates: {
       canonical: `${process.env.PUBLIC_URL}/services/local-residential-movers`,
       languages: {
@@ -41,9 +41,9 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     },
     openGraph: {
       title:
-        "Local Moving Services in Dubai, UAE | Moving Services Near You - Hamdan Moverd",
+        "Best Movers Near You | Professional House Moving Services - Hamdan Movers",
       description:
-        "Hamdan Movers & Packers helps you move easily within the UAE. We pack your things carefully, transport them safely, and unpack them at your new home. We can help with both local and international moves. Trust us for a stress-free relocation.",
+        "Are you searching for top-quality movers in your area? Hamdan Movers offers expert house moving and packing services all over the UAE. We take care of everything from packing your stuff to safely moving it to your new home. Pick us for a stress-free moving experience.",
       url: `${process.env.PUBLIC_URL}/services/local-residential-movers`,
       siteName: t("site-Info.name"),
       locale: locale,

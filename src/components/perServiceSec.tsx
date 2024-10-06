@@ -18,7 +18,7 @@ function PerServiceSec({
   const locale = useLocale();
   const b = useTranslations("buttons");
   return (
-    <div className="w-full md:w-11/12 md:mt-[160px] mt-36">
+    <div className="w-full md:w-11/12 md:mt-48 mt-36">
       <div
         dir={locale === "ar" ? "rtl" : "ltr"}
         className={`grid md:grid-cols-2 grid-cols-1 md:gap-x-4 gap-y-9 items-center ${

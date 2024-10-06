@@ -84,10 +84,7 @@ function PerServiceSec() {
     <>
       <Navbar />
       <div className="w-full flex flex-col items-center justify-center gap-y-16">
-        <div
-          dir={locale === "ar" ? "rtl" : "ltr"}
-          className="md:mt-[160px] mt-36"
-        >
+        <div dir={locale === "ar" ? "rtl" : "ltr"} className="md:mt-48 mt-36">
           <div
             className={`grid md:grid-cols-2 grid-cols-1 md:gap-x-4 gap-y-9 items-center ${
               locale === "ar" ? "md:mr-[60px]" : "md:ml-[60px]"

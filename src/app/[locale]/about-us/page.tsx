@@ -63,7 +63,7 @@ const AboutUsSection = () => {
       <Navbar />
 
       <div className="w-full flex flex-col items-center justify-center gap-y-16">
-        <div className="w-full md:w-11/12 md:mt-[160px] mt-36">
+        <div className="w-full md:w-11/12 md:mt-48 mt-36">
           <div className="w-full">
             <h1
               className={`md:text-[70px] text-[60px] border-b-[2px] pb-6 border-black ${

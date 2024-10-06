@@ -2,9 +2,14 @@
 import { Link } from "@/i18n/routing";
 import React, { useEffect, useState } from "react";
 import { Button } from "./ui/button";
-import { IconMapPin, IconMenu2, IconPhone } from "@tabler/icons-react";
+import {
+  IconLocationPin,
+  IconMapPin,
+  IconMenu2,
+  IconPhone,
+} from "@tabler/icons-react";
 import { motion } from "framer-motion";
-import { ChevronDown, Phone, TimerIcon, X } from "lucide-react";
+import { ChevronDown, Phone, PhoneIcon, TimerIcon, X } from "lucide-react";
 import Image from "next/image";
 import logo from "../../public/images/hamdan-mover-logo.png";
 import { useLocale, useTranslations } from "next-intl";
@@ -116,9 +121,68 @@ function Navbar() {
   return (
     <>
       <header className="w-full fixed left-0 flex flex-col items-center justify-center z-[200] font-poppins">
+        {!navAni && (
+          <motion.div
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            exit={{
+              opacity: 1,
+            }}
+            transition={{
+              ease: "linear",
+              duration: "0.1",
+            }}
+            className="hidden transition-opacity info w-full md:px-20 md:flex justify-between items-center b-bg min-h-14 bg-red-200"
+          >
+            <div className="flex ">
+              <span className="text-white font-semibold text-lg pr-5">
+                {b("call now")}
+              </span>
+              <Link
+                href={"tel:+971566651978"}
+                className="text-white flex gap-x-1 items-center"
+              >
+                <PhoneIcon
+                  strokeWidth={0}
+                  fill="white"
+                  className="p-1 bg-orange-600 rounded-full ts"
+                />{" "}
+                <span className="text-lg tracking-wide">+971566651978</span>
+              </Link>
+              <Link
+                href={"tel:+971503626685"}
+                className="text-white flex gap-x-1 pl-4 items-center"
+              >
+                <PhoneIcon
+                  strokeWidth={0}
+                  fill="white"
+                  className="p-1 bg-orange-600 rounded-full ts"
+                />{" "}
+                <span className="text-lg tracking-wide">+971503626685</span>
+              </Link>
+            </div>
+            <div className="flex items-center">
+              <IconLocationPin
+                strokeWidth={1.4}
+                className="p-1 bg-orange-600 text-white rounded-full ts"
+              />
+              <span
+                className={`${
+                  locale === "ar" ? "ar-p" : "text-lg font-light"
+                } text-white pl-2`}
+              >
+                {t("address")}
+              </span>
+            </div>
+          </motion.div>
+        )}
         <nav
           className={`border flex relative justify-between items-center md:px-4 px-2 md:w-11/12 bg-white my-3 ${
-            !navAni ? "md:mt-5" : "shadow-lg shadow-neutral-100"
+            !navAni ? "md:mt-1" : "shadow-lg shadow-neutral-100"
           } mt-0 md:h-[82px] h-[68px] md:rounded-full rounded-none w-full transition-all`}
         >
           <div className="md:w-36 w-[100px] h-14 relative md:mr-0 mr-2">
@@ -252,7 +316,9 @@ function Navbar() {
               >
                 <div className="flex justify-start gap-x-2 items-center">
                   <IconMapPin className="pr p-[2px]" />{" "}
-                  <p className="text-sm">Estiqlal Road Abushagara sharjah</p>
+                  <p className={locale === "ar" ? "ar-p" : "text-sm"}>
+                    {t("address")}
+                  </p>
                 </div>
                 <div className="flex justify-start gap-x-2 items-center">
                   <TimerIcon className="pr p-[2px]" />{" "}
@@ -260,7 +326,8 @@ function Navbar() {
                 </div>
                 <div className="flex justify-start gap-x-2 items-center">
                   <Phone className="pr p-[2px]" />{" "}
-                  <p className="text-sm"> 0566651978, 0503626685</p>
+                  <Link href={"tel:+971566651978"}>+971566651978</Link>
+                  <Link href={"tel:+971503626685"}>+971503626685</Link>
                 </div>
               </motion.div>
             ) : null}

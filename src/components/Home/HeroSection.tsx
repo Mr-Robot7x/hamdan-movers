@@ -14,7 +14,10 @@ function HeroSection() {
   const b = useTranslations("buttons");
 
   return (
-    <section id="home" className=" md:mt-36 mt-32 w-full flex justify-center">
+    <section
+      id="home"
+      className=" md:mt-48 mt-32 w-full flex justify-center"
+    >
       <ConfirmBox />
       <div
         dir={locale === "ar" ? "rtl" : "ltr"}

@@ -40,10 +40,17 @@ export async function POST(req: NextRequest) {
       );
     }
     console.log(data?.id);
-    return NextResponse.json({
-      success: true,
-      id: data?.id,
-    });
+
+    return NextResponse.redirect(
+      new URL(
+        `${process.env.PUBLIC_URL}/${req.nextUrl.locale}?ok=${data?.id}`,
+        req.url
+      )
+    );
+    // return NextResponse.json({
+    //   success: true,
+    //   id: data?.id,
+    // });
   } catch (error) {
     return NextResponse.json({
       success: false,

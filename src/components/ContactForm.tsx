@@ -41,8 +41,8 @@ const ContactUs = ({ isPage = false }: { isPage?: boolean }) => {
     if (!response.ok) {
       throw new Error(response.statusText);
     } else {
-      const data = await response.json();
-      window.location.href = `/?ok=${data?.id}`;
+      // const data = await response.json();
+      window.location.replace(`/${locale}?ok=true`);
     }
     console.log("Form Data : ", formData);
   };
