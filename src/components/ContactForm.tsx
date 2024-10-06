@@ -2,7 +2,6 @@
 import { IconHours24, IconLocationPin } from "@tabler/icons-react";
 import { MailsIcon, PhoneForwardedIcon } from "lucide-react";
 import { Button } from "./ui/button";
-import { FormEvent, useState } from "react";
 const services = [
   {
     value: "home",
@@ -24,36 +23,29 @@ const services = [
 import { Link } from "@/i18n/routing";
 import { useLocale, useTranslations } from "next-intl";
 import CustomSelect from "./ui/select";
+import React from "react";
 const ContactUs = ({ isPage = false }: { isPage?: boolean }) => {
   const t = useTranslations("contact");
   const locale = useLocale();
-  const [data, setData] = useState<{
-    name: string;
-
-    phone: string;
-    location: string;
-    service: string;
-    description: string;
-  }>({
-    name: "",
-
-    phone: "",
-    location: "",
-    service: "",
-    description: "",
-  });
-  const handleContact = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    Object.keys(data).forEach((field) => {
-      if (!data[field as keyof typeof data]) {
-        alert("Please fill all the fields");
-        return;
-      }
-
-      e.currentTarget.reset();
+    const formData = new FormData(e.target as HTMLFormElement);
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      body: formData,
+      headers: {
+        "return-url": window.location.href,
+      },
     });
-  };
 
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    } else {
+      const data = await response.json();
+      window.location.href = `/?ok=${data?.id}`;
+    }
+    console.log("Form Data : ", formData);
+  };
   return (
     <div id="contact" className="bg-white w-full md:w-11/12">
       <div className="max-w-5xl px-4 xl:px-0 py-10 lg:py-10 mx-auto">
@@ -76,7 +68,7 @@ const ContactUs = ({ isPage = false }: { isPage?: boolean }) => {
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 lg:gap-x-16 font-poppins ">
           <div className="md:order-2 border-b border-neutral-800 pb-10 mb-10 md:border-b-0 md:pb-0 md:mb-0">
-            <form onSubmit={(e) => handleContact(e)} className="">
+            <form className="" onSubmit={(e) => handleSubmit(e)}>
               <div className="space-y-4">
                 {/* Input */}
                 <div className="relative">
@@ -85,9 +77,8 @@ const ContactUs = ({ isPage = false }: { isPage?: boolean }) => {
                     id="hs-tac-input-name"
                     className="border border-neutral-200 peer p-4 block w-full focus:border-neutral-400 transition-all shadow-md shadow-neutral-50 rounded-lg text-sm text-black placeholder:text-transparent focus:outline-none focus:ring-0 disabled:opacity-50 disabled:pointer-events-none focus:pt-6 focus:pb-2 [&:not(:placeholder-shown)]:pt-6 [&:not(:placeholder-shown)]:pb-2 autofill:pt-6 autofill:pb-2"
                     required
+                    name="name"
                     placeholder="Name"
-                    value={data.name}
-                    onChange={(e) => setData({ ...data, name: e.target.value })}
                   />
                   <label
                     htmlFor="hs-tac-input-name"
@@ -96,27 +87,14 @@ const ContactUs = ({ isPage = false }: { isPage?: boolean }) => {
                     Name
                   </label>
                 </div>
-                {/* End Input */}
 
-                {/* Input */}
-
-                {/* End Input */}
-
-                {/* Input */}
-
-                {/* End Input */}
-
-                {/* Input */}
                 <div className="relative">
                   <input
                     type="text"
                     id="hs-tac-input-phone"
                     className="border border-neutral-200 peer p-4 block w-full focus:border-neutral-400 transition-all shadow-md shadow-neutral-50 rounded-lg text-sm text-black placeholder:text-transparent focus:outline-none focus:ring-0 disabled:opacity-50 disabled:pointer-events-none focus:pt-6 focus:pb-2 [&:not(:placeholder-shown)]:pt-6 [&:not(:placeholder-shown)]:pb-2 autofill:pt-6 autofill:pb-2"
                     required
-                    value={data.phone}
-                    onChange={(e) =>
-                      setData({ ...data, phone: e.target.value })
-                    }
+                    name="phone"
                     placeholder="Phone No"
                   />
                   <label
@@ -133,10 +111,7 @@ const ContactUs = ({ isPage = false }: { isPage?: boolean }) => {
                     id="hs-tac-input-company"
                     className="border border-neutral-200 peer p-4 block w-full focus:border-neutral-400 transition-all shadow-md shadow-neutral-50 rounded-lg text-sm text-black placeholder:text-transparent focus:outline-none focus:ring-0 disabled:opacity-50 disabled:pointer-events-none focus:pt-6 focus:pb-2 [&:not(:placeholder-shown)]:pt-6 [&:not(:placeholder-shown)]:pb-2 autofill:pt-6 autofill:pb-2"
                     required
-                    value={data.location}
-                    onChange={(e) =>
-                      setData({ ...data, location: e.target.value })
-                    }
+                    name="address"
                     placeholder="Location"
                   />
                   <label
@@ -149,7 +124,7 @@ const ContactUs = ({ isPage = false }: { isPage?: boolean }) => {
                 {/* {service select} */}
 
                 <div>
-                  <CustomSelect options={services} onChange={() => {}} />
+                  <CustomSelect name="service" options={services} />
                 </div>
 
                 {/* Textarea */}
@@ -157,18 +132,15 @@ const ContactUs = ({ isPage = false }: { isPage?: boolean }) => {
                   <textarea
                     id="hs-tac-message"
                     className="border border-neutral-200 peer p-4 block w-full focus:border-neutral-400 transition-all shadow-md shadow-neutral-50 rounded-lg text-sm text-black placeholder:text-transparent focus:outline-none focus:ring-0 disabled:opacity-50 disabled:pointer-events-none focus:pt-6 focus:pb-2 [&:not(:placeholder-shown)]:pt-6 [&:not(:placeholder-shown)]:pb-2 autofill:pt-6 autofill:pb-2"
+                    name="message"
                     required
-                    value={data.description}
-                    onChange={(e) =>
-                      setData({ ...data, description: e.target.value })
-                    }
                     placeholder="This is a textarea placeholder"
                   />
                   <label
                     htmlFor="hs-tac-message"
                     className="absolute top-0 start-0 p-4 h-full gr text-sm truncate pointer-events-none transition-all border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none peer-focus:text-xs peer-focus:-translate-y-[12px] peer-focus:gr peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:-translate-y-[10px] peer-[:not(:placeholder-shown)]:gr"
                   >
-                    Tell us about your project
+                    Your message
                   </label>
                 </div>
 

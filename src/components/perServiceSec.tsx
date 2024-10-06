@@ -54,7 +54,7 @@ function PerServiceSec({
             <Link className="" href={"tel:+971566651978"}>
               <Button dir="ltr" variant={"light"}>
                 <PhoneForwarded className="mr-2 w-5 h-5" />{" "}
-                <span dir="ltr">+971 566651978 </span>
+                <span dir="ltr">{b("call now")} </span>
               </Button>
             </Link>
           </div>

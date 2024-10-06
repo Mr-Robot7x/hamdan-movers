@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import React from "react";
 import { Button } from "../ui/button";
 import client from "../../../public/images/800+-clients-reviews.png";
 import hours from "../../../public/images/24-hours-icon.png";
@@ -8,12 +7,15 @@ import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import CustomSelect from "../ui/select";
 import { SendIcon } from "lucide-react";
+import ConfirmBox from "../ConfirmBox";
 function HeroSection() {
   const locale = useLocale();
   const t = useTranslations("heroSection");
   const b = useTranslations("buttons");
+
   return (
     <section id="home" className=" md:mt-36 mt-32 w-full flex justify-center">
+      <ConfirmBox />
       <div
         dir={locale === "ar" ? "rtl" : "ltr"}
         className={`${
@@ -94,27 +96,34 @@ function HeroSection() {
           <form
             dir=""
             className="bg-white md:p-4 p-3 shadow-lg shadow-black/5 rounded-3xl md:w-[85%] w-full  flex items-center justify-center flex-col"
+            method="POST"
+            action={"/api/contact"}
           >
             <h3 className="text-center mb-6 mt-4">{t("form-h")}</h3>
             <input
+              required
               name="name"
               placeholder={t("name")}
               type="text"
               className="bg-gray-50 w-full mt-3 p-4 outline-none rounded-3xl focus:shadow-md transition-shadow"
             />
             <input
+              required
               name="phone"
               placeholder={t("phone")}
               type="number"
               className="bg-gray-50 w-full mt-3 p-4 outline-none rounded-3xl focus:shadow-md transition-shadow"
             />
             <input
-              name="name"
+              required
+              name="address"
               placeholder={t("address")}
               type="text"
               className="bg-gray-50 w-full mt-3 p-4 outline-none rounded-3xl focus:shadow-md transition-shadow"
             />
             <CustomSelect
+              required={true}
+              name="service"
               className="border-none bg-gray-50 mt-3 p-4 rounded-3xl focus:shadow-md transition-shadow"
               options={[
                 {
@@ -130,16 +139,13 @@ function HeroSection() {
                   value: "Delivery",
                 },
               ]}
-              onChange={(option) => {
-                console.log(option);
-              }}
               placeholder={t("service")}
             />
             <textarea
               className="w-full h-28 bg-gray-50 mt-3 p-4 outline-none rounded-3xl focus:shadow-md transition-shadow"
               placeholder={t("message")}
               name="message"
-              id=""
+              required
             ></textarea>
             <Button type="submit" className="mt-3">
               {b("Send Now")}{" "}

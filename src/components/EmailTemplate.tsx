@@ -1,17 +1,18 @@
 import * as React from "react";
 
 interface EmailTemplateProps {
-  firstName: string;
-  phoneNo: string;
-  emailAddress: string;
-  address: string;
-  services: string;
-  otherServices?: string;
-  message: string;
+  name: string | null;
+  phone: string | null;
+  address: string | null;
+  services: string | null;
+  message: string | null;
 }
-import imagesrc from "../../public/images/KSM-LOGO.png";
 export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
-  firstName,
+  name,
+  phone,
+  address,
+  services,
+  message,
 }) => (
   <Html>
     <Head />
@@ -19,18 +20,12 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
     <Body style={main}>
       <Container>
         <Section style={logo}>
-          <Img src={`${imagesrc}`} />
+          <Img
+            src={`https://hamdanmovers.vercel.app/images/hamdan-mover-logo.png`}
+          />
         </Section>
 
         <Section style={content}>
-          <Row>
-            <Img
-              style={image}
-              width={620}
-              src={`${""}/static/yelp-header.png`}
-            />
-          </Row>
-
           <Row style={{ ...boxInfos, paddingBottom: "0" }}>
             <Column>
               <Heading
@@ -40,7 +35,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
                   textAlign: "center",
                 }}
               >
-                Hi Nazir Ullah,
+                Hi Ahmad Hussain,
               </Heading>
               <Heading
                 as="h2"
@@ -50,7 +45,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
                   textAlign: "center",
                 }}
               >
-                You have new order from Al Khajista.com
+                You have new order from hamdanmoversuae.com
               </Heading>
               <Heading
                 style={{
@@ -65,39 +60,24 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
               </Heading>
               <Text style={paragraph}>
                 <b>User Name </b>
-                {firstName}
+                {name}
               </Text>
               <Text style={{ ...paragraph, marginTop: -5 }}>
-                <b>Email Address </b>
-                {}
+                <b>Phone Number </b>
+                {phone}
               </Text>
               <Text style={{ ...paragraph, marginTop: -5 }}>
-                <b>Location: </b>
-                {"loginLocation"}
-              </Text>
-              <Text
-                style={{
-                  color: "rgb(0,0,0, 0.5)",
-                  fontSize: 14,
-                  marginTop: -5,
-                }}
-              >
-                *Approximate geographic location based on IP address:
-                {"3333"}
-              </Text>
-
-              <Text style={paragraph}>
-                If this was you, nothing else you need to do.
+                <b>Located At: </b>
+                {address}
               </Text>
               <Text style={{ ...paragraph, marginTop: -5 }}>
-                If this you or if you have additional questions, please see our
-                support page.
+                <b>Service Want: </b>
+                {services}
               </Text>
-            </Column>
-          </Row>
-          <Row style={{ ...boxInfos, paddingTop: "0" }}>
-            <Column style={containerButton} colSpan={2}>
-              <Button style={button}>Learn More</Button>
+              <Text style={{ ...paragraph, marginTop: -5 }}>
+                <b>Description: </b>
+                {message}
+              </Text>
             </Column>
           </Row>
         </Section>
@@ -119,7 +99,6 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
 
 import {
   Body,
-  Button,
   Container,
   Column,
   Head,
@@ -146,30 +125,10 @@ const logo = {
   padding: "30px 20px",
 };
 
-const containerButton = {
-  display: "flex",
-  justifyContent: "center",
-  width: "100%",
-};
-
-const button = {
-  backgroundColor: "#e00707",
-  borderRadius: 3,
-  color: "#FFF",
-  fontWeight: "bold",
-  border: "1px solid rgb(0,0,0, 0.1)",
-  cursor: "pointer",
-  padding: "12px 30px",
-};
-
 const content = {
   border: "1px solid rgb(0,0,0, 0.1)",
   borderRadius: "3px",
   overflow: "hidden",
-};
-
-const image = {
-  maxWidth: "100%",
 };
 
 const boxInfos = {
