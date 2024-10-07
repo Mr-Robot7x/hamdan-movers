@@ -13,6 +13,7 @@ import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 function Footer() {
   const t = useTranslations("navitems");
+  const b = useTranslations("footer");
   const subServices: { name: string; link: string }[] = [
     {
       name: t("services-sub.local"),
@@ -76,57 +77,57 @@ function Footer() {
           <div className="flex flex-col gap-y-4 font-poppins">
             <h4>Main Pages</h4>
             <div className="flex flex-col gap-y-3">
-              <Link href="/">Home</Link>
+              <Link href="/">{b("home")}</Link>
 
-              <Link href="/services">Services</Link>
+              <Link href="/services">{b("services")}</Link>
 
-              <Link href="/about-us">About Us</Link>
+              <Link href="/about-us"> {b("about")} </Link>
 
-              <Link href="/contact-us">Contact Us</Link>
+              <Link href="/contabct-us"> {b("contact")} </Link>
 
-              <Link href="/services-locations">Services Locations</Link>
+              <Link href="/services-locations"> {b("location")} </Link>
 
-              <Link href="/">Terms and Conditions</Link>
+              <Link href="/"> {b("TandC")} </Link>
 
-              <Link href="/">Privacy Policy</Link>
+              <Link href="/"> {b("Pp")} </Link>
             </div>
           </div>
           <div className="flex flex-col gap-y-4 font-poppins">
-            <h4>Services</h4>
+            <h4> {b("services")} </h4>
             <div className="flex flex-col gap-y-3">
               {subServices.map((service, i) => (
                 <Link key={i} href={service.link}>
                   {service.name}
                 </Link>
               ))}
-              <Link href="/pickup-rental-trucks">Pickup Car For Rent</Link>
+              <Link href="/pickup-rental-trucks"> {b("cars")} </Link>
             </div>
           </div>
           <div className="flex flex-col gap-y-4 font-poppins">
             <h4>Services Locations</h4>
             <div className="flex flex-col gap-y-3">
               <Link href={"/services-locations/movers-and-packers-dubai"}>
-                Movers in Dubai
+                {b("md")} {b("dubai")}
               </Link>
 
               <Link href={"/services-locations/movers-and-packers-sharjah"}>
-                Movers in Sharjah
+                {b("md")} {b("sharjah")}
               </Link>
 
               <Link href={"/services-locations/movers-and-packers-ajman"}>
-                Movers in Ajman
+                {b("md")} {b("ajman")}
               </Link>
 
               <Link href={"/pickup-rental-trucks-in-dubai"}>
-                Pickup Car Rent Dubai
+                {b("pickup")} {b("dubai")}
               </Link>
 
               <Link href={"/pickup-rental-trucks-in-sharjah"}>
-                Pickup Car Rent Sharjah
+                {b("pickup")} {b("sharjah")}
               </Link>
 
               <Link href={"/pickup-rental-trucks-in-ajman"}>
-                Pickup Car Rent Ajman
+                {b("pickup")} {b("ajman")}
               </Link>
             </div>
           </div>

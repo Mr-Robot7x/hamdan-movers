@@ -769,5 +769,20 @@
       "country": "United Arab Emirates",
       "language": "en"
     }
+  },
+  "footer": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About Us",
+    "contact": "Contact Us",
+    "location": "Services Locations",
+    "TandC": "Terms and Conditions",
+    "Pp": "Privacy Policy",
+    "cars": "Pickup Cars For Rent",
+    "dubai": "Dubai",
+    "sharjah": "Sharjah",
+    "ajman": "Ajman",
+    "md": "Movers in ",
+    "pickup": "Pickup Rent"
   }
 }
