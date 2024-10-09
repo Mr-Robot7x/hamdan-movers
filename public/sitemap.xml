@@ -1,269 +1,99 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://hamdanmoversuae.com/</loc>
-    <xhtml:link
-      rel="alternate"
-      hreflang="ar"
-      href="https://hamdanmoversuae.com/ar/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://hamdanmoversuae.com/en/"/>
-    <lastmod>2024-10-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <url>
-    <loc>https://hamdanmoversuae.com/services</loc>
-    <xhtml:link
-      rel="alternate"
-      hreflang="ar"
-      href="https://hamdanmoversuae.com/ar/services"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://hamdanmoversuae.com/en/services"/>
-    <lastmod>2024-10-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://hamdanmoversuae.com/services-locations</loc>
-    <xhtml:link
-      rel="alternate"
-      hreflang="ar"
-      href="https://hamdanmoversuae.com/ar/services-locations"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://hamdanmoversuae.com/en/services-locations"/>
-    <lastmod>2024-10-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://hamdanmoversuae.com/services-locations/movers-and-packers-dubai</loc>
-    <xhtml:link
-      rel="alternate"
-      hreflang="ar"
-      href="https://hamdanmoversuae.com/ar/services-locations/movers-and-packers-dubai"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://hamdanmoversuae.com/en/services-locations/movers-and-packers-dubai"/>
-    <lastmod>2024-10-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://hamdanmoversuae.com/services-locations/movers-and-packers-sharjah</loc>
-    <xhtml:link
-      rel="alternate"
-      hreflang="ar"
-      href="https://hamdanmoversuae.com/ar/services-locations/movers-and-packers-sharjah"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://hamdanmoversuae.com/en/services-locations/movers-and-packers-sharjah"/>
-    <lastmod>2024-10-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://hamdanmoversuae.com/services-locations/movers-and-packers-ajman</loc>
-    <xhtml:link
-      rel="alternate"
-      hreflang="ar"
-      href="https://hamdanmoversuae.com/ar/services-locations/movers-and-packers-ajman"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://hamdanmoversuae.com/en/services-locations/movers-and-packers-ajman"/>
-    <lastmod>2024-10-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://hamdanmoversuae.com/pickup-rental-trucks</loc>
-    <xhtml:link
-      rel="alternate"
-      hreflang="ar"
-      href="https://hamdanmoversuae.com/ar/pickup-rental-trucks"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://hamdanmoversuae.com/en/pickup-rental-trucks"/>
-    <lastmod>2024-10-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://hamdanmoversuae.com/pickup-rental-trucks-in-ajman</loc>
-    <xhtml:link
-      rel="alternate"
-      hreflang="ar"
-      href="https://hamdanmoversuae.com/ar/pickup-rental-trucks-in-ajman"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://hamdanmoversuae.com/en/pickup-rental-trucks-in-ajman"/>
-    <lastmod>2024-10-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://hamdanmoversuae.com/pickup-rental-trucks-in-sharjah</loc>
-    <xhtml:link
-      rel="alternate"
-      hreflang="ar"
-      href="https://hamdanmoversuae.com/ar/pickup-rental-trucks-in-sharjah"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://hamdanmoversuae.com/en/pickup-rental-trucks-in-sharjah"/>
-    <lastmod>2024-10-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://hamdanmoversuae.com/pickup-rental-trucks-in-dubai</loc>
-    <xhtml:link
-      rel="alternate"
-      hreflang="ar"
-      href="https://hamdanmoversuae.com/ar/pickup-rental-trucks-in-dubai"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://hamdanmoversuae.com/en/pickup-rental-trucks-in-dubai"/>
-    <lastmod>2024-10-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://hamdanmoversuae.com/contact-us</loc>
-    <xhtml:link
-      rel="alternate"
-      hreflang="ar"
-      href="https://hamdanmoversuae.com/ar/contact-us"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://hamdanmoversuae.com/en/contact-us"/>
-    <lastmod>2024-10-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://hamdanmoversuae.com/about-us</loc>
-    <xhtml:link
-      rel="alternate"
-      hreflang="ar"
-      href="https://hamdanmoversuae.com/ar/about-us"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://hamdanmoversuae.com/en/about-us"/>
-    <lastmod>2024-10-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://hamdanmoversuae.com/services/commerical-office-movers</loc>
-    <xhtml:link
-      rel="alternate"
-      hreflang="ar"
-      href="https://hamdanmoversuae.com/ar/services/commerical-office-movers"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://hamdanmoversuae.com/en/services/commerical-office-movers"/>
-    <lastmod>2024-10-08</lastmod>
-  </url>
-
-  <url>
-    <loc>https://hamdanmoversuae.com/services/international-moving</loc>
-    <xhtml:link
-      rel="alternate"
-      hreflang="ar"
-      href="https://hamdanmoversuae.com/ar/services/international-moving"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://hamdanmoversuae.com/en/services/international-moving"/>
-    <lastmod>2024-10-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://hamdanmoversuae.com/services/local-residential-movers</loc>
-    <xhtml:link
-      rel="alternate"
-      hreflang="ar"
-      href="https://hamdanmoversuae.com/ar/services/local-residential-movers"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://hamdanmoversuae.com/en/services/local-residential-movers"/>
-    <lastmod>2024-10-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://hamdanmoversuae.com/services/packing-services</loc>
-    <xhtml:link
-      rel="alternate"
-      hreflang="ar"
-      href="https://hamdanmoversuae.com/ar/services/packing-services"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://hamdanmoversuae.com/en/services/packing-services"/>
-    <lastmod>2024-10-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://hamdanmoversuae.com/services/speciality-moving</loc>
-    <xhtml:link
-      rel="alternate"
-      hreflang="ar"
-      href="https://hamdanmoversuae.com/ar/services/speciality-moving"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://hamdanmoversuae.com/en/services/speciality-moving"/>
-    <lastmod>2024-10-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://hamdanmoversuae.com/services/storage-services</loc>
-    <xhtml:link
-      rel="alternate"
-      hreflang="ar"
-      href="https://hamdanmoversuae.com/ar/services/storage-services"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://hamdanmoversuae.com/en/services/storage-services"/>
-    <lastmod>2024-10-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-</urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://yourdomain.com/</loc>
+        <lastmod>2024-10-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomain.com/ar" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/en" />
+    </url>
+    <url>
+        <loc>https://yourdomain.com/services</loc>
+        <lastmod>2024-10-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomain.com/ar/services" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/en/services" />
+    </url>
+    <url>
+        <loc>https://yourdomain.com/services-locations</loc>
+        <lastmod>2024-10-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomain.com/ar/services-locations" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/en/services-locations" />
+    </url>
+    <url>
+        <loc>https://yourdomain.com/services-locations/movers-and-packers-dubai</loc>
+        <lastmod>2024-10-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomain.com/ar/services-locations/movers-and-packers-dubai" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/en/services-locations/movers-and-packers-dubai" />
+    </url>
+    <url>
+        <loc>https://yourdomain.com/services-locations/movers-and-packers-sharjah</loc>
+        <lastmod>2024-10-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomain.com/ar/services-locations/movers-and-packers-sharjah" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/en/services-locations/movers-and-packers-sharjah" />
+    </url>
+    <url>
+        <loc>https://yourdomain.com/services-locations/movers-and-packers-ajman</loc>
+        <lastmod>2024-10-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomain.com/ar/services-locations/movers-and-packers-ajman" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/en/services-locations/movers-and-packers-ajman" />
+    </url>
+    <url>
+        <loc>https://yourdomain.com/pickup-rental-trucks</loc>
+        <lastmod>2024-10-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomain.com/ar/pickup-rental-trucks" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/en/pickup-rental-trucks" />
+    </url>
+    <url>
+        <loc>https://yourdomain.com/pickup-rental-trucks-in-ajman</loc>
+        <lastmod>2024-10-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomain.com/ar/pickup-rental-trucks-in-ajman" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/en/pickup-rental-trucks-in-ajman" />
+    </url>
+    <url>
+        <loc>https://yourdomain.com/pickup-rental-trucks-in-sharjah</loc>
+        <lastmod>2024-10-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomain.com/ar/pickup-rental-trucks-in-sharjah" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/en/pickup-rental-trucks-in-sharjah" />
+    </url>
+    <url>
+        <loc>https://yourdomain.com/pickup-rental-trucks-in-dubai</loc>
+        <lastmod>2024-10-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomain.com/ar/pickup-rental-trucks-in-dubai" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/en/pickup-rental-trucks-in-dubai" />
+    </url>
+    <url>
+        <loc>https://yourdomain.com/contact-us</loc>
+        <lastmod>2024-10-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomain.com/ar/contact-us" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/en/contact-us" />
+    </url>
+    <url>
+        <loc>https://yourdomain.com/about-us</loc>
+        <lastmod>2024-10-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomain.com/ar/about-us" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/en/about-us" />
+    </url>    <!-- Add more URLs as needed, keeping the same format --></urlset>
