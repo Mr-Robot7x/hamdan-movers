@@ -9,6 +9,12 @@ const bundleAnalyzer = withBundleAnalyzer({
 });
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "ar"],
+    localeDetection: true,
+  },
+};
 
 export default withNextIntl(bundleAnalyzer(nextConfig));
