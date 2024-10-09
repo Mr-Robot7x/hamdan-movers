@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     title: t("title"),
     description: t("desc"),
     alternates: {
-      canonical: process.env.PUBLIC_URL,
+      canonical: process.env.PUBLIC_URL + "/" + locale,
       languages: {
         ar: `${process.env.PUBLIC_URL}/ar`,
         en: `${process.env.PUBLIC_URL}/en`,
