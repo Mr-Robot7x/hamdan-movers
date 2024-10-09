@@ -1,99 +1,72 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-    xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://yourdomain.com/</loc>
-        <lastmod>2024-10-09</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://alkhajista.netlify.app/</loc>
+        <lastmod>2024-09-17</lastmod>
         <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomain.com/ar" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/en" />
     </url>
     <url>
-        <loc>https://yourdomain.com/services</loc>
-        <lastmod>2024-10-09</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://alkhajista.netlify.app/services</loc>
+        <lastmod>2024-09-17</lastmod>
         <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomain.com/ar/services" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/en/services" />
     </url>
     <url>
-        <loc>https://yourdomain.com/services-locations</loc>
-        <lastmod>2024-10-09</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://alkhajista.netlify.app/our-gallary</loc>
+        <lastmod>2024-09-17</lastmod>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomain.com/ar/services-locations" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/en/services-locations" />
     </url>
     <url>
-        <loc>https://yourdomain.com/services-locations/movers-and-packers-dubai</loc>
-        <lastmod>2024-10-09</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomain.com/ar/services-locations/movers-and-packers-dubai" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/en/services-locations/movers-and-packers-dubai" />
-    </url>
-    <url>
-        <loc>https://yourdomain.com/services-locations/movers-and-packers-sharjah</loc>
-        <lastmod>2024-10-09</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomain.com/ar/services-locations/movers-and-packers-sharjah" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/en/services-locations/movers-and-packers-sharjah" />
-    </url>
-    <url>
-        <loc>https://yourdomain.com/services-locations/movers-and-packers-ajman</loc>
-        <lastmod>2024-10-09</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomain.com/ar/services-locations/movers-and-packers-ajman" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/en/services-locations/movers-and-packers-ajman" />
-    </url>
-    <url>
-        <loc>https://yourdomain.com/pickup-rental-trucks</loc>
-        <lastmod>2024-10-09</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomain.com/ar/pickup-rental-trucks" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/en/pickup-rental-trucks" />
-    </url>
-    <url>
-        <loc>https://yourdomain.com/pickup-rental-trucks-in-ajman</loc>
-        <lastmod>2024-10-09</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomain.com/ar/pickup-rental-trucks-in-ajman" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/en/pickup-rental-trucks-in-ajman" />
-    </url>
-    <url>
-        <loc>https://yourdomain.com/pickup-rental-trucks-in-sharjah</loc>
-        <lastmod>2024-10-09</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomain.com/ar/pickup-rental-trucks-in-sharjah" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/en/pickup-rental-trucks-in-sharjah" />
-    </url>
-    <url>
-        <loc>https://yourdomain.com/pickup-rental-trucks-in-dubai</loc>
-        <lastmod>2024-10-09</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomain.com/ar/pickup-rental-trucks-in-dubai" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/en/pickup-rental-trucks-in-dubai" />
-    </url>
-    <url>
-        <loc>https://yourdomain.com/contact-us</loc>
-        <lastmod>2024-10-09</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://alkhajista.netlify.app/about-us</loc>
+        <lastmod>2024-09-17</lastmod>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomain.com/ar/contact-us" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/en/contact-us" />
     </url>
     <url>
-        <loc>https://yourdomain.com/about-us</loc>
-        <lastmod>2024-10-09</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomain.com/ar/about-us" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/en/about-us" />
-    </url>    <!-- Add more URLs as needed, keeping the same format --></urlset>
+        <loc>https://alkhajista.netlify.app/contact-us</loc>
+        <lastmod>2024-09-17</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://alkhajista.netlify.app/services/packing-services-in-dubai</loc>
+        <lastmod>2024-09-17</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://alkhajista.netlify.app/services/delivery-services-in-dubai</loc>
+        <lastmod>2024-09-17</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://alkhajista.netlify.app/services/home-fixing-services-in-dubai</loc>
+        <lastmod>2024-09-17</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://alkhajista.netlify.app/services/office-fixing-services-in-dubai</loc>
+        <lastmod>2024-09-17</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://alkhajista.netlify.app/services/dismantling-services-in-dubai</loc>
+        <lastmod>2024-09-17</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://alkhajista.netlify.app/services/furniture-fixing-services-in-dubai</loc>
+        <lastmod>2024-09-17</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://alkhajista.netlify.app/services/curtain-fixing-services-in-dubai</loc>
+        <lastmod>2024-09-17</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://alkhajista.netlify.app/terms-and-conditions</loc>
+        <lastmod>2024-09-17</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://alkhajista.netlify.app/privacy-policy</loc>
+        <lastmod>2024-09-17</lastmod>
+        <priority>0.5</priority>
+    </url>
+</urlset>
