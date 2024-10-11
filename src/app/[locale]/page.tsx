@@ -13,6 +13,7 @@ import WorkProcessSection from "@/components/Process";
 import TestimonialSection from "@/components/Testimonials";
 import { getTranslations } from "next-intl/server";
 import { type Metadata } from "next";
+
 interface Params {
   params: {
     locale: string;
@@ -35,7 +36,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     openGraph: {
       title: t("title"),
       description: t("desc"),
-      url: process.env.PUBLIC_URL,
+      url: `${process.env.PUBLIC_URL}/${locale}`,
       siteName: t("site-Info.name"),
       locale: locale,
       type: "website",
@@ -47,6 +48,31 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
         url: `${process.env.PUBLIC_URL}/images/hamdan-mover-logo.png`,
         alt: "Hamdan Movers Logo",
       },
+    },
+    other: {
+      "application/ld+json": JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "MovingCompany",
+        name: "Hamdan Movers and Packers",
+        url: `${process.env.PUBLIC_URL}/${locale}`,
+        logo: `${process.env.PUBLIC_URL}/images/hamdan-mover-logo.png`,
+        description: t("desc"),
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Estiqlal Road Abushagara",
+          addressLocality: "Sharjah",
+          addressRegion: "Sharjah",
+          postalCode: "00000",
+          addressCountry: "AE",
+        },
+        telephone: "+971566651978",
+        email: "hussain43ahmad@gmail.com",
+        openingHours: "Mo-su 09:00-18:00",
+        // sameAs: [
+        //   "https://www.facebook.com/yourpage",
+        //   "https://www.instagram.com/yourpage",
+        // ],
+      }),
     },
   };
 }

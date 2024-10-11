@@ -200,7 +200,7 @@ const ContactUs = ({ isPage = false }: { isPage?: boolean }) => {
                 </h3>
                 <p className="mt-1 gr">
                   <Link href={"tel:+971566651978"}>+971 566651978</Link> <br />
-                  <Link href={"tel:+971505626685"}>+971 505626685</Link>
+                  <Link href={"tel:+971503626685"}>+971 503626685</Link>
                 </p>
               </div>
             </div>

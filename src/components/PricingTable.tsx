@@ -40,19 +40,19 @@ const PricingTable: React.FC = () => {
 
   return (
     <div dir="ltr" className="overflow-x-auto font-poppins">
-      <table className="min-w-full rounded-lg table-auto border-collapse border border-gray-300">
+      <table className="md:w-full rounded-lg table-auto border-collapse border border-gray-300">
         <thead>
           <tr className="bg-gray-100">
-            <th className={`px-1 py-4 border text-nowrap font-bold`}>
+            <th className={`px-0.5 py-4 border text-nowrap font-bold`}>
               {t("heading1")}
             </th>
-            <th className={`px-1 py-4 border text-nowrap font-bold`}>
+            <th className={`px-0.5 py-4 border text-nowrap font-bold`}>
               {t("heading2")}
             </th>
-            <th className={`px-1 py-4 border text-nowrap font-bold`}>
+            <th className={`px-0.5 py-4 border text-nowrap font-bold`}>
               {t("heading3")}
             </th>
-            <th className={`px-1 py-4 border text-nowrap font-bold`}>
+            <th className={`px-0.5 py-4 border text-nowrap font-bold`}>
               {t("heading4")}
             </th>
           </tr>
@@ -64,19 +64,19 @@ const PricingTable: React.FC = () => {
               className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}
             >
               <td
-                className={`md:px-4 px-1 py-4 border border-gray-300 ${
+                className={`md:px-4 px-0.5 py-4 border border-gray-300 ${
                   locale === "ar" ? "font-arabic text-right text-lg" : ""
                 }`}
               >
                 {item.size}
               </td>
-              <td className="md:px-4 px-1 py-4 border border-gray-300 text-center">
+              <td className="md:px-4 px-0.5 py-4 border border-gray-300 text-center">
                 {item.trucks}
               </td>
-              <td className="md:px-4 px-1 py-4 border border-gray-300 text-center">
+              <td className="md:px-4 px-0.5 py-4 border border-gray-300 text-center">
                 {item.crew}
               </td>
-              <td className="md:px-4 px-1 py-4 border border-gray-300 text-center">
+              <td className="md:px-4 px-0.5 py-4 border border-gray-300 text-center">
                 {item.cost}
               </td>
             </tr>

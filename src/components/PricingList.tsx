@@ -66,8 +66,8 @@ function PricingList({
   ];
   return (
     <div className="w-full md:w-11/12 mt-5">
-      <section className=" rounded-3xl md:py-10 md:px-10 px-1">
-        <div className="md:ml-9 container mx-auto flex flex-col md:flex-row items-center justify-center">
+      <section className=" rounded-3xl md:py-10 md:px-10">
+        <div className="md:ml-9 container mx-auto flex flex-col md:flex-row items-center justify-center ">
           {/* Right Side - Content */}
           <div
             className={`md:-mr-28 md:-mt-0 z-20 rounded-lg shadow-lg shadow-neutral-100 bg-white p-4 md:w-1/2 text-center ${
@@ -78,16 +78,14 @@ function PricingList({
           >
             <h3
               className={`text-[#db5e16] uppercase ${
-                locale === "ar"
-                  ? " mb-4 text-base font-arabic"
-                  : "text-sm font-bold mb-2"
+                locale === "ar" ? " mb-4 text-base " : "text-sm font-bold mb-2"
               }`}
             >
               {t("top")}
             </h3>
             <h2
               className={`text-3xl font-bold text-gray-900 mb-4 ${
-                locale === "ar" ? "font-arabic" : ""
+                locale === "ar" ? "" : ""
               }`}
             >
               {t("title")}
@@ -130,20 +128,14 @@ function PricingList({
         <div className=" w-full md:w-10/12 rounded-3xl md:p-5 py-5 px-0">
           <div>
             <h2
-              className={`${
-                locale === "ar" ? "font-arabic font-bold" : "font-poppins"
-              }`}
+              className={`${locale === "ar" ? " font-bold" : "font-poppins"}`}
             >
               {t("list.title")}
             </h2>
             <p className={locale === "ar" ? "ar-p mt-4" : "my-4"}>
               {t("list.desc")}
             </p>
-            <h3
-              className={
-                locale === "ar" ? "mt-4 font-arabic text-2xl" : "font-poppins"
-              }
-            >
+            <h3 className={locale === "ar" ? "mt-4  text-2xl" : "font-poppins"}>
               {t("list.sub-heading")}
             </h3>
             <ol className={`custom-symbol mt-4 flex flex-col gap-y-2 `}>
@@ -163,25 +155,19 @@ function PricingList({
           </div>
           <div id="pricingList" className="mt-10">
             <h2 className="text-center">{t("list.table-title")}</h2>
-            <div className="mt-8">
+            <div className="mt-8 w-full">
               <PricingTable />
             </div>
           </div>
           {!isHome && (
             <div className="md:mt-16 mt-10 font-poppins">
-              <h2
-                className={`${locale === "ar" ? "font-arabic font-bold" : ""}`}
-              >
+              <h2 className={`${locale === "ar" ? " font-bold" : ""}`}>
                 {c("title")} {city ? city : "UAE"}
               </h2>
               <p className={`${locale === "ar" ? "ar-p" : ""} my-4`}>
                 {c("desc1")} {city ? city : "UAE"}, {c("desc2")}
               </p>
-              <h3
-                className={
-                  locale === "ar" ? "font-arabic text-2xl" : "font-poppins"
-                }
-              >
+              <h3 className={locale === "ar" ? " text-2xl" : "font-poppins"}>
                 {c("sub1")}
               </h3>
               <p className={`${locale === "ar" ? "ar-p" : ""} mt-2`}>
@@ -189,7 +175,7 @@ function PricingList({
               </p>
               <h3
                 className={`${
-                  locale === "ar" ? "font-arabic text-2xl" : "font-poppins"
+                  locale === "ar" ? " text-2xl" : "font-poppins"
                 } mt-3`}
               >
                 {c("sub2")}
@@ -199,7 +185,7 @@ function PricingList({
               </p>
               <h3
                 className={`${
-                  locale === "ar" ? "font-arabic text-3xl" : "font-poppins"
+                  locale === "ar" ? " text-3xl" : "font-poppins"
                 } mt-2`}
               >
                 {c("sub2-sub-title")}
@@ -220,7 +206,7 @@ function PricingList({
               </ul>
               <h3
                 className={`${
-                  locale === "ar" ? "font-arabic text-3xl" : "font-poppins"
+                  locale === "ar" ? " text-3xl" : "font-poppins"
                 } mt-2`}
               >
                 {c("sub2-sub-title2")}
@@ -241,7 +227,7 @@ function PricingList({
               </ul>
               <h3
                 className={`mt-3 ${
-                  locale === "ar" ? "font-arabic text-2xl" : "font-poppins"
+                  locale === "ar" ? " text-2xl" : "font-poppins"
                 }`}
               >
                 {c("sub3")}
@@ -251,7 +237,7 @@ function PricingList({
               </p>
               <h3
                 className={`mt-3 ${
-                  locale === "ar" ? "font-arabic text-2xl" : "font-poppins"
+                  locale === "ar" ? " text-2xl" : "font-poppins"
                 }`}
               >
                 {c("sub4")}

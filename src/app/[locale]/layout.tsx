@@ -3,6 +3,7 @@ import { getMessages } from "next-intl/server";
 import { Poppins, Amiri, Playfair_Display } from "next/font/google";
 import type { Metadata } from "next";
 import "./globals.css";
+import Script from "next/script";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 const poppins = Poppins({
@@ -47,6 +48,18 @@ export default async function RootLayout({
   const messages = await getMessages();
   return (
     <html lang={locale}>
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=G-YJFJVBXMC6`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+        window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-YJFJVBXMC6');
+      `}
+      </Script>
       <body>
         <NextIntlClientProvider messages={messages}>
           <main
