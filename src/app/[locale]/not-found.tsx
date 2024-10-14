@@ -1,5 +1,5 @@
 import React from "react";
-import notfoundImage from "../../public/images/not-found.svg";
+import notfoundImage from "../../../public/images/not-found.svg";
 import Image from "next/image";
 function notfound() {
   return (

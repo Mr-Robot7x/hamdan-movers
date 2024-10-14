@@ -29,17 +29,17 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     description:
       "We are trusted movers in Dubai for safe and reliable moving services. Whether it's a local or international move, we handle everything from cars to pianos with care, ensuring your belongings arrive on time and without damage.",
     alternates: {
-      canonical: `${process.env.PUBLIC_URL}/services-locations/about-us`,
+      canonical: `${process.env.PUBLIC_URL}/${locale}/about-us`,
       languages: {
-        ar: `${process.env.PUBLIC_URL}/ar/services-locations/about-us`,
-        en: `${process.env.PUBLIC_URL}/en/services-locations/about-us`,
+        ar: `${process.env.PUBLIC_URL}/ar/about-us`,
+        en: `${process.env.PUBLIC_URL}/en/about-us`,
       },
     },
     openGraph: {
       title: "About Us | Hamdan Movers",
       description:
         "We are trusted movers in Dubai for safe and reliable moving services. Whether it's a local or international move, we handle everything from cars to pianos with care, ensuring your belongings arrive on time and without damage.",
-      url: `${process.env.PUBLIC_URL}/services-locations/about-us`,
+      url: `${process.env.PUBLIC_URL}/${locale}/about-us`,
       siteName: t("site-Info.name"),
       locale: locale,
       type: "website",
@@ -51,6 +51,107 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
         url: `${process.env.PUBLIC_URL}/images/hamdan-mover-logo.png`,
         alt: "Hamdan Movers Logo",
       },
+    },
+    other: {
+      "application/ld+json": JSON.stringify({
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": `${process.env.PUBLIC_URL}/${locale}/about-us/`,
+            url: `${process.env.PUBLIC_URL}/${locale}/about-us/`,
+            name: "About Us | Hamdan Movers",
+            isPartOf: { "@id": `${process.env.PUBLIC_URL}/${locale}#website` },
+            primaryImageOfPage: {
+              "@id": `${process.env.PUBLIC_URL}/${locale}/about-us/#primaryimage`,
+            },
+            image: {
+              "@id": `${process.env.PUBLIC_URL}/${locale}/about-us/#primaryimage`,
+            },
+            thumbnailUrl: `${process.env.PUBLIC_URL}/images/owner-ahmad-hussain.jpg`,
+
+            dateModified: Date.now().toString(),
+            breadcrumb: {
+              "@id": `${process.env.PUBLIC_URL}/${locale}/about-us/#breadcrumb`,
+            },
+            inLanguage: locale === "ar" ? "ar-AE" : "en-US",
+            potentialAction: [
+              {
+                "@type": "ReadAction",
+                target: [`${process.env.PUBLIC_URL}/${locale}/about-us/`],
+              },
+            ],
+          },
+          {
+            "@type": "ImageObject",
+            inLanguage: locale === "ar" ? "ar-AE" : "en-US",
+            "@id": `${process.env.PUBLIC_URL}/${locale}/about-us/#primaryimage`,
+            url: `${process.env.PUBLIC_URL}/images/owner-ahmad-hussain.jpg`,
+            contentUrl: `${process.env.PUBLIC_URL}/images/owner-ahmad-hussain.jpg`,
+            width: 2000,
+            height: 1333,
+            caption: "best movers in dubai, UAE | Hamdan Movers",
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": `${process.env.PUBLIC_URL}/${locale}/about-us/#breadcrumb`,
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: `${process.env.PUBLIC_URL}/${locale}/`,
+              },
+              { "@type": "ListItem", position: 2, name: "About Us" },
+            ],
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://sanamovers.com/#website",
+            url: "https://sanamovers.com/",
+            name: "Sana Movers",
+            description: "Move your Dreams Safely",
+            publisher: { "@id": "https://sanamovers.com/#organization" },
+            potentialAction: [
+              {
+                "@type": "SearchAction",
+                target: {
+                  "@type": "EntryPoint",
+                  urlTemplate: "https://sanamovers.com/?s={search_term_string}",
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  valueRequired: true,
+                  valueName: "search_term_string",
+                },
+              },
+            ],
+            inLanguage: "en-US",
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://sanamovers.com/#organization",
+            name: "Sana Movers",
+            url: "https://sanamovers.com/",
+            logo: {
+              "@type": "ImageObject",
+              inLanguage: "en-US",
+              "@id": "https://sanamovers.com/#/schema/logo/image/",
+              url: "https://sanamovers.com/wp-content/uploads/2024/01/sana_movers_logo_W.png",
+              contentUrl:
+                "https://sanamovers.com/wp-content/uploads/2024/01/sana_movers_logo_W.png",
+              width: 1063,
+              height: 172,
+              caption: "Sana Movers",
+            },
+            image: { "@id": "https://sanamovers.com/#/schema/logo/image/" },
+            sameAs: [
+              "https://www.facebook.com/sanamovers/",
+              "https://www.instagram.com/sanamoversuae/",
+            ],
+          },
+        ],
+      }),
     },
   };
 }
