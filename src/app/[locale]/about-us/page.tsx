@@ -69,8 +69,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
               "@id": `${process.env.PUBLIC_URL}/${locale}/about-us/#primaryimage`,
             },
             thumbnailUrl: `${process.env.PUBLIC_URL}/images/owner-ahmad-hussain.jpg`,
-
-            dateModified: Date.now().toString(),
+            datePublished: "2024-10-01",
+            dateModified: "2024-10-15T12:00:00Z",
             breadcrumb: {
               "@id": `${process.env.PUBLIC_URL}/${locale}/about-us/#breadcrumb`,
             },
@@ -81,7 +81,36 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
                 target: [`${process.env.PUBLIC_URL}/${locale}/about-us/`],
               },
             ],
+            hasPart: [
+              // Added hasPart for related pages
+              {
+                "@type": "WebPage",
+                "@id": `${process.env.PUBLIC_URL}/${locale}/services/`,
+                name: "Services",
+              },
+              {
+                "@type": "WebPage",
+                "@id": `${process.env.PUBLIC_URL}/${locale}/contact-us/`,
+                name: "Contact Us",
+              },
+              {
+                "@type": "WebPage",
+                "@id": `${process.env.PUBLIC_URL}/${locale}/services-locations/movers-and-packers-dubai/`,
+                name: "Movers In Dubai",
+              },
+              {
+                "@type": "WebPage",
+                "@id": `${process.env.PUBLIC_URL}/${locale}/services-locations/movers-and-packers-sharjah/`,
+                name: "Movers In Sharjah",
+              },
+              {
+                "@type": "WebPage",
+                "@id": `${process.env.PUBLIC_URL}/${locale}/services-locations/movers-and-packers-ajman/`,
+                name: "Movers In Ajman",
+              },
+            ],
           },
+
           {
             "@type": "ImageObject",
             inLanguage: locale === "ar" ? "ar-AE" : "en-US",
@@ -90,7 +119,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
             contentUrl: `${process.env.PUBLIC_URL}/images/owner-ahmad-hussain.jpg`,
             width: 2000,
             height: 1333,
-            caption: "best movers in dubai, UAE | Hamdan Movers",
+            caption:
+              "Professional movers in Dubai, UAE - Hamdan Movers and Packers offering safe and reliable moving services.",
           },
           {
             "@type": "BreadcrumbList",
@@ -107,17 +137,20 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
           },
           {
             "@type": "WebSite",
-            "@id": "https://sanamovers.com/#website",
-            url: "https://sanamovers.com/",
-            name: "Sana Movers",
-            description: "Move your Dreams Safely",
-            publisher: { "@id": "https://sanamovers.com/#organization" },
+            "@id": `${process.env.PUBLIC_URL}/#website`,
+            url: `${process.env.PUBLIC_URL}/${locale}/`,
+            name: "Hamdan Movers",
+            description:
+              "We are trusted movers in Dubai for safe and reliable moving services. Whether it's a local or international move, we handle everything from cars to pianos with care, ensuring your belongings arrive on time and without damage.",
+            publisher: {
+              "@id": `${process.env.PUBLIC_URL}/${locale}/#organization`,
+            },
             potentialAction: [
               {
                 "@type": "SearchAction",
                 target: {
                   "@type": "EntryPoint",
-                  urlTemplate: "https://sanamovers.com/?s={search_term_string}",
+                  urlTemplate: `${process.env.PUBLIC_URL}/${locale}?s={search_term_string}`,
                 },
                 "query-input": {
                   "@type": "PropertyValueSpecification",
@@ -126,29 +159,34 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
                 },
               },
             ],
-            inLanguage: "en-US",
+            inLanguage: locale === "ar" ? "ar-AE" : "en-US",
           },
           {
             "@type": "Organization",
-            "@id": "https://sanamovers.com/#organization",
-            name: "Sana Movers",
-            url: "https://sanamovers.com/",
+            "@id": `${process.env.PUBLIC_URL}/${locale}/#organization`,
+            name: "Hamdan Movers",
+            url: `${process.env.PUBLIC_URL}/${locale}/`,
             logo: {
               "@type": "ImageObject",
-              inLanguage: "en-US",
-              "@id": "https://sanamovers.com/#/schema/logo/image/",
-              url: "https://sanamovers.com/wp-content/uploads/2024/01/sana_movers_logo_W.png",
-              contentUrl:
-                "https://sanamovers.com/wp-content/uploads/2024/01/sana_movers_logo_W.png",
+              inLanguage: locale === "ar" ? "ar-AE" : "en-US",
+              "@id": `${process.env.PUBLIC_URL}/images/hamdan-mover-logo.png`,
+              url: `${process.env.PUBLIC_URL}/images/hamdan-mover-logo.png`,
+              contentUrl: `${process.env.PUBLIC_URL}/images/hamdan-mover-logo.png`,
               width: 1063,
               height: 172,
-              caption: "Sana Movers",
+              caption: "Hamdan Movers and Packers",
             },
-            image: { "@id": "https://sanamovers.com/#/schema/logo/image/" },
-            sameAs: [
-              "https://www.facebook.com/sanamovers/",
-              "https://www.instagram.com/sanamoversuae/",
-            ],
+            image: {
+              "@id": `${process.env.PUBLIC_URL}/images/hamdan-mover-logo.png`,
+            },
+            contactPoint: {
+              // Added contactPoint
+              "@type": "ContactPoint",
+              telephone: "+971566651978",
+              contactType: "Customer Service",
+              areaServed: "AE",
+              availableLanguage: ["en", "ar"],
+            },
           },
         ],
       }),

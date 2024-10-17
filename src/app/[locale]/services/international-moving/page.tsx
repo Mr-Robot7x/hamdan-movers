@@ -29,23 +29,21 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "meta-service" });
 
   return {
-    title:
-      "Safe and Timely International Deliveries From UAE to anywhere in the world",
+    title: "Safe and Timely International Movers in UAE | Hamdan Mover",
     description:
       "International moving made easy with Hamdan Movers. Our expert team handles packing, shipping, customs, and door-to-door delivery, ensuring a smooth, stress-free experience. Trust us for seamless, professional service on your move abroad.",
     alternates: {
-      canonical: `${process.env.PUBLIC_URL}/services/international-moving`,
+      canonical: `${process.env.PUBLIC_URL}/${locale}/services/international-moving/`,
       languages: {
-        ar: `${process.env.PUBLIC_URL}/ar/services/international-moving`,
-        en: `${process.env.PUBLIC_URL}/en/services/international-moving`,
+        ar: `${process.env.PUBLIC_URL}/ar/services/international-moving/`,
+        en: `${process.env.PUBLIC_URL}/en/services/international-moving/`,
       },
     },
     openGraph: {
-      title:
-        "Safe and Timely International Deliveries From UAE to anywhere in the world",
+      title: "Safe and Timely International Movers in UAE | Hamdan Mover",
       description:
         "International moving made easy with Hamdan Movers. Our expert team handles packing, shipping, customs, and door-to-door delivery, ensuring a smooth, stress-free experience. Trust us for seamless, professional service on your move abroad.",
-      url: `${process.env.PUBLIC_URL}/services/international-moving`,
+      url: `${process.env.PUBLIC_URL}/${locale}/services/international-moving/`,
       siteName: t("site-Info.name"),
       locale: locale,
       type: "website",
@@ -54,8 +52,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       faxNumbers: ["+971566651978", "+971545019655", "+971503626685"],
       phoneNumbers: ["+971566651978", "+971545019655", "+971503626685"],
       images: {
-        url: `${process.env.PUBLIC_URL}/images/hamdan-mover-logo.png`,
-        alt: "Hamdan Movers Logo",
+        url: `${process.env.PUBLIC_URL}/images/international-service.jpg`,
+        alt: "International Movers In Dubai, UAE",
       },
     },
   };

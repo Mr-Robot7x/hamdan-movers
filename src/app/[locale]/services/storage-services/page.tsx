@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     description:
       "Need secure, climate-controlled storage? Our clean, air-conditioned units protect your belongings from damage, whether for short or long-term storage. Ideal for moving, downsizing, or extra space, with 24/7 monitoring and easy access for peace of mind",
     alternates: {
-      canonical: `${process.env.PUBLIC_URL}/services/storage-services`,
+      canonical: `${process.env.PUBLIC_URL}/${locale}/services/storage-services`,
       languages: {
         ar: `${process.env.PUBLIC_URL}/ar/services/storage-services`,
         en: `${process.env.PUBLIC_URL}/en/services/storage-services`,
@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
         "Best Storage Units In Dubai, UAE | Short and Long-Term Options - Hamdan Movers",
       description:
         "Need secure, climate-controlled storage? Our clean, air-conditioned units protect your belongings from damage, whether for short or long-term storage. Ideal for moving, downsizing, or extra space, with 24/7 monitoring and easy access for peace of mind",
-      url: `${process.env.PUBLIC_URL}/services/storage-services`,
+      url: `${process.env.PUBLIC_URL}/${locale}/services/storage-services`,
       siteName: t("site-Info.name"),
       locale: locale,
       type: "website",
@@ -57,7 +57,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       faxNumbers: ["+971566651978", "+971545019655", "+971503626685"],
       phoneNumbers: ["+971566651978", "+971545019655", "+971503626685"],
       images: {
-        url: `${process.env.PUBLIC_URL}/images/hamdan-mover-logo.png`,
+        url: `${process.env.PUBLIC_URL}/images/storage-service.jpg`,
         alt: "Hamdan Movers Logo",
       },
     },

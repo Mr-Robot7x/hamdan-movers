@@ -30,21 +30,21 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "meta-service" });
 
   return {
-    title: "Professional Packing Services in Dubai, UAE | Hamdan Movers",
+    title: "Best Packing Services in Dubai, UAE | Hamdan Movers",
     description:
       "Hamdan Movers and Packers provide expert packing services across the UAE, ensuring your belongings are safely packed and arrive in perfect condition. Our skilled team uses high-quality materials and techniques, offering reliable packing solutions for both local and long-distance moves in UAE.",
     alternates: {
-      canonical: `${process.env.PUBLIC_URL}/services/packing-services`,
+      canonical: `${process.env.PUBLIC_URL}/${locale}/services/packing-services`,
       languages: {
         ar: `${process.env.PUBLIC_URL}/ar/services/packing-services`,
         en: `${process.env.PUBLIC_URL}/en/services/packing-services`,
       },
     },
     openGraph: {
-      title: "Professional Packing Services in Dubai, UAE | Hamdan Movers",
+      title: "Best Packing Services in Dubai, UAE | Hamdan Movers",
       description:
         "Hamdan Movers and Packers provide expert packing services across the UAE, ensuring your belongings are safely packed and arrive in perfect condition. Our skilled team uses high-quality materials and techniques, offering reliable packing solutions for both local and long-distance moves in UAE.",
-      url: `${process.env.PUBLIC_URL}/services/packing-services`,
+      url: `${process.env.PUBLIC_URL}/${locale}/services/packing-services`,
       siteName: t("site-Info.name"),
       locale: locale,
       type: "website",
@@ -53,8 +53,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       faxNumbers: ["+971566651978", "+971545019655", "+971503626685"],
       phoneNumbers: ["+971566651978", "+971545019655", "+971503626685"],
       images: {
-        url: `${process.env.PUBLIC_URL}/images/hamdan-mover-logo.png`,
-        alt: "Hamdan Movers Logo",
+        url: `${process.env.PUBLIC_URL}/images/packing-unpacking.jpg`,
+        alt: "Packing Services in Dubai, UAE | Hamdan Movers",
       },
     },
   };

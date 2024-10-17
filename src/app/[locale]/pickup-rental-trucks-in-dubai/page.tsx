@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     description:
       "Searching for dependable pickup truck rental services in Dubai? Your solution is here! We provide a versatile fleet of pickup trucks to meet all your transportation needs. Whether it&lsquo;s moving goods, transporting items, or managing logistics, our pickups offer an efficient and hassle-free solution tailored to every job.",
     alternates: {
-      canonical: `${process.env.PUBLIC_URL}/pickup-rental-trucks-in-dubai`,
+      canonical: `${process.env.PUBLIC_URL}/${locale}/pickup-rental-trucks-in-dubai`,
       languages: {
         ar: `${process.env.PUBLIC_URL}/ar/pickup-rental-trucks-in-dubai`,
         en: `${process.env.PUBLIC_URL}/en/pickup-rental-trucks-in-dubai`,
@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
         "Affordable Pickup Truck Rentals for Business and Personal Use in Dubai",
       description:
         "Searching for dependable pickup truck rental services in Dubai? Your solution is here! We provide a versatile fleet of pickup trucks to meet all your transportation needs. Whether it&lsquo;s moving goods, transporting items, or managing logistics, our pickups offer an efficient and hassle-free solution tailored to every job.",
-      url: `${process.env.PUBLIC_URL}/pickup-rental-trucks-in-dubai`,
+      url: `${process.env.PUBLIC_URL}/${locale}/pickup-rental-trucks-in-dubai`,
       siteName: t("site-Info.name"),
       locale: locale,
       type: "website",
@@ -52,8 +52,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       faxNumbers: ["+971566651978", "+971545019655", "+971503626685"],
       phoneNumbers: ["+971566651978", "+971545019655", "+971503626685"],
       images: {
-        url: `${process.env.PUBLIC_URL}/images/hamdan-mover-logo.png`,
-        alt: "Hamdan Movers Logo",
+        url: `${process.env.PUBLIC_URL}/images/pickup-rent-services-3-trans.png`,
+        alt: "1.5 Ton / 3 Ton Pickup Trucks For Rent in Dubai",
       },
     },
   };

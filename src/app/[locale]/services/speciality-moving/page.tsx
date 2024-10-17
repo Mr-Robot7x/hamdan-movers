@@ -34,21 +34,21 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "meta-service" });
 
   return {
-    title: "Professional Specialty Movers for Unique Items in the UAE",
+    title: "Specialty Movers for Unique Items in the UAE | Hamdan Movers",
     description:
       "Specialty moving requires expert care for fragile, valuable, or bulky items. Hamdan Movers ensures safe transport for everything from art to pianos with professional handling and the right equipment. Trust us to protect your valuables during the move",
     alternates: {
-      canonical: `${process.env.PUBLIC_URL}/services/speciality-moving`,
+      canonical: `${process.env.PUBLIC_URL}/${locale}/services/speciality-moving`,
       languages: {
         ar: `${process.env.PUBLIC_URL}/ar/services/speciality-moving`,
         en: `${process.env.PUBLIC_URL}/en/services/speciality-moving`,
       },
     },
     openGraph: {
-      title: "Professional Specialty Movers for Unique Items in the UAE",
+      title: "Specialty Movers for Unique Items in the UAE | Hamdan Movers",
       description:
         "Specialty moving requires expert care for fragile, valuable, or bulky items. Hamdan Movers ensures safe transport for everything from art to pianos with professional handling and the right equipment. Trust us to protect your valuables during the move",
-      url: `${process.env.PUBLIC_URL}/services/speciality-moving`,
+      url: `${process.env.PUBLIC_URL}/${locale}/services/speciality-moving`,
       siteName: t("site-Info.name"),
       locale: locale,
       type: "website",
@@ -57,8 +57,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       faxNumbers: ["+971566651978", "+971545019655", "+971503626685"],
       phoneNumbers: ["+971566651978", "+971545019655", "+971503626685"],
       images: {
-        url: `${process.env.PUBLIC_URL}/images/hamdan-mover-logo.png`,
-        alt: "Hamdan Movers Logo",
+        url: `${process.env.PUBLIC_URL}/${locale}/services/speciality-moving.jpg`,
+        alt: "Specialty Movers for Unique Items in Dubai, UAE",
       },
     },
   };

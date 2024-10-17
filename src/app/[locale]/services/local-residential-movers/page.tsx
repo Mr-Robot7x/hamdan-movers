@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     description:
       "Are you searching for top-quality movers in your area? Hamdan Movers offers expert house moving and packing services all over the UAE. We take care of everything from packing your stuff to safely moving it to your new home. Pick us for a stress-free moving experience.",
     alternates: {
-      canonical: `${process.env.PUBLIC_URL}/services/local-residential-movers`,
+      canonical: `${process.env.PUBLIC_URL}/${locale}/services/local-residential-movers`,
       languages: {
         ar: `${process.env.PUBLIC_URL}/ar/services/local-residential-movers`,
         en: `${process.env.PUBLIC_URL}/en/services/local-residential-movers`,
@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
         "Best Movers Near You | Professional House Moving Services - Hamdan Movers",
       description:
         "Are you searching for top-quality movers in your area? Hamdan Movers offers expert house moving and packing services all over the UAE. We take care of everything from packing your stuff to safely moving it to your new home. Pick us for a stress-free moving experience.",
-      url: `${process.env.PUBLIC_URL}/services/local-residential-movers`,
+      url: `${process.env.PUBLIC_URL}/${locale}/services/local-residential-movers`,
       siteName: t("site-Info.name"),
       locale: locale,
       type: "website",
@@ -53,8 +53,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       faxNumbers: ["+971566651978", "+971545019655", "+971503626685"],
       phoneNumbers: ["+971566651978", "+971545019655", "+971503626685"],
       images: {
-        url: `${process.env.PUBLIC_URL}/images/hamdan-mover-logo.png`,
-        alt: "Hamdan Movers Logo",
+        url: `${process.env.PUBLIC_URL}/images/local-moving-service.jpg`,
+        alt: "Professional House Moving Services - Hamdan Movers",
       },
     },
   };

@@ -27,23 +27,21 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "meta-service" });
 
   return {
-    title:
-      "Best Movers And Packers In Ajman and its surrounded areas | Hamdan Movers",
+    title: "Best Movers And Packers In Ajman and Nears | Hamdan Movers",
     description:
-      "Hamdan Movers and Packers delivers top-quality moving solutions across the Ajman for 6 years. Our full-service options cover local moving, long-distance moving, packing &amp; storage, and specialty relocation. Our team of experienced experts ensures a seamless move for houses, offices, or commercial spaces, making your transition quick and hassle-free.",
+      "Hamdan Movers and Packers delivers top-quality moving solutions across the Ajman for 6 years. Our full-service options cover local moving, long-distance moving, packing , storage, and specialty relocation. Our team of experienced experts ensures a seamless move for houses, offices, or commercial spaces, making your transition quick and hassle-free.",
     alternates: {
-      canonical: `${process.env.PUBLIC_URL}/services-locations/movers-and-packers-ajman`,
+      canonical: `${process.env.PUBLIC_URL}/${locale}/services-locations/movers-and-packers-ajman`,
       languages: {
         ar: `${process.env.PUBLIC_URL}/ar/services-locations/movers-and-packers-ajman`,
         en: `${process.env.PUBLIC_URL}/en/services-locations/movers-and-packers-ajman`,
       },
     },
     openGraph: {
-      title:
-        "Best Movers And Packers In Ajman and its surrounded areas | Hamdan Movers",
+      title: "Best Movers And Packers In Ajman and Nears | Hamdan Movers",
       description:
         "Hamdan Movers and Packers delivers top-quality moving solutions across the Ajman for 6 years. Our full-service options cover local moving, long-distance moving, packing &amp; storage, and specialty relocation. Our team of experienced experts ensures a seamless move for houses, offices, or commercial spaces, making your transition quick and hassle-free.",
-      url: `${process.env.PUBLIC_URL}/services-locations/movers-and-packers-ajman`,
+      url: `${process.env.PUBLIC_URL}/${locale}/services-locations/movers-and-packers-ajman`,
       siteName: t("site-Info.name"),
       locale: locale,
       type: "website",
@@ -52,8 +50,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       faxNumbers: ["+971566651978", "+971545019655", "+971503626685"],
       phoneNumbers: ["+971566651978", "+971545019655", "+971503626685"],
       images: {
-        url: `${process.env.PUBLIC_URL}/images/hamdan-mover-logo.png`,
-        alt: "Hamdan Movers Logo",
+        url: `${process.env.PUBLIC_URL}/images/movers-in-ajman.jpg`,
+        alt: "Movers and packers in Ajman",
       },
     },
   };

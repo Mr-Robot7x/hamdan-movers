@@ -28,23 +28,21 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "meta-service" });
 
   return {
-    title:
-      "Commercial Moving Services in Dubai, UAE | Commercial Moving Services Near You - Hamdan Movers",
+    title: "Commercial Office Movers Near You | Dubai, UAE - Hamdan Movers",
     description:
-      "Hamdan Movers and Packers offer fully insured, 24/7 Office Moving Services in UAE. We provide customized relocation solutions with GPS-tracked fleets and handle Certificate of Insurance at no extra cost. With flexible scheduling and expertise in UAE’s unique moving challenges, we ensure a seamless, stress-free office move.",
+      "Hamdan Movers and Packers offer fully insured, 24/7 Office Moving Services in UAE. We provide customized relocation solutions with GPS-tracked fleets and handle Certificate of Insurance at no extra cost. ",
     alternates: {
-      canonical: `${process.env.PUBLIC_URL}/services/commerical-office-movers`,
+      canonical: `${process.env.PUBLIC_URL}/${locale}/services/commerical-office-movers`,
       languages: {
         ar: `${process.env.PUBLIC_URL}/ar/services/commerical-office-movers`,
         en: `${process.env.PUBLIC_URL}/en/services/commerical-office-movers`,
       },
     },
     openGraph: {
-      title:
-        "Commercial Moving Services in Dubai, UAE | Commercial Moving Services Near You - Hamdan Movers",
+      title: "Commercial Office Movers Near You | Dubai, UAE - Hamdan Movers",
       description:
-        "Hamdan Movers and Packers offer fully insured, 24/7 Office Moving Services in UAE. We provide customized relocation solutions with GPS-tracked fleets and handle Certificate of Insurance at no extra cost. With flexible scheduling and expertise in UAE’s unique moving challenges, we ensure a seamless, stress-free office move.",
-      url: `${process.env.PUBLIC_URL}/services/commerical-office-movers`,
+        "Hamdan Movers and Packers offer fully insured, 24/7 Office Moving Services in UAE. We provide customized relocation solutions with GPS-tracked fleets and handle Certificate of Insurance at no extra cost. ",
+      url: `${process.env.PUBLIC_URL}/${locale}/services/commerical-office-movers`,
       siteName: t("site-Info.name"),
       locale: locale,
       type: "website",
@@ -53,8 +51,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       faxNumbers: ["+971566651978", "+971545019655", "+971503626685"],
       phoneNumbers: ["+971566651978", "+971545019655", "+971503626685"],
       images: {
-        url: `${process.env.PUBLIC_URL}/images/hamdan-mover-logo.png`,
-        alt: "Hamdan Movers Logo",
+        url: `${process.env.PUBLIC_URL}/images/office-relocation.jpg`,
+        alt: "Commercial Office Movers Near You | Dubai, UAE - Hamdan Movers",
       },
     },
   };

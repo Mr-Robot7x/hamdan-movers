@@ -42,6 +42,134 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
         alt: "Hamdan Movers Logo",
       },
     },
+    other: {
+      "application/ld+json": JSON.stringify({
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": `${process.env.PUBLIC_URL}/${locale}/contact-us/`,
+            url: `${process.env.PUBLIC_URL}/${locale}/contact-us/`,
+            name: "Contact Us | Hamdan Movers",
+            isPartOf: { "@id": `${process.env.PUBLIC_URL}/${locale}#website` },
+            primaryImageOfPage: {
+              "@id": `${process.env.PUBLIC_URL}/${locale}/contact-us/#primaryimage`,
+            },
+            image: {
+              "@id": `${process.env.PUBLIC_URL}/${locale}/contact-us/#primaryimage`,
+            },
+            thumbnailUrl: `${process.env.PUBLIC_URL}/images/contact-us-hamdan-movers.jpg`,
+            datePublished: "2023-01-01",
+            dateModified: "2024-10-15T12:00:00Z",
+            breadcrumb: {
+              "@id": `${process.env.PUBLIC_URL}/${locale}/contact-us/#breadcrumb`,
+            },
+            inLanguage: locale === "ar" ? "ar-AE" : "en-US",
+            potentialAction: [
+              {
+                "@type": "CommunicateAction",
+                target: [`${process.env.PUBLIC_URL}/${locale}/contact-us/`],
+                description:
+                  "Contact Hamdan Movers for reliable and professional moving services in Dubai, UAE. Our customer service team is available to assist with your moving queries.",
+              },
+            ],
+            hasPart: [
+              {
+                "@type": "WebPage",
+                "@id": `${process.env.PUBLIC_URL}/${locale}/services/`,
+                name: "Services",
+              },
+              {
+                "@type": "WebPage",
+                "@id": `${process.env.PUBLIC_URL}/${locale}/about-us/`,
+                name: "About Us",
+              },
+            ],
+          },
+          {
+            "@type": "ImageObject",
+            inLanguage: locale === "ar" ? "ar-AE" : "en-US",
+            "@id": `${process.env.PUBLIC_URL}/${locale}/contact-us/#primaryimage`,
+            url: `${process.env.PUBLIC_URL}/images/contact-us-hamdan-movers.jpg`,
+            contentUrl: `${process.env.PUBLIC_URL}/images/contact-us-hamdan-movers.jpg`,
+            width: 2000,
+            height: 1333,
+            caption:
+              "Contact Hamdan Movers in Dubai, UAE for professional and safe moving services.",
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": `${process.env.PUBLIC_URL}/${locale}/contact-us/#breadcrumb`,
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: `${process.env.PUBLIC_URL}/${locale}/`,
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Contact Us",
+                item: `${process.env.PUBLIC_URL}/${locale}/contact-us/`,
+              },
+            ],
+          },
+          {
+            "@type": "WebSite",
+            "@id": `${process.env.PUBLIC_URL}/#website`,
+            url: `${process.env.PUBLIC_URL}/${locale}/`,
+            name: "Hamdan Movers",
+            description:
+              "Hamdan Movers is a professional moving company based in Dubai, UAE. We offer a wide range of services including local and international moving, packing, storage, and specialty moving services.",
+            publisher: {
+              "@id": `${process.env.PUBLIC_URL}/${locale}/#organization`,
+            },
+            potentialAction: [
+              {
+                "@type": "SearchAction",
+                target: {
+                  "@type": "EntryPoint",
+                  urlTemplate: `${process.env.PUBLIC_URL}/${locale}?s={search_term_string}`,
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  valueRequired: true,
+                  valueName: "search_term_string",
+                },
+              },
+            ],
+            inLanguage: locale === "ar" ? "ar-AE" : "en-US",
+          },
+          {
+            "@type": "Organization",
+            "@id": `${process.env.PUBLIC_URL}/${locale}/#organization`,
+            name: "Hamdan Movers",
+            url: `${process.env.PUBLIC_URL}/${locale}/`,
+            logo: {
+              "@type": "ImageObject",
+              inLanguage: locale === "ar" ? "ar-AE" : "en-US",
+              "@id": `${process.env.PUBLIC_URL}/images/hamdan-mover-logo.png`,
+              url: `${process.env.PUBLIC_URL}/images/hamdan-mover-logo.png`,
+              contentUrl: `${process.env.PUBLIC_URL}/images/hamdan-mover-logo.png`,
+              width: 1063,
+              height: 172,
+              caption: "Hamdan Movers and Packers",
+            },
+            image: {
+              "@id": `${process.env.PUBLIC_URL}/images/hamdan-mover-logo.png`,
+            },
+            contactPoint: {
+              "@type": "ContactPoint",
+              telephone: "+971566651978",
+              contactType: "Customer Service",
+              areaServed: "AE",
+              availableLanguage: ["en", "ar"],
+            },
+          },
+        ],
+      }),
+    },
   };
 }
 
@@ -77,6 +205,7 @@ function ContactUsPage() {
           <div className="flex justify-center mt-10">
             <div className="w-full md:w-11/12 h-96 bg-gradient-to-t from-slate-100 to-slate-300 rounded-2xl overflow-hidden">
               <iframe
+                aria-label="google map location"
                 src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d901.4683924553564!2d55.39522426953228!3d25.34202321065021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDIwJzMxLjMiTiA1NcKwMjMnNDUuMSJF!5e0!3m2!1sen!2s!4v1726905077160!5m2!1sen!2s"
                 className="w-full h-full drop-shadow-lg"
                 style={{

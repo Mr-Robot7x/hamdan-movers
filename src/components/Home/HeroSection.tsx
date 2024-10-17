@@ -14,10 +14,7 @@ function HeroSection() {
   const b = useTranslations("buttons");
 
   return (
-    <section
-      id="home"
-      className=" md:mt-48 mt-32 w-full flex justify-center"
-    >
+    <section id="home" className=" md:mt-48 mt-32 w-full flex justify-center">
       <ConfirmBox />
       <div
         dir={locale === "ar" ? "rtl" : "ltr"}
@@ -50,7 +47,7 @@ function HeroSection() {
             {t("description")}
           </p>
           <div className="w-full flex md:gap-x-3 md:flex-row flex-col gap-y-3 mt-6">
-            <Link aria-label="call now" href={"tel:tel:+971566651978"}>
+            <Link aria-label="call now" href={"tel:+971566651978"}>
               <Button className="">
                 {b("call now")} : <span dir="ltr">+971 56 6651978</span>
               </Button>

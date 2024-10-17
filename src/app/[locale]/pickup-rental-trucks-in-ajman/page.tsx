@@ -21,11 +21,11 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "meta-service" });
 
   return {
-    title: "Cheap pickup rental services in Ajman",
+    title: "Cheap Pickup Rental Cars in Ajman",
     description:
       "Rent a 1.5 / 3 ton pickup truck for versatile, cost-effective transport of furniture, materials, and more. Enjoy convenience and reliability with well-maintained vehicles from a trusted provider in Ajman",
     alternates: {
-      canonical: `${process.env.PUBLIC_URL}/pickup-rental-trucks-in-ajman`,
+      canonical: `${process.env.PUBLIC_URL}/${locale}/pickup-rental-trucks-in-ajman`,
       languages: {
         ar: `${process.env.PUBLIC_URL}/ar/pickup-rental-trucks-in-ajman`,
         en: `${process.env.PUBLIC_URL}/en/pickup-rental-trucks-in-ajman`,
@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       title: "Cheap pickup rental services in Ajman",
       description:
         "Rent a 1.5 / 3 ton pickup truck for versatile, cost-effective transport of furniture, materials, and more. Enjoy convenience and reliability with well-maintained vehicles from a trusted provider in Ajman",
-      url: `${process.env.PUBLIC_URL}/pickup-rental-trucks-in-ajman`,
+      url: `${process.env.PUBLIC_URL}/${locale}/pickup-rental-trucks-in-ajman`,
       siteName: t("site-Info.name"),
       locale: locale,
       type: "website",
@@ -44,8 +44,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       faxNumbers: ["+971566651978", "+971545019655", "+971503626685"],
       phoneNumbers: ["+971566651978", "+971545019655", "+971503626685"],
       images: {
-        url: `${process.env.PUBLIC_URL}/images/hamdan-mover-logo.png`,
-        alt: "Hamdan Movers Logo",
+        url: `${process.env.PUBLIC_URL}/images/pickup-rent-services-3-trans.png`,
+        alt: "1.5 Ton / 3 Ton Pickup Trucks For Rent in Ajman",
       },
     },
   };
