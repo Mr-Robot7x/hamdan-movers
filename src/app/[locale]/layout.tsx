@@ -60,6 +60,19 @@ export default async function RootLayout({
             gtag('config', 'G-YJFJVBXMC6');
       `}
       </Script>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=AW-16744321482"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics-tag-2" strategy="afterInteractive">
+        {`
+            window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-16744321482');
+          `}
+      </Script>
       <body>
         <NextIntlClientProvider messages={messages}>
           <main
