@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
   try {
     const { data, error } = await resend.emails.send({
       from: "Hamdan Movers <onboarding@resend.dev>",
-      to: ["businessmanagers7x@gmail.com"],
+      to: ["hamdan.movers.packers@gmail.com"],
       subject: "New Contact From Hamdan Movers",
       react: EmailTemplate({
         name: String(fdata.get("name")),
