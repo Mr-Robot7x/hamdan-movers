@@ -43,7 +43,7 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.redirect(
       new URL(
-        `${process.env.PUBLIC_URL}/${req.nextUrl.locale}?ok=${data?.id}`,
+        `${process.env.PUBLIC_URL}/${req.nextUrl.locale}?ok=true`,
         req.url
       )
     );

@@ -50,7 +50,7 @@ const CustomSelect: React.FC<CustomSelectProps> = ({
           {options.map((option) => (
             <li
               key={option.value}
-              className="p-3 cursor-pointer hover:bg-gray-100"
+              className="px-3 py-2 cursor-pointer hover:bg-gray-100 text-sm"
               onClick={() => handleOptionSelect(option)}
             >
               {option.label}

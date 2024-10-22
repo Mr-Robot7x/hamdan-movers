@@ -13,6 +13,25 @@ function HeroSection() {
   const t = useTranslations("heroSection");
   const b = useTranslations("buttons");
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.target as HTMLFormElement);
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      body: formData,
+      headers: {
+        "return-url": window.location.href,
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    } else {
+      // const data = await response.json();
+      window.location.replace(`/${locale}?ok=true`);
+    }
+    console.log("Form Data : ", formData);
+  };
   return (
     <section id="home" className=" md:mt-48 mt-32 w-full flex justify-center">
       <ConfirmBox />
@@ -97,7 +116,7 @@ function HeroSection() {
             dir=""
             className="bg-white md:p-4 p-3 shadow-lg shadow-black/5 rounded-3xl md:w-[85%] w-full  flex items-center justify-center flex-col"
             method="POST"
-            action={"/api/contact"}
+            onSubmit={(e) => handleSubmit(e)}
           >
             <h3 className="text-center mb-6 mt-4">{t("form-h")}</h3>
             <input
@@ -127,16 +146,44 @@ function HeroSection() {
               className="border-none bg-gray-50 mt-3 p-4 rounded-3xl focus:shadow-md transition-shadow"
               options={[
                 {
-                  label: "Moving",
-                  value: "Moving",
+                  value: " Local Moving",
+                  label: " Local Moving",
                 },
                 {
-                  label: "Packaging",
-                  value: "Packaging",
+                  value: " Commercial Moving",
+                  label: " Commercial Moving",
                 },
                 {
-                  label: "Delivery",
-                  value: "Delivery",
+                  value: "Packing and Unpacking",
+                  label: "Packing and Unpacking",
+                },
+                {
+                  value: "International Moving",
+                  label: "International Moving",
+                },
+                {
+                  value: "Pickup Trucks Rent",
+                  label: "Pickup Trucks Rent",
+                },
+                {
+                  value: "Apartment Moving",
+                  label: "Apartment Moving",
+                },
+                {
+                  value: "Villa Moving",
+                  label: "Villa Moving",
+                },
+                {
+                  value: "Office Relocation",
+                  label: "Office Relocation",
+                },
+                {
+                  value: "Home Cleaning",
+                  label: "Home Cleaning",
+                },
+                {
+                  value: "Furniture Cleaning",
+                  label: "Furniture Cleaning",
                 },
               ]}
               placeholder={t("service")}

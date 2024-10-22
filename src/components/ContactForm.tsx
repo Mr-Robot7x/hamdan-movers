@@ -4,20 +4,44 @@ import { MailsIcon, PhoneForwardedIcon } from "lucide-react";
 import { Button } from "./ui/button";
 const services = [
   {
-    value: "home",
-    label: "Home",
+    value: " Local Moving",
+    label: " Local Moving",
   },
   {
-    value: "office",
-    label: "Office",
+    value: " Commercial Moving",
+    label: " Commercial Moving",
   },
   {
-    value: "event",
-    label: "Event",
+    value: "Packing and Unpacking",
+    label: "Packing and Unpacking",
   },
   {
-    value: "other",
-    label: "Other",
+    value: "International Moving",
+    label: "International Moving",
+  },
+  {
+    value: "Pickup Trucks Rent",
+    label: "Pickup Trucks Rent",
+  },
+  {
+    value: "Apartment Moving",
+    label: "Apartment Moving",
+  },
+  {
+    value: "Villa Moving",
+    label: "Villa Moving",
+  },
+  {
+    value: "Office Relocation",
+    label: "Office Relocation",
+  },
+  {
+    value: "Home Cleaning",
+    label: "Home Cleaning",
+  },
+  {
+    value: "Furniture Cleaning",
+    label: "Furniture Cleaning",
   },
 ];
 import { Link } from "@/i18n/routing";
