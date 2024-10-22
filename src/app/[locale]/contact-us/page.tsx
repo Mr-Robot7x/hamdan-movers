@@ -19,17 +19,17 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     description:
       "We're experts in helping people move in the UAE. Our team is made up of experienced professionals who know exactly what they're doing. We have all the latest equipment and technology to make your move as smooth as possible. We value your feedback and are always looking for ways to improve our services. Trust us to handle your move with care and efficiency.",
     alternates: {
-      canonical: `${process.env.PUBLIC_URL}/${locale}/contact-us`,
+      canonical: `${process.env.PUBLIC_URL}/${locale}/contact-us/`,
       languages: {
-        ar: `${process.env.PUBLIC_URL}/ar/contact-us`,
-        en: `${process.env.PUBLIC_URL}/en/contact-us`,
+        ar: `${process.env.PUBLIC_URL}/ar/contact-us/`,
+        en: `${process.env.PUBLIC_URL}/en/contact-us/`,
       },
     },
     openGraph: {
       title: "Contact Us | Hamdan Movers",
       description:
         "We're experts in helping people move in the UAE. Our team is made up of experienced professionals who know exactly what they're doing. We have all the latest equipment and technology to make your move as smooth as possible. We value your feedback and are always looking for ways to improve our services. Trust us to handle your move with care and efficiency.",
-      url: `${process.env.PUBLIC_URL}/${locale}/contact-us`,
+      url: `${process.env.PUBLIC_URL}/${locale}/contact-us/`,
       siteName: t("site-Info.name"),
       locale: locale,
       type: "website",

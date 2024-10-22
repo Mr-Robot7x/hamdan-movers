@@ -32,17 +32,17 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     description:
       "Hamdan Movers and Packers offer fully insured, 24/7 Office Moving Services in UAE. We provide customized relocation solutions with GPS-tracked fleets and handle Certificate of Insurance at no extra cost. ",
     alternates: {
-      canonical: `${process.env.PUBLIC_URL}/${locale}/services/commerical-office-movers`,
+      canonical: `${process.env.PUBLIC_URL}/${locale}/services/commerical-office-movers/`,
       languages: {
-        ar: `${process.env.PUBLIC_URL}/ar/services/commerical-office-movers`,
-        en: `${process.env.PUBLIC_URL}/en/services/commerical-office-movers`,
+        ar: `${process.env.PUBLIC_URL}/ar/services/commerical-office-movers/`,
+        en: `${process.env.PUBLIC_URL}/en/services/commerical-office-movers/`,
       },
     },
     openGraph: {
       title: "Commercial Office Movers Near You | Dubai, UAE - Hamdan Movers",
       description:
         "Hamdan Movers and Packers offer fully insured, 24/7 Office Moving Services in UAE. We provide customized relocation solutions with GPS-tracked fleets and handle Certificate of Insurance at no extra cost. ",
-      url: `${process.env.PUBLIC_URL}/${locale}/services/commerical-office-movers`,
+      url: `${process.env.PUBLIC_URL}/${locale}/services/commerical-office-movers/`,
       siteName: t("site-Info.name"),
       locale: locale,
       type: "website",

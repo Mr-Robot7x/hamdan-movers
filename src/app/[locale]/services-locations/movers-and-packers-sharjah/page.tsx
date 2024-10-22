@@ -31,17 +31,17 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     description:
       "We offers comprehensive moving services across the Sharjah, including local and long-distance moves, packing, specialized handling, and custom crating. We handle residential, commercial, and emergency relocations for a seamless, stress-free experience.",
     alternates: {
-      canonical: `${process.env.PUBLIC_URL}/${locale}/services-locations/movers-and-packers-sharjah`,
+      canonical: `${process.env.PUBLIC_URL}/${locale}/services-locations/movers-and-packers-sharjah/`,
       languages: {
-        ar: `${process.env.PUBLIC_URL}/ar/services-locations/movers-and-packers-sharjah`,
-        en: `${process.env.PUBLIC_URL}/en/services-locations/movers-and-packers-sharjah`,
+        ar: `${process.env.PUBLIC_URL}/ar/services-locations/movers-and-packers-sharjah/`,
+        en: `${process.env.PUBLIC_URL}/en/services-locations/movers-and-packers-sharjah/`,
       },
     },
     openGraph: {
       title: "Cheap Moving and Packing Company In Sharjah | Hamdan Movers",
       description:
         "We offers comprehensive moving services across the Sharjah, including local and long-distance moves, packing, specialized handling, and custom crating. We handle residential, commercial, and emergency relocations for a seamless, stress-free experience.",
-      url: `${process.env.PUBLIC_URL}/${locale}/services-locations/movers-and-packers-sharjah`,
+      url: `${process.env.PUBLIC_URL}/${locale}/services-locations/movers-and-packers-sharjah/`,
       siteName: t("site-Info.name"),
       locale: locale,
       type: "website",

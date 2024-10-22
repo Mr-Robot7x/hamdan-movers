@@ -30,17 +30,17 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     description:
       "Looking for reliable pickup rental services in UAE? Look no further! We offer a versatile fleet of pickups to meet all your transportation needs. Whether you need to move goods, transport items, or handle logistics, our pickup trucks provide a hassle-free and efficient solution tailored for every task.",
     alternates: {
-      canonical: `${process.env.PUBLIC_URL}/${locale}/pickup-rental-trucks`,
+      canonical: `${process.env.PUBLIC_URL}/${locale}/pickup-rental-trucks/`,
       languages: {
-        ar: `${process.env.PUBLIC_URL}/ar/pickup-rental-trucks`,
-        en: `${process.env.PUBLIC_URL}/en/pickup-rental-trucks`,
+        ar: `${process.env.PUBLIC_URL}/ar/pickup-rental-trucks/`,
+        en: `${process.env.PUBLIC_URL}/en/pickup-rental-trucks/`,
       },
     },
     openGraph: {
       title: "Cheap Pickup Truck Rentals for Business and Personal Use in UAE",
       description:
         "Looking for reliable pickup rental services in UAE? Look no further! We offer a versatile fleet of pickups to meet all your transportation needs. Whether you need to move goods, transport items, or handle logistics, our pickup trucks provide a hassle-free and efficient solution tailored for every task.",
-      url: `${process.env.PUBLIC_URL}/${locale}/pickup-rental-trucks`,
+      url: `${process.env.PUBLIC_URL}/${locale}/pickup-rental-trucks/`,
       siteName: t("site-Info.name"),
       locale: locale,
       type: "website",

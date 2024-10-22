@@ -38,17 +38,17 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     description:
       "Specialty moving requires expert care for fragile, valuable, or bulky items. Hamdan Movers ensures safe transport for everything from art to pianos with professional handling and the right equipment. Trust us to protect your valuables during the move",
     alternates: {
-      canonical: `${process.env.PUBLIC_URL}/${locale}/services/speciality-moving`,
+      canonical: `${process.env.PUBLIC_URL}/${locale}/services/speciality-moving/`,
       languages: {
-        ar: `${process.env.PUBLIC_URL}/ar/services/speciality-moving`,
-        en: `${process.env.PUBLIC_URL}/en/services/speciality-moving`,
+        ar: `${process.env.PUBLIC_URL}/ar/services/speciality-moving/`,
+        en: `${process.env.PUBLIC_URL}/en/services/speciality-moving/`,
       },
     },
     openGraph: {
       title: "Specialty Movers for Unique Items in the UAE | Hamdan Movers",
       description:
         "Specialty moving requires expert care for fragile, valuable, or bulky items. Hamdan Movers ensures safe transport for everything from art to pianos with professional handling and the right equipment. Trust us to protect your valuables during the move",
-      url: `${process.env.PUBLIC_URL}/${locale}/services/speciality-moving`,
+      url: `${process.env.PUBLIC_URL}/${locale}/services/speciality-moving/`,
       siteName: t("site-Info.name"),
       locale: locale,
       type: "website",

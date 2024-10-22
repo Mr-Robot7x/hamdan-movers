@@ -31,17 +31,17 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     description:
       "Hamdan Movers and Packers delivers top-quality moving solutions across the Ajman for 6 years. Our full-service options cover local moving, long-distance moving, packing , storage, and specialty relocation. Our team of experienced experts ensures a seamless move for houses, offices, or commercial spaces, making your transition quick and hassle-free.",
     alternates: {
-      canonical: `${process.env.PUBLIC_URL}/${locale}/services-locations/movers-and-packers-ajman`,
+      canonical: `${process.env.PUBLIC_URL}/${locale}/services-locations/movers-and-packers-ajman/`,
       languages: {
-        ar: `${process.env.PUBLIC_URL}/ar/services-locations/movers-and-packers-ajman`,
-        en: `${process.env.PUBLIC_URL}/en/services-locations/movers-and-packers-ajman`,
+        ar: `${process.env.PUBLIC_URL}/ar/services-locations/movers-and-packers-ajman/`,
+        en: `${process.env.PUBLIC_URL}/en/services-locations/movers-and-packers-ajman/`,
       },
     },
     openGraph: {
       title: "Best Movers And Packers In Ajman and Nears | Hamdan Movers",
       description:
         "Hamdan Movers and Packers delivers top-quality moving solutions across the Ajman for 6 years. Our full-service options cover local moving, long-distance moving, packing &amp; storage, and specialty relocation. Our team of experienced experts ensures a seamless move for houses, offices, or commercial spaces, making your transition quick and hassle-free.",
-      url: `${process.env.PUBLIC_URL}/${locale}/services-locations/movers-and-packers-ajman`,
+      url: `${process.env.PUBLIC_URL}/${locale}/services-locations/movers-and-packers-ajman/`,
       siteName: t("site-Info.name"),
       locale: locale,
       type: "website",

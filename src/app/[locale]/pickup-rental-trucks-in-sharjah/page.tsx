@@ -32,10 +32,10 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     description:
       "Looking for reliable pickup rental services in Sharjah? Look no further! We offer a versatile fleet of pickups to meet all your transportation needs. Whether you need to move goods, transport items, or handle logistics, our pickup trucks provide a hassle-free and efficient solution tailored for every task.",
     alternates: {
-      canonical: `${process.env.PUBLIC_URL}/${locale}/pickup-rental-trucks-in-sharjah`,
+      canonical: `${process.env.PUBLIC_URL}/${locale}/pickup-rental-trucks-in-sharjah/`,
       languages: {
-        ar: `${process.env.PUBLIC_URL}/ar/pickup-rental-trucks-in-sharjah`,
-        en: `${process.env.PUBLIC_URL}/en/pickup-rental-trucks-in-sharjah`,
+        ar: `${process.env.PUBLIC_URL}/ar/pickup-rental-trucks-in-sharjah/`,
+        en: `${process.env.PUBLIC_URL}/en/pickup-rental-trucks-in-sharjah/`,
       },
     },
     openGraph: {
@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
         "Cheap Pickup Truck Rentals for Business and Personal Use in Sharjah",
       description:
         "Looking for reliable pickup rental services in Sharjah? Look no further! We offer a versatile fleet of pickups to meet all your transportation needs. Whether you need to move goods, transport items, or handle logistics, our pickup trucks provide a hassle-free and efficient solution tailored for every task.",
-      url: `${process.env.PUBLIC_URL}/${locale}/pickup-rental-trucks-in-sharjah`,
+      url: `${process.env.PUBLIC_URL}/${locale}/pickup-rental-trucks-in-sharjah/`,
       siteName: t("site-Info.name"),
       locale: locale,
       type: "website",

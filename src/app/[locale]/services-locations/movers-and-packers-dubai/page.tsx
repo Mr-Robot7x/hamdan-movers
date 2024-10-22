@@ -31,17 +31,17 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     description:
       "Cheap Moving and Packing Company In Dubai, Hamdan Movers and Packers delivers top-quality moving solutions across the Dubai for 6 years. Our full-service options cover local moving, long-distance moving, packing &amp; storage, and specialty relocation. Our team of experienced experts ensures a seamless move for houses, offices, or commercial spaces, making your transition quick and hassle-free.",
     alternates: {
-      canonical: `${process.env.PUBLIC_URL}/${locale}/services-locations/movers-and-packers-dubai`,
+      canonical: `${process.env.PUBLIC_URL}/${locale}/services-locations/movers-and-packers-dubai/`,
       languages: {
-        ar: `${process.env.PUBLIC_URL}/ar/services-locations/movers-and-packers-dubai`,
-        en: `${process.env.PUBLIC_URL}/en/services-locations/movers-and-packers-dubai`,
+        ar: `${process.env.PUBLIC_URL}/ar/services-locations/movers-and-packers-dubai/`,
+        en: `${process.env.PUBLIC_URL}/en/services-locations/movers-and-packers-dubai/`,
       },
     },
     openGraph: {
       title: "Best Movers And Packers In Dubai | Hamdan Movers",
       description:
         "Cheap Moving and Packing Company In Dubai, Hamdan Movers and Packers delivers top-quality moving solutions across the Dubai for 6 years. Our full-service options cover local moving, long-distance moving, packing &amp; storage, and specialty relocation. Our team of experienced experts ensures a seamless move for houses, offices, or commercial spaces, making your transition quick and hassle-free.",
-      url: `${process.env.PUBLIC_URL}/${locale}/services-locations/movers-and-packers-dubai`,
+      url: `${process.env.PUBLIC_URL}/${locale}/services-locations/movers-and-packers-dubai/`,
       siteName: t("site-Info.name"),
       locale: locale,
       type: "website",

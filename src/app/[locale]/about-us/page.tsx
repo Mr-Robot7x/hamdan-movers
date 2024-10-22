@@ -29,17 +29,17 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     description:
       "We are trusted movers in Dubai for safe and reliable moving services. Whether it's a local or international move, we handle everything from cars to pianos with care, ensuring your belongings arrive on time and without damage.",
     alternates: {
-      canonical: `${process.env.PUBLIC_URL}/${locale}/about-us`,
+      canonical: `${process.env.PUBLIC_URL}/${locale}/about-us/`,
       languages: {
-        ar: `${process.env.PUBLIC_URL}/ar/about-us`,
-        en: `${process.env.PUBLIC_URL}/en/about-us`,
+        ar: `${process.env.PUBLIC_URL}/ar/about-us/`,
+        en: `${process.env.PUBLIC_URL}/en/about-us/`,
       },
     },
     openGraph: {
       title: "About Us | Hamdan Movers",
       description:
         "We are trusted movers in Dubai for safe and reliable moving services. Whether it's a local or international move, we handle everything from cars to pianos with care, ensuring your belongings arrive on time and without damage.",
-      url: `${process.env.PUBLIC_URL}/${locale}/about-us`,
+      url: `${process.env.PUBLIC_URL}/${locale}/about-us/`,
       siteName: t("site-Info.name"),
       locale: locale,
       type: "website",
