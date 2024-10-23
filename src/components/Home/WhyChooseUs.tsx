@@ -57,10 +57,10 @@ const WhyChooseUs: React.FC = () => {
               </p>
 
               <div className="flex item-center gap-x-4 mb-8">
-                <Link href={"/contact-us"}>
+                <Link href={"/contact-us/"}>
                   <Button>{b("Contact Us")}</Button>
                 </Link>
-                <Link href={"/about-us"}>
+                <Link href={"/about-us/"}>
                   <Button variant={"light"}>{b("Know More")}</Button>
                 </Link>
               </div>

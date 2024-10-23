@@ -71,7 +71,7 @@ function HeroSection() {
                 {b("call now")} : <span dir="ltr">+971 56 6651978</span>
               </Button>
             </Link>
-            <Link href={"/services"}>
+            <Link href={"/services/"}>
               <Button variant={"secondary"}>{b("Our Services")}</Button>
             </Link>
           </div>

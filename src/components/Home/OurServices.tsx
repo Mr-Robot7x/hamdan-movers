@@ -61,7 +61,7 @@ function OurServices({ title, city }: { title?: string; city?: string }) {
             {t("local.desc")}
           </p>
           <div className="mt-5">
-            <Link href={"/services/local-residential-movers"}>
+            <Link href={"/services/local-residential-movers/"}>
               <Button size={"sm"} variant={"outline"}>
                 {b("Service Detail")}
               </Button>
@@ -99,7 +99,7 @@ function OurServices({ title, city }: { title?: string; city?: string }) {
             {t("commercial.desc")}
           </p>
           <div className="mt-5">
-            <Link href={"/services/commerical-office-movers"}>
+            <Link href={"/services/commerical-office-movers/"}>
               <Button size={"sm"} variant={"outline"}>
                 {b("Service Detail")}
               </Button>
@@ -137,7 +137,7 @@ function OurServices({ title, city }: { title?: string; city?: string }) {
             {t("packing.desc")}
           </p>
           <div className="mt-5">
-            <Link href={"/services/packing-services"}>
+            <Link href={"/services/packing-services/"}>
               <Button size={"sm"} variant={"outline"}>
                 {b("Service Detail")}
               </Button>
@@ -175,7 +175,7 @@ function OurServices({ title, city }: { title?: string; city?: string }) {
             {t("storage.desc")}
           </p>
           <div className="mt-5">
-            <Link href={"/services/storage-services"}>
+            <Link href={"/services/storage-services/"}>
               <Button size={"sm"} variant={"outline"}>
                 {b("Service Detail")}
               </Button>
@@ -213,7 +213,7 @@ function OurServices({ title, city }: { title?: string; city?: string }) {
             {t("specialty.desc")}
           </p>
           <div className="mt-5">
-            <Link href={"/services/speciality-moving"}>
+            <Link href={"/services/speciality-moving/"}>
               <Button size={"sm"} variant={"outline"}>
                 {b("Service Detail")}
               </Button>
@@ -252,7 +252,7 @@ function OurServices({ title, city }: { title?: string; city?: string }) {
             {t("international.desc")}
           </p>
           <div className="mt-5">
-            <Link href={"/services/international-moving"}>
+            <Link href={"/services/international-moving/"}>
               <Button size={"sm"} variant={"outline"}>
                 {b("Service Detail")}
               </Button>

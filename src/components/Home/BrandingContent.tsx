@@ -128,7 +128,7 @@ function BrandingContent() {
               </p>
 
               <div className="flex justify-center md:justify-start space-x-4 md:mb-8 mb-4">
-                <Link href={"/contact-us"}>
+                <Link href={"/contact-us/"}>
                   <Button>{b("Contact Us")}</Button>
                 </Link>
               </div>

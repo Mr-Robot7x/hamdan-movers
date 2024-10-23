@@ -19,7 +19,7 @@ function Locations() {
         >
           <li className="grid md:grid-cols-2 grid-cols-1 items-center">
             <div>
-              <Link href={"/services-locations/movers-and-packers-dubai"}>
+              <Link href={"/services-locations/movers-and-packers-dubai/"}>
                 <h3
                   className={`${
                     locale === "ar"
@@ -44,7 +44,7 @@ function Locations() {
                 <Link href={"tel:+971566651978"}>
                   <Button dir="ltr">Call Now</Button>
                 </Link>
-                <Link href={"/services-locations/movers-and-packers-dubai"}>
+                <Link href={"/services-locations/movers-and-packers-dubai/"}>
                   <Button variant={"secondary"}>{b("View More")}</Button>
                 </Link>
               </div>
@@ -76,7 +76,7 @@ function Locations() {
               </div>
             </div>
             <div>
-              <Link href={"/services-locations/movers-and-packers-sharjah"}>
+              <Link href={"/services-locations/movers-and-packers-sharjah/"}>
                 <h3
                   className={`${
                     locale === "ar" ? "font-arabic font-bold" : ""
@@ -92,7 +92,7 @@ function Locations() {
                 <Link href={"tel:+971566651978"}>
                   <Button dir="ltr">Call Now</Button>
                 </Link>
-                <Link href={"/services-locations/movers-and-packers-sharjah"}>
+                <Link href={"/services-locations/movers-and-packers-sharjah/"}>
                   <Button variant={"secondary"}>{b("View More")}</Button>
                 </Link>
               </div>
@@ -100,7 +100,7 @@ function Locations() {
           </li>
           <li className="grid md:grid-cols-2 grid-cols-1 items-center">
             <div>
-              <Link href={"/services-locations/movers-and-packers-ajman"}>
+              <Link href={"/services-locations/movers-and-packers-ajman/"}>
                 <h3
                   className={`${
                     locale === "ar"
@@ -125,7 +125,7 @@ function Locations() {
                 <Link href={"tel:+971566651978"}>
                   <Button dir="ltr">Call Now</Button>
                 </Link>
-                <Link href={"/services-locations/movers-and-packers-ajman"}>
+                <Link href={"/services-locations/movers-and-packers-ajman/"}>
                   <Button variant={"secondary"}>{b("View More")}</Button>
                 </Link>
               </div>

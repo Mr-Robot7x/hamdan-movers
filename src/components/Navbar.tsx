@@ -262,7 +262,7 @@ function Navbar() {
                               className={`block text-black border border-transparent mx-[2px] hover:border-neutral-200 px-4 py-2 transition-all rounded-3xl active:scale-[0.98] relative ${
                                 locale === "ar" ? "font-arabic font-bold" : ""
                               }`}
-                              href={loc.link}
+                              href={loc.link + "/"}
                             >
                               {loc.name}
                             </Link>
@@ -276,7 +276,7 @@ function Navbar() {
             </ul>
           </div>
           <div className="flex gap-x-2 flex-row-reverse">
-            <Link href={"/contact-us"}>
+            <Link href={"/contact-us/"}>
               <Button className="md:block hidden">{b("contact-now")}</Button>
             </Link>
 

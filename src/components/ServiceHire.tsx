@@ -80,7 +80,7 @@ const ServiceHire = ({
                 ))}
               </ol>
               <div className="mt-8 mb-8">
-                <Link href={"/contact-us"}>
+                <Link href={"/contact-us/"}>
                   <Button>{b("Contact Us")}</Button>
                 </Link>
               </div>

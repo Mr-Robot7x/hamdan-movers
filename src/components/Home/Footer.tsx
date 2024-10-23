@@ -10,10 +10,11 @@ import {
 import { Button } from "../ui/button";
 import { Instagram } from "lucide-react";
 import { Link } from "@/i18n/routing";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 function Footer() {
   const t = useTranslations("navitems");
   const b = useTranslations("footer");
+  const locale = useLocale();
   const subServices: { name: string; link: string }[] = [
     {
       name: t("services-sub.local"),
@@ -79,13 +80,13 @@ function Footer() {
             <div className="flex flex-col gap-y-3">
               <Link href="/">{b("home")}</Link>
 
-              <Link href="/services">{b("services")}</Link>
+              <Link href="/services/">{b("services")}</Link>
 
-              <Link href="/about-us"> {b("about")} </Link>
+              <Link href="/about-us/"> {b("about")} </Link>
 
-              <Link href="/contabct-us"> {b("contact")} </Link>
+              <Link href="/contact-us/"> {b("contact")} </Link>
 
-              <Link href="/services-locations"> {b("location")} </Link>
+              <Link href="/services-locations/"> {b("location")} </Link>
 
               <Link href="/"> {b("TandC")} </Link>
 
@@ -96,37 +97,37 @@ function Footer() {
             <h4> {b("services")} </h4>
             <div className="flex flex-col gap-y-3">
               {subServices.map((service, i) => (
-                <Link key={i} href={service.link}>
+                <Link key={i} href={"/" + locale + service.link + "/"}>
                   {service.name}
                 </Link>
               ))}
-              <Link href="/pickup-rental-trucks"> {b("cars")} </Link>
+              <Link href="/pickup-rental-trucks/"> {b("cars")} </Link>
             </div>
           </div>
           <div className="flex flex-col gap-y-4 font-poppins">
             <h4>Services Locations</h4>
             <div className="flex flex-col gap-y-3">
-              <Link href={"/services-locations/movers-and-packers-dubai"}>
+              <Link href={"/services-locations/movers-and-packers-dubai/"}>
                 {b("md")} {b("dubai")}
               </Link>
 
-              <Link href={"/services-locations/movers-and-packers-sharjah"}>
+              <Link href={"/services-locations/movers-and-packers-sharjah/"}>
                 {b("md")} {b("sharjah")}
               </Link>
 
-              <Link href={"/services-locations/movers-and-packers-ajman"}>
+              <Link href={"/services-locations/movers-and-packers-ajman/"}>
                 {b("md")} {b("ajman")}
               </Link>
 
-              <Link href={"/pickup-rental-trucks-in-dubai"}>
+              <Link href={"/pickup-rental-trucks-in-dubai/"}>
                 {b("pickup")} {b("dubai")}
               </Link>
 
-              <Link href={"/pickup-rental-trucks-in-sharjah"}>
+              <Link href={"/pickup-rental-trucks-in-sharjah/"}>
                 {b("pickup")} {b("sharjah")}
               </Link>
 
-              <Link href={"/pickup-rental-trucks-in-ajman"}>
+              <Link href={"/pickup-rental-trucks-in-ajman/"}>
                 {b("pickup")} {b("ajman")}
               </Link>
             </div>

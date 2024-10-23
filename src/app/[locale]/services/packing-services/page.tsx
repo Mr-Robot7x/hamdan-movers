@@ -182,7 +182,7 @@ function CommercialOfficeMovers() {
                   {t("plus.desc")}
                 </p>
 
-                <Link href={"/contact-us"}>
+                <Link href={"/contact-us/"}>
                   <Button>{b("Contact Us")}</Button>
                 </Link>
               </div>
