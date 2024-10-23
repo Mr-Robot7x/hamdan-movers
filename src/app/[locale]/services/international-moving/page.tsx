@@ -29,9 +29,14 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "meta-service" });
 
   return {
-    title: "Safe and Timely International Movers in UAE | Hamdan Mover",
+    title:
+      locale === "ar"
+        ? "شركات نقل دولي آمنة ومناسبة في الإمارات"
+        : "Safe and Timely International Movers in UAE",
     description:
-      "International moving made easy with Hamdan Movers. Our expert team handles packing, shipping, customs, and door-to-door delivery, ensuring a smooth, stress-free experience. Trust us for seamless, professional service on your move abroad.",
+      locale === "ar"
+        ? "حمدان للم نقل: نقل دولي سهل. تعبئة وتغليف، شحن، جمارك، تسليم حتى الباب. انتقال بدون ضغوط. ثق بنا!"
+        : "Hamdan Movers: Global moving made easy. Expert packing, shipping, customs, door-to-door. Stress-free relocation. Trust us!",
     alternates: {
       canonical: `${process.env.PUBLIC_URL}/${locale}/services/international-moving/`,
       languages: {
@@ -40,9 +45,14 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: "Safe and Timely International Movers in UAE | Hamdan Mover",
+      title:
+        locale === "ar"
+          ? "شركات نقل دولي آمنة ومناسبة في الإمارات"
+          : "Safe and Timely International Movers in UAE",
       description:
-        "International moving made easy with Hamdan Movers. Our expert team handles packing, shipping, customs, and door-to-door delivery, ensuring a smooth, stress-free experience. Trust us for seamless, professional service on your move abroad.",
+        locale === "ar"
+          ? "حمدان للم نقل: نقل دولي سهل. تعبئة وتغليف، شحن، جمارك، تسليم حتى الباب. انتقال بدون ضغوط. ثق بنا!"
+          : "Hamdan Movers: Global moving made easy. Expert packing, shipping, customs, door-to-door. Stress-free relocation. Trust us!",
       url: `${process.env.PUBLIC_URL}/${locale}/services/international-moving/`,
       siteName: t("site-Info.name"),
       locale: locale,

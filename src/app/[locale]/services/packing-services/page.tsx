@@ -30,9 +30,14 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "meta-service" });
 
   return {
-    title: "Best Packing Services in Dubai, UAE | Hamdan Movers",
+    title:
+      locale === "ar"
+        ? "أفضل خدمات التعبئة في دبي | حمدان موفرز"
+        : "Best Packing Services in Dubai, UAE | Hamdan Movers",
     description:
-      "Hamdan Movers and Packers provide expert packing services across the UAE, ensuring your belongings are safely packed and arrive in perfect condition. Our skilled team uses high-quality materials and techniques, offering reliable packing solutions for both local and long-distance moves in UAE.",
+      locale === "ar"
+        ? "توفر حمدان موفرز خدمات تعبئة احترافية في جميع أنحاء الإمارات، لضمان تعبئة آمنة لممتلكاتك باستخدام مواد عالية الجودة للنقل المحلي والدولي"
+        : "Hamdan Movers offers expert packing services across the UAE, ensuring your belongings are safely packed using top-quality materials for local and long-distance moves.",
     alternates: {
       canonical: `${process.env.PUBLIC_URL}/${locale}/services/packing-services/`,
       languages: {
@@ -41,9 +46,14 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: "Best Packing Services in Dubai, UAE | Hamdan Movers",
+      title:
+        locale === "ar"
+          ? "أفضل خدمات التعبئة في دبي | حمدان موفرز"
+          : "Best Packing Services in Dubai, UAE | Hamdan Movers",
       description:
-        "Hamdan Movers and Packers provide expert packing services across the UAE, ensuring your belongings are safely packed and arrive in perfect condition. Our skilled team uses high-quality materials and techniques, offering reliable packing solutions for both local and long-distance moves in UAE.",
+        locale === "ar"
+          ? "توفر حمدان موفرز خدمات تعبئة احترافية في جميع أنحاء الإمارات، لضمان تعبئة آمنة لممتلكاتك باستخدام مواد عالية الجودة للنقل المحلي والدولي"
+          : "Hamdan Movers offers expert packing services across the UAE, ensuring your belongings are safely packed using top-quality materials for local and long-distance moves.",
       url: `${process.env.PUBLIC_URL}/${locale}/services/packing-services/`,
       siteName: t("site-Info.name"),
       locale: locale,

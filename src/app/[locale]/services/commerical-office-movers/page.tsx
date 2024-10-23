@@ -28,9 +28,14 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "meta-service" });
 
   return {
-    title: "Commercial Office Movers Near You | Dubai, UAE - Hamdan Movers",
+    title:
+      locale === "ar"
+        ? "شركات نقل المكاتب التجارية بالقرب منك | دبي، الإمارات"
+        : "Commercial Office Movers Near You | Dubai, UAE",
     description:
-      "Hamdan Movers and Packers offer fully insured, 24/7 Office Moving Services in UAE. We provide customized relocation solutions with GPS-tracked fleets and handle Certificate of Insurance at no extra cost. ",
+      locale === "ar"
+        ? "حمدان للم نقل: شركات نقل المكاتب المؤمنة في الإمارات. خدمة على مدار الساعة، أسطول مزود بنظام تحديد المواقع العالمي (GPS)، حلول النقل، تأمين مجاني. اتصل بنا!"
+        : "Hamdan Movers: UAE's insured office movers. 24/7 service, GPS fleet, relocation solutions, free insurance. Contact us!",
     alternates: {
       canonical: `${process.env.PUBLIC_URL}/${locale}/services/commerical-office-movers/`,
       languages: {
@@ -39,9 +44,14 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: "Commercial Office Movers Near You | Dubai, UAE - Hamdan Movers",
+      title:
+        locale === "ar"
+          ? "شركات نقل المكاتب التجارية بالقرب منك | دبي، الإمارات"
+          : "Commercial Office Movers Near You | Dubai, UAE",
       description:
-        "Hamdan Movers and Packers offer fully insured, 24/7 Office Moving Services in UAE. We provide customized relocation solutions with GPS-tracked fleets and handle Certificate of Insurance at no extra cost. ",
+        locale === "ar"
+          ? "حمدان للم نقل: شركات نقل المكاتب المؤمنة في الإمارات. خدمة على مدار الساعة، أسطول مزود بنظام تحديد المواقع العالمي (GPS)، حلول النقل، تأمين مجاني. اتصل بنا!"
+          : "Hamdan Movers: UAE's insured office movers. 24/7 service, GPS fleet, relocation solutions, free insurance. Contact us!",
       url: `${process.env.PUBLIC_URL}/${locale}/services/commerical-office-movers/`,
       siteName: t("site-Info.name"),
       locale: locale,
@@ -52,7 +62,10 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       phoneNumbers: ["+971566651978", "+971545019655", "+971503626685"],
       images: {
         url: `${process.env.PUBLIC_URL}/images/office-relocation.jpg`,
-        alt: "Commercial Office Movers Near You | Dubai, UAE - Hamdan Movers",
+        alt:
+          locale === "ar"
+            ? "شركات نقل المكاتب التجارية بالقرب منك | دبي، الإمارات"
+            : "Commercial Office Movers Near You | Dubai, UAE",
       },
     },
   };

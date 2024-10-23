@@ -21,9 +21,14 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "meta-service" });
 
   return {
-    title: "Cheap Pickup Rental Cars in Ajman",
+    title:
+      locale === "ar"
+        ? "شاحنات بيك آب للإيجار بأسعار رخيصة في عجمان"
+        : "Cheap Pickup Rental Trucks in Ajman",
     description:
-      "Rent a 1.5 / 3 ton pickup truck for versatile, cost-effective transport of furniture, materials, and more. Enjoy convenience and reliability with well-maintained vehicles from a trusted provider in Ajman",
+      locale === "ar"
+        ? "استأجر شاحنة بيك آب 1.5/3 طن لنقل الأثاث والمواد بشكل متنوع وبتكلفة فعالة. تمتع بمركبات موثوقة ومُصانة جيدًا من مقدم خدمة موثوق في عجمان"
+        : "Rent a 1.5/3 ton pickup truck for versatile, cost-effective transport of furniture and materials. Enjoy reliable, well-maintained vehicles from a trusted provider in Ajman",
     alternates: {
       canonical: `${process.env.PUBLIC_URL}/${locale}/pickup-rental-trucks-in-ajman/`,
       languages: {
@@ -32,9 +37,14 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: "Cheap pickup rental services in Ajman",
+      title:
+        locale === "ar"
+          ? "خدمات تأجير بيك آب بأسعار رخيصة في عجمان"
+          : "Cheap pickup rental services in Ajman",
       description:
-        "Rent a 1.5 / 3 ton pickup truck for versatile, cost-effective transport of furniture, materials, and more. Enjoy convenience and reliability with well-maintained vehicles from a trusted provider in Ajman",
+        locale === "ar"
+          ? "استأجر شاحنة بيك آب 1.5/3 طن لنقل الأثاث والمواد بشكل متنوع وبتكلفة فعالة. تمتع بمركبات موثوقة ومُصانة جيدًا من مقدم خدمة موثوق في عجمان"
+          : "Rent a 1.5/3 ton pickup truck for versatile, cost-effective transport of furniture and materials. Enjoy reliable, well-maintained vehicles from a trusted provider in Ajman",
       url: `${process.env.PUBLIC_URL}/${locale}/pickup-rental-trucks-in-ajman/`,
       siteName: t("site-Info.name"),
       locale: locale,

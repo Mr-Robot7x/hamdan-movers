@@ -28,9 +28,13 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 
   return {
     title:
-      "Affordable Pickup Truck Rentals for Business and Personal Use in Dubai",
+      locale === "ar"
+        ? "تأجير بيك آب بأسعار معقولة للاستخدام التجاري والشخصي في دبي"
+        : "Affordable Pickup Trucks for Business & Personal in Dubai",
     description:
-      "Searching for dependable pickup truck rental services in Dubai? Your solution is here! We provide a versatile fleet of pickup trucks to meet all your transportation needs. Whether it&lsquo;s moving goods, transporting items, or managing logistics, our pickups offer an efficient and hassle-free solution tailored to every job.",
+      locale === "ar"
+        ? "تبحث عن خدمات تأجير بيك آب موثوقة في دبي؟ نقدم شاحنات متنوعة لنقل البضائع، النقل أو الخدمات اللوجستية — حلول فعالة وسهلة لكل مهمة"
+        : "Looking for reliable pickup rental services in Dubai? We offer versatile trucks for moving goods, transport, or logistics—efficient, hassle-free solutions for every job.",
     alternates: {
       canonical: `${process.env.PUBLIC_URL}/${locale}/pickup-rental-trucks-in-dubai/`,
       languages: {
@@ -40,9 +44,13 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     },
     openGraph: {
       title:
-        "Affordable Pickup Truck Rentals for Business and Personal Use in Dubai",
+        locale === "ar"
+          ? "تأجير بيك آب بأسعار معقولة للاستخدام التجاري والشخصي في دبي"
+          : "Affordable Pickup Trucks for Business & Personal in Dubai",
       description:
-        "Searching for dependable pickup truck rental services in Dubai? Your solution is here! We provide a versatile fleet of pickup trucks to meet all your transportation needs. Whether it&lsquo;s moving goods, transporting items, or managing logistics, our pickups offer an efficient and hassle-free solution tailored to every job.",
+        locale === "ar"
+          ? "تبحث عن خدمات تأجير بيك آب موثوقة في دبي؟ نقدم شاحنات متنوعة لنقل البضائع، النقل أو الخدمات اللوجستية — حلول فعالة وسهلة لكل مهمة"
+          : "Looking for reliable pickup rental services in Dubai? We offer versatile trucks for moving goods, transport, or logistics—efficient, hassle-free solutions for every job.",
       url: `${process.env.PUBLIC_URL}/${locale}/pickup-rental-trucks-in-dubai/`,
       siteName: t("site-Info.name"),
       locale: locale,

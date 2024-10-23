@@ -25,9 +25,14 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "meta-service" });
 
   return {
-    title: "About Us | Hamdan Movers",
+    title:
+      locale === "ar"
+        ? "من نحن | حمدان لنقل الأثاث"
+        : "About Us | Hamdan Movers",
     description:
-      "We are trusted movers in Dubai for safe and reliable moving services. Whether it's a local or international move, we handle everything from cars to pianos with care, ensuring your belongings arrive on time and without damage.",
+      locale === "ar"
+        ? "نحن ناقلون موثوقون في دبي نقدم خدمات نقل آمنة وموثوقة محليًا ودوليًا. من السيارات إلى البيانو، نتعامل مع كل شيء بعناية لضمان التسليم في الوقت المناسب وبدون ضرر."
+        : "Trusted movers in Dubai providing safe, reliable local and international services. From cars to pianos, we handle it all with care, ensuring on-time, damage-free delivery.",
     alternates: {
       canonical: `${process.env.PUBLIC_URL}/${locale}/about-us/`,
       languages: {
@@ -36,7 +41,10 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: "About Us | Hamdan Movers",
+      title:
+        locale === "ar"
+          ? "من نحن | حمدان لنقل الأثاث"
+          : "About Us | Hamdan Movers",
       description:
         "We are trusted movers in Dubai for safe and reliable moving services. Whether it's a local or international move, we handle everything from cars to pianos with care, ensuring your belongings arrive on time and without damage.",
       url: `${process.env.PUBLIC_URL}/${locale}/about-us/`,
@@ -60,7 +68,10 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
             "@type": "WebPage",
             "@id": `${process.env.PUBLIC_URL}/${locale}/about-us/`,
             url: `${process.env.PUBLIC_URL}/${locale}/about-us/`,
-            name: "About Us | Hamdan Movers",
+            name:
+              locale === "ar"
+                ? "من نحن | حمدان لنقل الأثاث"
+                : "About Us | Hamdan Movers",
             isPartOf: { "@id": `${process.env.PUBLIC_URL}/${locale}#website` },
             primaryImageOfPage: {
               "@id": `${process.env.PUBLIC_URL}/${locale}/about-us/#primaryimage`,

@@ -33,9 +33,13 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 
   return {
     title:
-      "Best Storage Units In Dubai, UAE | Short and Long-Term Options - Hamdan Movers",
+      locale === "ar"
+        ? "وحدات تخزين في دبي | خيارات قصيرة وطويلة الأجل"
+        : "Storage Units In Dubai, UAE | Short and Long-Term Options",
     description:
-      "Need secure, climate-controlled storage? Our clean, air-conditioned units protect your belongings from damage, whether for short or long-term storage. Ideal for moving, downsizing, or extra space, with 24/7 monitoring and easy access for peace of mind",
+      locale === "ar"
+        ? "وحدات تخزين آمنة ومكيفة للمدى القصير أو الطويل. مثالية للنقل أو تقليل المساحة، مع مراقبة 24/7 وإمكانية وصول سهلة"
+        : "Secure, climate-controlled storage units for short or long-term use. Perfect for moving, downsizing, or extra space, with 24/7 monitoring and easy access.",
     alternates: {
       canonical: `${process.env.PUBLIC_URL}/${locale}/services/storage-services/`,
       languages: {
@@ -45,9 +49,13 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     },
     openGraph: {
       title:
-        "Best Storage Units In Dubai, UAE | Short and Long-Term Options - Hamdan Movers",
+        locale === "ar"
+          ? "وحدات تخزين في دبي | خيارات قصيرة وطويلة الأجل"
+          : "Storage Units In Dubai, UAE | Short and Long-Term Options",
       description:
-        "Need secure, climate-controlled storage? Our clean, air-conditioned units protect your belongings from damage, whether for short or long-term storage. Ideal for moving, downsizing, or extra space, with 24/7 monitoring and easy access for peace of mind",
+        locale === "ar"
+          ? "وحدات تخزين آمنة ومكيفة للمدى القصير أو الطويل. مثالية للنقل أو تقليل المساحة، مع مراقبة 24/7 وإمكانية وصول سهلة"
+          : "Secure, climate-controlled storage units for short or long-term use. Perfect for moving, downsizing, or extra space, with 24/7 monitoring and easy access.",
       url: `${process.env.PUBLIC_URL}/${locale}/services/storage-services/`,
       siteName: t("site-Info.name"),
       locale: locale,

@@ -24,9 +24,13 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 
   return {
     title:
-      "Moving Services in Dubai, Sharjah, Ajman and its surrounding areas.",
+      locale === "ar"
+        ? "نقل عفش في دبي والشارقة وعجمان والمناطق المجاورة"
+        : "Movers in Dubai, Sharjah, Ajman & Nearby Areas",
     description:
-      "Find the best moving company near you with ease. Explore top-rated local movers, compare services, and get hassle-free relocation. Whether it's a residential or commercial move, discover trusted professionals for a smooth, secure, and stress-free experience. Get quotes and expert guidance for your next move today!",
+      locale === "ar"
+        ? "اعثر على أفضل شركات النقل بالقرب منك. قارن الخدمات للنقل السكني أو التجاري واستمتع بانتقال سلس وآمن مع مساعدة الخبراء"
+        : "Find top-rated movers near you. Compare services for residential or commercial moves and enjoy a stress-free relocation with expert help and secure transportation.",
     alternates: {
       canonical: `${process.env.PUBLIC_URL}/${locale}/services-locations/`,
       languages: {
@@ -36,9 +40,13 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     },
     openGraph: {
       title:
-        "Moving Services in Dubai, Sharjah, Ajman and its surrounding areas.",
+        locale === "ar"
+          ? "نقل عفش في دبي والشارقة وعجمان والمناطق المجاورة"
+          : "Movers in Dubai, Sharjah, Ajman & Nearby Areas",
       description:
-        "Find the best moving company near you with ease. Explore top-rated local movers, compare services, and get hassle-free relocation. Whether it's a residential or commercial move, discover trusted professionals for a smooth, secure, and stress-free experience. Get quotes and expert guidance for your next move today!",
+        locale === "ar"
+          ? "اعثر على أفضل شركات النقل بالقرب منك. قارن الخدمات للنقل السكني أو التجاري واستمتع بانتقال سلس وآمن مع مساعدة الخبراء"
+          : "Find top-rated movers near you. Compare services for residential or commercial moves and enjoy a stress-free relocation with expert help and secure transportation.",
       url: `${process.env.PUBLIC_URL}/${locale}/services-locations/`,
       siteName: t("site-Info.name"),
       locale: locale,

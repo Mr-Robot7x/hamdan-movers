@@ -123,7 +123,7 @@ function SpecialityMovingService() {
             <div className="min-h-32 bg-neutral-50 border border-neutral-200 rounded-3xl flex items-center flex-col py-4 px-2">
               <div className="relative md:w-[450px] w-[327px] bg-gradient-to-t from-slate-100 to-slate-300 h-64 rounded-2xl">
                 <Image
-                  alt={"long term storage"}
+                  alt={"Art and Antique Moving"}
                   src={artImg}
                   placeholder="blur"
                   fill
@@ -150,7 +150,7 @@ function SpecialityMovingService() {
             <div className="min-h-32 bg-neutral-50 border border-neutral-200 rounded-3xl flex items-center col-span-1 flex-col py-4 px-2">
               <div className="relative md:w-[450px] w-[327px] bg-gradient-to-t from-slate-100 to-slate-300 h-64 rounded-2xl">
                 <Image
-                  alt={"long term storage"}
+                  alt={"piano moving hamdan movers"}
                   src={pianoImg}
                   placeholder="blur"
                   fill
@@ -179,7 +179,7 @@ function SpecialityMovingService() {
             <div className="min-h-32 bg-neutral-50 border border-neutral-200 rounded-3xl flex items-center flex-col py-4 px-2">
               <div className="relative md:w-[450px] w-[327px] bg-gradient-to-t from-slate-100 to-slate-300 h-64 rounded-2xl">
                 <Image
-                  alt={"long term storage"}
+                  alt={"creating packing"}
                   src={cratingImg}
                   placeholder="blur"
                   fill
@@ -206,7 +206,7 @@ function SpecialityMovingService() {
             <div className="min-h-32 bg-neutral-50 border border-neutral-200 rounded-3xl flex items-center col-span-1 flex-col py-4 px-2">
               <div className="relative md:w-[450px] w-[327px] bg-gradient-to-t from-slate-100 to-slate-300 h-64 rounded-2xl">
                 <Image
-                  alt={"long term storage"}
+                  alt={"Specialty Appliance"}
                   src={specialtyImg}
                   placeholder="blur"
                   fill

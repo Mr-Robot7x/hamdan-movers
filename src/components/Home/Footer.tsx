@@ -10,11 +10,10 @@ import {
 import { Button } from "../ui/button";
 import { Instagram } from "lucide-react";
 import { Link } from "@/i18n/routing";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 function Footer() {
   const t = useTranslations("navitems");
   const b = useTranslations("footer");
-  const locale = useLocale();
   const subServices: { name: string; link: string }[] = [
     {
       name: t("services-sub.local"),
@@ -97,7 +96,7 @@ function Footer() {
             <h4> {b("services")} </h4>
             <div className="flex flex-col gap-y-3">
               {subServices.map((service, i) => (
-                <Link key={i} href={"/" + locale + service.link + "/"}>
+                <Link key={i} href={service.link + "/"}>
                   {service.name}
                 </Link>
               ))}

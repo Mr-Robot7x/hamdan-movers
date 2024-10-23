@@ -27,9 +27,14 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "meta-service" });
 
   return {
-    title: "Best Movers And Packers In Ajman and Nears | Hamdan Movers",
+    title:
+      locale === "ar"
+        ? "أفضل شركات نقل وتعبئة في عجمان | حمدان موفرز"
+        : "Best Movers & Packers in Ajman | Hamdan Movers",
     description:
-      "Hamdan Movers and Packers delivers top-quality moving solutions across the Ajman for 6 years. Our full-service options cover local moving, long-distance moving, packing , storage, and specialty relocation. Our team of experienced experts ensures a seamless move for houses, offices, or commercial spaces, making your transition quick and hassle-free.",
+      locale === "ar"
+        ? "تقدم حمدان موفرز خدمات نقل احترافية في عجمان تشمل النقل المحلي والدولي، التعبئة، التخزين، وغيرها. استمتع بانتقال سلس وخالٍ من المتاعب"
+        : "Hamdan Movers offers expert moving services in Ajman, covering local and long-distance moves, packing, storage, and more. Enjoy a seamless, hassle-free relocation",
     alternates: {
       canonical: `${process.env.PUBLIC_URL}/${locale}/services-locations/movers-and-packers-ajman/`,
       languages: {
@@ -38,9 +43,14 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: "Best Movers And Packers In Ajman and Nears | Hamdan Movers",
+      title:
+        locale === "ar"
+          ? "أفضل شركات نقل وتعبئة في عجمان | حمدان موفرز"
+          : "Best Movers & Packers in Ajman | Hamdan Movers",
       description:
-        "Hamdan Movers and Packers delivers top-quality moving solutions across the Ajman for 6 years. Our full-service options cover local moving, long-distance moving, packing &amp; storage, and specialty relocation. Our team of experienced experts ensures a seamless move for houses, offices, or commercial spaces, making your transition quick and hassle-free.",
+        locale === "ar"
+          ? "تقدم حمدان موفرز خدمات نقل احترافية في عجمان تشمل النقل المحلي والدولي، التعبئة، التخزين، وغيرها. استمتع بانتقال سلس وخالٍ من المتاعب"
+          : "Hamdan Movers offers expert moving services in Ajman, covering local and long-distance moves, packing, storage, and more. Enjoy a seamless, hassle-free relocation",
       url: `${process.env.PUBLIC_URL}/${locale}/services-locations/movers-and-packers-ajman/`,
       siteName: t("site-Info.name"),
       locale: locale,

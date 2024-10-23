@@ -27,9 +27,14 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "meta-service" });
 
   return {
-    title: "Cheap Moving and Packing Company In Sharjah | Hamdan Movers",
+    title:
+      locale === "ar"
+        ? "شركة نقل وتعبئة ميسورة في الشارقة | حمدان موفرز"
+        : "Cheap Movers & Packers in Sharjah | Hamdan Movers",
     description:
-      "We offers comprehensive moving services across the Sharjah, including local and long-distance moves, packing, specialized handling, and custom crating. We handle residential, commercial, and emergency relocations for a seamless, stress-free experience.",
+      locale === "ar"
+        ? "نقدم خدمات نقل شاملة في الشارقة تشمل النقل المحلي والدولي، التعبئة، التعبئة المخصصة، والتنقلات الطارئة لتجربة سلسة"
+        : "We offer complete moving services in Sharjah, including local and long-distance moves, packing, custom crating, and emergency relocations for a smooth experience.",
     alternates: {
       canonical: `${process.env.PUBLIC_URL}/${locale}/services-locations/movers-and-packers-sharjah/`,
       languages: {
@@ -38,9 +43,14 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: "Cheap Moving and Packing Company In Sharjah | Hamdan Movers",
+      title:
+        locale === "ar"
+          ? "شركة نقل وتعبئة ميسورة في الشارقة | حمدان موفرز"
+          : "Cheap Movers & Packers in Sharjah | Hamdan Movers",
       description:
-        "We offers comprehensive moving services across the Sharjah, including local and long-distance moves, packing, specialized handling, and custom crating. We handle residential, commercial, and emergency relocations for a seamless, stress-free experience.",
+        locale === "ar"
+          ? "نقدم خدمات نقل شاملة في الشارقة تشمل النقل المحلي والدولي، التعبئة، التعبئة المخصصة، والتنقلات الطارئة لتجربة سلسة"
+          : "We offer complete moving services in Sharjah, including local and long-distance moves, packing, custom crating, and emergency relocations for a smooth experience.ee experience.",
       url: `${process.env.PUBLIC_URL}/${locale}/services-locations/movers-and-packers-sharjah/`,
       siteName: t("site-Info.name"),
       locale: locale,

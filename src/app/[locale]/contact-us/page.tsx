@@ -15,9 +15,14 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "meta-service" });
 
   return {
-    title: "Contact Us | Hamdan Movers",
+    title:
+      locale === "ar"
+        ? "اتصل بنا | حمدان لنقل الأثاث"
+        : "Contact Us | Hamdan Movers",
     description:
-      "We're experts in helping people move in the UAE. Our team is made up of experienced professionals who know exactly what they're doing. We have all the latest equipment and technology to make your move as smooth as possible. We value your feedback and are always looking for ways to improve our services. Trust us to handle your move with care and efficiency.",
+      locale === "ar"
+        ? "معتبرون في نقل الأثاث في الإمارات العربية المتحدة، فريق عمل محترف وأحدث المعدات. نضمن لك عملية نقل سلسة وفعالة، مع تقدير لتعليقاتك لتحسين خدماتنا. ثق بنا!"
+        : "Expert movers in UAE with a skilled team and the latest equipment. We ensure a smooth, efficient move while valuing your feedback to improve our services. Trust us!",
     alternates: {
       canonical: `${process.env.PUBLIC_URL}/${locale}/contact-us/`,
       languages: {
@@ -26,9 +31,14 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: "Contact Us | Hamdan Movers",
+      title:
+        locale === "ar"
+          ? "اتصل بنا | حمدان لنقل الأثاث"
+          : "Contact Us | Hamdan Movers",
       description:
-        "We're experts in helping people move in the UAE. Our team is made up of experienced professionals who know exactly what they're doing. We have all the latest equipment and technology to make your move as smooth as possible. We value your feedback and are always looking for ways to improve our services. Trust us to handle your move with care and efficiency.",
+        locale === "ar"
+          ? "معتبرون في نقل الأثاث في الإمارات العربية المتحدة، فريق عمل محترف وأحدث المعدات. نضمن لك عملية نقل سلسة وفعالة، مع تقدير لتعليقاتك لتحسين خدماتنا. ثق بنا!"
+          : "Expert movers in UAE with a skilled team and the latest equipment. We ensure a smooth, efficient move while valuing your feedback to improve our services. Trust us!",
       url: `${process.env.PUBLIC_URL}/${locale}/contact-us/`,
       siteName: t("site-Info.name"),
       locale: locale,
@@ -50,7 +60,10 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
             "@type": "WebPage",
             "@id": `${process.env.PUBLIC_URL}/${locale}/contact-us/`,
             url: `${process.env.PUBLIC_URL}/${locale}/contact-us/`,
-            name: "Contact Us | Hamdan Movers",
+            name:
+              locale === "ar"
+                ? "اتصل بنا | حمدان لنقل الأثاث"
+                : "Contact Us | Hamdan Movers",
             isPartOf: { "@id": `${process.env.PUBLIC_URL}/${locale}#website` },
             primaryImageOfPage: {
               "@id": `${process.env.PUBLIC_URL}/${locale}/contact-us/#primaryimage`,

@@ -26,9 +26,11 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "meta-service" });
 
   return {
-    title: "Cheap Pickup Truck Rent | Business and Personal Use in UAE",
+    title: "Affordable Pickup Truck Rentals for Business & Personal Use",
     description:
-      "Looking for reliable pickup rental services in UAE? Look no further! We offer a versatile fleet of pickups to meet all your transportation needs. Whether you need to move goods, transport items, or handle logistics, our pickup trucks provide a hassle-free and efficient solution tailored for every task.",
+      locale === "ar"
+        ? "هل تبحث عن خدمات تأجير بيك آب موثوقة في الإمارات؟ لدينا أسطول متنوع يلبي جميع احتياجات النقل، من نقل البضائع إلى الخدمات اللوجستية، بحلول سهلة وفعالة"
+        : "Reliable pickup rental services in UAE. Our versatile fleet meets all transportation needs, offering hassle-free and efficient solutions for moving goods and logistics.",
     alternates: {
       canonical: `${process.env.PUBLIC_URL}/${locale}/pickup-rental-trucks/`,
       languages: {
@@ -37,9 +39,11 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: "Cheap Pickup Truck Rentals for Business and Personal Use in UAE",
+      title: "Affordable Pickup Truck Rentals for Business & Personal Use",
       description:
-        "Looking for reliable pickup rental services in UAE? Look no further! We offer a versatile fleet of pickups to meet all your transportation needs. Whether you need to move goods, transport items, or handle logistics, our pickup trucks provide a hassle-free and efficient solution tailored for every task.",
+        locale === "ar"
+          ? "هل تبحث عن خدمات تأجير بيك آب موثوقة في الإمارات؟ لدينا أسطول متنوع يلبي جميع احتياجات النقل، من نقل البضائع إلى الخدمات اللوجستية، بحلول سهلة وفعالة"
+          : "Reliable pickup rental services in UAE. Our versatile fleet meets all transportation needs, offering hassle-free and efficient solutions for moving goods and logistics.",
       url: `${process.env.PUBLIC_URL}/${locale}/pickup-rental-trucks/`,
       siteName: t("site-Info.name"),
       locale: locale,

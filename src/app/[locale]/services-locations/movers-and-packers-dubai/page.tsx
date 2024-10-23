@@ -27,9 +27,14 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "meta-service" });
 
   return {
-    title: "Best Movers And Packers In Dubai | Hamdan Movers",
+    title:
+      locale === "ar"
+        ? "أفضل شركات النقل والتعبئة في دبي | حمدان موفرز"
+        : "Best Movers & Packers in Dubai | Hamdan Movers",
     description:
-      "Cheap Moving and Packing Company In Dubai, Hamdan Movers and Packers delivers top-quality moving solutions across the Dubai for 6 years. Our full-service options cover local moving, long-distance moving, packing &amp; storage, and specialty relocation. Our team of experienced experts ensures a seamless move for houses, offices, or commercial spaces, making your transition quick and hassle-free.",
+      locale === "ar"
+        ? "توفر حمدان موفرز حلول نقل ميسورة في دبي لمدة 6 سنوات، بما يشمل النقل المحلي والدولي، التعبئة، التخزين، والانتقالات المتخصصة"
+        : "Hamdan Movers offers affordable moving solutions in Dubai for 6 years. Our services include local and long-distance moves, packing, storage, and specialty relocations.",
     alternates: {
       canonical: `${process.env.PUBLIC_URL}/${locale}/services-locations/movers-and-packers-dubai/`,
       languages: {
@@ -38,9 +43,14 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: "Best Movers And Packers In Dubai | Hamdan Movers",
+      title:
+        locale === "ar"
+          ? "أفضل شركات النقل والتعبئة في دبي | حمدان موفرز"
+          : "Best Movers & Packers in Dubai | Hamdan Movers",
       description:
-        "Cheap Moving and Packing Company In Dubai, Hamdan Movers and Packers delivers top-quality moving solutions across the Dubai for 6 years. Our full-service options cover local moving, long-distance moving, packing &amp; storage, and specialty relocation. Our team of experienced experts ensures a seamless move for houses, offices, or commercial spaces, making your transition quick and hassle-free.",
+        locale === "ar"
+          ? "توفر حمدان موفرز حلول نقل ميسورة في دبي لمدة 6 سنوات، بما يشمل النقل المحلي والدولي، التعبئة، التخزين، والانتقالات المتخصصة"
+          : "Hamdan Movers offers affordable moving solutions in Dubai for 6 years. Our services include local and long-distance moves, packing, storage, and specialty relocations.ee.",
       url: `${process.env.PUBLIC_URL}/${locale}/services-locations/movers-and-packers-dubai/`,
       siteName: t("site-Info.name"),
       locale: locale,
